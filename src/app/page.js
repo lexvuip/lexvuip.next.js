@@ -1,95 +1,67 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import AboutSection from '../components/AboutSection';
+import OurSection from '../components/OurSection';
+import BlogSection from '../components/BlogSection';
+import TestimonialSection from '../components/TestimonialSection';
+import FAQSection from '../components/FAQSection';
+import FotterSection from '../components/FotterSection';
+import FloatingCallButton from '../components/FloatingCallButton';
+import '../styles/App.css';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const router = useRouter();
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  const renderAnimatedWords = (words, startDelay = 0) => {
+    return words.map((word, index) => (
+      <span
+        key={`${word}-${index}`}
+        style={{ animationDelay: `${startDelay + index * 0.08}s` }}
+      >
+        {word}&nbsp;
+      </span>
+    ));
+  };
+
+  return (
+    <div className="App">
+      <header className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">
+            {renderAnimatedWords(
+              ['Precision', 'in', 'Every', 'Filing'],
+              0
+            )}
+            <br />
+            {renderAnimatedWords(
+              ['Clarity', 'in', 'Every', 'Design.'],
+              0.6
+            )}
+          </h1>
+          <p className="hero-description">
+            Your cases deserve more than routine paperwork. They deserve strategy and accuracy. At LexVu, we take care of the details that protect your clients and free up your time. Our team is trained in filings, trial preparation, managing clients, docket management and patent support. We don't just follow procedure; we raise the standard every time.
+          </p>
+          <div className="hero-actions">
+            <button
+              className="hero-contact-btn"
+              onClick={() => router.push('/contact')}
+            >
+              Get In Touch
+            </button>
+            <Link href="/services" className="hero-services-link">
+              Our Services
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+      <AboutSection />
+      <OurSection />
+      {/* <BlogSection /> */}
+      <TestimonialSection />
+      <FAQSection />
+      <FotterSection />
+      <FloatingCallButton />
     </div>
   );
 }

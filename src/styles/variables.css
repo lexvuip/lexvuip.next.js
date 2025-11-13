@@ -1,0 +1,16 @@
+:root {
+	--color-maroon: #6b353f;
+	--color-maroon-dark: #8a5a66;
+	--color-light-pink: #fbeff3;
+	--color-pink-divider: #e2cfd2;
+	--color-white: #fff;
+	--color-bg-light: #faf8f8;
+	--color-dark-text: #231f20;
+	--color-muted-text: #444;
+	--color-link: #e2cfd2;
+
+	--font-serif: Lato, sans-serif;
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+}

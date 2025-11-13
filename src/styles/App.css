@@ -1,0 +1,231 @@
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Hero Section styles */
+.hero-section {
+	width: 100%;
+	background-image: url('/assets/stockimages/homepage.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 0 0 0 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.hero-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: 80%;
+	margin: auto auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.hero-title {
+	font-family: var(--font-serif);
+	font-size: 5.81rem;
+	font-weight: bold;
+	color: var(--color-white);
+	margin-bottom: 2.5rem;
+	margin-top: 4vw;
+	line-height: 1.1;
+	text-align: left;
+}
+
+.hero-description {
+	font-family: var(--font-serif);
+	font-size: 1.25rem;
+	color: var(--color-white);
+	margin-bottom: 4rem;
+	max-width: 900px;
+	text-align: left;
+	line-height: 1.2;
+}
+
+.hero-actions {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.hero-contact-btn {
+	background: var(--color-light-pink);
+	color: var(--color-maroon);
+	font-size: 1.25rem;
+	font-family: var(--font-serif);
+	border: none;
+	border-radius: 2px;
+	padding: 1rem 3.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	box-shadow: none;
+}
+
+.hero-contact-btn:hover {
+	background: var(--color-link);
+	color: var(--color-maroon);
+}
+
+.hero-services-link {
+	color: var(--color-white);
+	font-family: var(--font-serif);
+	font-size: 1.25rem;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: auto;
+	transition: color 0.2s;
+}
+
+.hero-services-link:hover {
+	color: var(--color-maroon);
+}
+
+/* Mobile styles for hero section */
+@media screen and (max-width: 768px) {
+	.hero-section {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-content {
+		max-width: 90%;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+		padding-top: 80px;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		text-align: left;
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-description {
+		font-size: 1.1rem;
+		text-align: left;
+		margin-bottom: 2.5rem;
+		max-width: 100%;
+	}
+
+	.hero-actions {
+		flex-direction: column;
+		gap: 1.5rem;
+		width: 100%;
+		align-items: center;
+	}
+
+	.hero-contact-btn {
+		width: 50%;
+		padding: 1rem 0;
+		font-size: 1.1rem;
+		order: 1;
+		align-items: left;
+	}
+
+	.hero-services-link {
+		margin-left: 0;
+		font-size: 1.1rem;
+		order: 2;
+		text-decoration: underline;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.hero-title {
+		font-size: 2.5rem;
+	}
+
+	.hero-description {
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+
+	.hero-contact-btn {
+		align-items: left;
+		width: 60%;
+		font-size: 1rem;
+	}
+}
+
+/* Word-by-word premium animation for hero title */
+.hero-title span {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(30px);
+	background: var(--color-white);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: fadeUpWord 0.4s ease forwards, shine 3s linear infinite;
+}
+
+/* Description fade in after title */
+.hero-description {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeUp 1s ease-out forwards;
+	animation-delay: 0.5s;
+}
+
+/* Buttons and links appear in sequence */
+.hero-contact-btn,
+.hero-services-link {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeUp 0.8s ease-out forwards;
+}
+
+.hero-contact-btn {
+	animation-delay: 1s;
+}
+
+.hero-services-link {
+	animation-delay: 1s;
+}
+
+/* Keyframes */
+@keyframes fadeUpWord {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes shine {
+	0% {
+		background-position: 200% center;
+	}
+	100% {
+		background-position: -200% center;
+	}
+}

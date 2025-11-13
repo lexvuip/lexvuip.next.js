@@ -1,0 +1,205 @@
+@import './variables.css';
+
+.blog-section {
+	width: 100%;
+	background: var(--color-white);
+	display: flex;
+	justify-content: center;
+	padding: 4vw 0 6vw 0;
+	border-top: 1.5px solid var(--color-pink-divider);
+}
+
+.blog-container {
+	width: 100%;
+	max-width: 80%;
+}
+
+.blog-header {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.blog-badge {
+	grid-column: 1 / -1;
+	font-family: var(--font-serif);
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--color-maroon);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	opacity: 0;
+	transform: translateY(16px);
+}
+
+.blog-title {
+	font-family: var(--font-serif);
+	font-size: 3rem;
+	color: var(--color-dark-text);
+	margin: 0.3rem 0 0.5rem 0;
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.blog-title .italic {
+	font-style: italic;
+	font-weight: 400;
+}
+
+.blog-all-btn {
+	justify-self: end;
+	background: var(--color-maroon);
+	color: var(--color-white);
+	text-decoration: none;
+	font-family: var(--font-serif);
+	font-size: 0.95rem;
+	padding: 0.7rem 1.1rem;
+	border-radius: 3px;
+}
+
+.blog-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+}
+
+.blog-card {
+	background: var(--color-white);
+	border: 1px solid var(--color-pink-divider);
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+.blog-image-wrapper {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	position: relative;
+}
+
+.blog-image {
+	width: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.35s ease;
+	transform-origin: center center;
+	will-change: transform;
+}
+
+.blog-card-body {
+	padding: 1.1rem 1.5rem 1.25rem 1.5rem;
+	border-top: 1px solid #f2e6ea;
+}
+
+/* Hover zoom effect without layout shift */
+.blog-card:hover .blog-image {
+	transform: scale(1.05);
+}
+
+.blog-category {
+	display: inline-block;
+	font-size: 0.68rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	font-weight: 600;
+	color: var(--color-dark-text);
+	background: #fbf0f3;
+	border: 1px solid var(--color-pink-divider);
+	padding: 0.22rem 0.45rem;
+	border-radius: 3px;
+	margin-bottom: 0.8rem;
+}
+
+.blog-card-title {
+	font-family: var(--font-serif);
+	font-size: 1.3rem;
+	color: var(--color-dark-text);
+	margin: 0.3rem 0 0.6rem 0;
+	line-height: 1.25;
+}
+.blog-card-title a {
+	color: inherit;
+	text-decoration: none;
+}
+.blog-card-title a:hover {
+	color: var(--color-maroon);
+}
+
+.blog-date {
+	font-family: var(--font-serif);
+	font-size: 0.9rem;
+	color: var(--color-muted-text);
+}
+
+/* Reveal on scroll like services */
+/* Triggered by IntersectionObserver */
+.blog-badge.in-view {
+	animation: fadeUp 0.8s ease-out forwards;
+	animation-delay: 0.1s;
+}
+.blog-title.in-view {
+	animation: fadeUp 1s ease-out forwards;
+	animation-delay: 0.3s;
+}
+
+@media (max-width: 1024px) {
+	.blog-container {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 768px) {
+	.blog-section {
+		padding: 2rem 1rem 2rem 1rem;
+	}
+	.blog-container {
+		max-width: 100%;
+		padding: 0 0.5rem;
+	}
+	.blog-header {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		margin-bottom: 2.5rem;
+	}
+	.blog-all-btn {
+		justify-self: start;
+		width: 40%;
+		text-align: left;
+		font-size: 1.2rem;
+		padding: 1.1rem;
+		margin-top: 0.5rem;
+	}
+	.blog-title {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+	.blog-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.blog-card {
+		border-radius: 0;
+		border-left: 1px solid var(--color-pink-divider);
+		border-right: 1px solid var(--color-pink-divider);
+		margin-bottom: 2rem;
+	}
+	.blog-image-wrapper {
+		aspect-ratio: 1/1;
+		min-height: 220px;
+	}
+	.blog-image {
+		/* height: 60%; */
+		object-fit: cover;
+	}
+	.blog-card-body {
+		padding: 1.2rem 1rem 1.5rem 1rem;
+	}
+	.blog-card-title {
+		font-size: 1.1rem;
+	}
+}
