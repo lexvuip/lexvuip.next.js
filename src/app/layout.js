@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import { Icons } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "LexVuIP - Legal Solutions",
-  description: "Professional legal solutions including IP services, paralegal support, and custom legal workflows",
+  title: "Lexvuip",
+  description: "We offer IP Solutions, Patent Design, and Paralegal services for individuals and businesses. Trusted experts in your region.",
+  keywords: ["IP Solutions", "Patent Design", "Paralegal Services", "Legal Solutions", "Trusted Experts", "lexvuip", "Intellectual Property", "Patent", "Paralegal"],
+
 };
 
 export default function RootLayout({ children }) {
