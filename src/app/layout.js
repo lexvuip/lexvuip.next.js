@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Lexvuip",
+  title: "LexVu - Precision in Every Filing, Clarity in Every Design",
   description: "We offer IP Solutions, Patent Design, and Paralegal services for individuals and businesses. Trusted experts in your region.",
   keywords: ["IP Solutions", "Patent Design", "Paralegal Services", "Legal Solutions", "Trusted Experts", "lexvuip", "Intellectual Property", "Patent", "Paralegal"],
 

@@ -1,96 +1,13 @@
-'use client';
 import React from 'react';
-import { useEffect } from 'react';
 import '../styles/ServicesPage.css';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
+import AboutContactButton from './AboutContactButton';
+import ServicesHeroParallax from './ServicesHeroParallax';
+import Image from 'next/image';
 
-function ServicesPage() {
-	const services = [
-		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Criminal',
-			subtitle: 'Defense',
-			desc: 'Our attorneys bring decades of criminal defense experience to defend your rights, challenge evidence, and build a strategic case',
-			bullets: [
-				'950+ clients defended',
-				'Felonies, DUIs, white-collar',
-				'Strong, rights-focused defense',
-			],
-		},
-		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Immigration',
-			subtitle: 'Law',
-			desc: 'From family-based petitions and work visas to green cards and naturalization, we guide individuals and businesses through every step, helping you achieve lawful status and long-term security.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
-		},
-		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Immigration',
-			subtitle: 'Law',
-			desc: 'From family-based petitions and work visas to green cards and naturalization, we guide individuals and businesses through every step, helping you achieve lawful status and long-term security.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
-		},
-	];
-	useEffect(() => {
-		const container = document.querySelector('.services-hero-image-row');
-		const image = document.querySelector('.services-hero-image');
-		if (!container || !image) return;
-
-		const prefersReduced = window.matchMedia(
-			'(prefers-reduced-motion: reduce)'
-		).matches;
-		if (prefersReduced) return;
-
-		let rafId = null;
-
-		const updateParallax = () => {
-			const rect = container.getBoundingClientRect();
-			const viewportHeight =
-				window.innerHeight || document.documentElement.clientHeight;
-
-			// Compute progress of container within viewport [0,1]
-			const start = viewportHeight; // when top is at bottom of viewport
-			const end = -rect.height; // when bottom is above viewport
-			const progress = Math.min(
-				1,
-				Math.max(0, (start - rect.top) / (start - end))
-			);
-
-			// Map progress to translateY range (subtle movement)
-			const maxShift = 30; // px; adjust for more/less parallax
-			const translateY = (progress - 0.5) * 2 * maxShift; // range [-maxShift, +maxShift]
-			image.style.setProperty('--parallax-y', `${translateY.toFixed(2)}px`);
-			rafId = null;
-		};
-
-		const onScroll = () => {
-			if (rafId) return;
-			rafId = requestAnimationFrame(updateParallax);
-		};
-
-		window.addEventListener('scroll', onScroll, { passive: true });
-		window.addEventListener('resize', onScroll);
-		// Initial position
-		onScroll();
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onScroll);
-			if (rafId) cancelAnimationFrame(rafId);
-		};
-	}, []);
-
+export default function ServicesPage() {
 	return (
 		<section className="services-hero-section">
 			<div className="services-hero-content">
@@ -105,17 +22,10 @@ function ServicesPage() {
 					compliant IP support, strengthening patent and trademark filings, and
 					helping shape the future of innovation protection.
 				</p>
-				<button className="services-hero-btn">
-					Get In Touch <span className="arrow">→</span>
-				</button>
+				<AboutContactButton className="services-hero-btn" text={<>Get In Touch <span className="arrow">→</span></>} />
 			</div>
-			<div className="services-hero-image-row">
-				<img
-					src="/assets/stockimages/lawer.jpg"
-					alt="Law building"
-					className="services-hero-image"
-				/>
-			</div>
+			
+            <ServicesHeroParallax />
 
 			{/* New Section: Stats and Description */}
 			<section className="services-stats-section">
@@ -128,9 +38,7 @@ function ServicesPage() {
 							Delivering IP Excellence for Over Two{' '}
 							<span className="italic">Decades</span>
 						</h2>
-						<button className="services-hero-btn stats-btn">
-							Get In Touch <span className="arrow">→</span>
-						</button>
+						<AboutContactButton className="services-hero-btn stats-btn" text={<>Get In Touch <span className="arrow">→</span></>} />
 					</div>
 					<div className="services-stats-right">
 						<p>
@@ -164,11 +72,15 @@ function ServicesPage() {
 					</h3>
 					<div className="legal-services-cards-row services-leadership-style">
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/caseManagement.jpg"
-							alt="case Management"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/caseManagement.jpg"
+								alt="case Management"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Case Management</h4>
 								<p className="legal-service-desc">
@@ -178,11 +90,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/docketingManagement.jpg"
-							alt="Docketing Management"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/docketingManagement.jpg"
+								alt="Docketing Management"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Docketing Management</h4>
 								<p className="legal-service-desc">
@@ -192,11 +108,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/eFillingServices.jpg"
-							alt="E-Filing Services"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/eFillingServices.jpg"
+								alt="E-Filing Services"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">E-Filing Services</h4>
 								<p className="legal-service-desc">
@@ -206,11 +126,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/contactManagementServices.jpg"
-							alt="Contact Management Services"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/contactManagementServices.jpg"
+								alt="Contact Management Services"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">
 									Contact Management Services
@@ -221,11 +145,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/trailPreparation.jpg"
-							alt="Trial Preparation"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/trailPreparation.jpg"
+								alt="Trial Preparation"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Trial Preparation</h4>
 								<p className="legal-service-desc">
@@ -234,24 +162,32 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/lawer.jpg"
-							alt="Deposition Coordination"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/lawer.jpg"
+								alt="Deposition Coordination"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Deposition Coordination</h4>
 								<p className="legal-service-desc">
-									Scheduling, logistics, and support for depositions.
+									Scheduling, logistics, and support for dpositions.
 								</p>
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/complianceSupport.jpg"
-							alt="Compliance Support"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/complianceSupport.jpg"
+								alt="Compliance Support"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Compliance Support</h4>
 								<p className="legal-service-desc">
@@ -267,11 +203,15 @@ function ServicesPage() {
 					</h3>
 					<div className="legal-services-cards-row services-leadership-style">
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/utilitypatentdrawing.jpg"
-							alt="Utility Patent Drawings"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/utilitypatentdrawing.jpg"
+								alt="Utility Patent Drawings"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Utility Patent Drawings</h4>
 								<p className="legal-service-desc">
@@ -281,11 +221,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/desingpatentdrawing.jpg"
-							alt="Design Patent Drawings"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/desingpatentdrawing.jpg"
+								alt="Design Patent Drawings"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Design Patent Drawings</h4>
 								<p className="legal-service-desc">
@@ -294,11 +238,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/trademarkdesign.jpg"
-							alt="Trademark Support"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/trademarkdesign.jpg"
+								alt="Trademark Support"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Trademark Support</h4>
 								<p className="legal-service-desc">
@@ -314,11 +262,15 @@ function ServicesPage() {
 					</h3>
 					<div className="legal-services-cards-row services-leadership-style">
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/desingpatentdrawing.jpg"
-							alt="Custom Solutions"
-							className="legal-service-image"
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/desingpatentdrawing.jpg"
+								alt="Custom Solutions"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
 							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">
 									Tailored IP & Paralegal Support
@@ -329,11 +281,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/utilitypatentdrawing.jpg"
-							alt="Workflow Automation"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/utilitypatentdrawing.jpg"
+								alt="Workflow Automation"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">Workflow Automation</h4>
 								<p className="legal-service-desc">
@@ -342,11 +298,15 @@ function ServicesPage() {
 							</div>
 						</div>
 						<div className="legal-service-card">
-						<img
-							src="/assets/stockimages/customworkflow.jpg"
-							alt="Special Projects & Consulting"
-							className="legal-service-image"
-						/>
+						<div className="legal-service-image-container">
+							<Image
+								src="/assets/stockimages/customworkflow.jpg"
+								alt="Special Projects & Consulting"
+								fill
+								className="legal-service-image"
+								style={{ objectFit: 'cover' }}
+							/>
+						</div>
 							<div className="legal-service-content">
 								<h4 className="legal-service-title">
 									Special Projects & Consulting
@@ -365,5 +325,3 @@ function ServicesPage() {
 		</section>
 	);
 }
-
-export default ServicesPage;
