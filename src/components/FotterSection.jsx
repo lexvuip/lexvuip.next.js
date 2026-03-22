@@ -8,7 +8,7 @@ function FotterSection() {
 				<div className="footer-main-row">
 					<div className="footer-col footer-brand">
 						<div className="footer-logo">
-							{/* <img src="/logo.png" alt="LexVuIP" className="footer-logo-img" /> */}
+							<img src="/logo.png" alt="LexVuIP Logo" className="footer-logo-img" />
 							<span>LexVuIP</span>
 						</div>
 						<div className="footer-tagline">
