@@ -23,7 +23,7 @@ export default function AboutPage() {
               />
             </div>
             <h3>Our Mission</h3>
-            <p>We aim to <b>support</b> attorneys with <b>reliable</b>, detail-oriented <b>help</b> in both intellectual property and litigation. <b>We</b> ensure every filing, drawing, and deadline is managed with <b>care</b>.</p>
+            <p>We aim to support attorneys with reliable, detail-oriented help in both intellectual property and litigation. We ensure every filing, drawing, and deadline is managed with care.</p>
           </div>
 
           <div className="card">
@@ -36,7 +36,7 @@ export default function AboutPage() {
               />
             </div>
             <h3>Our Promise</h3>
-            <p>We <b>relieve the pressure</b> on your desk. Whether you need design patent figures or trial prep documents, our work is <b>accurate</b>, <b>compliant</b>, and <b>delivered on time every time</b> .</p>
+            <p>We relieve the pressure on your desk. Whether you need design patent figures or trial prep documents, our work is accurate, compliant, and delivered on time every time.</p>
           </div>
 
           <div className="card">
@@ -49,7 +49,7 @@ export default function AboutPage() {
               />
             </div>
             <h3>Our Purpose</h3>
-            <p>To <b>strengthen</b> the work of attorneys by removing <b>bottlenecks</b>, protecting innovation, and building lasting <b>partnerships</b> rooted in <b>trust</b>, <b>clarity</b>, and <b>results</b>.</p>
+            <p>To strengthen the work of attorneys by removing bottlenecks, protecting innovation, and building lasting partnerships rooted in trust, clarity, and results.</p>
           </div>
         </div>
       </section>
