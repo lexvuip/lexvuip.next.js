@@ -105,9 +105,8 @@ function NavBar() {
 	return (
 		<>
 			<nav
-				className={`navbar ${
-					isHomePage && !scrolled ? 'transparent' : 'scrolled'
-				}`}
+				className={`navbar ${isHomePage && !scrolled ? 'transparent' : 'scrolled'
+					}`}
 			>
 				<Link href="/" className="navbar-logo">
 					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
@@ -174,6 +173,9 @@ function NavBar() {
 						<a href="/#faq">FAQ</a>
 					</li>
 					<li>
+						<Link href="/security">Security</Link>
+					</li>
+					<li>
 						<Link href="/contact">Contact Us</Link>
 					</li>
 				</ul>
@@ -199,20 +201,25 @@ function NavBar() {
 					<ul className="mobile-nav-links">
 						<li>
 							<Link href="/" onClick={closeMobileMenu}>
-							Home
-						</Link>
+								Home
+							</Link>
 						</li>
 						<li>
 							<Link href="/about" onClick={closeMobileMenu}>
-							About
-						</Link>
+								About
+							</Link>
+						</li>
+						<li>
+							<Link href="/security" onClick={closeMobileMenu}>
+								Security
+							</Link>
 						</li>
 						<li className="mobile-services-item">
 							<div className="mobile-services-toggle">
 								<Link href="/services" onClick={closeMobileMenu} className="mobile-services-title">
 									<span>Services</span>
 								</Link>
-								<button 
+								<button
 									className="mobile-arrow-btn"
 									onClick={toggleMobileServices}
 								>
@@ -226,7 +233,7 @@ function NavBar() {
 										<Link href="/service/ipsolutions" onClick={closeMobileMenu} className="mobile-services-section-title">
 											<span>IP Solutions</span>
 										</Link>
-										<button 
+										<button
 											className="mobile-sub-arrow-btn"
 											onClick={toggleMobileIpSolutions}
 										>
@@ -248,7 +255,7 @@ function NavBar() {
 										<Link href="/service/paralegalsolutions" onClick={closeMobileMenu} className="mobile-services-section-title">
 											<span>Paralegal Solutions</span>
 										</Link>
-										<button 
+										<button
 											className="mobile-sub-arrow-btn"
 											onClick={toggleMobileParalegalSolutions}
 										>
@@ -274,7 +281,7 @@ function NavBar() {
 										<Link href="/service/customsolutions" onClick={closeMobileMenu} className="mobile-services-section-title">
 											<span>Custom Solutions</span>
 										</Link>
-										<button 
+										<button
 											className="mobile-sub-arrow-btn"
 											onClick={toggleMobileCustomSolutions}
 										>
@@ -294,8 +301,8 @@ function NavBar() {
 						</li>
 						<li>
 							<Link href="/contact" onClick={closeMobileMenu}>
-							Contact Us
-						</Link>
+								Contact Us
+							</Link>
 						</li>
 					</ul>
 					<div className="mobile-nav-contact">
