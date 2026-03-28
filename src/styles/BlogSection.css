@@ -47,7 +47,8 @@
 
 .blog-title .italic {
 	font-style: italic;
-	font-weight: 400;
+	font-weight: 500;
+	color: var(--color-gold-dark);
 }
 
 .blog-all-btn {

@@ -407,7 +407,7 @@
 .italic-serif {
 	font-style: italic;
 	font-weight: 500;
-	color: var(--color-gold-light);
+	color: var(--color-gold-dark);
 }
 
 /* --- CTA Section --- */
