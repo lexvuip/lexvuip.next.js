@@ -3,7 +3,10 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 
-export default function ServicesHeroParallax() {
+export default function ServicesHeroParallax({ 
+	imageSrc = "/assets/stockimages/lawer.jpg", 
+	alt = "Legal Services" 
+}) {
 	useEffect(() => {
 		const container = document.querySelector('.services-hero-image-row');
 		const image = document.querySelector('.services-hero-image');
@@ -54,8 +57,8 @@ export default function ServicesHeroParallax() {
 		<div className="services-hero-image-row">
             <div className="services-hero-image-container">
                 <Image
-                    src="/assets/stockimages/lawer.jpg"
-                    alt="Law building"
+                    src={imageSrc}
+                    alt={alt}
                     fill
                     priority
                     className="services-hero-image"
