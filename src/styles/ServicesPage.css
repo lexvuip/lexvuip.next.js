@@ -171,25 +171,264 @@
 
 .impact-visual-column {
 	flex: 0 0 50%;
+	opacity: 0;
 }
 
-.impact-image-wrapper {
+.about-reveal-wrapper.left-revealed .impact-visual-column {
+	animation: slideUpReveal 1.2s var(--transition-elegant) forwards;
+}
+
+.impact-visual-canvas {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 16/10;
+	aspect-ratio: 1/1;
+	background: transparent; /* Seamless blend */
 	border-radius: var(--radius-sm);
 	overflow: hidden;
-	box-shadow: var(--shadow-xl);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* Removed border and shadow for 'blend-in' effect */
 }
 
-.impact-overlay {
+/* Technical Grid Background - Fading out at edges */
+.impact-grid-overlay {
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(135deg, rgba(10, 22, 40, 0.4) 0%, transparent 100%);
+	background-image: 
+		linear-gradient(rgba(201, 162, 39, 0.25) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(201, 162, 39, 0.25) 1px, transparent 1px);
+	background-size: 50px 50px;
+	opacity: 0.7;
+	/* Create a sophisticated fade-out effect */
+	mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+	-webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+}
+
+/* Animated Patent Blueprint - Darker gold for light background */
+.blueprint-visual {
+	position: absolute;
+	width: 85%;
+	height: 85%;
+	opacity: 0.25;
+	pointer-events: none;
+}
+
+.blueprint-svg {
+	width: 100%;
+	height: 100%;
+	stroke: var(--color-gold-dark); /* Deeper gold for visibility */
+	stroke-width: 0.75;
+	fill: none;
+}
+
+/* Restoring Drawing Animation */
+.blueprint-circle, 
+.blueprint-rect, 
+.blueprint-line, 
+.blueprint-line-diagonal {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: drawBlueprint 5s var(--transition-elegant) forwards;
+}
+
+@keyframes drawBlueprint {
+	to { stroke-dashoffset: 0; }
+}
+
+/* Optional: Subtle rotation to make it feel 'alive' */
+.blueprint-visual {
+	position: absolute;
+	width: 85%;
+	height: 85%;
+	opacity: 0.25;
+	pointer-events: none;
+	animation: slowRotate 60s linear infinite;
+}
+
+@keyframes slowRotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Stat Cards - Reversed Contrast Anchor */
+.stat-card-primary {
+	position: relative;
+	z-index: 10;
+	width: 65%;
+	will-change: transform;
+	transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card-glass {
+	background: var(--color-navy-deep); /* Solid anchor on light background */
+	border: 1px solid var(--color-gold);
+	padding: 2.5rem;
+	border-radius: var(--radius-sm);
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 30px 60px rgba(10, 22, 40, 0.25);
+	transition: box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-header {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+.gold-dot {
+	width: 6px;
+	height: 6px;
+	background: var(--color-gold);
+	border-radius: 50%;
+	box-shadow: 0 0 10px var(--color-gold);
+}
+
+.stat-label-tiny {
+	font-family: var(--font-sans);
+	font-size: 0.65rem;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: var(--color-gold-light);
+}
+
+.stat-value-container {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.stat-value {
+	font-family: var(--font-serif);
+	font-size: 4rem;
+	color: var(--color-white);
+	line-height: 1;
+}
+
+.stat-unit {
+	font-family: var(--font-serif);
+	font-size: 1.25rem;
+	color: var(--color-gold);
+	font-style: italic;
+}
+
+.stat-description-tiny {
+	font-family: var(--font-sans);
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.7); /* Lighter text on dark card */
+	line-height: 1.4;
+}
+
+/* Secondary Floating Cards - Matching the new theme */
+.stat-card-secondary {
+	position: absolute;
+	z-index: 15;
+	will-change: transform;
+	transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card-secondary.top-right {
+	top: 15%;
+	right: 10%;
+}
+
+.stat-card-secondary.bottom-left {
+	bottom: 15%;
+	left: 10%;
+}
+
+.stat-card-mini {
+	background: var(--color-white); /* White cards on ivory background */
+	border: 1px solid var(--color-gold);
+	padding: 1.2rem 1.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: var(--shadow-md);
+}
+
+.mini-value {
+	font-family: var(--font-serif);
+	font-size: 1.5rem;
+	color: var(--color-navy-deep); /* Dark text on white mini card */
+}
+
+.mini-label {
+	font-family: var(--font-sans);
+	font-size: 0.65rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-gold-dark);
+	margin-top: 0.2rem;
+}
+
+/* Glow Effect - Subtle warmth instead of light glow */
+.impact-glow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	height: 90%;
+	background: radial-gradient(circle, rgba(201, 162, 39, 0.05) 0%, transparent 70%);
+	pointer-events: none;
+}
+
+/* Hover Effects */
+.impact-visual-canvas:hover .stat-card-primary {
+	transform: scale(1.03) translate3d(0, -10px, 0);
+}
+
+.impact-visual-canvas:hover .stat-card-glass {
+	box-shadow: 0 45px 90px rgba(10, 22, 40, 0.25);
+}
+
+.impact-visual-canvas:hover .stat-card-secondary.top-right {
+	transform: translate3d(15px, -15px, 0);
+}
+
+.impact-visual-canvas:hover .stat-card-secondary.bottom-left {
+	transform: translate3d(-15px, 15px, 0);
+}
+
+.impact-visual-canvas:hover .blueprint-visual {
+	opacity: 0.35;
 }
 
 .impact-content-column {
 	flex: 0 0 40%;
+	opacity: 0;
+}
+
+.about-reveal-wrapper.content-revealed .impact-content-column {
+	animation: fadeInDelayed 1.2s var(--transition-elegant) forwards;
+	animation-delay: 0.4s;
+}
+
+@keyframes slideUpReveal {
+	from {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDelayed {
+	from {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .impact-title {
