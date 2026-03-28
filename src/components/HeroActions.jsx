@@ -12,10 +12,10 @@ export default function HeroActions() {
         className="hero-contact-btn"
         onClick={() => router.push('/contact')}
       >
-        Get In Touch
+        <span>Get In Touch</span>
       </button>
       <Link href="/services" className="hero-services-link">
-        Our Services
+        Explore Services
       </Link>
     </div>
   );

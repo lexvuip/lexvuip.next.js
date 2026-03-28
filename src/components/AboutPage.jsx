@@ -4,82 +4,139 @@ import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 import FotterSection from './FotterSection';
 import AboutContactButton from './AboutContactButton';
+import AboutReveal from './AboutReveal';
 import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div>
-      <section className="section-wrapper">
-        <h2>At LexVuIP, We Provide Precise Support, From Paralegal Services to Patent Drawings, So Attorneys Can Focus on Advocacy Instead of Administration.</h2>
-        
-        <div className="cards-container">
-          <div className="card">
-            <div className="icon-circle">
-              <Image 
-                src="/assets/stockimages/ourmission.jpg" 
-                alt="Mission Icon"
-                width={80}
-                height={80}
-              />
+    <div className="about-page-luxury">
+      {/* Elevated Hero/Principles Section */}
+      <section className="about-principles-section">
+        <AboutReveal>
+          <div className="principles-header">
+            <div className="luxury-label-group">
+              <span className="gold-line"></span>
+              <span className="luxury-label">CORE PHILOSOPHY</span>
             </div>
-            <h3>Our Mission</h3>
-            <p>We aim to <b>support</b> attorneys with <b>reliable</b>, detail-oriented <b>help</b> in both intellectual property and litigation. <b>We</b> ensure every filing, drawing, and deadline is managed with <b>care</b>.</p>
+            <h2 className="principles-main-title">
+              Precise Support. <span className="italic-serif">Seamless</span> Advocacy.
+            </h2>
+            <p className="principles-subtitle">
+              At LexVuIP, we provide the technical foundation so attorneys can focus on what matters most: the art of advocacy.
+            </p>
           </div>
+          
+          <div className="principles-grid">
+            <div className="principle-item">
+              <div className="principle-visual">
+                <div className="principle-image-wrapper">
+                  <Image 
+                    src="/assets/stockimages/ourmission.jpg" 
+                    alt="Mission"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div className="principle-number">01</div>
+                </div>
+              </div>
+              <div className="principle-content">
+                <h3>Our Mission</h3>
+                <p>We aim to support attorneys with reliable, detail-oriented help in both intellectual property and litigation. We ensure every filing, drawing, and deadline is managed with care.</p>
+              </div>
+            </div>
 
-          <div className="card">
-            <div className="icon-circle">
-              <Image 
-                src="/assets/stockimages/ourpromise.jpg" 
-                alt="Promise Icon"
-                width={80}
-                height={80}
-              />
+            <div className="principle-item">
+              <div className="principle-visual">
+                <div className="principle-image-wrapper">
+                  <Image 
+                    src="/assets/stockimages/ourpromise.jpg" 
+                    alt="Promise"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div className="principle-number">02</div>
+                </div>
+              </div>
+              <div className="principle-content">
+                <h3>Our Promise</h3>
+                <p>We relieve the pressure on your desk. Whether you need design patent figures or trial prep documents, our work is accurate, compliant, and delivered on time every time.</p>
+              </div>
             </div>
-            <h3>Our Promise</h3>
-            <p>We <b>relieve the pressure</b> on your desk. Whether you need design patent figures or trial prep documents, our work is <b>accurate</b>, <b>compliant</b>, and <b>delivered on time every time</b> .</p>
-          </div>
 
-          <div className="card">
-            <div className="icon-circle">
-              <Image 
-                src="/assets/stockimages/ourpurpose.jpg" 
-                alt="Purpose Icon"
-                width={80}
-                height={80}
-              />
+            <div className="principle-item">
+              <div className="principle-visual">
+                <div className="principle-image-wrapper">
+                  <Image 
+                    src="/assets/stockimages/ourpurpose.jpg" 
+                    alt="Purpose"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div className="principle-number">03</div>
+                </div>
+              </div>
+              <div className="principle-content">
+                <h3>Our Purpose</h3>
+                <p>To strengthen the work of attorneys by removing bottlenecks, protecting innovation, and building lasting partnerships rooted in trust, clarity, and results.</p>
+              </div>
             </div>
-            <h3>Our Purpose</h3>
-            <p>To <b>strengthen</b> the work of attorneys by removing <b>bottlenecks</b>, protecting innovation, and building lasting <b>partnerships</b> rooted in <b>trust</b>, <b>clarity</b>, and <b>results</b>.</p>
           </div>
-        </div>
+        </AboutReveal>
       </section>
 
-      <section className="our-journey-section">
-        <div className="our-journey-left-column">
-          <div className="our-journey-header">
-            <div className="our-journey-arrow-container">
-              <span className="our-journey-arrow"></span>
-              <span className="our-journey-arrow"></span>
-              <span className="our-journey-arrow"></span>
+      {/* Cinematic Journey Section */}
+      <section className="luxury-journey-section">
+        <AboutReveal>
+          <div className="journey-composition">
+            <div className="journey-visual-column about-left-column">
+              <div className="journey-image-stack">
+                <div className="main-journey-image">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
+                    alt="Law library"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="accent-journey-image">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+                    alt="Drafting"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              </div>
             </div>
-            <h2 className="our-journey-title-small">OUR JOURNEY</h2>
+
+            <div className="journey-text-column about-content">
+              <div className="journey-header">
+                <div className="luxury-label-group">
+                  <span className="gold-line"></span>
+                  <span className="luxury-label">THE HERITAGE</span>
+                </div>
+                <h2 className="journey-title-large">
+                  From Full Legal Support to <span className="italic-serif">Patent Drawings</span> Built on <span className="italic-serif">Precision</span> Expanded Through <span className="italic-serif">Trust</span>
+                </h2>
+              </div>
+              
+              <div className="journey-description-body">
+                <p>
+                  What started over two decades ago as a patent illustration practice has evolved into a trusted partner for attorneys in both intellectual property and litigation support. Over the years, we have helped firms protect innovation with accurate utility and design patent drawings, trademarks, and global IP documentation. At the same time, our role has grown to include paralegal services, drafting pleadings, preparing filings, managing dockets, and supporting trial preparation.
+                </p>
+                <p>
+                  Our mission remains the same: to give attorneys the confidence that every detail, whether technical or procedural, is handled with accuracy and care.
+                </p>
+                
+                <div className="journey-cta">
+                  <AboutContactButton className="luxury-outline-btn" text="Talk to our Experts →" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="our-journey-right-column">
-          <h1 className="our-journey-title-large">
-            From Full Legal Support to <span className="our-journey-emphasis">Patent Drawings</span>
-            <br />
-            Built on <span className="our-journey-emphasis">Precision</span> Expanded Through<span className="our-journey-emphasis">Trust</span>
-          </h1>
-          <p className="our-journey-description">
-            What started over two decades ago as a patent illustration practice has evolved into a trusted partner for attorneys in both intellectual property and litigation support. Over the years, we have helped firms protect innovation with accurate utility and design patent drawings, trademarks, and global IP documentation. At the same time, our role has grown to include paralegal services, drafting pleadings, preparing filings, managing dockets, and supporting trial preparation.  
-          </p>
-          <p className="our-journey-description">
-            Our mission remains the same: to give attorneys the confidence that every detail, whether technical or procedural, is handled with accuracy and care. 
-          </p>
-          <AboutContactButton className="our-journey-btn" text="Talk to our Experts →" />
-        </div>
+        </AboutReveal>
       </section>
+
       <TestimonialSection />
       <FAQSection />
       <FotterSection />

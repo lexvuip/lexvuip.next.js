@@ -1,245 +1,206 @@
 'use client'
 import React from 'react';
 import '../styles/IpSolutionsPage.css';
-// Using public paths for images instead of imports
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
+import AboutStats from './AboutStats';
+import AboutReveal from './AboutReveal';
+import AboutContactButton from './AboutContactButton';
+import ServicesHeroParallax from './ServicesHeroParallax';
+import Image from 'next/image';
 import CountUp from 'react-countup';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 function IpSolutionsPage() {
-	const router = useRouter();
-	const [startCount, setStartCount] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			const section = document.querySelector('.about-stats-row');
-			const rect = section?.getBoundingClientRect();
-			if (rect?.top < window.innerHeight && !startCount) {
-				setStartCount(true);
-			}
-		};
-
-		// Call once after mount to trigger if already in view
-		handleScroll();
-
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [startCount]);
-
-	// Add parallax effect for hero image
-	useEffect(() => {
-		const container = document.querySelector('.services-hero-image-row');
-		const image = document.querySelector('.services-hero-image');
-		if (!container || !image) return;
-
-		const prefersReduced = window.matchMedia(
-			'(prefers-reduced-motion: reduce)'
-		).matches;
-		if (prefersReduced) return;
-
-		let rafId = null;
-
-		const updateParallax = () => {
-			const rect = container.getBoundingClientRect();
-			const viewportHeight =
-				window.innerHeight || document.documentElement.clientHeight;
-
-			// Compute progress of container within viewport [0,1]
-			const start = viewportHeight; // when top is at bottom of viewport
-			const end = -rect.height; // when bottom is above viewport
-			const progress = Math.min(
-				1,
-				Math.max(0, (start - rect.top) / (start - end))
-			);
-
-			// Map progress to translateY range (subtle movement)
-			const maxShift = 30; // px; adjust for more/less parallax
-			const translateY = (progress - 0.5) * 2 * maxShift; // range [-maxShift, +maxShift]
-			image.style.setProperty('--parallax-y', `${translateY.toFixed(2)}px`);
-			rafId = null;
-		};
-
-		const onScroll = () => {
-			if (rafId) return;
-			rafId = requestAnimationFrame(updateParallax);
-		};
-
-		window.addEventListener('scroll', onScroll, { passive: true });
-		window.addEventListener('resize', onScroll);
-		// Initial position
-		onScroll();
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onScroll);
-			if (rafId) cancelAnimationFrame(rafId);
-		};
-	}, []);
-
 	const services = [
 		{
 			image: '/assets/stockimages/utilitypatentdrawing.jpg',
-			title: 'Design',
-			subtitle: 'Patents',
-			headingOne: "Precision That Protects",
-			descOne: 'For design patents, every line and curve matters. We create drawings that highlight the unique visual qualities of your product while following USPTO and international standards closely.',
-			headingTwo: "Showcase Your Vision",
-			descTwo: "Our drawings do more than just document your design; they improve it. By making its distinct features clear, we help examiners recognize what sets your product apart.",
-			headingThree: "Tailored Service",
-			descThree: "No two designs are the same. That's why we adjust our approach to fit your specific needs, ensuring accuracy, originality, and protection for your intellectual property.",
-			bullets: [
-				'36,353+ Projects Completed Successfully'
-			],
+			title: 'Utility Patent Drawings',
+			desc: 'USPTO, EPO, and WIPO-compliant utility illustrations crafted with technical precision and engineering expertise.',
+			number: '01',
 		},
 		{
 			image: '/assets/stockimages/desingpatentdrawing.jpg',
-			title: 'Utility',
-			subtitle: 'Patents',
-			headingOne: "Technical Expertise You Can Trust",
-			descOne: 'Our team combines deep engineering knowledge with careful attention to detail. We create utility patent drawings that clearly show every function and component of your invention.',
-			headingTwo: "Clarity That Drives Approval",
-			descTwo: "From reference numbers to arrowheads, every element is crafted to meet USPTO, PCT, and WIPO requirements. This helps examiners understand your invention quickly and boosts your application's chance of success.",
-			headingThree: "Collaborative Process",
-			descThree: "We work closely with you at every step. We ensure the drawings meet technical standards and reflect the true nature of your innovation.",
-			bullets: [
-				'78,765+ Projects Completed Successfully'
-			],
+			title: 'Design Patent Drawings',
+			desc: 'Accurate, visually compelling design patent illustrations that highlight unique visual qualities and distinct features.',
+			number: '02',
 		},
 		{
 			image: '/assets/stockimages/trademarkdesign.jpg',
-			title: 'Trademark',
-			subtitle: 'Support',
-			headingOne: "Your Brand, Defined Clearly",
-			descOne: 'We create trademark drawings that capture the essence of your identity while meeting the exact requirements for legal protection.',
-			headingTwo: "Visual Strength, Legal Power",
-			descTwo: "Our work boosts brand recognition and acts as a protective layer. It prevents unauthorized use and ensures consistency across all applications.",
-			headingThree: "Aligned With Your Vision",
-			descThree: "We collaborate with you to reflect your brand's voice. We ensure that your trademark is not only compliant but also connects with your audience.",
-			bullets: [
-				'6,059+ Projects Completed Successfully'
-			],
+			title: 'Trademark Support',
+			desc: 'Comprehensive search, filing, and drawing services that capture the essence of your brand identity while meeting legal requirements.',
+			number: '03',
 		},
 	];
+
 	return (
-		<section className="services-hero-section">
-			<div className="services-hero-content">
-				<h1 className="services-hero-title">
-					Legal Services Built
-					<br />
-					Around Your <span className="italic">Needs</span>
-				</h1>
-				<p className="services-hero-description">
-					For over two decades, we've stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
-				</p>
-				<button className="services-hero-btn" onClick={() => router.push('/contact')}>
-					Get In Touch <span className="arrow">→</span>
-				</button>
-			</div>
-			<div className="services-hero-image-row">
-				<img
-				src="/assets/stockimages/ipSolutionsServiceHeroImage.jpg"
-				alt="Law building"
-				className="services-hero-image"
-			/>
-			</div>
+		<main className="services-page-luxury">
+			{/* Hero Section */}
+			<section className="services-hero-section">
+				<div className="services-hero-content">
+					<h1 className="services-hero-title">
+						IP Solutions Built
+						<br />
+						for <span className="italic">Innovation</span>
+					</h1>
+					<p className="services-hero-description">
+						For over 25 years, we’ve partnered with IP attorneys to provide 
+						precise, compliant patent and trademark drawings that strengthen 
+						filings and protect intellectual property worldwide.
+					</p>
+					<div className="services-hero-actions">
+						<AboutContactButton 
+							className="services-hero-btn" 
+							text={<>Get In Touch <span className="arrow">→</span></>} 
+						/>
+					</div>
+				</div>
+				<ServicesHeroParallax imageSrc="/assets/stockimages/homepage.jpg" alt="IP Solutions Hero" />
+			</section>
 
-			{/* New Section: Stats and Description */}
-			<section className="services-stats-section">
-				<div className="about-stats-row">
-					<div
-						className={`about-stat ${startCount ? 'revealed' : ''}`}
-						style={{ '--about-stat-delay': '0s' }}
-					>
-						<div className="about-stat-value">
-							{startCount && <CountUp end={25} duration={2.5} suffix="+ Yr" />}
+			{/* Impact Section */}
+			<section className="services-impact-section">
+				<AboutReveal>
+					<div className="impact-container">
+						<div className="impact-visual-column about-left-column">
+							<div className="impact-visual-canvas">
+								<div className="impact-grid-overlay"></div>
+								<div className="blueprint-visual">
+									<svg viewBox="0 0 400 400" className="blueprint-svg">
+										<circle cx="200" cy="200" r="140" className="blueprint-circle" />
+										<path d="M60,200 L340,200" className="blueprint-line" />
+										<path d="M200,60 L200,340" className="blueprint-line" />
+										<rect x="100" y="100" width="200" height="200" className="blueprint-rect" />
+										<path d="M100,100 L300,300" className="blueprint-line-diagonal" />
+										<path d="M300,100 L100,300" className="blueprint-line-diagonal" />
+										<circle cx="200" cy="60" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="200" cy="340" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="60" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="340" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+									</svg>
+								</div>
+								<div className="stat-card-primary">
+									<div className="stat-card-glass">
+										<div className="stat-header">
+											<span className="gold-dot"></span>
+											<span className="stat-label-tiny">PRECISION FIRST</span>
+										</div>
+										<div className="stat-value-container">
+											<CountUp end={99} duration={3} className="stat-value" suffix="%" />
+											<span className="stat-unit">ACCURACY</span>
+										</div>
+										<p className="stat-description-tiny">Flawless compliance for 25+ years</p>
+									</div>
+								</div>
+								<div className="stat-card-secondary top-right">
+									<div className="stat-card-mini">
+										<span className="mini-value">USPTO</span>
+										<span className="mini-label">Compliant</span>
+									</div>
+								</div>
+								<div className="stat-card-secondary bottom-left">
+									<div className="stat-card-mini">
+										<span className="mini-value">WIPO</span>
+										<span className="mini-label">Global</span>
+									</div>
+								</div>
+								<div className="impact-glow"></div>
+							</div>
 						</div>
-						<div className="about-stat-label">
-							Serving Individuals & Businesses
+						<div className="impact-content-column about-content">
+							<div className="luxury-label-group">
+								<span className="gold-line"></span>
+								<span className="luxury-label">PRECISION & EXPERTISE</span>
+							</div>
+							<h2 className="impact-title">
+								<span className="italic-serif">Protecting</span> Your 
+								Intellectual Property with Unmatched Detail.
+							</h2>
+							<div className="impact-description">
+								<p>
+									Every line and curve matters in IP law. Our team combines deep 
+									technical knowledge with careful attention to USPTO and 
+									international standards.
+								</p>
+								<p>
+									We ensure your drawings are not just compliant, but clear and 
+									effective, driving faster approvals and stronger protection 
+									for your innovations.
+								</p>
+							</div>
+							<div className="impact-cta">
+								<AboutContactButton className="luxury-outline-btn" text="Consult our Experts" />
+							</div>
 						</div>
 					</div>
-					<div
-						className={`about-stat ${startCount ? 'revealed' : ''}`}
-						style={{ '--about-stat-delay': '0.12s' }}
-					>
-						<div className="about-stat-value">
-							{startCount && <CountUp end={46} duration={2.5} suffix="+" />}
+				</AboutReveal>
+			</section>
+
+			{/* Stats Section */}
+			<section className="services-stats-luxury-section">
+				<AboutStats />
+			</section>
+
+			{/* Catalog Section */}
+			<section className="services-catalog-section">
+				<div className="catalog-container">
+					<div className="catalog-header">
+						<div className="luxury-label-group central">
+							<span className="gold-line"></span>
+							<span className="luxury-label">OUR IP SERVICES</span>
+							<span className="gold-line"></span>
 						</div>
-						<div className="about-stat-label">
-							Technical Fields & Sectors Covered
-						</div>
+						<h2 className="catalog-main-title">Specialized IP Support</h2>
 					</div>
 
-					<div
-						className={`about-stat ${startCount ? 'revealed' : ''}`}
-						style={{ '--about-stat-delay': '0.24s' }}
-					>
-						<div className="about-stat-value">
-							{startCount && <CountUp end={98} duration={2.0} suffix="%" />}
-						</div>
-						<div className="about-stat-label">Client Satisfaction Worldwide</div>
-					</div>
-
-					<div
-						className={`about-stat ${startCount ? 'revealed' : ''}`}
-						style={{ '--about-stat-delay': '0.36s' }}
-					>
-						<div className="about-stat-value">
-							{startCount && (
-								<CountUp end={121177} duration={1.5} separator="," suffix="+" />
-							)}
-						</div>
-						<div className="about-stat-label">
-							Combined Legal projects Successfully Delivered
+					<div className="service-category-group">
+						<div className="services-grid-luxury">
+							{services.map((service, idx) => (
+								<ServiceCard 
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.desc}
+									number={service.number}
+								/>
+							))}
 						</div>
 					</div>
 				</div>
-
-				{/* New Legal Services Section */}
-				<section className="legal-services-section">
-					<div className="legal-services-header">
-						<div className="legal-services-badge">OUR LEGAL SERVICES</div>
-						<h2 className="legal-services-title">
-							Trusted <span className="italic">expertise</span> across the legal
-							spectrum — tailored to your unique needs.
-						</h2>
-					</div>
-					<div className="separate-legal-services-cards-row">
-						{services.map((service, idx) => (
-							<div className="separate-legal-service-card" key={idx}>
-								<img
-									src={service.image}
-									alt={service.title + ' ' + service.subtitle}
-									className="separate-legal-service-image"
-								/>
-								<div className="separate-legal-service-content">
-									<h3 className="separate-legal-service-title">
-										<span className="italic">{service.title}</span>{' '}
-										{service.subtitle}
-									</h3>
-									<h4>{service.headingOne}</h4>
-									<p className="separate-legal-service-desc">{service.descOne}</p>
-									<h4>{service.headingTwo}</h4>
-									<p className="separate-legal-service-desc">{service.descTwo}</p>
-									<h4>{service.headingThree}</h4>
-									<p className="separate-legal-service-desc">{service.descThree}</p>
-									<ul className="separate-legal-service-list">
-										{service.bullets.map((b, i) => (
-											<li key={i}>{b}</li>
-										))}
-									</ul>
-								</div>
-							</div>
-						))}
-					</div>
-				</section>
 			</section>
+
 			<TestimonialSection />
 			<FAQSection />
 			<FotterSection />
-		</section>
+		</main>
+	);
+}
+
+function ServiceCard({ image, title, desc, number }) {
+	return (
+		<AboutReveal>
+			<div className="luxury-service-card">
+				<div className="card-visual">
+					<div className="card-image-wrapper">
+						<Image
+							src={image}
+							alt={title}
+							fill
+							style={{ objectFit: 'cover' }}
+						/>
+						<div className="card-overlay"></div>
+						<span className="card-number">{number}</span>
+					</div>
+				</div>
+				<div className="card-info">
+					<h4 className="card-title">{title}</h4>
+					<p className="card-description">{desc}</p>
+					<div className="card-footer">
+						<span className="footer-line"></span>
+					</div>
+				</div>
+			</div>
+		</AboutReveal>
 	);
 }
 

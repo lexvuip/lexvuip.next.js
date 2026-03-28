@@ -100,7 +100,7 @@ function TestimonialSection() {
 						aria-label="Previous testimonials"
 						disabled={animating}
 					>
-						&#8592;
+						<span>&#8592;</span>
 					</button>
 					<button
 						className="testimonial-nav-btn"
@@ -108,7 +108,7 @@ function TestimonialSection() {
 						aria-label="Next testimonials"
 						disabled={animating}
 					>
-						&#8594;
+						<span>&#8594;</span>
 					</button>
 				</div>
 			</div>

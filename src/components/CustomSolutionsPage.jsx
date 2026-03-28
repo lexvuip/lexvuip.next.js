@@ -1,179 +1,206 @@
 'use client'
 import React from 'react';
-import { useEffect } from 'react';
 import '../styles/CustomSolutionPage.css';
-// Using public paths for images instead of imports
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
+import AboutReveal from './AboutReveal';
+import AboutContactButton from './AboutContactButton';
+import ServicesHeroParallax from './ServicesHeroParallax';
+import AboutStats from './AboutStats';
+import Image from 'next/image';
+import CountUp from 'react-countup';
 
 function CustomSolutionsPage() {
-	// Add parallax effect for hero image
-	useEffect(() => {
-		const container = document.querySelector('.services-hero-image-row');
-		const image = document.querySelector('.services-hero-image');
-		if (!container || !image) return;
-
-		const prefersReduced = window.matchMedia(
-			'(prefers-reduced-motion: reduce)'
-		).matches;
-		if (prefersReduced) return;
-
-		let rafId = null;
-
-		const updateParallax = () => {
-			const rect = container.getBoundingClientRect();
-			const viewportHeight =
-				window.innerHeight || document.documentElement.clientHeight;
-
-			// Compute progress of container within viewport [0,1]
-			const start = viewportHeight; // when top is at bottom of viewport
-			const end = -rect.height; // when bottom is above viewport
-			const progress = Math.min(
-				1,
-				Math.max(0, (start - rect.top) / (start - end))
-			);
-
-			// Map progress to translateY range (subtle movement)
-			const maxShift = 30; // px; adjust for more/less parallax
-			const translateY = (progress - 0.5) * 2 * maxShift; // range [-maxShift, +maxShift]
-			image.style.setProperty('--parallax-y', `${translateY.toFixed(2)}px`);
-			rafId = null;
-		};
-
-		const onScroll = () => {
-			if (rafId) return;
-			rafId = requestAnimationFrame(updateParallax);
-		};
-
-		window.addEventListener('scroll', onScroll, { passive: true });
-		window.addEventListener('resize', onScroll);
-		// Initial position
-		onScroll();
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onScroll);
-			if (rafId) cancelAnimationFrame(rafId);
-		};
-	}, []);
-
 	const services = [
 		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Criminal',
-			subtitle: 'Defense',
-			desc: 'Our attorneys bring decades of criminal defense experience to defend your rights, challenge evidence, and build a strategic case',
-			bullets: [
-				'950+ clients defended',
-				'Felonies, DUIs, white-collar',
-				'Strong, rights-focused defense',
-			],
+			image: '/assets/stockimages/desingpatentdrawing.jpg',
+			title: 'Tailored Support',
+			desc: 'Custom solutions for unique IP and paralegal needs, adapting to your firm’s specific workflow and reporting style.',
+			number: '01',
 		},
 		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Immigration',
-			subtitle: 'Law',
-			desc: 'From family-based petitions and work visas to green cards and naturalization, we guide individuals and businesses through every step, helping you achieve lawful status and long-term security.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			image: '/assets/stockimages/utilitypatentdrawing.jpg',
+			title: 'Workflow Automation',
+			desc: 'Efficiency-driven automation for legal processes, helping your team stay ahead of schedules and filings.',
+			number: '02',
 		},
 		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Immigration',
-			subtitle: 'Law',
-			desc: 'From family-based petitions and work visas to green cards and naturalization, we guide individuals and businesses through every step, helping you achieve lawful status and long-term security.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			image: '/assets/stockimages/customworkflow.jpg',
+			title: 'Special Consulting',
+			desc: 'Expert consulting for complex legal projects that require specialized technical or procedural knowledge.',
+			number: '03',
 		},
 	];
-	return (
-		<section className="services-hero-section">
-			<div className="services-hero-content">
-				<h1 className="services-hero-title">
-					Legal Services Built
-					<br />
-					Around Your <span className="italic">Needs</span>
-				</h1>
-				<p className="services-hero-description">
-					For over two decades, we’ve stood with clients through their most
-					pivotal moments—providing trusted legal counsel, winning major cases,
-					and shaping futures through law.
-				</p>
-				<button className="services-hero-btn">
-					Get In Touch <span className="arrow">→</span>
-				</button>
-			</div>
-			<div className="services-hero-image-row">
-				<img
-				src="/assets/stockimages/lawer.jpg"
-				alt="Law building"
-				className="services-hero-image"
-			/>
-			</div>
 
-			{/* New Section: Stats and Description */}
-			<section className="services-stats-section">
-				<div className="services-stats-content">
-					<div className="services-stats-left">
-						<h2 className="services-stats-title">
-							Your firm’s workflow, our support - <span className="italic">customized, accurate, and always</span> on time.
-						</h2>
-						<button className="services-hero-btn stats-btn">
-							Get In Touch <span className="arrow">→</span>
-						</button>
-					</div>
-					<div className="services-stats-right">
-						<p>
-							Every firm has its own way of working. We adapt to yours. Whether it’s a specific workflow, reporting method, or client communication style, we integrate directly into your process. The result: accurate, timely support that feels like part of your team and keeps both you and your clients ahead of schedule.
-						</p>
+	return (
+		<main className="services-page-luxury">
+			{/* Hero Section */}
+			<section className="services-hero-section">
+				<div className="services-hero-content">
+					<h1 className="services-hero-title">
+						Custom Solutions for
+						<br />
+						Your <span className="italic">Firm</span>
+					</h1>
+					<p className="services-hero-description">
+						Every firm has its own way of working. We adapt to yours, providing 
+						accurate, timely support that feels like a natural extension of 
+						your team.
+					</p>
+					<div className="services-hero-actions">
+						<AboutContactButton 
+							className="services-hero-btn" 
+							text={<>Get In Touch <span className="arrow">→</span></>} 
+						/>
 					</div>
 				</div>
-
-				{/* New Legal Services Section */}
-				{/* <section className="legal-services-section">
-					<div className="legal-services-header">
-						<div className="legal-services-badge">OUR LEGAL SERVICES</div>
-						<h2 className="legal-services-title">
-							Trusted <span className="italic">expertise</span> across the legal
-							spectrum — tailored to your unique needs.
-						</h2>
-					</div>
-					<div className="separate-legal-services-cards-row">
-						{services.map((service, idx) => (
-							<div className="separate-legal-service-card" key={idx}>
-								<img
-									src={service.image}
-									alt={service.title + ' ' + service.subtitle}
-									className="separate-legal-service-image"
-								/>
-								<div className="separate-legal-service-content">
-									<h3 className="separate-legal-service-title">
-										{service.title}{' '}
-										<span className="italic">{service.subtitle}</span>
-									</h3>
-									<p className="separate-legal-service-desc">{service.desc}</p>
-									<ul className="separate-legal-service-list">
-										{service.bullets.map((b, i) => (
-											<li key={i}>{b}</li>
-										))}
-									</ul>
-								</div>
-							</div>
-						))}
-					</div>
-				</section> */}
+				<ServicesHeroParallax imageSrc="/assets/stockimages/customworkflow.jpg" alt="Custom Solutions Hero" />
 			</section>
+
+			{/* Impact Section */}
+			<section className="services-impact-section">
+				<AboutReveal>
+					<div className="impact-container">
+						<div className="impact-visual-column about-left-column">
+							<div className="impact-visual-canvas">
+								<div className="impact-grid-overlay"></div>
+								<div className="blueprint-visual">
+									<svg viewBox="0 0 400 400" className="blueprint-svg">
+										<circle cx="200" cy="200" r="140" className="blueprint-circle" />
+										<path d="M60,200 L340,200" className="blueprint-line" />
+										<path d="M200,60 L200,340" className="blueprint-line" />
+										<rect x="100" y="100" width="200" height="200" className="blueprint-rect" />
+										<path d="M100,100 L300,300" className="blueprint-line-diagonal" />
+										<path d="M300,100 L100,300" className="blueprint-line-diagonal" />
+										<circle cx="200" cy="60" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="200" cy="340" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="60" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="340" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+									</svg>
+								</div>
+								<div className="stat-card-primary">
+									<div className="stat-card-glass">
+										<div className="stat-header">
+											<span className="gold-dot"></span>
+											<span className="stat-label-tiny">TAILORED INTEGRATION</span>
+										</div>
+										<div className="stat-value-container">
+											<CountUp end={100} duration={3} className="stat-value" suffix="%" />
+											<span className="stat-unit">ADAPTIVE</span>
+										</div>
+										<p className="stat-description-tiny">Bespoke workflows for premier law firms</p>
+									</div>
+								</div>
+								<div className="stat-card-secondary top-right">
+									<div className="stat-card-mini">
+										<span className="mini-value">ACTIVE</span>
+										<span className="mini-label">Collaboration</span>
+									</div>
+								</div>
+								<div className="stat-card-secondary bottom-left">
+									<div className="stat-card-mini">
+										<span className="mini-value">FAST</span>
+										<span className="mini-label">Turnaround</span>
+									</div>
+								</div>
+								<div className="impact-glow"></div>
+							</div>
+						</div>
+						<div className="impact-content-column about-content">
+							<div className="luxury-label-group">
+								<span className="gold-line"></span>
+								<span className="luxury-label">TAILORED INTEGRATION</span>
+							</div>
+							<h2 className="impact-title">
+								<span className="italic-serif">Seamlessly</span> Adapting to 
+								Your Unique Legal Workflows.
+							</h2>
+							<div className="impact-description">
+								<p>
+									Whether it’s a specific reporting method or a unique 
+									communication style, we integrate directly into your process. 
+									The result is support that keeps you ahead of schedule.
+								</p>
+								<p>
+									Our goal is to remove bottlenecks and provide clarity, 
+									allowing you to focus on the high-level strategy while we 
+									handle the technical execution.
+								</p>
+							</div>
+							<div className="impact-cta">
+								<AboutContactButton className="luxury-outline-btn" text="Design your Solution" />
+							</div>
+						</div>
+					</div>
+				</AboutReveal>
+			</section>
+
+			{/* Stats Section */}
+			<section className="services-stats-luxury-section">
+				<AboutStats />
+			</section>
+
+			{/* Catalog Section */}
+			<section className="services-catalog-section">
+				<div className="catalog-container">
+					<div className="catalog-header">
+						<div className="luxury-label-group central">
+							<span className="gold-line"></span>
+							<span className="luxury-label">OUR CUSTOM SERVICES</span>
+							<span className="gold-line"></span>
+						</div>
+						<h2 className="catalog-main-title">Bespoke Legal Support</h2>
+					</div>
+
+					<div className="service-category-group">
+						<div className="services-grid-luxury">
+							{services.map((service, idx) => (
+								<ServiceCard 
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.desc}
+									number={service.number}
+								/>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<TestimonialSection />
 			<FAQSection />
 			<FotterSection />
-		</section>
+		</main>
+	);
+}
+
+function ServiceCard({ image, title, desc, number }) {
+	return (
+		<AboutReveal>
+			<div className="luxury-service-card">
+				<div className="card-visual">
+					<div className="card-image-wrapper">
+						<Image
+							src={image}
+							alt={title}
+							fill
+							style={{ objectFit: 'cover' }}
+						/>
+						<div className="card-overlay"></div>
+						<span className="card-number">{number}</span>
+					</div>
+				</div>
+				<div className="card-info">
+					<h4 className="card-title">{title}</h4>
+					<p className="card-description">{desc}</p>
+					<div className="card-footer">
+						<span className="footer-line"></span>
+					</div>
+				</div>
+			</div>
+		</AboutReveal>
 	);
 }
 

@@ -1,236 +1,230 @@
 'use client'
 import React from 'react';
-import { useEffect } from 'react';
 import '../styles/ParalegalSolutionsPage.css';
-// Using public paths for images instead of imports
-import ParalegalFAQSection from '../components/ParalegalSolutions/ParalegalFAQSection';
-import FotterSection from '../components/FotterSection';
+import ParalegalFAQSection from './ParalegalSolutions/ParalegalFAQSection';
+import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import AboutReveal from './AboutReveal';
+import AboutContactButton from './AboutContactButton';
+import ServicesHeroParallax from './ServicesHeroParallax';
+import AboutStats from './AboutStats';
+import Image from 'next/image';
+import CountUp from 'react-countup';
 
 function ParaLegalSolutions() {
-	const router = useRouter();
 	const services = [
 		{
 			image: '/assets/stockimages/caseManagement.jpg',
-			title: 'Case',
-			subtitle: 'Management',
-			desc: 'Every case has moving parts, and it’s easy to lose track of details. We organize, track, and update each stage, from intake to resolution, so you always know where things stand. We monitor deadlines and provide clear status reports. This lets you focus on strategy while we manage the flow. Nothing gets missed, and progress never stalls.',
-			bullets: [
-				'950+ clients defended',
-				'Felonies, DUIs, white-collar',
-				'Strong, rights-focused defense',
-			],
+			title: 'Case Management',
+			desc: 'End-to-end management ensuring every milestone from intake to resolution is met with absolute precision.',
+			number: '01',
 		},
 		{
 			image: '/assets/stockimages/docketingManagement.jpg',
-			title: 'Docketing',
-			subtitle: 'Management',
-			desc: 'Deadlines drive litigation. One missed date can change everything. We keep track of hearings, filings, and court deadlines carefully, offering you real-time visibility and peace of mind. Our system helps you stay ahead of schedules and filings without scrambling. You can work knowing critical dates are handled and nothing important will go unnoticed.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			title: 'Docketing Management',
+			desc: 'Expert tracking of hearings, filings, and court deadlines to give you real-time visibility and peace of mind.',
+			number: '02',
 		},
 		{
 			image: '/assets/stockimages/eFillingServices.jpg',
-			title: 'E-Filling',
-			subtitle: 'Services',
-			desc: 'Courts require accuracy and timing, and electronic filings leave no room for error. We prepare and submit your documents to local and federal courts on schedule, securing confirmations. You send the final version, and we handle the filing. Every document reaches the right people at the right time without adding more to your workload.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			title: 'E-Filing Services',
+			desc: 'Seamless electronic filing for local and federal courts, ensuring accuracy and timely confirmations.',
+			number: '03',
 		},
 		{
 			image: '/assets/stockimages/contactManagementServices.jpg',
 			title: 'Contact Management',
-			subtitle: 'Services',
-			desc: 'Keeping client and witness information current shouldn’t drain your time. We maintain organized records and clear communication logs so nothing slips through the cracks. You’ll have updated details at hand whenever you need them, helping you move faster in case prep and court. The right information, ready the moment you ask for it.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			desc: 'Organized and secure management of client and witness information for rapid access during case prep.',
+			number: '04',
 		},
 		{
 			image: '/assets/stockimages/trailPreparation.jpg',
-			title: 'Trial',
-			subtitle: 'Preparation',
-			desc: 'Winning in court begins well before you enter the courtroom. We put together complete trial binders, exhibits, and witness lists with careful attention to detail. Our behind-the-scenes work makes sure you have everything you need, organized and ready. You can walk into trial prepared, confident, and focused on making your strongest argument.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			title: 'Trial Preparation',
+			desc: 'Comprehensive support for trial binders, exhibits, and witness lists to ensure you walk into court fully prepared.',
+			number: '05',
 		},
 		{
 			image: '/assets/stockimages/lawer.jpg',
-			title: 'Deposition',
-			subtitle: 'Coordination',
-			desc: 'Depositions need precision, which means every exhibit, transcript, and witness detail must be ready on time. We coordinate schedules, organize materials, and prepare supporting documents to help you focus on questioning and strategy. With everything handled in advance, you can show up focused, fully equipped, and ready to take control.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			title: 'Deposition Coordination',
+			desc: 'Expert logistics, transcript management, and exhibit preparation for smooth deposition proceedings.',
+			number: '06',
 		},
 		{
 			image: '/assets/stockimages/complianceSupport.jpg',
-			title: 'Compliance',
-			subtitle: 'Support',
-			desc: 'We keep up with court procedures, filing standards, and documentation requirements so your practice stays compliant and on track. With every detail checked and monitored, you avoid delays, protect your clients, and keep cases moving smoothly through the system.',
-			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
-			],
+			title: 'Compliance Support',
+			desc: 'Continuous monitoring of court procedures and filing standards to protect your clients and keep cases moving.',
+			number: '07',
 		},
 	];
-	// Add parallax effect for hero image - MOVED INSIDE THE COMPONENT
-	useEffect(() => {
-		const container = document.querySelector('.services-hero-image-row');
-		const image = document.querySelector('.services-hero-image');
-		if (!container || !image) return;
-
-		const prefersReduced = window.matchMedia(
-			'(prefers-reduced-motion: reduce)'
-		).matches;
-		if (prefersReduced) return;
-
-		let rafId = null;
-
-		const updateParallax = () => {
-			const rect = container.getBoundingClientRect();
-			const viewportHeight =
-				window.innerHeight || document.documentElement.clientHeight;
-
-			// Compute progress of container within viewport [0,1]
-			const start = viewportHeight; // when top is at bottom of viewport
-			const end = -rect.height; // when bottom is above viewport
-			const progress = Math.min(
-				1,
-				Math.max(0, (start - rect.top) / (start - end))
-			);
-
-			// Map progress to translateY range (subtle movement)
-			const maxShift = 30; // px; adjust for more/less parallax
-			const translateY = (progress - 0.5) * 2 * maxShift; // range [-maxShift, +maxShift]
-			image.style.setProperty('--parallax-y', `${translateY.toFixed(2)}px`);
-			rafId = null;
-		};
-
-		const onScroll = () => {
-			if (rafId) return;
-			rafId = requestAnimationFrame(updateParallax);
-		};
-
-		window.addEventListener('scroll', onScroll, { passive: true });
-		window.addEventListener('resize', onScroll);
-		// Initial position
-		onScroll();
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-			window.removeEventListener('resize', onScroll);
-			if (rafId) cancelAnimationFrame(rafId);
-		};
-	}, []);
 
 	return (
-		<section className="services-hero-section">
-			<div className="services-hero-content">
-				<h1 className="services-hero-title">
-					Legal Services Built
-					<br />
-					Around Your <span className="italic">Needs</span>
-				</h1>
-				<p className="services-hero-description">
-					For over two decades, we’ve stood with clients through their most
-					pivotal moments, providing trusted legal counsel, winning major cases,
-					and shaping futures through law.
-				</p>
-				<button className="services-hero-btn" onClick={() => router.push('/contact')}>
-					Get In Touch <span className="arrow">→</span>
-				</button>
-			</div>
-			<div className="services-hero-image-row">
-				<img
-				src="/assets/stockimages/paralegalSolutionsServiceHeroImage.jpg"
-				alt="Law building"
-				className="services-hero-image"
-			/>
-			</div>
-
-			{/* New Section: Stats and Description */}
-			<section className="services-stats-section">
-				<div className="services-stats-content">
-					<div className="services-stats-left">
-						{/* <h2 className="services-stats-title">
-							<span className="italic">Protecting</span> Rights, Resolving
-							Disputes, and
-							<br />
-							Delivering Results for Over Two{' '}
-							<span className="italic">Decades</span>
-						</h2> */}
-						<h2 className="services-stats-title">
-							We support attorneys strengthen cases with proven <span className="italic">experience, precision, and strategic</span> insight that sharpens their competitive edge
-						</h2>
-						<button className="services-hero-btn stats-btn" onClick={() => router.push('/contact')}>
-							Get In Touch <span className="arrow">→</span>
-						</button>
-					</div>
-					<div className="services-stats-right">
-						<p>
-							We help attorneys win more cases by clearing the overload and keeping the details under control. Whatever your docket demands, we’re ready to keep you ahead of deadlines.
-						</p>
-						<p>
-							With decades of hands-on paralegal support, we handle filings, prep, and documentation so you stay focused on arguments and strategy. What this really means is your time goes where it counts, building cases and serving clients.
-						</p>
+		<main className="services-page-luxury">
+			{/* Hero Section */}
+			<section className="services-hero-section">
+				<div className="services-hero-content">
+					<h1 className="services-hero-title">
+						Paralegal Solutions for
+						<br />
+						<span className="italic">Advocacy</span>
+					</h1>
+					<p className="services-hero-description">
+						For over two decades, we’ve provided attorneys with the technical 
+						foundation needed to win cases—clearing the overload and keeping 
+						every detail under control.
+					</p>
+					<div className="services-hero-actions">
+						<AboutContactButton 
+							className="services-hero-btn" 
+							text={<>Get In Touch <span className="arrow">→</span></>} 
+						/>
 					</div>
 				</div>
-
-				{/* New Legal Services Section */}
-				<section className="legal-services-section">
-					<div className="legal-services-header">
-						<div className="legal-services-badge">OUR LEGAL SERVICES</div>
-						<h2 className="legal-services-title">
-							Trusted <span className="italic">expertise</span> across the legal
-							spectrum — tailored to your unique needs.
-						</h2>
-					</div>
-					<div className="separate-legal-services-cards-row">
-						{services.map((service, idx) => (
-							<div className="separate-legal-service-card" key={idx}>
-								<img
-									src={service.image}
-									alt={service.title + ' ' + service.subtitle}
-									className="separate-legal-service-image"
-								/>
-								<div className="separate-legal-service-content">
-									<h3 className="separate-legal-service-title">
-										{service.title}{' '}
-										<span className="italic">{service.subtitle}</span>
-									</h3>
-									<p className="separate-legal-service-desc">{service.desc}</p>
-									{/* <ul className="separate-legal-service-list">
-										{service.bullets.map((b, i) => (
-											<li key={i}>{b}</li>
-										))}
-									</ul> */}
-								</div>
-							</div>
-						))}
-					</div>
-				</section>
+				<ServicesHeroParallax imageSrc="/assets/stockimages/lawer.jpg" alt="Paralegal Solutions Hero" />
 			</section>
+
+			{/* Impact Section */}
+			<section className="services-impact-section">
+				<AboutReveal>
+					<div className="impact-container">
+						<div className="impact-visual-column about-left-column">
+							<div className="impact-visual-canvas">
+								<div className="impact-grid-overlay"></div>
+								<div className="blueprint-visual">
+									<svg viewBox="0 0 400 400" className="blueprint-svg">
+										<circle cx="200" cy="200" r="140" className="blueprint-circle" />
+										<path d="M60,200 L340,200" className="blueprint-line" />
+										<path d="M200,60 L200,340" className="blueprint-line" />
+										<rect x="100" y="100" width="200" height="200" className="blueprint-rect" />
+										<path d="M100,100 L300,300" className="blueprint-line-diagonal" />
+										<path d="M300,100 L100,300" className="blueprint-line-diagonal" />
+										<circle cx="200" cy="60" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="200" cy="340" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="60" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+										<circle cx="340" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+									</svg>
+								</div>
+								<div className="stat-card-primary">
+									<div className="stat-card-glass">
+										<div className="stat-header">
+											<span className="gold-dot"></span>
+											<span className="stat-label-tiny">OPERATIONAL EXCELLENCE</span>
+										</div>
+										<div className="stat-value-container">
+											<CountUp end={121} duration={3} className="stat-value" suffix="K+" />
+											<span className="stat-unit">PROJECTS</span>
+										</div>
+										<p className="stat-description-tiny">Seamless legal support delivered globally</p>
+									</div>
+								</div>
+								<div className="stat-card-secondary top-right">
+									<div className="stat-card-mini">
+										<span className="mini-value">25+</span>
+										<span className="mini-label">Years</span>
+									</div>
+								</div>
+								<div className="stat-card-secondary bottom-left">
+									<div className="stat-card-mini">
+										<span className="mini-value">GLOBAL</span>
+										<span className="mini-label">Support</span>
+									</div>
+								</div>
+								<div className="impact-glow"></div>
+							</div>
+						</div>
+						<div className="impact-content-column about-content">
+							<div className="luxury-label-group">
+								<span className="gold-line"></span>
+								<span className="luxury-label">STRATEGIC SUPPORT</span>
+							</div>
+							<h2 className="impact-title">
+								<span className="italic-serif">Strengthening</span> Cases with 
+								Proven Precision and Experience.
+							</h2>
+							<div className="impact-description">
+								<p>
+									We help attorneys win more cases by clearing the overload and 
+									keeping the details under control. Our hands-on support handles 
+									filings, prep, and documentation.
+								</p>
+								<p>
+									This means your time goes where it counts: building stronger 
+									arguments and serving your clients, while we ensure nothing 
+									important goes unnoticed.
+								</p>
+							</div>
+							<div className="impact-cta">
+								<AboutContactButton className="luxury-outline-btn" text="Connect with Us" />
+							</div>
+						</div>
+					</div>
+				</AboutReveal>
+			</section>
+
+			{/* Stats Section */}
+			<section className="services-stats-luxury-section">
+				<AboutStats />
+			</section>
+
+			{/* Catalog Section */}
+			<section className="services-catalog-section">
+				<div className="catalog-container">
+					<div className="catalog-header">
+						<div className="luxury-label-group central">
+							<span className="gold-line"></span>
+							<span className="luxury-label">OUR PARALEGAL SERVICES</span>
+							<span className="gold-line"></span>
+						</div>
+						<h2 className="catalog-main-title">Comprehensive Legal Support</h2>
+					</div>
+
+					<div className="service-category-group">
+						<div className="services-grid-luxury">
+							{services.map((service, idx) => (
+								<ServiceCard 
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.desc}
+									number={service.number}
+								/>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<TestimonialSection />
 			<ParalegalFAQSection />
 			<FotterSection />
-		</section>
+		</main>
+	);
+}
+
+function ServiceCard({ image, title, desc, number }) {
+	return (
+		<AboutReveal>
+			<div className="luxury-service-card">
+				<div className="card-visual">
+					<div className="card-image-wrapper">
+						<Image
+							src={image}
+							alt={title}
+							fill
+							style={{ objectFit: 'cover' }}
+						/>
+						<div className="card-overlay"></div>
+						<span className="card-number">{number}</span>
+					</div>
+				</div>
+				<div className="card-info">
+					<h4 className="card-title">{title}</h4>
+					<p className="card-description">{desc}</p>
+					<div className="card-footer">
+						<span className="footer-line"></span>
+					</div>
+				</div>
+			</div>
+		</AboutReveal>
 	);
 }
 
