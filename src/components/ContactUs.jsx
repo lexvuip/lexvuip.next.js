@@ -25,24 +25,26 @@ function ContactUs() {
 				<div className="contact-hero-overlay"></div>
 				<div className="contact-hero-pattern"></div>
 				
-				<div className="contact-hero-ornament left"></div>
-				<div className="contact-hero-ornament right"></div>
-				
-				<div className="contact-hero-content animate-fade-in-up">
-					<h1 className="contact-hero-title">
-						Let's Discuss Your<br />
-						<span className="italic-serif">Legal Support Needs</span>
-					</h1>
-					
-					<div className="hero-divider">
-						<span className="divider-line"></span>
-						<span className="divider-diamond"></span>
-						<span className="divider-line"></span>
+				<div className="contact-hero-content">
+					<div className="hero-label">
+						<span>Get in Touch</span>
 					</div>
 					
-					<p className="contact-hero-subtitle">
-						Whether you need IP solutions, patent drawings, or paralegal services — our experts are ready to assist.
-					</p>
+					<div className="animate-hero-text">
+						<h1 className="contact-hero-title">
+							Let's Discuss Your<br />
+							<span className="italic-serif">Legal Support Needs</span>
+						</h1>
+						
+						<p className="contact-hero-subtitle">
+							Experience bespoke intellectual property solutions and paralegal services designed for the modern legal landscape.
+						</p>
+					</div>
+				</div>
+
+				<div className="hero-scroll-indicator">
+					<span className="scroll-text">Scroll</span>
+					<div className="scroll-line"></div>
 				</div>
 			</section>
 
@@ -50,9 +52,9 @@ function ContactUs() {
 				<div className="contact-main-container">
 					<div className="contact-form-card">
 						<div className="form-header">
-							<h2>Send Us a <span className="italic-serif">Message</span></h2>
+							<h2>Start a <span className="italic-serif">Conversation</span></h2>
 							<p className="form-intro">
-								Fill out the form below and our team will get back to you within 24 hours.
+								Share your requirements with our expert team. We pride ourselves on providing precise, sophisticated legal support tailored to your unique needs.
 							</p>
 						</div>
 						<div 
@@ -65,45 +67,45 @@ function ContactUs() {
 
 					<div className="contact-info-section">
 						<div className="info-header">
-							<div className="info-label">Contact Information</div>
-							<h2>Reach Out <span className="italic-serif">Directly</span></h2>
+							<div className="info-label">Direct Reach</div>
+							<h2>Global <span className="italic-serif">Headquarters</span></h2>
 						</div>
 						
 						<div className="contact-info-cards">
 							<div className="contact-info-card">
 								<div className="info-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
 										<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
 										<circle cx="12" cy="10" r="3" />
 									</svg>
 								</div>
 								<div className="info-content">
-									<span className="info-label-small">Office Address</span>
+									<span className="info-label-small">Location</span>
 									<p>6260 139th AVE.<br />NE 66 Redmond, WA 98052</p>
 								</div>
 							</div>
 
 							<div className="contact-info-card">
 								<div className="info-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
 										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
 									</svg>
 								</div>
 								<div className="info-content">
-									<span className="info-label-small">Phone Number</span>
+									<span className="info-label-small">Telephone</span>
 									<a href="tel:+18562142512" className="info-link">856-214-2512</a>
 								</div>
 							</div>
 
 							<div className="contact-info-card">
 								<div className="info-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
 										<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
 										<polyline points="22,6 12,13 2,6" />
 									</svg>
 								</div>
 								<div className="info-content">
-									<span className="info-label-small">Email Address</span>
+									<span className="info-label-small">Electronic Mail</span>
 									<a href="mailto:inbox@lexvuip.com?subject=New Inquiry" className="info-link">
 										inbox@lexvuip.com
 									</a>
@@ -113,21 +115,20 @@ function ContactUs() {
 
 						<div className="contact-hours-card">
 							<div className="hours-header">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
 									<circle cx="12" cy="12" r="10" />
 									<polyline points="12 6 12 12 16 14" />
 								</svg>
-								<span>Business Hours</span>
+								<span>Availability</span>
 							</div>
 							<div className="hours-grid">
 								<div className="hours-row">
-									<span className="day">Mon — Fri</span>
-									<span className="time">9:00 AM — 6:00 PM PST</span>
+									<span className="day">Monday — Friday</span>
+									<span className="time">09:00 — 18:00 PST</span>
 								</div>
-								<div className="hours-divider"></div>
 								<div className="hours-row">
-									<span className="day">Sat — Sun</span>
-									<span className="time closed">Closed</span>
+									<span className="day">Saturday — Sunday</span>
+									<span className="time closed">By Appointment Only</span>
 								</div>
 							</div>
 						</div>
