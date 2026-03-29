@@ -65,7 +65,7 @@ export default function AboutSection() {
 							</div>
 
 							<div className="about-cta-wrapper">
-								<Button variant="secondary">Request a Consultation</Button>
+								<Button href="/contact" variant="secondary">Request a Consultation</Button>
 							</div>
 						</div>
 					</div>
