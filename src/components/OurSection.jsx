@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import '../styles/OurSection.css';
-// Images will be referenced directly from public directory
+import Button from './Button';
 import { useRouter } from 'next/navigation';
 
 
@@ -176,8 +176,8 @@ function OurSection() {
 						</div>
 					))}
 				</div>
-				<div className="our-learnmore-row" onClick={() => router.push('/services')}>
-					<button className="our-learnmore-btn" >Learn More</button>
+				<div className="our-learnmore-row">
+					<Button href="/services" variant="secondary">Learn More</Button>
 				</div>
 			</div>
 		</section>

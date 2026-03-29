@@ -5,7 +5,7 @@ import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 import AboutReveal from './AboutReveal';
-import AboutContactButton from './AboutContactButton';
+import Button from './Button';
 import ServicesHeroParallax from './ServicesHeroParallax';
 import AboutStats from './AboutStats';
 import Image from 'next/image';
@@ -49,10 +49,7 @@ function CustomSolutionsPage() {
 						your team.
 					</p>
 					<div className="services-hero-actions">
-						<AboutContactButton 
-							className="services-hero-btn" 
-							text={<>Get In Touch <span className="arrow">→</span></>} 
-						/>
+						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
 				<ServicesHeroParallax imageSrc="/assets/stockimages/customworkflow.jpg" alt="Custom Solutions Hero" />
@@ -129,7 +126,7 @@ function CustomSolutionsPage() {
 								</p>
 							</div>
 							<div className="impact-cta">
-								<AboutContactButton className="luxury-outline-btn" text="Design your Solution" />
+								<Button href="/contact" variant="secondary">Design your Solution</Button>
 							</div>
 						</div>
 					</div>

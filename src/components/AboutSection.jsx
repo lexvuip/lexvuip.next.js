@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/AboutSection.css';
 import AboutStats from './AboutStats';
 import AboutReveal from './AboutReveal';
-import AboutContactButton from './AboutContactButton';
+import Button from './Button';
 import Image from 'next/image';
 
 export default function AboutSection() {
@@ -65,10 +65,7 @@ export default function AboutSection() {
 							</div>
 
 							<div className="about-cta-wrapper">
-								<AboutContactButton
-									className="about-luxury-btn"
-									text="Request a Consultation"
-								/>
+								<Button variant="secondary">Request a Consultation</Button>
 							</div>
 						</div>
 					</div>

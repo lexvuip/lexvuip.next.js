@@ -1,6 +1,8 @@
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
+import "../styles/Button.css";
 import NavBar from "../components/NavBar";
+import FloatingCallButton from "../components/FloatingCallButton";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
       <body className={`${playfair.variable} ${manrope.variable}`} suppressHydrationWarning>
         <NavBar />
         {children}
+        <FloatingCallButton />
       </body>
     </html>
   );

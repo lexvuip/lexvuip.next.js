@@ -4,7 +4,6 @@ import BlogSection from '../components/BlogSection';
 import TestimonialSection from '../components/TestimonialSection';
 import FAQSection from '../components/FAQSection';
 import FotterSection from '../components/FotterSection';
-import FloatingCallButton from '../components/FloatingCallButton';
 import HeroActions from '../components/HeroActions';
 import '../styles/App.css';
 
@@ -52,7 +51,6 @@ export default function Home() {
       <TestimonialSection />
       <FAQSection />
       <FotterSection />
-      <FloatingCallButton />
     </div>
   );
 }
