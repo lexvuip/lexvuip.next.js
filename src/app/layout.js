@@ -1,5 +1,6 @@
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
+import "../styles/Button.css";
 import NavBar from "../components/NavBar";
 import FloatingCallButton from "../components/FloatingCallButton";
 

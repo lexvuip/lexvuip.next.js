@@ -3,7 +3,7 @@ import '../styles/AboutPage.css';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 import FotterSection from './FotterSection';
-import AboutContactButton from './AboutContactButton';
+import Button from './Button';
 import AboutReveal from './AboutReveal';
 import Image from 'next/image';
 
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 </p>
                 
                 <div className="journey-cta">
-                  <AboutContactButton className="luxury-outline-btn" text="Talk to our Experts →" />
+                  <Button href="/contact" variant="secondary">Talk to our Experts →</Button>
                 </div>
               </div>
             </div>

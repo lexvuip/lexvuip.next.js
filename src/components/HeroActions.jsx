@@ -1,19 +1,12 @@
 'use client';
 
+import Button from './Button';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 export default function HeroActions() {
-  const router = useRouter();
-
   return (
     <div className="hero-actions">
-      <button
-        className="hero-contact-btn"
-        onClick={() => router.push('/contact')}
-      >
-        <span>Get In Touch</span>
-      </button>
+      <Button href="/contact" className="hero-btn-sm">Get In Touch</Button>
       <Link href="/services" className="hero-services-link">
         Explore Services
       </Link>

@@ -5,7 +5,7 @@ import ParalegalFAQSection from './ParalegalSolutions/ParalegalFAQSection';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import AboutReveal from './AboutReveal';
-import AboutContactButton from './AboutContactButton';
+import Button from './Button';
 import ServicesHeroParallax from './ServicesHeroParallax';
 import AboutStats from './AboutStats';
 import Image from 'next/image';
@@ -73,10 +73,7 @@ function ParaLegalSolutions() {
 						every detail under control.
 					</p>
 					<div className="services-hero-actions">
-						<AboutContactButton 
-							className="services-hero-btn" 
-							text={<>Get In Touch <span className="arrow">→</span></>} 
-						/>
+						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
 				<ServicesHeroParallax imageSrc="/assets/stockimages/lawer.jpg" alt="Paralegal Solutions Hero" />
@@ -153,7 +150,7 @@ function ParaLegalSolutions() {
 								</p>
 							</div>
 							<div className="impact-cta">
-								<AboutContactButton className="luxury-outline-btn" text="Connect with Us" />
+								<Button href="/contact" variant="secondary">Connect with Us</Button>
 							</div>
 						</div>
 					</div>

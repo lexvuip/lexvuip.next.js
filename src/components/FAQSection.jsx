@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/FAQSection.css';
+import Button from './Button';
 import { useRouter } from 'next/navigation';
 
 const faqs = [
@@ -85,16 +86,11 @@ function FAQSection() {
 						<br />
 						Questions
 					</h2>
-					<div className="faq-desc faq-animate-desc">
-						Anything else you’d like to know? Get in touch with our team and
-						we’d be happy to discuss your questions.
+<div className="faq-desc faq-animate-desc">
+						Anything else you'd like to know? Get in touch with our team and
+						we'd be happy to discuss your questions.
 					</div>
-					<button
-						className="faq-contact-btn faq-animate-btn"
-						onClick={() => router.push('/contact')}
-					>
-						Get In Touch <span className="faq-arrow">→</span>
-					</button>
+					<Button href="/contact" arrow>Get In Touch</Button>
 					{/* <div className="faq-avatars">
 						{avatars.map((src, idx) => (
 							<img className="faq-avatar" src={src} alt="avatar" key={idx} />

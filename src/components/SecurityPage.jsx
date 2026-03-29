@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/SecurityPage.css';
 import FotterSection from './FotterSection';
-import Link from 'next/link';
+import Button from './Button';
 
 export default function SecurityPage() {
   return (
@@ -24,10 +24,7 @@ export default function SecurityPage() {
             ensure that every document, drawing, and communication remains
             completely confidential and secure throughout its lifecycle.
           </p>
-          <Link href="/contact" className="security-hero-btn">
-            Learn More About Our Safety Measures
-            <span className="arrow">→</span>
-          </Link>
+          <Button href="/contact" arrow>Learn More About Our Safety Measures</Button>
         </div>
       </section>
 
@@ -369,10 +366,7 @@ export default function SecurityPage() {
             Need more specific details about our security protocols? Our team is
             available to provide deeper insights into how we protect your information.
           </p>
-          <Link href="/contact" className="security-cta-btn">
-            Get In Touch
-            <span className="arrow">→</span>
-          </Link>
+          <Button href="/contact" arrow>Get In Touch</Button>
         </div>
       </section>
 

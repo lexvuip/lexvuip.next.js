@@ -2,7 +2,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import Button from './Button';
 import '../styles/NavBar.css';
+import '../styles/Button.css';
 
 function NavBar() {
 	const [scrolled, setScrolled] = useState(false);
@@ -181,9 +183,7 @@ function NavBar() {
 				</ul>
 
 				<div className="navbar-contact">
-					<button className="contact-btn" onClick={handleContactClick}>
-						Get In Touch <span className="faq-arrow">→</span>
-					</button>
+					<Button className="btn-inverted" arrow>Get In Touch</Button>
 				</div>
 
 				<div className="mobile-menu-btn" onClick={toggleMobileMenu}>
@@ -306,9 +306,7 @@ function NavBar() {
 						</li>
 					</ul>
 					<div className="mobile-nav-contact">
-						<button className="contact-btn" onClick={handleContactClick}>
-							Get In Touch
-						</button>
+						<Button className="btn-inverted">Get In Touch</Button>
 					</div>
 				</div>
 			</div>

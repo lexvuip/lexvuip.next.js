@@ -6,7 +6,7 @@ import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 import AboutStats from './AboutStats';
 import AboutReveal from './AboutReveal';
-import AboutContactButton from './AboutContactButton';
+import Button from './Button';
 import ServicesHeroParallax from './ServicesHeroParallax';
 import Image from 'next/image';
 import CountUp from 'react-countup';
@@ -49,10 +49,7 @@ function IpSolutionsPage() {
 						filings and protect intellectual property worldwide.
 					</p>
 					<div className="services-hero-actions">
-						<AboutContactButton 
-							className="services-hero-btn" 
-							text={<>Get In Touch <span className="arrow">→</span></>} 
-						/>
+						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
 				<ServicesHeroParallax imageSrc="/assets/stockimages/homepage.jpg" alt="IP Solutions Hero" />
@@ -129,7 +126,7 @@ function IpSolutionsPage() {
 								</p>
 							</div>
 							<div className="impact-cta">
-								<AboutContactButton className="luxury-outline-btn" text="Consult our Experts" />
+								<Button href="/contact" variant="secondary">Consult our Experts</Button>
 							</div>
 						</div>
 					</div>
