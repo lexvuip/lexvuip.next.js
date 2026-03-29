@@ -1,7 +1,8 @@
 'use client'
 import React from 'react';
 import '../styles/ParalegalSolutionsPage.css';
-import ParalegalFAQSection from './ParalegalSolutions/ParalegalFAQSection';
+import FAQSection from './FAQSection';
+import { paralegalFaqs } from '../data/faqs';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import AboutReveal from './AboutReveal';
@@ -191,7 +192,7 @@ function ParaLegalSolutions() {
 			</section>
 
 			<TestimonialSection />
-			<ParalegalFAQSection />
+			<FAQSection faqs={paralegalFaqs} />
 			<FotterSection />
 		</main>
 	);
