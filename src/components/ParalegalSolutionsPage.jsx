@@ -6,10 +6,10 @@ import { paralegalFaqs } from '../data/faqs';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import AboutReveal from './AboutReveal';
+import ServiceCard from './ServiceCard';
 import Button from './Button';
 import ServicesHeroParallax from './ServicesHeroParallax';
 import AboutStats from './AboutStats';
-import Image from 'next/image';
 import CountUp from 'react-countup';
 
 function ParaLegalSolutions() {
@@ -187,33 +187,6 @@ function ParaLegalSolutions() {
 			<FAQSection faqs={paralegalFaqs} />
 			<FotterSection />
 		</main>
-	);
-}
-
-function ServiceCard({ image, title, desc }) {
-	return (
-		<AboutReveal>
-			<div className="luxury-service-card">
-				<div className="card-visual">
-					<div className="card-image-wrapper">
-						<Image
-							src={image}
-							alt={title}
-							fill
-							style={{ objectFit: 'cover' }}
-						/>
-						<div className="card-overlay"></div>
-					</div>
-				</div>
-				<div className="card-info">
-					<h4 className="card-title">{title}</h4>
-					<p className="card-description">{desc}</p>
-					<div className="card-footer">
-						<span className="footer-line"></span>
-					</div>
-				</div>
-			</div>
-		</AboutReveal>
 	);
 }
 
