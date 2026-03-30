@@ -16,20 +16,17 @@ function CustomSolutionsPage() {
 		{
 			image: '/assets/stockimages/desingpatentdrawing.jpg',
 			title: 'Tailored Support',
-			desc: 'Custom solutions for unique IP and paralegal needs, adapting to your firm’s specific workflow and reporting style.',
-			number: '01',
+			desc: 'Custom solutions for unique IP and paralegal needs, adapting to your firm\'s specific workflow and reporting style.',
 		},
 		{
 			image: '/assets/stockimages/utilitypatentdrawing.jpg',
 			title: 'Workflow Automation',
 			desc: 'Efficiency-driven automation for legal processes, helping your team stay ahead of schedules and filings.',
-			number: '02',
 		},
 		{
 			image: '/assets/stockimages/customworkflow.jpg',
 			title: 'Special Consulting',
 			desc: 'Expert consulting for complex legal projects that require specialized technical or procedural knowledge.',
-			number: '03',
 		},
 	];
 
@@ -158,7 +155,6 @@ function CustomSolutionsPage() {
 									image={service.image}
 									title={service.title}
 									desc={service.desc}
-									number={service.number}
 								/>
 							))}
 						</div>
@@ -173,7 +169,7 @@ function CustomSolutionsPage() {
 	);
 }
 
-function ServiceCard({ image, title, desc, number }) {
+function ServiceCard({ image, title, desc }) {
 	return (
 		<AboutReveal>
 			<div className="luxury-service-card">
@@ -186,7 +182,6 @@ function ServiceCard({ image, title, desc, number }) {
 							style={{ objectFit: 'cover' }}
 						/>
 						<div className="card-overlay"></div>
-						<span className="card-number">{number}</span>
 					</div>
 				</div>
 				<div className="card-info">

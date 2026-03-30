@@ -17,19 +17,16 @@ function IpSolutionsPage() {
 			image: '/assets/stockimages/utilitypatentdrawing.jpg',
 			title: 'Utility Patent Drawings',
 			desc: 'USPTO, EPO, and WIPO-compliant utility illustrations crafted with technical precision and engineering expertise.',
-			number: '01',
 		},
 		{
 			image: '/assets/stockimages/desingpatentdrawing.jpg',
 			title: 'Design Patent Drawings',
 			desc: 'Accurate, visually compelling design patent illustrations that highlight unique visual qualities and distinct features.',
-			number: '02',
 		},
 		{
 			image: '/assets/stockimages/trademarkdesign.jpg',
 			title: 'Trademark Support',
 			desc: 'Comprehensive search, filing, and drawing services that capture the essence of your brand identity while meeting legal requirements.',
-			number: '03',
 		},
 	];
 
@@ -158,7 +155,6 @@ function IpSolutionsPage() {
 									image={service.image}
 									title={service.title}
 									desc={service.desc}
-									number={service.number}
 								/>
 							))}
 						</div>
@@ -173,7 +169,7 @@ function IpSolutionsPage() {
 	);
 }
 
-function ServiceCard({ image, title, desc, number }) {
+function ServiceCard({ image, title, desc }) {
 	return (
 		<AboutReveal>
 			<div className="luxury-service-card">
@@ -186,7 +182,6 @@ function ServiceCard({ image, title, desc, number }) {
 							style={{ objectFit: 'cover' }}
 						/>
 						<div className="card-overlay"></div>
-						<span className="card-number">{number}</span>
 					</div>
 				</div>
 				<div className="card-info">

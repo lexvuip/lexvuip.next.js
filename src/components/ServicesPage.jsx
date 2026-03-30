@@ -147,42 +147,36 @@ export default function ServicesPage() {
 						</div>
 						
 						<div className="services-grid-luxury">
-							<ServiceCard 
-								image="/assets/stockimages/caseManagement.jpg"
-								title="Case Management"
-								desc="End-to-end management ensuring every milestone is met with precision."
-								number="01"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/docketingManagement.jpg"
-								title="Docketing Management"
-								desc="Efficient tracking and management of critical IP deadlines."
-								number="02"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/eFillingServices.jpg"
-								title="E-Filing Services"
-								desc="Seamless electronic filing for patents and trademarks."
-								number="03"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/contactManagementServices.jpg"
-								title="Contact Management"
-								desc="Organized and secure case information management."
-								number="04"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/trailPreparation.jpg"
-								title="Trial Preparation"
-								desc="Comprehensive support for trial document and evidence prep."
-								number="05"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/lawer.jpg"
-								title="Deposition Coordination"
-								desc="Expert logistics and support for global depositions."
-								number="06"
-							/>
+						<ServiceCard 
+							image="/assets/stockimages/caseManagement.jpg"
+							title="Case Management"
+							desc="End-to-end management ensuring every milestone is met with precision."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/docketingManagement.jpg"
+							title="Docketing Management"
+							desc="Efficient tracking and management of critical IP deadlines."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/eFillingServices.jpg"
+							title="E-Filing Services"
+							desc="Seamless electronic filing for patents and trademarks."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/contactManagementServices.jpg"
+							title="Contact Management"
+							desc="Organized and secure case information management."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/trailPreparation.jpg"
+							title="Trial Preparation"
+							desc="Comprehensive support for trial document and evidence prep."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/lawer.jpg"
+							title="Deposition Coordination"
+							desc="Expert logistics and support for global depositions."
+						/>
 						</div>
 					</div>
 
@@ -194,24 +188,21 @@ export default function ServicesPage() {
 						</div>
 						
 						<div className="services-grid-luxury">
-							<ServiceCard 
-								image="/assets/stockimages/utilitypatentdrawing.jpg"
-								title="Utility Patent Drawings"
-								desc="USPTO, EPO, and WIPO-compliant utility illustrations."
-								number="01"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/desingpatentdrawing.jpg"
-								title="Design Patent Drawings"
-								desc="Accurate, visually compelling design patent illustrations."
-								number="02"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/trademarkdesign.jpg"
-								title="Trademark Support"
-								desc="Comprehensive search, filing, and drawing services."
-								number="03"
-							/>
+						<ServiceCard 
+							image="/assets/stockimages/utilitypatentdrawing.jpg"
+							title="Utility Patent Drawings"
+							desc="USPTO, EPO, and WIPO-compliant utility illustrations."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/desingpatentdrawing.jpg"
+							title="Design Patent Drawings"
+							desc="Accurate, visually compelling design patent illustrations."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/trademarkdesign.jpg"
+							title="Trademark Support"
+							desc="Comprehensive search, filing, and drawing services."
+						/>
 						</div>
 					</div>
 
@@ -223,24 +214,21 @@ export default function ServicesPage() {
 						</div>
 						
 						<div className="services-grid-luxury">
-							<ServiceCard 
-								image="/assets/stockimages/desingpatentdrawing.jpg"
-								title="Tailored Support"
-								desc="Custom solutions for unique IP and paralegal needs."
-								number="01"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/utilitypatentdrawing.jpg"
-								title="Workflow Automation"
-								desc="Efficiency-driven automation for legal processes."
-								number="02"
-							/>
-							<ServiceCard 
-								image="/assets/stockimages/customworkflow.jpg"
-								title="Special Consulting"
-								desc="Expert consulting for complex legal projects."
-								number="03"
-							/>
+						<ServiceCard 
+							image="/assets/stockimages/desingpatentdrawing.jpg"
+							title="Tailored Support"
+							desc="Custom solutions for unique IP and paralegal needs."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/utilitypatentdrawing.jpg"
+							title="Workflow Automation"
+							desc="Efficiency-driven automation for legal processes."
+						/>
+						<ServiceCard 
+							image="/assets/stockimages/customworkflow.jpg"
+							title="Special Consulting"
+							desc="Expert consulting for complex legal projects."
+						/>
 						</div>
 					</div>
 				</div>
@@ -253,7 +241,7 @@ export default function ServicesPage() {
 	);
 }
 
-function ServiceCard({ image, title, desc, number }) {
+function ServiceCard({ image, title, desc }) {
 	return (
 		<AboutReveal>
 			<div className="luxury-service-card">
@@ -266,7 +254,6 @@ function ServiceCard({ image, title, desc, number }) {
 							style={{ objectFit: 'cover' }}
 						/>
 						<div className="card-overlay"></div>
-						<span className="card-number">{number}</span>
 					</div>
 				</div>
 				<div className="card-info">

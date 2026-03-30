@@ -18,43 +18,36 @@ function ParaLegalSolutions() {
 			image: '/assets/stockimages/caseManagement.jpg',
 			title: 'Case Management',
 			desc: 'End-to-end management ensuring every milestone from intake to resolution is met with absolute precision.',
-			number: '01',
 		},
 		{
 			image: '/assets/stockimages/docketingManagement.jpg',
 			title: 'Docketing Management',
 			desc: 'Expert tracking of hearings, filings, and court deadlines to give you real-time visibility and peace of mind.',
-			number: '02',
 		},
 		{
 			image: '/assets/stockimages/eFillingServices.jpg',
 			title: 'E-Filing Services',
 			desc: 'Seamless electronic filing for local and federal courts, ensuring accuracy and timely confirmations.',
-			number: '03',
 		},
 		{
 			image: '/assets/stockimages/contactManagementServices.jpg',
 			title: 'Contact Management',
 			desc: 'Organized and secure management of client and witness information for rapid access during case prep.',
-			number: '04',
 		},
 		{
 			image: '/assets/stockimages/trailPreparation.jpg',
 			title: 'Trial Preparation',
 			desc: 'Comprehensive support for trial binders, exhibits, and witness lists to ensure you walk into court fully prepared.',
-			number: '05',
 		},
 		{
 			image: '/assets/stockimages/lawer.jpg',
 			title: 'Deposition Coordination',
 			desc: 'Expert logistics, transcript management, and exhibit preparation for smooth deposition proceedings.',
-			number: '06',
 		},
 		{
 			image: '/assets/stockimages/complianceSupport.jpg',
 			title: 'Compliance Support',
 			desc: 'Continuous monitoring of court procedures and filing standards to protect your clients and keep cases moving.',
-			number: '07',
 		},
 	];
 
@@ -183,7 +176,6 @@ function ParaLegalSolutions() {
 									image={service.image}
 									title={service.title}
 									desc={service.desc}
-									number={service.number}
 								/>
 							))}
 						</div>
@@ -198,7 +190,7 @@ function ParaLegalSolutions() {
 	);
 }
 
-function ServiceCard({ image, title, desc, number }) {
+function ServiceCard({ image, title, desc }) {
 	return (
 		<AboutReveal>
 			<div className="luxury-service-card">
@@ -211,7 +203,6 @@ function ServiceCard({ image, title, desc, number }) {
 							style={{ objectFit: 'cover' }}
 						/>
 						<div className="card-overlay"></div>
-						<span className="card-number">{number}</span>
 					</div>
 				</div>
 				<div className="card-info">

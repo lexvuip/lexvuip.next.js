@@ -36,7 +36,6 @@ export default function AboutPage() {
                     fill
                     style={{ objectFit: 'cover' }}
                   />
-                  <div className="principle-number">01</div>
                 </div>
               </div>
               <div className="principle-content">
@@ -54,7 +53,6 @@ export default function AboutPage() {
                     fill
                     style={{ objectFit: 'cover' }}
                   />
-                  <div className="principle-number">02</div>
                 </div>
               </div>
               <div className="principle-content">
@@ -72,7 +70,6 @@ export default function AboutPage() {
                     fill
                     style={{ objectFit: 'cover' }}
                   />
-                  <div className="principle-number">03</div>
                 </div>
               </div>
               <div className="principle-content">
