@@ -1,4 +1,4 @@
-import ContactUs from '../../components/ContactUs';
+import ContactPage from '../../components/pages/ContactPage';
 
 export const metadata = {
   title: "Contact Us - LexVu | Talk to Our Experts",
@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function Contact() {
-  return <ContactUs />;
+  return <ContactPage />;
 }

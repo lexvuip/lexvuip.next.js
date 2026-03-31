@@ -1,8 +1,7 @@
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
-import "../styles/Button.css";
-import NavBar from "../components/NavBar";
-import FloatingCallButton from "../components/FloatingCallButton";
+import NavBar from "../components/layout/NavBar";
+import FloatingCallButton from "../components/ui/FloatingCallButton";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
