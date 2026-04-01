@@ -694,42 +694,34 @@
 
 	.impact-visual-canvas {
 		aspect-ratio: 4/3;
-		max-height: 350px;
+		max-height: 400px;
 	}
 
 	.blueprint-visual {
-		width: 70%;
-		height: 70%;
-		opacity: 0.2;
+		width: 90%;
+		height: 90%;
 	}
 
 	.impact-grid-overlay {
-		background-size: 30px 30px;
-		opacity: 0.5;
+		background-size: 35px 35px;
 	}
 
 	.stat-card-primary {
-		width: 70%;
+		width: 75%;
 	}
 
 	.stat-card-glass {
 		padding: 1.5rem;
 	}
 
-	.stat-value {
-		font-size: 2.5rem;
+	.stat-card-secondary.top-right {
+		top: 10%;
+		right: 5%;
 	}
 
-	.stat-unit {
-		font-size: 1rem;
-	}
-
-	.stat-card-secondary {
-		display: none;
-	}
-
-	.blueprint-visual {
-		animation: none;
+	.stat-card-secondary.bottom-left {
+		bottom: 10%;
+		left: 5%;
 	}
 }
 
@@ -745,19 +737,16 @@
 
 	.impact-visual-canvas {
 		aspect-ratio: 1/1;
-		max-height: 280px;
+		max-height: 320px;
 	}
 
 	.blueprint-visual {
-		display: none;
-	}
-
-	.impact-grid-overlay {
-		opacity: 0.3;
+		width: 80%;
+		height: 80%;
 	}
 
 	.stat-card-primary {
-		width: 85%;
+		width: 80%;
 	}
 
 	.stat-card-glass {
@@ -765,14 +754,14 @@
 	}
 
 	.stat-value {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
-	.stat-label-tiny {
-		font-size: 0.6rem;
+	.stat-card-mini {
+		padding: 0.9rem 1.2rem;
 	}
 
-	.stat-description-tiny {
-		font-size: 0.75rem;
+	.mini-value {
+		font-size: 1.2rem;
 	}
 }
