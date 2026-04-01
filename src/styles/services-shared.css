@@ -224,10 +224,17 @@
 .blueprint-circle, 
 .blueprint-rect, 
 .blueprint-line, 
-.blueprint-line-diagonal {
+.blueprint-line-diagonal,
+.blueprint-shape {
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
 	animation: drawBlueprint 5s var(--transition-elegant) forwards;
+}
+
+.blueprint-shape {
+	fill: none;
+	stroke: var(--color-gold-dark);
+	stroke-width: 1;
 }
 
 @keyframes drawBlueprint {
