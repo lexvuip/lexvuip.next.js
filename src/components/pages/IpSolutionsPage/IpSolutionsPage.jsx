@@ -138,6 +138,7 @@ function IpSolutionsPage() {
 									image={service.image}
 									title={service.title}
 									desc={service.description}
+									href={`/service/ipsolutions/${service.slug}`}
 								/>
 								))}
 						</div>

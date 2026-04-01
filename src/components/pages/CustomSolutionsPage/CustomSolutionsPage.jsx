@@ -10,26 +10,9 @@ import ServiceCard from '../../ui/ServiceCard';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import CountUp from 'react-countup';
+import { customServices } from '../../../data/services';
 
 function CustomSolutionsPage() {
-	const services = [
-		{
-			image: '/assets/stockimages/desingpatentdrawing.jpg',
-			title: 'Tailored Support',
-			desc: 'Custom solutions for unique IP and paralegal needs, adapting to your firm\'s specific workflow and reporting style.',
-		},
-		{
-			image: '/assets/stockimages/utilitypatentdrawing.jpg',
-			title: 'Workflow Automation',
-			desc: 'Efficiency-driven automation for legal processes, helping your team stay ahead of schedules and filings.',
-		},
-		{
-			image: '/assets/stockimages/customworkflow.jpg',
-			title: 'Special Consulting',
-			desc: 'Expert consulting for complex legal projects that require specialized technical or procedural knowledge.',
-		},
-	];
-
 	return (
 		<main className="services-page-luxury">
 			{/* Hero Section */}
@@ -119,7 +102,7 @@ function CustomSolutionsPage() {
 								<p>
 									Our goal is to remove bottlenecks and provide clarity, 
 									allowing you to focus on the high-level strategy while we 
-									handle the technical execution.
+ handle the technical execution.
 								</p>
 							</div>
 							<div className="impact-cta">
@@ -149,12 +132,13 @@ function CustomSolutionsPage() {
 
 					<div className="service-category-group">
 						<div className="services-grid-luxury">
-							{services.map((service, idx) => (
+							{customServices.map((service, idx) => (
 								<ServiceCard 
 									key={idx}
 									image={service.image}
 									title={service.title}
-									desc={service.desc}
+									desc={service.description}
+									href={`/service/customsolutions/${service.slug}`}
 								/>
 							))}
 						</div>

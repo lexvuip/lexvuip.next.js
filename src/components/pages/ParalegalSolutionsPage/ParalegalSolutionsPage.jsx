@@ -11,46 +11,9 @@ import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import CountUp from 'react-countup';
 import { paralegalFaqs } from '../../../data/faqs';
+import { paralegalServices } from '../../../data/services';
 
 function ParalegalSolutionsPage() {
-	const services = [
-		{
-			image: '/assets/stockimages/caseManagement.jpg',
-			title: 'Case Management',
-			desc: 'End-to-end management ensuring every milestone from intake to resolution is met with absolute precision.',
-		},
-		{
-			image: '/assets/stockimages/docketingManagement.jpg',
-			title: 'Docketing Management',
-			desc: 'Expert tracking of hearings, filings, and court deadlines to give you real-time visibility and peace of mind.',
-		},
-		{
-			image: '/assets/stockimages/eFillingServices.jpg',
-			title: 'E-Filing Services',
-			desc: 'Seamless electronic filing for local and federal courts, ensuring accuracy and timely confirmations.',
-		},
-		{
-			image: '/assets/stockimages/contactManagementServices.jpg',
-			title: 'Contact Management',
-			desc: 'Organized and secure management of client and witness information for rapid access during case prep.',
-		},
-		{
-			image: '/assets/stockimages/trailPreparation.jpg',
-			title: 'Trial Preparation',
-			desc: 'Comprehensive support for trial binders, exhibits, and witness lists to ensure you walk into court fully prepared.',
-		},
-		{
-			image: '/assets/stockimages/lawer.jpg',
-			title: 'Deposition Coordination',
-			desc: 'Expert logistics, transcript management, and exhibit preparation for smooth deposition proceedings.',
-		},
-		{
-			image: '/assets/stockimages/complianceSupport.jpg',
-			title: 'Compliance Support',
-			desc: 'Continuous monitoring of court procedures and filing standards to protect your clients and keep cases moving.',
-		},
-	];
-
 	return (
 		<main className="services-page-luxury">
 			{/* Hero Section */}
@@ -170,12 +133,13 @@ function ParalegalSolutionsPage() {
 
 					<div className="service-category-group">
 						<div className="services-grid-luxury">
-							{services.map((service, idx) => (
+							{paralegalServices.map((service, idx) => (
 								<ServiceCard 
 									key={idx}
 									image={service.image}
 									title={service.title}
-									desc={service.desc}
+									desc={service.description}
+									href={`/service/paralegalsolutions/${service.slug}`}
 								/>
 							))}
 						</div>

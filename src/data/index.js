@@ -1,2 +1,2 @@
 export { navLinks } from './navigation';
-export { ipServices } from './services';
+export { ipServices, paralegalServices, customServices } from './services';

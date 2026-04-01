@@ -1,4 +1,8 @@
-/* Service Card Component Styles */
+.card-link-wrapper {
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
 
 .luxury-service-card {
 	display: flex;
@@ -60,22 +64,14 @@
 	transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Card Hover Effects */
-.luxury-service-card:hover .card-image-wrapper {
+.card-link-wrapper:hover .card-image-wrapper {
 	transform: scale(1.1);
 }
 
-.luxury-service-card:hover .card-title {
+.card-link-wrapper:hover .card-title {
 	color: var(--color-gold);
 }
 
-.luxury-service-card:hover .footer-line {
+.card-link-wrapper:hover .footer-line {
 	width: 100%;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-	.card-visual {
-		aspect-ratio: 16/9;
-	}
 }

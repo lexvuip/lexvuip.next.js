@@ -85,7 +85,11 @@ function MobileMenu() {
 														}`}>
 														<ul className="mobile-services-list">
 															{section.items.map((item, itemIndex) => (
-																<li key={itemIndex}>{item}</li>
+																<li key={itemIndex}>
+																	<Link href={item.href} onClick={handleLinkClick}>
+																		{item.label}
+																	</Link>
+																</li>
 															))}
 														</ul>
 													</div>

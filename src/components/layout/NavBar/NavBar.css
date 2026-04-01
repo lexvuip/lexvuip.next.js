@@ -228,8 +228,7 @@
 
 .services-dropdown-section ul li {
 	font-size: 0.85rem;
-	color: rgba(255, 255, 255, 0.75);
-	padding: 0.6rem 0;
+	padding: 0;
 	font-family: var(--font-sans);
 	font-weight: 400;
 	transition: all var(--transition-fast);
@@ -237,7 +236,15 @@
 	letter-spacing: 0.01em;
 }
 
-.services-dropdown-section ul li:hover {
+.services-dropdown-section ul li a {
+	display: block;
+	padding: 0.6rem 0;
+	color: rgba(255, 255, 255, 0.75);
+	text-decoration: none;
+	transition: all var(--transition-fast);
+}
+
+.services-dropdown-section ul li:hover a {
 	color: var(--color-white);
 	padding-left: 6px;
 }
@@ -482,16 +489,22 @@
 }
 
 .mobile-services-list li {
+	padding: 0;
+}
+
+.mobile-services-list li a {
+	display: block;
 	padding: 0.6rem 3rem;
 	color: rgba(255, 255, 255, 0.65);
 	font-size: 0.8rem;
 	font-family: var(--font-sans);
 	font-weight: 300;
 	letter-spacing: 0.01em;
+	text-decoration: none;
 	transition: all var(--transition-fast);
 }
 
-.mobile-services-list li:hover {
+.mobile-services-list li:hover a {
 	color: var(--color-white);
 	background-color: rgba(201, 162, 39, 0.03);
 }

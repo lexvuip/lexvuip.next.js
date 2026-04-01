@@ -28,7 +28,11 @@ function ServicesDropdown({ onMouseEnter, onMouseLeave }) {
 					{section.items && (
 						<ul>
 							{section.items.map((item, itemIndex) => (
-								<li key={itemIndex}>{item}</li>
+								<li key={itemIndex}>
+									<Link href={item.href} onClick={closeServicesDropdown}>
+										{item.label}
+									</Link>
+								</li>
 							))}
 						</ul>
 					)}
