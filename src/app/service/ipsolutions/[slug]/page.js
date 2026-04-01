@@ -29,5 +29,5 @@ export default async function Page({ params }) {
 		notFound();
 	}
 
-	return <SubServicePage service={service} />;
+	return <SubServicePage service={service} category="ip" />;
 }
