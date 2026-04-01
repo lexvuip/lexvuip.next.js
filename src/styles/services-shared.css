@@ -686,6 +686,51 @@
 	.card-visual {
 		aspect-ratio: 16/9;
 	}
+
+	.impact-visual-column {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.impact-visual-canvas {
+		aspect-ratio: 4/3;
+		max-height: 350px;
+	}
+
+	.blueprint-visual {
+		width: 70%;
+		height: 70%;
+		opacity: 0.2;
+	}
+
+	.impact-grid-overlay {
+		background-size: 30px 30px;
+		opacity: 0.5;
+	}
+
+	.stat-card-primary {
+		width: 70%;
+	}
+
+	.stat-card-glass {
+		padding: 1.5rem;
+	}
+
+	.stat-value {
+		font-size: 2.5rem;
+	}
+
+	.stat-unit {
+		font-size: 1rem;
+	}
+
+	.stat-card-secondary {
+		display: none;
+	}
+
+	.blueprint-visual {
+		animation: none;
+	}
 }
 
 @media (max-width: 480px) {
@@ -696,5 +741,38 @@
 	.services-hero-btn {
 		width: 100%;
 		padding: 1.2rem;
+	}
+
+	.impact-visual-canvas {
+		aspect-ratio: 1/1;
+		max-height: 280px;
+	}
+
+	.blueprint-visual {
+		display: none;
+	}
+
+	.impact-grid-overlay {
+		opacity: 0.3;
+	}
+
+	.stat-card-primary {
+		width: 85%;
+	}
+
+	.stat-card-glass {
+		padding: 1.25rem;
+	}
+
+	.stat-value {
+		font-size: 2rem;
+	}
+
+	.stat-label-tiny {
+		font-size: 0.6rem;
+	}
+
+	.stat-description-tiny {
+		font-size: 0.75rem;
 	}
 }
