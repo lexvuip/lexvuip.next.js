@@ -145,38 +145,44 @@ function ServicesPage() {
 							<div className="category-line"></div>
 						</div>
 						
-						<div className="services-grid-luxury">
-						<ServiceCard 
-							image="/assets/stockimages/caseManagement.jpg"
-							title="Case Management"
-							desc="End-to-end management ensuring every milestone is met with precision."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/docketingManagement.jpg"
-							title="Docketing Management"
-							desc="Efficient tracking and management of critical IP deadlines."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/eFillingServices.jpg"
-							title="E-Filing Services"
-							desc="Seamless electronic filing for patents and trademarks."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/contactManagementServices.jpg"
-							title="Contact Management"
-							desc="Organized and secure case information management."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/trailPreparation.jpg"
-							title="Trial Preparation"
-							desc="Comprehensive support for trial document and evidence prep."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/lawer.jpg"
-							title="Deposition Coordination"
-							desc="Expert logistics and support for global depositions."
-						/>
-						</div>
+					<div className="services-grid-luxury">
+					<ServiceCard
+						image="/assets/stockimages/caseManagement.jpg"
+						title="Case Management"
+						desc="End-to-end management ensuring every milestone is met with precision."
+						href="/service/paralegalsolutions/case-docketing-management"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/docketingManagement.jpg"
+						title="Docketing Management"
+						desc="Efficient tracking and management of critical IP deadlines."
+						href="/service/paralegalsolutions/case-docketing-management"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/eFillingServices.jpg"
+						title="E-Filing Services"
+						desc="Seamless electronic filing for patents and trademarks."
+						href="/service/paralegalsolutions/efiling-compliance"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/contactManagementServices.jpg"
+						title="Contact Management"
+						desc="Organized and secure case information management."
+						href="/service/paralegalsolutions/document-management"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/trailPreparation.jpg"
+						title="Trial Preparation"
+						desc="Comprehensive support for trial document and evidence prep."
+						href="/service/paralegalsolutions/trial-prep-deposition"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/lawer.jpg"
+						title="Deposition Coordination"
+						desc="Expert logistics and support for global depositions."
+						href="/service/paralegalsolutions/trial-prep-deposition"
+					/>
+					</div>
 					</div>
 
 					{/* IP Solutions Category */}
@@ -186,23 +192,26 @@ function ServicesPage() {
 							<div className="category-line"></div>
 						</div>
 						
-						<div className="services-grid-luxury">
-						<ServiceCard 
-							image="/assets/stockimages/utilitypatentdrawing.jpg"
-							title="Utility Patent Drawings"
-							desc="USPTO, EPO, and WIPO-compliant utility illustrations."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/desingpatentdrawing.jpg"
-							title="Design Patent Drawings"
-							desc="Accurate, visually compelling design patent illustrations."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/trademarkdesign.jpg"
-							title="Trademark Support"
-							desc="Comprehensive search, filing, and drawing services."
-						/>
-						</div>
+					<div className="services-grid-luxury">
+					<ServiceCard
+						image="/assets/stockimages/utilitypatentdrawing.jpg"
+						title="Utility Patent Drawings"
+						desc="USPTO, EPO, and WIPO-compliant utility illustrations."
+						href="/service/ipsolutions/utility-patent-drawings"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/desingpatentdrawing.jpg"
+						title="Design Patent Drawings"
+						desc="Accurate, visually compelling design patent illustrations."
+						href="/service/ipsolutions/design-patent-drawings"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/trademarkdesign.jpg"
+						title="Trademark Support"
+						desc="Comprehensive search, filing, and drawing services."
+						href="/service/ipsolutions/trademark-support"
+					/>
+					</div>
 					</div>
 
 					{/* Custom Solutions Category */}
@@ -212,23 +221,26 @@ function ServicesPage() {
 							<div className="category-line"></div>
 						</div>
 						
-						<div className="services-grid-luxury">
-						<ServiceCard 
-							image="/assets/stockimages/desingpatentdrawing.jpg"
-							title="Tailored Support"
-							desc="Custom solutions for unique IP and paralegal needs."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/utilitypatentdrawing.jpg"
-							title="Workflow Automation"
-							desc="Efficiency-driven automation for legal processes."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/customworkflow.jpg"
-							title="Special Consulting"
-							desc="Expert consulting for complex legal projects."
-						/>
-						</div>
+					<div className="services-grid-luxury">
+					<ServiceCard
+						image="/assets/stockimages/desingpatentdrawing.jpg"
+						title="Tailored Support"
+						desc="Custom solutions for unique IP and paralegal needs."
+						href="/service/customsolutions/tailored-support"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/utilitypatentdrawing.jpg"
+						title="Workflow Automation"
+						desc="Efficiency-driven automation for legal processes."
+						href="/service/customsolutions/workflow-automation"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/customworkflow.jpg"
+						title="Special Consulting"
+						desc="Expert consulting for complex legal projects."
+						href="/service/customsolutions/special-consulting"
+					/>
+					</div>
 					</div>
 				</div>
 			</section>
