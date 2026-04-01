@@ -1,4 +1,4 @@
-import CustomSolutionsPage from '../../../components/CustomSolutionsPage';
+import CustomSolutionsPage from '../../../components/pages/CustomSolutionsPage';
 
 export const metadata = {
   title: "Custom Solutions - LexVu | Tailored Legal Support",

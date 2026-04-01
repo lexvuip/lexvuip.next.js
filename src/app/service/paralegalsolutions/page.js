@@ -1,4 +1,4 @@
-import ParalegalSolutionsPage from '../../../components/ParalegalSolutionsPage';
+import ParalegalSolutionsPage from '../../../components/pages/ParalegalSolutionsPage';
 
 export const metadata = {
   title: "Paralegal Solutions - LexVu | Case & Docket Management",

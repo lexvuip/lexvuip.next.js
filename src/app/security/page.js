@@ -1,4 +1,4 @@
-import SecurityPage from '../../components/SecurityPage';
+import SecurityPage from '../../components/pages/SecurityPage';
 
 export const metadata = {
   title: "Information Security & Data Privacy Protocols | LexVu",

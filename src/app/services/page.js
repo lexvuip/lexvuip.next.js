@@ -1,4 +1,4 @@
-import ServicesPage from '../../components/ServicesPage';
+import ServicesPage from '../../components/pages/ServicesPage';
 
 export const metadata = {
   title: "Legal & IP Services - LexVu | Comprehensive Support",
