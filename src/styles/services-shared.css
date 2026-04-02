@@ -357,6 +357,13 @@
 	left: 10%;
 }
 
+.stat-card-secondary.bottom-right {
+	bottom: 5%;
+	left: 25%;
+	right: auto;
+	z-index: 20;
+}
+
 .stat-card-mini {
 	background: var(--color-white);
 	border: 1px solid var(--color-gold);
@@ -410,6 +417,10 @@
 
 .impact-visual-canvas:hover .stat-card-secondary.bottom-left {
 	transform: translate3d(-15px, 15px, 0);
+}
+
+.impact-visual-canvas:hover .stat-card-secondary.bottom-right {
+	transform: translate3d(15px, 15px, 0);
 }
 
 .impact-visual-canvas:hover .blueprint-visual {
@@ -772,6 +783,11 @@
 	.stat-card-secondary.bottom-left {
 		bottom: 0;
 		left: -5%;
+	}
+
+	.stat-card-secondary.bottom-right {
+		bottom: 5%;
+		right: 20%;
 	}
 }
 

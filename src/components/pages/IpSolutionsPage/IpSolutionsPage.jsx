@@ -81,6 +81,12 @@ function IpSolutionsPage() {
 										<span className="mini-label">Global</span>
 									</div>
 								</div>
+								<div className="stat-card-secondary bottom-right">
+									<div className="stat-card-mini">
+										<span className="mini-value">EPO</span>
+										<span className="mini-label">European</span>
+									</div>
+								</div>
 								<div className="impact-glow"></div>
 							</div>
 						</div>
