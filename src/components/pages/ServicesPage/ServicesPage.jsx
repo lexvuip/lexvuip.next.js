@@ -47,17 +47,51 @@ function ServicesPage() {
 								{/* Animated Patent Blueprint */}
 								<div className="blueprint-visual">
 									<svg viewBox="0 0 400 400" className="blueprint-svg">
+										<defs>
+											<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+												<feGaussianBlur stdDeviation="2" result="blur" />
+												<feComposite in="SourceGraphic" in2="blur" operator="over" />
+											</filter>
+										</defs>
+										
+										{/* Measurement lines & Technical marks */}
+										<g className="technical-marks" opacity="0.6">
+											<line x1="50" y1="50" x2="70" y2="50" className="blueprint-line" />
+											<line x1="50" y1="50" x2="50" y2="70" className="blueprint-line" />
+											<line x1="330" y1="50" x2="350" y2="50" className="blueprint-line" />
+											<line x1="350" y1="50" x2="350" y2="70" className="blueprint-line" />
+											<line x1="50" y1="330" x2="50" y2="350" className="blueprint-line" />
+											<line x1="50" y1="350" x2="70" y2="350" className="blueprint-line" />
+											<line x1="330" y1="350" x2="350" y2="350" className="blueprint-line" />
+											<line x1="350" y1="330" x2="350" y2="350" className="blueprint-line" />
+											
+											{/* Crosshair */}
+											<circle cx="200" cy="200" r="2" fill="var(--color-gold)" />
+										</g>
+
+										{/* Main Blueprint Shapes */}
 										<circle cx="200" cy="200" r="140" className="blueprint-circle" />
 										<path d="M60,200 L340,200" className="blueprint-line" />
 										<path d="M200,60 L200,340" className="blueprint-line" />
 										<rect x="100" y="100" width="200" height="200" className="blueprint-rect" />
 										<path d="M100,100 L300,300" className="blueprint-line-diagonal" />
 										<path d="M300,100 L100,300" className="blueprint-line-diagonal" />
-										{/* Small detailing */}
-										<circle cx="200" cy="60" r="3" fill="var(--color-gold)" opacity="0.5" />
-										<circle cx="200" cy="340" r="3" fill="var(--color-gold)" opacity="0.5" />
-										<circle cx="60" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
-										<circle cx="340" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+										
+										{/* Floating dots / Intersection markers */}
+										<g className="blueprint-accents">
+											<circle cx="200" cy="60" r="3" className="blueprint-dot" />
+											<circle cx="200" cy="340" r="3" className="blueprint-dot" />
+											<circle cx="60" cy="200" r="3" className="blueprint-dot" />
+											<circle cx="340" cy="200" r="3" className="blueprint-dot" />
+											
+											<circle cx="100" cy="100" r="2" className="blueprint-dot-small" />
+											<circle cx="300" cy="100" r="2" className="blueprint-dot-small" />
+											<circle cx="100" cy="300" r="2" className="blueprint-dot-small" />
+											<circle cx="300" cy="300" r="2" className="blueprint-dot-small" />
+										</g>
+
+										{/* Secondary Orbiting Circle */}
+										<circle cx="200" cy="200" r="170" className="blueprint-circle-outer" strokeDasharray="10 20" />
 									</svg>
 								</div>
 
