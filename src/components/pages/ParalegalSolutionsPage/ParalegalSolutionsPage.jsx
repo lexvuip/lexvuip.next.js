@@ -133,15 +133,42 @@ function ParalegalSolutionsPage() {
 
 					<div className="service-category-group">
 						<div className="services-grid-luxury">
-							{paralegalServices.map((service, idx) => (
-								<ServiceCard 
-									key={idx}
-									image={service.image}
-									title={service.title}
-									desc={service.description}
-									href={`/service/paralegalsolutions/${service.slug}`}
-								/>
-							))}
+							<ServiceCard
+								image="/assets/stockimages/caseManagement.jpg"
+								title="Case Management"
+								desc="End-to-end management ensuring every milestone is met with precision."
+								href="/service/paralegalsolutions/case-docketing-management"
+							/>
+							<ServiceCard
+								image="/assets/stockimages/docketingManagement.jpg"
+								title="Docketing Management"
+								desc="Efficient tracking and management of critical IP deadlines."
+								href="/service/paralegalsolutions/case-docketing-management"
+							/>
+							<ServiceCard
+								image="/assets/stockimages/eFillingServices.jpg"
+								title="E-Filing Services"
+								desc="Seamless electronic filing for patents and trademarks."
+								href="/service/paralegalsolutions/efiling-compliance"
+							/>
+							<ServiceCard
+								image="/assets/stockimages/contactManagementServices.jpg"
+								title="Contact Management"
+								desc="Organized and secure case information management."
+								href="/service/paralegalsolutions/document-management"
+							/>
+							<ServiceCard
+								image="/assets/stockimages/trailPreparation.jpg"
+								title="Trial Preparation"
+								desc="Comprehensive support for trial document and evidence prep."
+								href="/service/paralegalsolutions/trial-prep-deposition"
+							/>
+							<ServiceCard
+								image="/assets/stockimages/lawer.jpg"
+								title="Deposition Coordination"
+								desc="Expert logistics and support for global depositions."
+								href="/service/paralegalsolutions/trial-prep-deposition"
+							/>
 						</div>
 					</div>
 				</div>

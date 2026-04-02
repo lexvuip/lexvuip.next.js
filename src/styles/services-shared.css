@@ -153,7 +153,7 @@
 /* --- Impact Section --- */
 .services-impact-section {
 	width: 100vw;
-	padding: 10vw 0;
+	padding: 6vw 0; /* Reduced from 10vw */
 	background: var(--color-ivory);
 	display: flex;
 	justify-content: center;
@@ -210,6 +210,7 @@
 	height: 85%;
 	opacity: 0.25;
 	pointer-events: none;
+	animation: slowRotate 60s linear infinite;
 }
 
 .blueprint-svg {
@@ -218,6 +219,13 @@
 	stroke: var(--color-gold-dark);
 	stroke-width: 0.75;
 	fill: none;
+	overflow: visible;
+	filter: none;
+}
+
+.technical-marks {
+	stroke: var(--color-gold);
+	stroke-width: 0.5;
 }
 
 /* Restoring Drawing Animation */
@@ -225,30 +233,34 @@
 .blueprint-rect, 
 .blueprint-line, 
 .blueprint-line-diagonal,
-.blueprint-shape {
+.blueprint-shape,
+.blueprint-circle-outer {
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
 	animation: drawBlueprint 5s var(--transition-elegant) forwards;
 }
 
-.blueprint-shape {
-	fill: none;
-	stroke: var(--color-gold-dark);
-	stroke-width: 1;
+.blueprint-circle-outer {
+	stroke: var(--color-gold);
+	opacity: 0.3;
+	stroke-width: 0.5;
 }
+
+.blueprint-dot, .blueprint-dot-small {
+	fill: var(--color-gold);
+	opacity: 0;
+	animation: fadeInAccents 1s var(--transition-elegant) forwards;
+}
+
+.blueprint-dot { animation-delay: 2s; }
+.blueprint-dot-small { animation-delay: 2.5s; opacity: 0; }
 
 @keyframes drawBlueprint {
 	to { stroke-dashoffset: 0; }
 }
 
-/* Optional: Subtle rotation to make it feel 'alive' */
-.blueprint-visual {
-	position: absolute;
-	width: 85%;
-	height: 85%;
-	opacity: 0.25;
-	pointer-events: none;
-	animation: slowRotate 60s linear infinite;
+@keyframes fadeInAccents {
+	to { opacity: 0.6; }
 }
 
 @keyframes slowRotate {
@@ -345,6 +357,13 @@
 	left: 10%;
 }
 
+.stat-card-secondary.bottom-right {
+	bottom: 5%;
+	left: 25%;
+	right: auto;
+	z-index: 20;
+}
+
 .stat-card-mini {
 	background: var(--color-white);
 	border: 1px solid var(--color-gold);
@@ -398,6 +417,10 @@
 
 .impact-visual-canvas:hover .stat-card-secondary.bottom-left {
 	transform: translate3d(-15px, 15px, 0);
+}
+
+.impact-visual-canvas:hover .stat-card-secondary.bottom-right {
+	transform: translate3d(15px, 15px, 0);
 }
 
 .impact-visual-canvas:hover .blueprint-visual {
@@ -645,7 +668,7 @@
 /* --- Responsive --- */
 @media (max-width: 1200px) {
 	.impact-container {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: 5vw;
 	}
 	
@@ -686,6 +709,86 @@
 	.card-visual {
 		aspect-ratio: 16/9;
 	}
+
+	.services-impact-section {
+		padding: 15vw 0 !important; /* Reduced from 40vw */
+		min-height: 120vh !important; /* Slightly adjusted min-height */
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.impact-container {
+		flex-direction: column-reverse;
+		gap: 15vw; /* Increased gap */
+	}
+
+	.impact-visual-column {
+		flex: 0 0 100%;
+		max-width: 100%;
+		position: relative;
+		margin-top: 30vw; /* Shifted down to avoid overlap with content */
+		margin-bottom: 4rem;
+	}
+
+	.impact-visual-canvas {
+		aspect-ratio: 1/1;
+		max-height: none;
+		padding: 0;
+		overflow: visible; /* Allow background elements to bleed */
+		background: transparent;
+	}
+
+	.blueprint-visual {
+		width: 180%;
+		height: 180%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0.3;
+		animation: slowRotateMobile 80s linear infinite;
+	}
+
+	.blueprint-svg {
+		stroke-width: 1;
+	}
+
+	.impact-grid-overlay {
+		position: absolute;
+		inset: -50%;
+		background-size: 40px 40px;
+		mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+		-webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+		opacity: 0.5;
+	}
+
+	@keyframes slowRotateMobile {
+		from { transform: translate(-50%, -50%) rotate(0deg); }
+		to { transform: translate(-50%, -50%) rotate(360deg); }
+	}
+
+	.stat-card-primary {
+		width: 85%;
+	}
+
+	.stat-card-glass {
+		padding: 2rem;
+	}
+
+	.stat-card-secondary.top-right {
+		top: 0;
+		right: -5%;
+	}
+
+	.stat-card-secondary.bottom-left {
+		bottom: 0;
+		left: -5%;
+	}
+
+	.stat-card-secondary.bottom-right {
+		bottom: 5%;
+		right: 20%;
+	}
 }
 
 @media (max-width: 480px) {
@@ -696,5 +799,46 @@
 	.services-hero-btn {
 		width: 100%;
 		padding: 1.2rem;
+	}
+
+	.impact-visual-canvas {
+		aspect-ratio: 1/1;
+	}
+
+	.blueprint-visual {
+		width: 220%;
+		height: 220%;
+		opacity: 0.4;
+	}
+
+	.blueprint-svg {
+		stroke-width: 1.2;
+		filter: drop-shadow(0 0 2px var(--color-gold-light));
+	}
+
+	.impact-grid-overlay {
+		inset: -80%;
+		mask-image: radial-gradient(circle at center, black 15%, transparent 60%);
+		-webkit-mask-image: radial-gradient(circle at center, black 15%, transparent 60%);
+	}
+
+	.stat-card-primary {
+		width: 90%;
+	}
+
+	.stat-card-glass {
+		padding: 1.5rem;
+	}
+
+	.stat-value {
+		font-size: 3rem;
+	}
+
+	.stat-card-mini {
+		padding: 0.8rem 1rem;
+	}
+
+	.mini-value {
+		font-size: 1.1rem;
 	}
 }

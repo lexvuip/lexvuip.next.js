@@ -47,17 +47,51 @@ function ServicesPage() {
 								{/* Animated Patent Blueprint */}
 								<div className="blueprint-visual">
 									<svg viewBox="0 0 400 400" className="blueprint-svg">
+										<defs>
+											<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+												<feGaussianBlur stdDeviation="2" result="blur" />
+												<feComposite in="SourceGraphic" in2="blur" operator="over" />
+											</filter>
+										</defs>
+										
+										{/* Measurement lines & Technical marks */}
+										<g className="technical-marks" opacity="0.6">
+											<line x1="50" y1="50" x2="70" y2="50" className="blueprint-line" />
+											<line x1="50" y1="50" x2="50" y2="70" className="blueprint-line" />
+											<line x1="330" y1="50" x2="350" y2="50" className="blueprint-line" />
+											<line x1="350" y1="50" x2="350" y2="70" className="blueprint-line" />
+											<line x1="50" y1="330" x2="50" y2="350" className="blueprint-line" />
+											<line x1="50" y1="350" x2="70" y2="350" className="blueprint-line" />
+											<line x1="330" y1="350" x2="350" y2="350" className="blueprint-line" />
+											<line x1="350" y1="330" x2="350" y2="350" className="blueprint-line" />
+											
+											{/* Crosshair */}
+											<circle cx="200" cy="200" r="2" fill="var(--color-gold)" />
+										</g>
+
+										{/* Main Blueprint Shapes */}
 										<circle cx="200" cy="200" r="140" className="blueprint-circle" />
 										<path d="M60,200 L340,200" className="blueprint-line" />
 										<path d="M200,60 L200,340" className="blueprint-line" />
 										<rect x="100" y="100" width="200" height="200" className="blueprint-rect" />
 										<path d="M100,100 L300,300" className="blueprint-line-diagonal" />
 										<path d="M300,100 L100,300" className="blueprint-line-diagonal" />
-										{/* Small detailing */}
-										<circle cx="200" cy="60" r="3" fill="var(--color-gold)" opacity="0.5" />
-										<circle cx="200" cy="340" r="3" fill="var(--color-gold)" opacity="0.5" />
-										<circle cx="60" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
-										<circle cx="340" cy="200" r="3" fill="var(--color-gold)" opacity="0.5" />
+										
+										{/* Floating dots / Intersection markers */}
+										<g className="blueprint-accents">
+											<circle cx="200" cy="60" r="3" className="blueprint-dot" />
+											<circle cx="200" cy="340" r="3" className="blueprint-dot" />
+											<circle cx="60" cy="200" r="3" className="blueprint-dot" />
+											<circle cx="340" cy="200" r="3" className="blueprint-dot" />
+											
+											<circle cx="100" cy="100" r="2" className="blueprint-dot-small" />
+											<circle cx="300" cy="100" r="2" className="blueprint-dot-small" />
+											<circle cx="100" cy="300" r="2" className="blueprint-dot-small" />
+											<circle cx="300" cy="300" r="2" className="blueprint-dot-small" />
+										</g>
+
+										{/* Secondary Orbiting Circle */}
+										<circle cx="200" cy="200" r="170" className="blueprint-circle-outer" strokeDasharray="10 20" />
 									</svg>
 								</div>
 
@@ -145,38 +179,44 @@ function ServicesPage() {
 							<div className="category-line"></div>
 						</div>
 						
-						<div className="services-grid-luxury">
-						<ServiceCard 
-							image="/assets/stockimages/caseManagement.jpg"
-							title="Case Management"
-							desc="End-to-end management ensuring every milestone is met with precision."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/docketingManagement.jpg"
-							title="Docketing Management"
-							desc="Efficient tracking and management of critical IP deadlines."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/eFillingServices.jpg"
-							title="E-Filing Services"
-							desc="Seamless electronic filing for patents and trademarks."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/contactManagementServices.jpg"
-							title="Contact Management"
-							desc="Organized and secure case information management."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/trailPreparation.jpg"
-							title="Trial Preparation"
-							desc="Comprehensive support for trial document and evidence prep."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/lawer.jpg"
-							title="Deposition Coordination"
-							desc="Expert logistics and support for global depositions."
-						/>
-						</div>
+					<div className="services-grid-luxury">
+					<ServiceCard
+						image="/assets/stockimages/caseManagement.jpg"
+						title="Case Management"
+						desc="End-to-end management ensuring every milestone is met with precision."
+						href="/service/paralegalsolutions/case-docketing-management"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/docketingManagement.jpg"
+						title="Docketing Management"
+						desc="Efficient tracking and management of critical IP deadlines."
+						href="/service/paralegalsolutions/case-docketing-management"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/eFillingServices.jpg"
+						title="E-Filing Services"
+						desc="Seamless electronic filing for patents and trademarks."
+						href="/service/paralegalsolutions/efiling-compliance"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/contactManagementServices.jpg"
+						title="Contact Management"
+						desc="Organized and secure case information management."
+						href="/service/paralegalsolutions/document-management"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/trailPreparation.jpg"
+						title="Trial Preparation"
+						desc="Comprehensive support for trial document and evidence prep."
+						href="/service/paralegalsolutions/trial-prep-deposition"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/lawer.jpg"
+						title="Deposition Coordination"
+						desc="Expert logistics and support for global depositions."
+						href="/service/paralegalsolutions/trial-prep-deposition"
+					/>
+					</div>
 					</div>
 
 					{/* IP Solutions Category */}
@@ -186,23 +226,26 @@ function ServicesPage() {
 							<div className="category-line"></div>
 						</div>
 						
-						<div className="services-grid-luxury">
-						<ServiceCard 
-							image="/assets/stockimages/utilitypatentdrawing.jpg"
-							title="Utility Patent Drawings"
-							desc="USPTO, EPO, and WIPO-compliant utility illustrations."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/desingpatentdrawing.jpg"
-							title="Design Patent Drawings"
-							desc="Accurate, visually compelling design patent illustrations."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/trademarkdesign.jpg"
-							title="Trademark Support"
-							desc="Comprehensive search, filing, and drawing services."
-						/>
-						</div>
+					<div className="services-grid-luxury">
+					<ServiceCard
+						image="/assets/stockimages/utilitypatentdrawing.jpg"
+						title="Utility Patent Drawings"
+						desc="USPTO, EPO, and WIPO-compliant utility illustrations."
+						href="/service/ipsolutions/utility-patent-drawings"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/desingpatentdrawing.jpg"
+						title="Design Patent Drawings"
+						desc="Accurate, visually compelling design patent illustrations."
+						href="/service/ipsolutions/design-patent-drawings"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/trademarkdesign.jpg"
+						title="Trademark Support"
+						desc="Comprehensive search, filing, and drawing services."
+						href="/service/ipsolutions/trademark-support"
+					/>
+					</div>
 					</div>
 
 					{/* Custom Solutions Category */}
@@ -212,23 +255,26 @@ function ServicesPage() {
 							<div className="category-line"></div>
 						</div>
 						
-						<div className="services-grid-luxury">
-						<ServiceCard 
-							image="/assets/stockimages/desingpatentdrawing.jpg"
-							title="Tailored Support"
-							desc="Custom solutions for unique IP and paralegal needs."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/utilitypatentdrawing.jpg"
-							title="Workflow Automation"
-							desc="Efficiency-driven automation for legal processes."
-						/>
-						<ServiceCard 
-							image="/assets/stockimages/customworkflow.jpg"
-							title="Special Consulting"
-							desc="Expert consulting for complex legal projects."
-						/>
-						</div>
+					<div className="services-grid-luxury">
+					<ServiceCard
+						image="/assets/stockimages/desingpatentdrawing.jpg"
+						title="Tailored Support"
+						desc="Custom solutions for unique IP and paralegal needs."
+						href="/service/customsolutions/tailored-support"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/utilitypatentdrawing.jpg"
+						title="Workflow Automation"
+						desc="Efficiency-driven automation for legal processes."
+						href="/service/customsolutions/workflow-automation"
+					/>
+					<ServiceCard
+						image="/assets/stockimages/customworkflow.jpg"
+						title="Special Consulting"
+						desc="Expert consulting for complex legal projects."
+						href="/service/customsolutions/special-consulting"
+					/>
+					</div>
 					</div>
 				</div>
 			</section>
