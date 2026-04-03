@@ -1,6 +1,7 @@
 import React from 'react';
 import { blogs } from '../../data/blogs';
 import BlogCard from '../../components/ui/BlogCard';
+import Footer from '../../components/layout/Footer/Footer';
 import './blog.css';
 
 export const metadata = {
@@ -43,6 +44,8 @@ export default function BlogIndexPage() {
 					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</main>
 	);
 }
