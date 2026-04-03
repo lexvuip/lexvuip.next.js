@@ -38,5 +38,6 @@ export const navLinks = [
 	},
 	{ href: '/#faq', label: 'FAQ' },
 	{ href: '/security', label: 'Security' },
+	{ href: '/blog', label: 'Blog' },
 	{ href: '/contact', label: 'Contact Us' }
 ];
