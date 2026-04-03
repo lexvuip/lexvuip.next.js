@@ -32,7 +32,7 @@ function IpSolutionsPage() {
 						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
-				<ServicesHeroParallax imageSrc="/assets/stockimages/homepage.jpg" alt="IP Solutions Hero" />
+				<ServicesHeroParallax imageSrc="/assets/stockimages/homepage.jpg" alt="Comprehensive IP solutions including patent drawings and trademark support" />
 			</section>
 
 			{/* Impact Section */}

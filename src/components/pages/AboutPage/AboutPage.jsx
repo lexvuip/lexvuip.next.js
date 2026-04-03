@@ -17,9 +17,9 @@ export default function AboutPage() {
               <span className="gold-line"></span>
               <span className="luxury-label">CORE PHILOSOPHY</span>
             </div>
-            <h2 className="principles-main-title">
+            <h1 className="principles-main-title">
               Precise Support. <span className="italic-serif">Seamless</span> Advocacy.
-            </h2>
+            </h1>
             <p className="principles-subtitle">
               At LexVuIP, we provide the technical foundation so attorneys can focus on what matters most: the art of advocacy.
             </p>
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 <div className="principle-image-wrapper">
                   <Image 
                     src="/assets/stockimages/ourmission.jpg" 
-                    alt="Mission"
+                    alt="LexVuIP mission to support attorneys with patent drawings and paralegal services"
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 <div className="principle-image-wrapper">
                   <Image 
                     src="/assets/stockimages/ourpromise.jpg" 
-                    alt="Promise"
+                    alt="LexVuIP promise of accurate IP filings and timely legal support delivery"
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -65,7 +65,7 @@ export default function AboutPage() {
                 <div className="principle-image-wrapper">
                   <Image 
                     src="/assets/stockimages/ourpurpose.jpg" 
-                    alt="Purpose"
+                    alt="LexVuIP purpose of building trusted partnerships with law firms for IP and litigation support"
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <div className="main-journey-image">
                   <Image 
                     src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
-                    alt="Law library"
+                    alt="Legal library with law books and resources supporting patent and IP law practice"
                     fill
                     style={{ objectFit: 'cover' }}
                   />
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 <div className="accent-journey-image">
                   <Image 
                     src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
-                    alt="Drafting"
+                    alt="Attorney drafting legal documents and patent applications at workspace"
                     fill
                     style={{ objectFit: 'cover' }}
                   />

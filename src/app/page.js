@@ -7,17 +7,59 @@ import Footer from '../components/layout/Footer';
 import HeroSection from '../components/sections/HeroSection';
 
 export const metadata = {
-  title: "LexVu - Precision in Every Filing, Clarity in Every Design",
-  description: "Expert IP Solutions, Patent Design, and Paralegal services for legal professionals. Specializing in utility and design patent drawings, eFiling, and trial preparation.",
+  title: "Home",
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://lexvuip.github.io/#organization',
+        'name': 'LexVuIP',
+        'url': 'https://lexvuip.github.io',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://lexvuip.github.io/logo.png',
+        },
+        'sameAs': [
+          'https://www.linkedin.com/in/lexvuip-global-ip-paralegal-solutions',
+          'https://www.facebook.com/share/1G3j5Jxpet/',
+          'https://www.instagram.com/lexvu_lexvuip?igsh=MXNpMnYxbWI4cWZ3NQ=='
+        ],
+        'contactPoint': {
+          '@type': 'ContactPoint',
+          'telephone': '+1-856-214-2512',
+          'contactType': 'customer service',
+          'email': 'inbox@lexvuip.com'
+        }
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://lexvuip.github.io/#website',
+        'url': 'https://lexvuip.github.io',
+        'name': 'LexVuIP',
+        'publisher': {
+          '@id': 'https://lexvuip.github.io/#organization'
+        }
+      }
+    ]
+  };
+
   return (
     <div className="App">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroSection />
       <AboutSection />
       <OurSection />
-      {/* <BlogSection /> */}
+      <BlogSection />
       <TestimonialSection />
       <FAQSection />
       <Footer />

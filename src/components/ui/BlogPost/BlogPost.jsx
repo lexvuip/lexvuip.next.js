@@ -2,26 +2,29 @@
 import React, { useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogs } from '../../../data/blogs';
+import Breadcrumbs from '../Breadcrumbs';
 import './BlogPost.css';
 
 function BlogPost() {
-	const { id } = useParams();
+	const { slug } = useParams();
 	const router = useRouter();
 
-	const post = useMemo(() => blogs.find((b) => b.id === id), [id]);
+	const post = useMemo(() => blogs.find((b) => b.slug === slug), [slug]);
 	const related = useMemo(
-		() => blogs.filter((b) => b.id !== id).slice(0, 3),
-		[id]
+		() => blogs.filter((b) => b.slug !== slug).slice(0, 3),
+		[slug]
 	);
 
 	if (!post) {
 		return (
 			<section className="blogpost-section">
 				<div className="blogpost-container">
+					<Breadcrumbs />
 					<p>Post not found.</p>
-					<button className="blogpost-back" onClick={() => router.back()}>
-						Go Back
+					<button className="blogpost-back" onClick={() => router.push('/blog')}>
+						Back to Blog
 					</button>
 				</div>
 			</section>
@@ -31,46 +34,69 @@ function BlogPost() {
 	return (
 		<section className="blogpost-section">
 			<div className="blogpost-container">
-				<button className="blogpost-back" onClick={() => router.back()}>
-					◀ Go Back
+				<Breadcrumbs />
+				<button className="blogpost-back" onClick={() => router.push('/blog')}>
+					<span className="arrow">←</span> Back to Blog
 				</button>
-				<div className="blogpost-meta">{post.category}</div>
-				<h1 className="blogpost-title">{post.title}</h1>
-				<div className="blogpost-date">{post.date}</div>
+				
+				<header className="blogpost-header">
+					<div className="blogpost-meta">
+						<span className="blogpost-category">{post.category}</span>
+						<span className="blogpost-divider">|</span>
+						<span className="blogpost-date">{post.date}</span>
+					</div>
+					<h1 className="blogpost-title">{post.title}</h1>
+				</header>
 
 				<div className="blogpost-hero">
-					<img src={post.heroImage} alt={post.title} />
+					<Image 
+						src={post.heroImage} 
+						alt={post.title} 
+						width={1600} 
+						height={900} 
+						priority
+						className="blogpost-image"
+					/>
 				</div>
 
-				<article className="blogpost-content">
-					{post.content?.map((sec, idx) => (
-						<section key={idx} className="blogpost-section-block">
-							{sec.heading && <h2>{sec.heading}</h2>}
-							<p>{sec.body}</p>
-						</section>
-					))}
-				</article>
+				<div className="blogpost-layout">
+					<article className="blogpost-content">
+						{post.content?.map((sec, idx) => (
+							<section key={idx} className="blogpost-section-block">
+								{sec.heading && <h2 className="blogpost-subheading">{sec.heading}</h2>}
+								<p className="blogpost-body">{sec.body}</p>
+							</section>
+						))}
+					</article>
+				</div>
 
 				<div className="blogpost-related">
-					<div className="blog-header">
-						<h2 className="blog-title">Related Blogs</h2>
-						<Link href="#" className="blog-all-btn">
-							All Blogs <span className="arrow">→</span>
+					<div className="blog-related-header">
+						<h2 className="related-title">Related Insights</h2>
+						<Link href="/blog" className="blog-all-link">
+							View All <span className="arrow">→</span>
 						</Link>
 					</div>
-					<div className="blog-grid">
+					<div className="blog-related-grid">
 						{related.map((r) => (
-							<article key={r.id} className="blog-card">
+							<article key={r.id} className="related-card">
 								<Link
-									href={`/blog/${r.id}`}
-									className="blog-image-wrapper hover-zoom"
+									href={`/blog/${r.slug}`}
+									className="related-image-wrapper hover-zoom"
 								>
-									<img src={r.heroImage} className="blog-image" alt={r.title} />
+									<Image 
+										src={r.heroImage} 
+										width={400} 
+										height={250} 
+										className="related-image" 
+										alt={r.title} 
+									/>
 								</Link>
-								<div className="blog-card-body">
-									<span className="blog-category">{r.category}</span>
-									<h3 className="blog-card-title">{r.title}</h3>
-									<div className="blog-date">{r.date}</div>
+								<div className="related-card-body">
+									<span className="related-category">{r.category}</span>
+									<h3 className="related-card-title">
+										<Link href={`/blog/${r.slug}`}>{r.title}</Link>
+									</h3>
 								</div>
 							</article>
 						))}
