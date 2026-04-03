@@ -1,7 +1,10 @@
 import ServicesPage from '../../components/pages/ServicesPage';
 
 export const metadata = {
-  title: "Legal & IP Services - LexVu | Comprehensive Support",
+  title: "Legal & IP Services",
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 export default function Services() {

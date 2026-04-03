@@ -8,6 +8,7 @@ import AboutStats from '../../sections/AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
+import Breadcrumbs from '../../ui/Breadcrumbs';
 import CountUp from 'react-countup';
 
 const categoryConfigs = {
@@ -109,6 +110,7 @@ function SubServicePage({ service, category = 'ip' }) {
 			{/* Hero Section */}
 			<section className="services-hero-section">
 				<div className="services-hero-content">
+					<Breadcrumbs />
 					<div className="luxury-label-group central">
 						<span className="gold-line"></span>
 						<span className="luxury-label">DETAILED SERVICE</span>

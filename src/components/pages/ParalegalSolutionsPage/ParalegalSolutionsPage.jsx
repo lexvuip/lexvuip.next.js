@@ -33,7 +33,7 @@ function ParalegalSolutionsPage() {
 						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
-				<ServicesHeroParallax imageSrc="/assets/stockimages/lawer.jpg" alt="Paralegal Solutions Hero" />
+				<ServicesHeroParallax imageSrc="/assets/stockimages/lawer.jpg" alt="Professional paralegal services including docketing, e-filing, and trial preparation" />
 			</section>
 
 			{/* Impact Section */}

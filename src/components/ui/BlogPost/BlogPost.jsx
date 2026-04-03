@@ -4,6 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogs } from '../../../data/blogs';
+import Breadcrumbs from '../Breadcrumbs';
 import './BlogPost.css';
 
 function BlogPost() {
@@ -20,6 +21,7 @@ function BlogPost() {
 		return (
 			<section className="blogpost-section">
 				<div className="blogpost-container">
+					<Breadcrumbs />
 					<p>Post not found.</p>
 					<button className="blogpost-back" onClick={() => router.push('/blog')}>
 						Back to Blog
@@ -32,6 +34,7 @@ function BlogPost() {
 	return (
 		<section className="blogpost-section">
 			<div className="blogpost-container">
+				<Breadcrumbs />
 				<button className="blogpost-back" onClick={() => router.push('/blog')}>
 					<span className="arrow">←</span> Back to Blog
 				</button>

@@ -1,0 +1,153 @@
+[
+  {
+    "id": "seo-01",
+    "category": "seo",
+    "description": "Fix metadata duplication and implement canonical tags",
+    "priority": "Critical",
+    "steps": [
+      "Identify overlapping metadata between src/app/layout.js and src/app/page.js",
+      "Ensure the root layout provides base metadata while specific pages override titles and descriptions uniquely",
+      "Implement a canonical URL generator in src/app/layout.js using the metadataBase property",
+      "Add alternating canonical tags to each individual route to prevent duplicate content issues"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-02",
+    "category": "seo",
+    "description": "Comprehensive Sitemap and Robots.txt update",
+    "priority": "Critical",
+    "steps": [
+      "Update src/app/sitemap.js to dynamically include all blog posts from src/data/blogs.js",
+      "Add missing static routes to the sitemap: /blog, /security, /privacy-policy, /terms-of-service, /cookie-policy",
+      "Verify that the sitemap URL in src/app/robots.js matches the actual deployment domain",
+      "Add 'disallow' rules for any internal or temporary paths in robots.js"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-03",
+    "category": "seo",
+    "description": "Implement Open Graph and Twitter Card metadata",
+    "priority": "Critical",
+    "steps": [
+      "Add openGraph property to metadata in src/app/layout.js with site_name, locale, and type",
+      "Add twitter property to metadata in src/app/layout.js for Card summary and site handle",
+      "Implement dynamic OG images and descriptions for blog posts in src/app/blog/[slug]/page.js",
+      "Add a default OG image (e.g., /logo.png or a dedicated og-image.jpg) to the public folder"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-04",
+    "category": "seo",
+    "description": "Structured Data (JSON-LD) implementation",
+    "priority": "High",
+    "steps": [
+      "Create a JSON-LD component for Organization/LocalBusiness schema on the homepage",
+      "Implement Article/BlogPosting schema for individual blog post pages",
+      "Add WebSite schema with SearchAction for site-wide search capabilities",
+      "Verify schema implementation using the Google Rich Results Test"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-05",
+    "category": "seo",
+    "description": "Create missing Policy and Legal pages",
+    "priority": "High",
+    "steps": [
+      "Create src/app/privacy-policy/page.js and associated content",
+      "Create src/app/terms-of-service/page.js and associated content",
+      "Create src/app/cookie-policy/page.js and associated content",
+      "Ensure these pages follow the site's design system and include standard legal disclosures"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-06",
+    "category": "seo",
+    "description": "Optimize Image Alt texts and accessibility",
+    "priority": "High",
+    "steps": [
+      "Audit all Image components and replace generic alt text (e.g., 'Legal professional at work') with keyword-rich, descriptive text",
+      "Ensure all service-related images include relevant keywords (e.g., 'USPTO patent drawings', 'legal docketing')",
+      "Verify that decorative images have empty alt attributes (alt='') to be ignored by screen readers",
+      "Check that image filenames in /public/assets/ are descriptive and hyphen-separated"
+    ],
+    "passes": true
+    },
+  {
+    "id": "seo-07",
+    "category": "seo",
+    "description": "Fix broken and incorrect internal links",
+    "priority": "High",
+    "steps": [
+      "Verify the link for 'Contact Management' in Footer.jsx (/service/paralegalsolutions-management) matches the actual route structure",
+      "Ensure all social media links in the footer have correct rel='noopener noreferrer' and aria-labels",
+      "Update internal links in AboutSection and BlogCard to ensure they point to the correct canonical paths",
+      "Audit the navigation.js data to ensure it aligns perfectly with the app directory structure"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-08",
+    "category": "seo",
+    "description": "Implement Breadcrumbs for hierarchical navigation",
+    "priority": "Medium",
+    "steps": [
+      "Create a reusable Breadcrumb component in src/components/ui/",
+      "Add Breadcrumbs to all sub-pages under /service/ and /blog/",
+      "Implement BreadcrumbList structured data (JSON-LD) for enhanced search result snippets"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-09",
+    "category": "seo",
+    "description": "Audit and fix Heading Hierarchy site-wide",
+    "priority": "Medium",
+    "steps": [
+      "Review every page to ensure there is exactly one H1 tag",
+      "Verify that H2-H6 tags follow a logical nested order without skipping levels",
+      "Check that section titles in service pages use H2 instead of H3 or div if they represent major topical divisions"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-10",
+    "category": "seo",
+    "description": "Optimize favicon set and implement Web App Manifest",
+    "priority": "Medium",
+    "steps": [
+      "Generate a full set of icons (16x16, 32x32, apple-touch-icon, android-chrome)",
+      "Create a manifest.json file in the public folder and link it in layout.js",
+      "Update metadata icons property to include the full set of generated icons"
+    ],
+    "passes": true
+  },
+  {
+    "id": "seo-11",
+    "category": "seo",
+    "description": "Enhance Video Accessibility and SEO",
+    "priority": "Low",
+    "steps": [
+      "Add a 'title' or 'aria-label' to the video element in AboutSection.jsx",
+      "Consider adding a text transcript or fallback content for the video",
+      "Ensure the video file is optimized for fast loading (check compression and format)"
+    ],
+    "passes": true
+  },
+  {
+    "id": "a11y-01",
+    "category": "functional",
+    "description": "Verify and refine keyboard navigation in ServicesDropdown",
+    "priority": "Low",
+    "steps": [
+      "Test the ArrowDown/ArrowUp and Escape key functionality in the Services dropdown",
+      "Ensure focus states are visually distinct and follow the brand's style",
+      "Confirm aria-expanded and aria-haspopup attributes are correctly toggling"
+    ],
+    "passes": true
+  }
+]

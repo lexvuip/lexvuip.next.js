@@ -48,21 +48,21 @@ function Footer() {
 						<div className="footer-links-group">
 							<h4 className="footer-links-title">IP Solutions</h4>
 							<ul className="footer-links-list">
-								<li><a href="/service/ipsolutions">Utility Patent Drawings</a></li>
-								<li><a href="/service/ipsolutions">Design Patent Drawings</a></li>
-								<li><a href="/service/ipsolutions">Trademark Support</a></li>
+								<li><a href="/service/ipsolutions/utility-patent-drawings">Utility Patent Drawings</a></li>
+								<li><a href="/service/ipsolutions/design-patent-drawings">Design Patent Drawings</a></li>
+								<li><a href="/service/ipsolutions/trademark-support">Trademark Support</a></li>
 							</ul>
 						</div>
 
 						<div className="footer-links-group">
 							<h4 className="footer-links-title">Paralegal Solutions</h4>
 							<ul className="footer-links-list">
-								<li><a href="/service/paralegalsolutions">Docketing Management</a></li>
-								<li><a href="/service/paralegalsolutions">E-Filing Services</a></li>
-								<li><a href="/service/paralegalsolutions-management">Contact Management</a></li>
-								<li><a href="/service/paralegalsolutions">Trial Preparation</a></li>
-								<li><a href="/service/paralegalsolutions">Deposition Coordination</a></li>
-								<li><a href="/service/paralegalsolutions">Compliance Support</a></li>
+								<li><a href="/service/paralegalsolutions/case-docketing-management">Docketing Management</a></li>
+								<li><a href="/service/paralegalsolutions/efiling-compliance">E-Filing Services</a></li>
+								<li><a href="/service/paralegalsolutions/document-management">Contact Management</a></li>
+								<li><a href="/service/paralegalsolutions/trial-prep-deposition">Trial Preparation</a></li>
+								<li><a href="/service/paralegalsolutions/trial-prep-deposition">Deposition Coordination</a></li>
+								<li><a href="/service/paralegalsolutions/efiling-compliance">Compliance Support</a></li>
 							</ul>
 						</div>
 

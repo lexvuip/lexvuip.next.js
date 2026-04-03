@@ -39,7 +39,13 @@ function DesktopNav() {
 							onMouseLeave={handleMouseLeave}
 							className="navbar-services-dropdown-parent"
 						>
-							<Link href={link.href} onClick={closeServicesDropdown}>
+							<Link 
+								href={link.href} 
+								onClick={closeServicesDropdown}
+								aria-haspopup="true"
+								aria-expanded={servicesDropdownOpen}
+								id="services-menu-button"
+							>
 								{link.label}
 							</Link>
 							<ServicesDropdown 

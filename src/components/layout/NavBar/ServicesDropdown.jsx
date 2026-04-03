@@ -17,19 +17,35 @@ function ServicesDropdown({ onMouseEnter, onMouseLeave }) {
 			className="services-dropdown"
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
+			role="menu"
+			aria-labelledby="services-menu-button"
+			onKeyDown={(e) => {
+				if (e.key === 'Escape') {
+					closeServicesDropdown();
+					document.getElementById('services-menu-button')?.focus();
+				}
+			}}
 		>
 			{servicesLink.sections.map((section, index) => (
-				<div key={index} className="services-dropdown-section">
-					<div className="services-dropdown-title">
-						<Link href={section.href} onClick={closeServicesDropdown}>
+				<div key={index} className="services-dropdown-section" role="none">
+					<div className="services-dropdown-title" role="none">
+						<Link 
+							href={section.href} 
+							onClick={closeServicesDropdown}
+							role="menuitem"
+						>
 							{section.label}
 						</Link>
 					</div>
 					{section.items && (
-						<ul>
+						<ul role="none">
 							{section.items.map((item, itemIndex) => (
-								<li key={itemIndex}>
-									<Link href={item.href} onClick={closeServicesDropdown}>
+								<li key={itemIndex} role="none">
+									<Link 
+										href={item.href} 
+										onClick={closeServicesDropdown}
+										role="menuitem"
+									>
 										{item.label}
 									</Link>
 								</li>

@@ -1,11 +1,18 @@
+import { blogs } from '../data/blogs';
+
 export default function sitemap() {
   const baseUrl = 'https://lexvuip.github.io';
   
-  const routes = [
+  const staticRoutes = [
     '',
     '/about',
     '/services',
     '/contact',
+    '/blog',
+    '/security',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/cookie-policy',
     '/service/paralegalsolutions',
     '/service/ipsolutions',
     '/service/customsolutions',
@@ -16,5 +23,12 @@ export default function sitemap() {
     priority: route === '' ? 1.0 : 0.8,
   }));
 
-  return routes;
+  const blogRoutes = blogs.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'weekly',
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }

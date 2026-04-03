@@ -14,7 +14,7 @@ const services = [
 		description:
 			'Our experienced remote paralegal team manages Docketing, E-Filing, and Contact Records with meticulous attention to detail—while also supporting Trial Preparation, Deposition Coordination, and Compliance so you can focus on advocacy, not administration.',
 		image: '/assets/stockimages/lawer.jpg',
-		alt: 'Utility Patent Drawings',
+		alt: 'Professional paralegal support for IP law firms and litigation',
 	},
 	{
 		number: 2,
@@ -26,7 +26,7 @@ const services = [
 		description:
 			'From intricate Utility Patent Drawings to visually precise Design Patent Illustrations and globally compliant Trademark Support, we deliver intellectual property assets that meet USPTO, EPO, and WIPO standards—ensuring your filings are clear, compliant, and strategically positioned for success.',
 		image: '/assets/stockimages/utilitypatentdrawing.jpg',
-		alt: 'Utility Patent Drawings',
+		alt: 'Technical utility patent drawings compliant with USPTO and WIPO standards',
 	},
 	{
 		number: 3,
@@ -38,7 +38,7 @@ const services = [
 		description:
 			'Whether you need a dedicated resource for high-volume filings, specialized illustration styles, or firm-specific compliance tasks, we integrate seamlessly into your processes—delivering accurate, on-time support that aligns perfectly with your team\'s standards and client expectations.',
 		image: '/assets/stockimages/desingpatentdrawing.jpg',
-		alt: 'Design Patent Illustrations',
+		alt: 'Custom design patent illustrations and tailored legal workflow support',
 	},
 ];
 

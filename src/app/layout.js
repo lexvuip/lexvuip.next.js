@@ -19,18 +19,43 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "LexVu - Precision in Every Filing, Clarity in Every Design",
-  description: "We offer IP Solutions, Patent Design, and Paralegal services for individuals and businesses. Trusted experts in your region.",
-  keywords: ["IP Solutions", "Patent Design", "Paralegal Services", "Legal Solutions", "Trusted Experts", "lexvuip", "Intellectual Property", "Patent", "Paralegal"],
-  icons: {
-    icon: "/logo.png",
+  metadataBase: new URL('https://lexvuip.github.io'),
+  title: {
+    default: 'LexVuIP | Intellectual Property & Paralegal Solutions',
+    template: '%s | LexVuIP'
   },
-};
+  description: 'Expert IP Solutions, Patent Design, and Paralegal services for legal professionals. Specializing in utility and design patent drawings, eFiling, and trial preparation.',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://lexvuip.github.io/',
+    siteName: 'LexVuIP',
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'LexVuIP Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LexVuIP | Intellectual Property & Paralegal Solutions',
+    description: 'Expert IP Solutions, Patent Design, and Paralegal services for legal professionals.',
+    images: ['/logo.png'],
+  },
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${manrope.variable}`} suppressHydrationWarning>
+    <html lang="en">
+      <body className={`${playfair.variable} ${manrope.variable}`}>
         <NavBar />
         {children}
         <FloatingCallButton />
