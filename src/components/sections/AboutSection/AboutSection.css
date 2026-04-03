@@ -167,6 +167,7 @@
 
 .narrative-subtitle {
 	font-family: var(--font-serif);
+	font-weight: 400;
 	font-size: 1.75rem;
 	line-height: 1.4;
 	color: var(--color-navy);

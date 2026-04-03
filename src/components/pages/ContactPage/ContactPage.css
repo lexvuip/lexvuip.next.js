@@ -523,26 +523,44 @@
 	.contact-hero-section {
 		height: 55vh;
 		min-height: 380px;
+		padding-top: 80px;
 	}
 
 	.contact-hero-title {
 		font-size: 2.2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-hero-subtitle {
+		font-size: 0.95rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
+
+	.hero-scroll-indicator {
+		display: none;
 	}
 
 	.contact-main-section {
-		padding: 12vw 5%;
+		padding: 8vw 4%;
 	}
 
 	.form-header {
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.form-header h2 {
-		font-size: 2rem;
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.form-intro {
+		font-size: 0.9rem;
+		line-height: 1.6;
 	}
 
 	.hs-form-frame {
-		padding: 1.5rem;
+		padding: 1rem;
 	}
 
 	.hs-form-frame::after {
@@ -551,16 +569,24 @@
 
 	.contact-info-section {
 		grid-template-columns: 1fr;
-		gap: 2.5rem;
+		gap: 2rem;
 	}
 
 	.info-header h2 {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 	}
 
 	.info-content p,
 	.info-link {
-		font-size: 1rem;
+		font-size: 0.95rem;
+	}
+
+	.info-label {
+		font-size: 0.65rem;
+	}
+
+	.info-label-small {
+		font-size: 0.6rem;
 	}
 }
 
@@ -568,35 +594,64 @@
 	.contact-hero-section {
 		height: 50vh;
 		min-height: 350px;
+		padding-top: 80px;
 	}
 
 	.contact-hero-title {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
 	}
 
 	.contact-hero-subtitle {
-		font-size: 0.9rem;
+		font-size: 0.85rem;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+
+	.hero-label span {
+		font-size: 0.65rem;
 	}
 
 	.divider-line {
 		width: 40px;
 	}
 
+	.contact-main-section {
+		padding: 6vw 4%;
+	}
+
 	.form-header {
-		padding-bottom: 1rem;
+		padding-bottom: 0.75rem;
 		margin-bottom: 1rem;
 	}
 
 	.form-header h2 {
-		font-size: 1.35rem;
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.form-intro {
+		font-size: 0.8rem;
+		line-height: 1.5;
+	}
+
+	.hs-form-frame {
+		padding: 0.75rem;
+	}
+
+	.info-header h2 {
+		font-size: 1.25rem;
+	}
+
+	.info-content p,
+	.info-link {
 		font-size: 0.85rem;
 	}
 
 	.cta-phone-btn {
 		width: 100%;
 		justify-content: center;
+		padding: 0.875rem 1.5rem;
+		font-size: 0.75rem;
 	}
 }

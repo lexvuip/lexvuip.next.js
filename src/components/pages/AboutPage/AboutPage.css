@@ -268,9 +268,15 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.about-principles-section {
+		padding: 160px 5% 8vw;
+	}
+}
+
 @media (max-width: 600px) {
 	.about-principles-section {
-		padding-top: 20vw;
+		padding: 160px 4% 8vw;
 	}
 
 	.journey-image-stack {
