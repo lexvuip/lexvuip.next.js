@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { useNavContext } from './NavContext';
 import useToggle from '../../../hooks/useToggle';
@@ -9,14 +9,28 @@ import Button from '../../ui/Button';
 
 function MobileMenu() {
 	const { mobileMenuOpen, closeMobileMenu } = useNavContext();
-	const [ipSolutionsOpen, toggleIpSolutions] = useToggle();
-	const [paralegalSolutionsOpen, toggleParalegalSolutions] = useToggle();
-	const [customSolutionsOpen, toggleCustomSolutions] = useToggle();
-	const [servicesOpen, toggleServices] = useToggle();
+	const [ipSolutionsOpen, toggleIpSolutions, setIpSolutionsOpen] = useToggle();
+	const [paralegalSolutionsOpen, toggleParalegalSolutions, setParalegalSolutionsOpen] = useToggle();
+	const [customSolutionsOpen, toggleCustomSolutions, setCustomSolutionsOpen] = useToggle();
+	const [servicesOpen, toggleServices, setServicesOpen] = useToggle();
+
+	const resetAllDropdowns = useCallback(() => {
+		setServicesOpen(false);
+		setIpSolutionsOpen(false);
+		setParalegalSolutionsOpen(false);
+		setCustomSolutionsOpen(false);
+	}, [setServicesOpen, setIpSolutionsOpen, setParalegalSolutionsOpen, setCustomSolutionsOpen]);
 
 	const handleLinkClick = useCallback(() => {
 		closeMobileMenu();
-	}, [closeMobileMenu]);
+		resetAllDropdowns();
+	}, [closeMobileMenu, resetAllDropdowns]);
+
+	useEffect(() => {
+		if (!mobileMenuOpen) {
+			resetAllDropdowns();
+		}
+	}, [mobileMenuOpen, resetAllDropdowns]);
 
 	const servicesLink = navLinks.find(link => link.label === 'Services');
 
@@ -39,8 +53,24 @@ function MobileMenu() {
 										<button
 											className="mobile-arrow-btn"
 											onClick={toggleServices}
+											aria-label="Toggle services menu"
 										>
-											<span className={`mobile-arrow ${servicesOpen ? 'open' : ''}`}>▼</span>
+											<svg 
+												className={`mobile-arrow ${servicesOpen ? 'open' : ''}`}
+												width="12" 
+												height="12" 
+												viewBox="0 0 12 12" 
+												fill="none" 
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path 
+													d="M2.5 4.5L6 8L9.5 4.5" 
+													stroke="currentColor" 
+													strokeWidth="1.5" 
+													strokeLinecap="round" 
+													strokeLinejoin="round"
+												/>
+											</svg>
 										</button>
 									</div>
 									<div className={`mobile-services-dropdown ${servicesOpen ? 'open' : ''}`}>
@@ -64,14 +94,30 @@ function MobileMenu() {
 																		? toggleParalegalSolutions
 																		: toggleCustomSolutions
 															}
+														aria-label={`Toggle ${section.label} menu`}
 														>
-														<span className={`mobile-sub-arrow ${
-															section.label === 'IP Solutions'
-																? (ipSolutionsOpen ? 'open' : '')
-																: section.label === 'Paralegal Solutions'
-																	? (paralegalSolutionsOpen ? 'open' : '')
-																	: (customSolutionsOpen ? 'open' : '')
-														}`}>▼</span>
+															<svg 
+																className={`mobile-sub-arrow ${
+																	section.label === 'IP Solutions'
+																		? (ipSolutionsOpen ? 'open' : '')
+																		: section.label === 'Paralegal Solutions'
+																			? (paralegalSolutionsOpen ? 'open' : '')
+																			: (customSolutionsOpen ? 'open' : '')
+																}`}
+																width="10" 
+																height="10" 
+																viewBox="0 0 12 12" 
+																fill="none" 
+																xmlns="http://www.w3.org/2000/svg"
+															>
+																<path 
+																	d="M2.5 4.5L6 8L9.5 4.5" 
+																	stroke="currentColor" 
+																	strokeWidth="1.5" 
+																	strokeLinecap="round" 
+																	strokeLinejoin="round"
+																/>
+															</svg>
 														</button>
 													)}
 												</div>

@@ -8,8 +8,21 @@
 	margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+	.luxury-label-group {
+		margin-bottom: 0;
+		gap: 1rem;
+	}
+}
+
 .luxury-label-group.central {
 	justify-content: center;
+}
+
+@media (max-width: 768px) {
+	.luxury-label-group.central {
+		margin-bottom: 0;
+	}
 }
 
 .gold-line {
@@ -689,7 +702,11 @@
 	}
 
 	.services-hero-content {
-		padding-top: 80px;
+		padding: 50px 0 50px 0;
+	}
+
+	.services-hero-image-container {
+		height: 350px;
 	}
 }
 
@@ -715,7 +732,11 @@
 	}
 
 	.services-hero-content {
-		padding-top: 80px;
+		padding: 50px 0 50px 0;
+	}
+
+	.services-hero-image-container {
+		height: 280px;
 	}
 
 	.services-impact-section {
@@ -805,7 +826,11 @@
 	}
 
 	.services-hero-content {
-		padding-top: 80px;
+		padding: 50px 0 50px 0;
+	}
+
+	.services-hero-image-container {
+		height: 220px;
 	}
 	
 	.services-hero-btn {
