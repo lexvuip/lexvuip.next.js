@@ -110,7 +110,7 @@ function MobileMenu() {
 					})}
 				</ul>
 				<div className="mobile-nav-contact">
-					<Button className="btn-inverted">Get In Touch</Button>
+					<Button href="/contact" className="btn-inverted" onClick={handleLinkClick}>Get In Touch</Button>
 				</div>
 			</div>
 		</div>

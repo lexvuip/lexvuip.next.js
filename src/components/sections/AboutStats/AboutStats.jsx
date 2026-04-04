@@ -1,29 +1,36 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import CountUp from 'react-countup';
 import './AboutStats.css';
 
 export default function AboutStats() {
 	const [startCount, setStartCount] = useState(false);
+	const statsRef = useRef(null);
 
 	useEffect(() => {
-		const handleScroll = () => {
-			const section = document.querySelector('.about-stats-row');
-			const rect = section?.getBoundingClientRect();
-			if (rect?.top < window.innerHeight && !startCount) {
-				setStartCount(true);
-			}
-		};
+		if (!statsRef.current) return;
 
-		handleScroll();
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [startCount]);
+		const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+		const threshold = isMobile ? 0.1 : 0.3;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setStartCount(true);
+				}
+			},
+			{ threshold }
+		);
+
+		observer.observe(statsRef.current);
+
+		return () => observer.disconnect();
+	}, []);
 
 	return (
 		<div className="about-stats-container">
-			<div className="about-stats-row">
+			<div ref={statsRef} className="about-stats-row">
 				<div
 					className={`about-stat ${startCount ? 'revealed' : ''}`}
 					style={{ '--about-stat-delay': '0s' }}

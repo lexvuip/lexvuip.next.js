@@ -55,7 +55,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${manrope.variable}`}>
+      <body className={`${playfair.variable} ${manrope.variable}`} suppressHydrationWarning>
         <NavBar />
         {children}
         <FloatingCallButton />

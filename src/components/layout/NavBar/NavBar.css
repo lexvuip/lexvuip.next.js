@@ -547,6 +547,19 @@
 
 /* Show mobile menu button on small screens */
 @media screen and (max-width: 768px) {
+	.navbar {
+		padding: 0.875rem 4vw;
+	}
+	
+	.navbar-logo {
+		font-size: 1.15rem;
+		gap: 0.5rem;
+	}
+	
+	.navbar-logo-img {
+		height: 1.75rem;
+	}
+	
 	.mobile-menu-btn {
 		display: block;
 	}

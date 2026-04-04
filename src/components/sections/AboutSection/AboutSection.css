@@ -167,6 +167,7 @@
 
 .narrative-subtitle {
 	font-family: var(--font-serif);
+	font-weight: 400;
 	font-size: 1.75rem;
 	line-height: 1.4;
 	color: var(--color-navy);
@@ -289,6 +290,13 @@
 		font-size: 1.5rem;
 	}
 
+	.about-visual-column,
+	.about-narrative-column {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+
 	.heritage-tag {
 		position: relative;
 		right: 0;
@@ -297,10 +305,10 @@
 		width: calc(100% - 40px);
 		margin-left: 20px;
 	}
-	}
+}
 
-	@media (max-width: 480px) {
+@media (max-width: 480px) {
 	.about-hero-title {
 		font-size: 2rem;
 	}
-	}
+}
