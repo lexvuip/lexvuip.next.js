@@ -4,15 +4,31 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './Breadcrumbs.css';
 
+const customLabels = {
+	service: 'Services',
+	ipsolutions: 'IP Solutions',
+	paralegalsolutions: 'Paralegal Solutions',
+	customsolutions: 'Custom Solutions',
+};
+
 const Breadcrumbs = () => {
   const pathname = usePathname();
   const pathSegments = pathname.split('/').filter((segment) => segment !== '');
 
   const breadcrumbs = pathSegments.map((segment, index) => {
-    const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
-    const label = segment
+    let href = `/${pathSegments.slice(0, index + 1).join('/')}`;
+    let label = segment
       .replace(/-/g, ' ')
       .replace(/\b\w/g, (l) => l.toUpperCase());
+    
+    if (customLabels[segment]) {
+      label = customLabels[segment];
+    }
+    
+    if (segment === 'service' && index === 0) {
+      href = '/services';
+    }
+    
     return { label, href };
   });
 

@@ -394,18 +394,27 @@
 	transition: all var(--transition-base);
 }
 
+.mobile-arrow-btn:hover .mobile-arrow {
+	opacity: 1;
+}
+
 .mobile-arrow-btn:hover {
 	background-color: rgba(201, 162, 39, 0.05);
 }
 
 .mobile-arrow {
-	font-size: 0.6rem;
 	transition: transform var(--transition-base);
-	color: rgba(255, 255, 255, 0.6);
+	color: var(--color-gold);
+	opacity: 0.7;
+}
+
+.mobile-arrow:hover {
+	opacity: 1;
 }
 
 .mobile-arrow.open {
 	transform: rotate(180deg);
+	opacity: 1;
 }
 
 .mobile-services-dropdown {
@@ -459,14 +468,19 @@
 	justify-content: center;
 }
 
+.mobile-sub-arrow-btn:hover .mobile-sub-arrow {
+	opacity: 0.9;
+}
+
 .mobile-sub-arrow {
-	font-size: 0.5rem;
 	transition: transform var(--transition-base);
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--color-gold-light);
+	opacity: 0.6;
 }
 
 .mobile-sub-arrow.open {
 	transform: rotate(180deg);
+	opacity: 0.9;
 }
 
 .mobile-services-sub-dropdown {
