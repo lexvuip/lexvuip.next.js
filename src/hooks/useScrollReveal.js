@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 /**
  * Custom hook for detecting when an element enters the viewport
  * @param {React.RefObject} ref - React ref for the target element
- * @param {number} [threshold=0.85] - The viewport threshold (0-1) at which element is considered visible
+ * @param {number} [threshold=0.85] - The viewport threshold (0-1) at which element is considered visible (desktop)
  * @returns {boolean} True if element is visible in viewport
  */
 function useScrollReveal(ref, threshold = 0.85) {
@@ -16,22 +16,25 @@ function useScrollReveal(ref, threshold = 0.85) {
 
 		const element = ref.current;
 
-		const handleScroll = () => {
-			const rect = element.getBoundingClientRect();
-			const viewportHeight = window.innerHeight;
-			
-			if (rect.top < viewportHeight * threshold) {
-				setIsVisible(true);
-			}
-		};
+		const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+		const effectiveThreshold = isMobile ? 0.3 : threshold;
 
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		
-		// Check initial visibility
-		handleScroll();
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setIsVisible(true);
+				}
+			},
+			{
+				threshold: effectiveThreshold,
+				rootMargin: '0px 0px -10% 0px',
+			}
+		);
+
+		observer.observe(element);
 
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
+			observer.disconnect();
 		};
 	}, [ref, threshold]);
 
