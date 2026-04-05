@@ -7,7 +7,8 @@ import Footer from '../components/layout/Footer';
 import HeroSection from '../components/sections/HeroSection';
 
 export const metadata = {
-  title: "Home",
+  title: 'Patent Drawings & Paralegal Services | IP Solutions for Law Firms',
+  description: 'LexVuIP provides USPTO-compliant patent drawings, trademark support, and paralegal services. 25+ years supporting IP attorneys with precision filings.',
   alternates: {
     canonical: '/',
   },

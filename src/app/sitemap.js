@@ -1,4 +1,5 @@
 import { blogs } from '../data/blogs';
+import { ipServices, paralegalServices, customServices } from '../data/services';
 
 export default function sitemap() {
   const baseUrl = 'https://lexvuip.github.io';
@@ -30,5 +31,26 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const ipRoutes = ipServices.map((service) => ({
+    url: `${baseUrl}/service/ipsolutions/${service.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const paralegalRoutes = paralegalServices.map((service) => ({
+    url: `${baseUrl}/service/paralegalsolutions/${service.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const customRoutes = customServices.map((service) => ({
+    url: `${baseUrl}/service/customsolutions/${service.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...ipRoutes, ...paralegalRoutes, ...customRoutes];
 }
