@@ -5,8 +5,27 @@ import Footer from '../../components/layout/Footer/Footer';
 import './blog.css';
 
 export const metadata = {
-	title: 'Insights & Updates | Lexvu IP',
-	description: 'Stay updated with the latest trends, regulations, and insights in the legal and IP industry.',
+	title: 'Insights & Updates | LexVuIP Blog',
+	description: 'Expert insights on patent law, IP filing, trademark protection, and legal process optimization. USPTO, EPO, and WIPO compliance guides for IP attorneys.',
+	alternates: {
+		canonical: '/blog',
+	},
+	openGraph: {
+		title: 'IP Insights & Legal Updates - LexVuIP Blog',
+		description: 'Expert insights on patent law, IP filing strategies, and legal process optimization.',
+		url: 'https://lexvuip.github.io/blog',
+		siteName: 'LexVuIP',
+		images: [
+			{
+				url: '/og-blog.jpg',
+				width: 1200,
+				height: 630,
+				alt: 'LexVuIP Blog - IP Insights and Legal Updates',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
 };
 
 export default function BlogIndexPage() {

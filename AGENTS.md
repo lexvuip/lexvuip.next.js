@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a Next.js 15 website for LexVuIP, a legal services company offering IP Solutions, Patent Design, and Paralegal services. Built with React 19 and Next.js App Router.
+Next.js 15 website for LexVuIP (legal services: IP Solutions, Patent Design, Paralegal). Built with React 19 and App Router.
 
 ## Build/Lint/Test Commands
 
@@ -12,17 +12,13 @@ npm run build        # Production build with Turbopack
 npm start            # Start production server
 ```
 
-No lint or test commands are currently configured. Consider adding:
-```bash
-npm run lint         # Run ESLint (not configured)
-npm test             # Run tests (not configured)
-```
+No lint or test commands configured. Consider adding `npm run lint` and `npm test`.
 
 ## Technology Stack
 
 - **Framework**: Next.js 15.5.9 with App Router
 - **React**: 19.1.0
-- **Styling**: Plain CSS with CSS variables, no CSS-in-JS
+- **Styling**: Plain CSS with CSS variables (no CSS-in-JS)
 - **Fonts**: Google Fonts (Playfair Display, Manrope) via `next/font/google`
 - **Language**: JavaScript (JSX), not TypeScript
 
@@ -31,122 +27,128 @@ npm test             # Run tests (not configured)
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── page.js            # Home page
+│   ├── page.js            # Home page (server component)
 │   ├── layout.js          # Root layout
 │   ├── globals.css        # Global styles
-│   ├── about/             # About page route
-│   ├── contact/           # Contact page route
-│   ├── security/          # Security page route
-│   ├── services/          # Services page route
-│   └── service/           # Individual service routes
-│       ├── ipsolutions/
-│       ├── paralegalsolutions/
-│       └── customsolutions/
-├── components/            # React components (PascalCase files)
-│   ├── NavBar.jsx
-│   ├── HeroActions.jsx
-│   └── ...
-├── data/                  # Static data files
-│   └── blogs.js
-└── styles/                # CSS files matching component names
-    ├── variables.css      # CSS custom properties
-    ├── App.css
-    └── ...
+│   ├── blog/[slug]/page.js
+│   └── service/{ipsolutions,paralegalsolutions,customsolutions}/[slug]/
+├── components/
+│   ├── layout/            # NavBar, Footer
+│   ├── pages/             # Page-level components (AboutPage, ContactPage)
+│   ├── sections/          # Reusable sections (HeroSection, FAQSection)
+│   └── ui/                # UI primitives (Button, BlogCard, Breadcrumbs)
+├── hooks/                 # Custom hooks (useScrollReveal, useParallax, etc.)
+├── data/                  # Static data (services.js, blogs.js, navigation.js)
+└── styles/                # CSS files (variables.css, globals.css)
 ```
 
 ## Code Style Guidelines
 
 ### Imports
 
-- Use single quotes for all imports
-- Import order: React/Next imports first, then local components, then styles
-- Use relative imports from component location (no path aliases configured)
+- Single quotes for all imports
+- Order: React/Next imports → local components → styles
+- Relative imports (no path aliases)
 
 ```jsx
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
-import '../styles/NavBar.css';
+import './Button.css';
 ```
 
-### Component Naming
+### Component Organization
 
-- **Files**: PascalCase (e.g., `NavBar.jsx`, `HeroActions.jsx`)
-- **Components**: PascalCase function declarations
-- **Export**: Use `export default` for single exports
-
-```jsx
-function NavBar() {
-  // ...
-}
-
-export default NavBar;
-```
+Each component in its own folder:
+- `ComponentName.jsx` - Main component
+- `ComponentName.css` - Styles (if needed)
+- `index.js` - Barrel export: `export { default } from './Button';`
 
 ### Component Patterns
 
-- Use `'use client'` directive at the top of client components
-- Server components (page.js files) do not need the directive
-- Destructure hooks at the top of the component
-- Use arrow functions or function declarations consistently
+- Use `'use client'` directive at top of client components
+- Server components (page.js) don't need the directive
+- Destructure props with defaults in function signature
+- Keep page.js minimal - logic goes in `components/pages/`
+
+```jsx
+// app/about/page.js
+import AboutPage from '../../components/pages/AboutPage';
+
+export const metadata = { title: "About Us - LexVu" };
+
+export default function About() {
+  return <AboutPage />;
+}
+```
 
 ### CSS & Styling
 
-- CSS variable definitions in `src/styles/variables.css`
-- One CSS file per component, named matching the component
-- Import CSS relative to component: `'../styles/ComponentName.css'`
-- Use CSS custom properties for colors, spacing, transitions
+- Variables in `src/styles/variables.css`
+- One CSS file per component, imported relative: `'./Button.css'`
 
 ```css
-/* Available variables */
 --color-navy: #0a1628;
 --color-gold: #c9a227;
 --font-serif: 'Playfair Display', Georgia, serif;
+--transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 ```
 
 ### Code Formatting
 
-- Tabs for indentation (observed in codebase)
+- Tabs for indentation
 - Single quotes for strings
 - No trailing commas
 - JSX attributes on multiple lines for complex elements
 
-### Error Handling
-
-- No specific error boundary pattern observed
-- Consider adding error.js files for route segments
-
 ### Naming Conventions
 
-- **CSS classes**: kebab-case (e.g., `.hero-section`, `.navbar-logo`)
-- **Functions**: camelCase (e.g., `handleContactClick`, `toggleMobileMenu`)
-- **State variables**: camelCase with descriptive names (e.g., `mobileMenuOpen`)
-- **Data files**: camelCase exports (e.g., `blogs`)
+- **Files/Folders**: PascalCase (`Button.jsx`, `HeroSection/`)
+- **CSS classes**: kebab-case (`.hero-section`, `.navbar-logo`)
+- **Functions**: camelCase (`handleContactClick`, `toggleMobileMenu`)
+- **State**: camelCase with descriptive names (`mobileMenuOpen`)
+- **Data exports**: camelCase (`ipServices`, `paralegalServices`)
+- **Hooks**: camelCase with `use` prefix (`useScrollReveal`)
+
+### Data Files
+
+- Named exports for data arrays
+- Group related data in single files
+
+```jsx
+// data/services.js
+export const ipServices = [ ... ];
+export const paralegalServices = [ ... ];
+
+// Usage
+import { ipServices } from '../../data/services';
+```
 
 ### Metadata & SEO
 
-- Export `metadata` object from page.js for SEO
-- Include title, description, keywords for each page
+Export `metadata` from page.js files:
 
 ```jsx
 export const metadata = {
   title: "Page Title",
   description: "Page description",
-  keywords: ["keyword1", "keyword2"],
 };
 ```
 
+### Custom Hooks
+
+Place in `src/hooks/` with JSDoc comments, export via barrel file.
+
 ### Client vs Server Components
 
-- Use `'use client'` for interactive components with hooks
-- Server components for static content and page routing
-- Navigation uses `next/link` for internal links, `next/navigation` for router
+- `'use client'` for interactive components with hooks
+- Server components for static content
+- Use `next/link` for internal links, `next/navigation` for router
 
 ## Notes for Agents
 
-1. No TypeScript - use JavaScript/JSX only
-2. No testing framework configured - recommend adding Jest or Vitest
-3. No ESLint configuration - recommend creating `.eslintrc.json`
-4. Use Turbopack for development and builds (already configured)
-5. Follow existing patterns when creating new components
-6. Match CSS file naming to component naming
+1. No TypeScript - JavaScript/JSX only
+2. No testing framework - recommend Vitest
+3. No ESLint - recommend `eslint.config.mjs`
+4. Use Turbopack for dev/build
+5. Match CSS file naming to component naming
+6. Use barrel exports (index.js) for clean imports

@@ -18,6 +18,9 @@ export async function generateMetadata({ params }) {
 		title: `${service.title} | Lexvuip Paralegal Solutions`,
 		description: service.description,
 		keywords: service.content.primaryKeywords.join(', '),
+		alternates: {
+			canonical: `/service/paralegalsolutions/${slug}`,
+		},
 	};
 }
 
