@@ -21,8 +21,8 @@ const manrope = Manrope({
 export const metadata = {
   metadataBase: new URL('https://lexvuip.github.io'),
   title: {
-    default: 'LexVuIP | Intellectual Property & Paralegal Solutions',
-    template: '%s | LexVuIP'
+    default: 'Intellectual Property & Paralegal Solutions',
+    template: '%s'
   },
   description: 'Expert IP Solutions, Patent Design, and Paralegal services for legal professionals. Specializing in utility and design patent drawings, eFiling, and trial preparation.',
   manifest: '/manifest.json',
@@ -46,7 +46,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LexVuIP | Intellectual Property & Paralegal Solutions',
+    title: 'Intellectual Property & Paralegal Solutions',
     description: 'Expert IP Solutions, Patent Design, and Paralegal services for legal professionals.',
     images: ['/logo.png'],
   },

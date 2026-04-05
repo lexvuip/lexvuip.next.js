@@ -18,6 +18,9 @@ export async function generateMetadata({ params }) {
 		title: `${service.title} | Lexvuip IP Solutions`,
 		description: service.description,
 		keywords: service.content.primaryKeywords.join(', '),
+		alternates: {
+			canonical: `/service/ipsolutions/${slug}`,
+		},
 	};
 }
 

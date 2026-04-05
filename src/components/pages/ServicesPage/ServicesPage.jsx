@@ -17,7 +17,7 @@ function ServicesPage() {
 			<section className="services-hero-section">
 				<div className="services-hero-content">
 					<h1 className="services-hero-title">
-						Legal Solutions Designed
+						Patent Drawings & Paralegal Services
 						<br />
 						for <span className="italic">IP Attorneys</span> Worldwide
 					</h1>

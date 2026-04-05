@@ -40,7 +40,7 @@ function Footer() {
 								<li><a href="/">Home</a></li>
 								<li><a href="/about">About</a></li>
 								<li><a href="/services">Services</a></li>
-								<li><a href="/faq">FAQ</a></li>
+								<li><a href="/#faq">FAQ</a></li>
 								<li><a href="/contact">Contact</a></li>
 							</ul>
 						</div>
@@ -70,9 +70,6 @@ function Footer() {
 							<h4 className="footer-links-title">Resources</h4>
 							<ul className="footer-links-list">
 								<li><a href="/blog">Blog</a></li>
-								<li><a href="/#">Case Studies</a></li>
-								<li><a href="/#">Whitepapers</a></li>
-								<li><a href="/#">Webinars</a></li>
 							</ul>
 						</div>
 					</div>
