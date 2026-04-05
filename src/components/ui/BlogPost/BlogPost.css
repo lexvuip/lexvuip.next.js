@@ -1,5 +1,5 @@
 .blogpost-section {
-	padding: calc(var(--space-4xl) + 60px) 0 var(--space-4xl);
+	padding: calc(var(--space-4xl) + 20px) 0;
 	background-color: var(--color-ivory);
 	min-height: 100vh;
 }
@@ -203,7 +203,7 @@
 
 @media (max-width: 768px) {
 	.blogpost-section {
-		padding: calc(var(--space-2xl) + 60px) 0 var(--space-2xl);
+		padding: calc(var(--space-2xl) + 20px) 0;
 	}
 	
 	.blogpost-back {
