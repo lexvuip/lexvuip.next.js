@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Contact LexVuIP - Get Expert IP Support',
     description: 'Get in touch with LexVuIP for IP solutions, patent drawings, and paralegal services.',
-    url: 'https://lexvuip.github.io/contact',
+    url: 'https://lexvuip.com/contact',
     siteName: 'LexVuIP',
     images: [
       {

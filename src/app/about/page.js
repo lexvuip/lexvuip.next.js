@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'About LexVuIP - 25+ Years of IP Excellence',
     description: '25+ years of excellence in IP support and paralegal services.',
-    url: 'https://lexvuip.github.io/about',
+    url: 'https://lexvuip.com/about',
     siteName: 'LexVuIP',
     images: [
       {

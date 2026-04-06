@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: 'Patent Drawings & Paralegal Services',
     description: 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and paralegal services. 25+ years supporting IP attorneys worldwide.',
-    url: 'https://lexvuip.github.io',
+    url: 'https://lexvuip.com',
     siteName: 'LexVuIP',
     images: [
       {
@@ -36,12 +36,12 @@ export default function Home() {
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://lexvuip.github.io/#organization',
+        '@id': 'https://lexvuip.com/#organization',
         'name': 'LexVuIP',
-        'url': 'https://lexvuip.github.io',
+        'url': 'https://lexvuip.com',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://lexvuip.github.io/logo.png',
+          'url': 'https://lexvuip.com/logo.png',
         },
         'sameAs': [
           'https://www.linkedin.com/in/lexvuip-global-ip-paralegal-solutions',
@@ -57,10 +57,10 @@ export default function Home() {
       },
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://lexvuip.github.io/#localbusiness',
+        '@id': 'https://lexvuip.com/#localbusiness',
         'name': 'LexVuIP',
         'description': 'Intellectual property and paralegal support services for law firms and IP attorneys.',
-        'url': 'https://lexvuip.github.io',
+        'url': 'https://lexvuip.com',
         'telephone': '+1-856-214-2512',
         'email': 'inbox@lexvuip.com',
         'address': {
@@ -88,23 +88,23 @@ export default function Home() {
           { '@type': 'Country', 'name': 'United Kingdom' }
         ],
         'priceRange': '$$',
-        'image': 'https://lexvuip.github.io/logo.png',
+        'image': 'https://lexvuip.com/logo.png',
         'parentOrganization': {
-          '@id': 'https://lexvuip.github.io/#organization'
+          '@id': 'https://lexvuip.com/#organization'
         }
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://lexvuip.github.io/#website',
-        'url': 'https://lexvuip.github.io',
+        '@id': 'https://lexvuip.com/#website',
+        'url': 'https://lexvuip.com',
         'name': 'LexVuIP',
         'publisher': {
-          '@id': 'https://lexvuip.github.io/#organization'
+          '@id': 'https://lexvuip.com/#organization'
         }
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://lexvuip.github.io/#faqpage',
+        '@id': 'https://lexvuip.com/#faqpage',
         'mainEntity': [
           {
             '@type': 'Question',

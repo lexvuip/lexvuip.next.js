@@ -46,7 +46,7 @@ export const blogs = [
 		category: 'Updates',
 		title:
 			'Major Patent Office Updates 2025: What Every IP Attorney Needs to Know',
-		date: '04/04/2026',
+		date: '03/15/2026',
 		excerpt:
 			'The USPTO, EPO, and WIPO have each rolled out significant rule changes in 2025 — covering fee structures, drawing standards, AI-assisted examination, and PCT procedure updates. Here is what practicing IP attorneys need to act on now.',
 		heroImage:
@@ -102,7 +102,7 @@ export const blogs = [
 		category: 'Trademark',
 		title:
 			'Trademark Strategy for Attorneys: What Strong Brand Protection Really Looks Like',
-		date: '04/04/2026',
+		date: '02/28/2026',
 		excerpt:
 			'A poorly executed trademark filing can cost a client years of enforcement rights. This guide walks IP attorneys through sophisticated trademark strategy — from clearance and specimen selection to international filing and enforcement.',
 		heroImage:
@@ -148,7 +148,7 @@ export const blogs = [
 		category: 'Insights',
 		title:
 			'How AI Is Changing Patent Prosecution — And What Attorneys Must Do Now',
-		date: '04/04/2026',
+		date: '01/22/2026',
 		excerpt:
 			'AI tools are reshaping how patents are drafted, searched, and examined. From USPTO inventorship guidance to AI-assisted claim drafting, here is what every IP attorney needs to understand and act on in 2026.',
 		heroImage:
@@ -194,7 +194,7 @@ export const blogs = [
 		category: 'Process',
 		title:
 			'The Hidden Costs of Non-Compliant Patent Drawings — And How to Eliminate Them',
-		date: '04/04/2026',
+		date: '12/10/2025',
 		excerpt:
 			'Non-compliant patent drawings are one of the most avoidable sources of prosecution delay and cost. This guide breaks down exactly what goes wrong, what it costs, and how IP attorneys can protect their clients and their timelines.',
 		heroImage:

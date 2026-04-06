@@ -13,7 +13,7 @@ export const metadata = {
 	openGraph: {
 		title: 'IP Insights & Legal Updates - LexVuIP Blog',
 		description: 'Expert insights on patent law, IP filing strategies, and legal process optimization.',
-		url: 'https://lexvuip.github.io/blog',
+		url: 'https://lexvuip.com/blog',
 		siteName: 'LexVuIP',
 		images: [
 			{

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
 		openGraph: {
 			title: post.title,
 			description: post.excerpt,
-			url: `https://lexvuip.github.io/blog/${slug}`,
+			url: `https://lexvuip.com/blog/${slug}`,
 			type: 'article',
 			publishedTime: post.date,
 			authors: ['LexVuIP'],
@@ -68,7 +68,7 @@ export default async function BlogDetailPage({ params }) {
 			{
 				'@type': 'Organization',
 				'name': 'LexVuIP',
-				'url': 'https://lexvuip.github.io',
+				'url': 'https://lexvuip.com',
 			},
 		],
 		'publisher': {
@@ -76,12 +76,12 @@ export default async function BlogDetailPage({ params }) {
 			'name': 'LexVuIP',
 			'logo': {
 				'@type': 'ImageObject',
-				'url': 'https://lexvuip.github.io/logo.png',
+				'url': 'https://lexvuip.com/logo.png',
 			},
 		},
 		'mainEntityOfPage': {
 			'@type': 'WebPage',
-			'@id': `https://lexvuip.github.io/blog/${slug}`,
+			'@id': `https://lexvuip.com/blog/${slug}`,
 		},
 	};
 
@@ -93,13 +93,13 @@ export default async function BlogDetailPage({ params }) {
 				'@type': 'ListItem',
 				'position': 1,
 				'name': 'Home',
-				'item': 'https://lexvuip.github.io/',
+				'item': 'https://lexvuip.com/',
 			},
 			{
 				'@type': 'ListItem',
 				'position': 2,
 				'name': 'Blog',
-				'item': 'https://lexvuip.github.io/blog',
+				'item': 'https://lexvuip.com/blog',
 			},
 			{
 				'@type': 'ListItem',
