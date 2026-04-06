@@ -17,7 +17,7 @@ export const metadata = {
 		siteName: 'LexVuIP',
 		images: [
 			{
-				url: '/og-blog.jpg',
+				url: '/og-blog.png',
 				width: 1200,
 				height: 630,
 				alt: 'LexVuIP Blog - IP Insights and Legal Updates',

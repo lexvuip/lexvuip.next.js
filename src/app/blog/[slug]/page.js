@@ -85,11 +85,39 @@ export default async function BlogDetailPage({ params }) {
 		},
 	};
 
+	const breadcrumbJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		'itemListElement': [
+			{
+				'@type': 'ListItem',
+				'position': 1,
+				'name': 'Home',
+				'item': 'https://lexvuip.github.io/',
+			},
+			{
+				'@type': 'ListItem',
+				'position': 2,
+				'name': 'Blog',
+				'item': 'https://lexvuip.github.io/blog',
+			},
+			{
+				'@type': 'ListItem',
+				'position': 3,
+				'name': post.title,
+			},
+		],
+	};
+
 	return (
 		<>
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
 			/>
 			<BlogPost />
 		</>
