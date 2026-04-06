@@ -2,7 +2,7 @@ import { blogs } from '../data/blogs';
 import { ipServices, paralegalServices, customServices } from '../data/services';
 
 export default function sitemap() {
-  const baseUrl = 'https://lexvuip.github.io';
+  const baseUrl = 'https://lexvuip.com';
   
   const staticRoutes = [
     '',

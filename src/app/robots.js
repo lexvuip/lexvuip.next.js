@@ -6,6 +6,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://lexvuip.github.io/sitemap.xml',
+    sitemap: 'https://lexvuip.com/sitemap.xml',
   }
 }
