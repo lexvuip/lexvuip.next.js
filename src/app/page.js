@@ -19,7 +19,7 @@ export const metadata = {
     siteName: 'LexVuIP',
     images: [
       {
-        url: '/og-home.jpg',
+        url: '/og-home.png',
         width: 1200,
         height: 630,
         alt: 'LexVuIP - Patent Drawings and Paralegal Services',

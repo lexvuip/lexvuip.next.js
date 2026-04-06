@@ -13,7 +13,7 @@ export const metadata = {
     siteName: 'LexVuIP',
     images: [
       {
-        url: '/og-contact.jpg',
+        url: '/og-contact.png',
         width: 1200,
         height: 630,
         alt: 'Contact LexVuIP',

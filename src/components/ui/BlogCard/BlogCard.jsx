@@ -13,7 +13,7 @@ const BlogCard = ({ post }) => {
 				<div className="blog-card-image-container">
 					<Image 
 						src={heroImage} 
-						alt={title} 
+						alt={`${title} - LexVuIP legal insights`}
 						fill
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						className="blog-card-img"

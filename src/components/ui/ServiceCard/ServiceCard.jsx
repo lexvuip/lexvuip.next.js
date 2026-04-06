@@ -13,7 +13,7 @@ function ServiceCard({ image, title, desc, href }) {
 				<div className="card-image-wrapper">
 					<Image
 						src={image}
-						alt={title}
+						alt={`${title} - Professional IP support service from LexVuIP`}
 						fill
 						style={{ objectFit: 'cover' }}
 					/>
