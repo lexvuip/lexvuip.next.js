@@ -1,5 +1,6 @@
 import React from 'react';
 import { blogs } from '../../../data/blogs';
+import { authors, defaultAuthor } from '../../../data/authors';
 import BlogPost from '../../../components/ui/BlogPost';
 
 export async function generateMetadata({ params }) {
@@ -11,6 +12,8 @@ export async function generateMetadata({ params }) {
 			title: 'Post Not Found',
 		};
 	}
+
+	const author = post.authorId ? authors[post.authorId] || defaultAuthor : defaultAuthor;
 
 	return {
 		title: post.title,
@@ -24,7 +27,7 @@ export async function generateMetadata({ params }) {
 			url: `https://lexvuip.com/blog/${slug}`,
 			type: 'article',
 			publishedTime: post.date,
-			authors: ['LexVuIP'],
+			authors: [author.name],
 			images: [
 				{
 					url: post.heroImage,
@@ -57,6 +60,8 @@ export default async function BlogDetailPage({ params }) {
 		return <div>Post Not Found</div>;
 	}
 
+	const author = post.authorId ? authors[post.authorId] || defaultAuthor : defaultAuthor;
+
 	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
@@ -64,13 +69,12 @@ export default async function BlogDetailPage({ params }) {
 		'description': post.excerpt,
 		'image': post.heroImage,
 		'datePublished': post.date,
-		'author': [
-			{
-				'@type': 'Organization',
-				'name': 'LexVuIP',
-				'url': 'https://lexvuip.com',
-			},
-		],
+		'author': {
+			'@type': 'Person',
+			'name': author.name,
+			'url': `https://lexvuip.com/about#${author.id}`,
+			'jobTitle': author.title,
+		},
 		'publisher': {
 			'@type': 'Organization',
 			'name': 'LexVuIP',

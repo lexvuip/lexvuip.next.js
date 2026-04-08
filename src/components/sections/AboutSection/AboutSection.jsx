@@ -33,8 +33,16 @@ export default function AboutSection() {
 								loop
 								muted
 								playsInline
+								poster="/videos/about_video_poster.jpg"
 								title="LexVuIP Intellectual Property and Paralegal Solutions Overview Video"
 							>
+								<track
+									kind="captions"
+									srcLang="en"
+									src="/videos/about_video_captions.vtt"
+									label="English captions"
+									default
+								/>
 								Your browser does not support the video tag.
 							</video>
 							<div className="video-overlay-border"></div>
