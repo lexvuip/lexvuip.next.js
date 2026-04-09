@@ -1,7 +1,7 @@
 export const ipServices = [
 	{
 		slug: 'utility-patent-drawings',
-		image: '/assets/stockimages/utilitypatentdrawing.jpg',
+		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'Utility Patent Drawings',
 		description: 'USPTO, EPO, and WIPO-compliant utility illustrations crafted with technical precision and engineering expertise',
 		content: {
@@ -16,7 +16,7 @@ export const ipServices = [
 	},
 	{
 		slug: 'design-patent-drawings',
-		image: '/assets/stockimages/desingpatentdrawing.jpg',
+		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
 		title: 'Design Patent Drawings',
 		description: 'Accurate, visually compelling design patent illustrations that highlight unique visual qualities and distinct features',
 		content: {
@@ -31,7 +31,7 @@ export const ipServices = [
 	},
 	{
 		slug: 'trademark-support',
-		image: '/assets/stockimages/trademarkdesign.jpg',
+		image: '/assets/stockimages/trademarkdesign-1920.webp',
 		title: 'Trademark Support',
 		description: 'Comprehensive search, filing, and drawing services that capture the essence of your brand identity while meeting legal requirements',
 		content: {
@@ -49,7 +49,7 @@ export const ipServices = [
 export const paralegalServices = [
 	{
 		slug: 'case-docketing-management',
-		image: '/assets/stockimages/caseManagement.jpg',
+		image: '/assets/stockimages/caseManagement-1920.webp',
 		title: 'Case & Docketing Management',
 		description: 'End-to-end management ensuring every milestone from intake to resolution is met with absolute precision.',
 		content: {
@@ -64,7 +64,7 @@ export const paralegalServices = [
 	},
 	{
 		slug: 'efiling-compliance',
-		image: '/assets/stockimages/eFillingServices.jpg',
+		image: '/assets/stockimages/eFillingServices-1920.webp',
 		title: 'E-Filing & Compliance Support',
 		description: 'Seamless electronic filing for local and federal courts, ensuring accuracy and timely confirmations.',
 		content: {
@@ -79,7 +79,7 @@ export const paralegalServices = [
 	},
 	{
 		slug: 'document-management',
-		image: '/assets/stockimages/contactManagementServices.jpg',
+		image: '/assets/stockimages/contactManagementServices-1920.webp',
 		title: 'Contact & Document Management',
 		description: 'Organized and secure management of client and witness information for rapid access during case prep.',
 		content: {
@@ -94,7 +94,7 @@ export const paralegalServices = [
 	},
 	{
 		slug: 'trial-prep-deposition',
-		image: '/assets/stockimages/trailPreparation.jpg',
+		image: '/assets/stockimages/trailPreparation-1920.webp',
 		title: 'Trial Preparation & Deposition Coordination',
 		description: 'Comprehensive support for trial binders, exhibits, and witness lists to ensure you walk into court fully prepared.',
 		content: {
@@ -109,7 +109,7 @@ export const paralegalServices = [
 	},
 	{
 		slug: 'compliance-support',
-		image: '/assets/stockimages/complianceSupport.jpg',
+		image: '/assets/stockimages/complianceSupport-1920.webp',
 		title: 'Compliance Support',
 		description: 'Continuous monitoring of court procedures and filing standards to protect your clients and keep cases moving.',
 		content: {
@@ -127,7 +127,7 @@ export const paralegalServices = [
 export const customServices = [
 	{
 		slug: 'tailored-support',
-		image: '/assets/stockimages/desingpatentdrawing.jpg',
+		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
 		title: 'Tailored Support',
 		description: 'Custom solutions for unique IP and paralegal needs, adapting to your firm\'s specific workflow and reporting style.',
 		content: {
@@ -142,7 +142,7 @@ export const customServices = [
 	},
 	{
 		slug: 'workflow-automation',
-		image: '/assets/stockimages/utilitypatentdrawing.jpg',
+		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'Workflow Automation',
 		description: 'Efficiency-driven automation for legal processes, helping your team stay ahead of schedules and filings.',
 		content: {
@@ -157,7 +157,7 @@ export const customServices = [
 	},
 	{
 		slug: 'special-consulting',
-		image: '/assets/stockimages/customworkflow.jpg',
+		image: '/assets/stockimages/customworkflow-1920.webp',
 		title: 'Special Consulting',
 		description: 'Expert consulting for complex legal projects that require specialized technical or procedural knowledge.',
 		content: {

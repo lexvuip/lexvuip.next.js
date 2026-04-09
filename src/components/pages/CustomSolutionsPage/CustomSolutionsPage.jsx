@@ -32,7 +32,7 @@ function CustomSolutionsPage() {
 						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
-				<ServicesHeroParallax imageSrc="/assets/stockimages/customworkflow.jpg" alt="Tailored legal support and custom workflow automation for law firms" />
+				<ServicesHeroParallax imageSrc="/assets/stockimages/customworkflow-1920.webp" alt="Tailored legal support and custom workflow automation for law firms" />
 			</section>
 
 			{/* Impact Section */}

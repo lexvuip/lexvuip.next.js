@@ -9,7 +9,7 @@ export const blogs = [
 		authorId: 'john-smith',
 		excerpt:
 			'A single overlooked detail — a non-compliant drawing, a missed jurisdiction, a misclassified claim — can delay or invalidate years of work. This guide walks attorneys through the critical checkpoints before, during, and after an IP filing.',
-		heroImage: '/assets/stockimages/utilitypatentdrawing.jpg',
+		heroImage: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		content: [
 			{
 				heading: 'Why IP Filings Fail — And How to Avoid It',

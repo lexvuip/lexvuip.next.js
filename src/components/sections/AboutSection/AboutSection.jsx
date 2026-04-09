@@ -84,15 +84,15 @@ export default function AboutSection() {
 				{/* Immersive Visual Break */}
 				<div className="about-immersive-row about-image-row">
 					<div className="immersive-container">
-						<Image
-							className="about-image"
-							src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
-							alt="LexVuIP legal professionals providing patent drawings and paralegal support services in a modern law office"
-							fill
-							sizes="100vw"
-							style={{ objectFit: 'cover' }}
-							priority
-						/>
+<Image
+						className="about-image"
+						src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+						alt="LexVuIP legal professionals providing patent drawings and paralegal support services in a modern law office"
+						fill
+						sizes="(max-width: 768px) 100vw, 50vw"
+						style={{ objectFit: 'cover' }}
+						priority
+					/>
 						<div className="image-vignette"></div>
 					</div>
 				</div>

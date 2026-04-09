@@ -30,9 +30,10 @@ export default function AboutPage() {
               <div className="principle-visual">
                 <div className="principle-image-wrapper">
                   <Image 
-                    src="/assets/stockimages/ourmission.jpg" 
+                    src="/assets/stockimages/ourmission-1920.webp" 
                     alt="LexVuIP mission to support attorneys with patent drawings and paralegal services"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
@@ -47,9 +48,10 @@ export default function AboutPage() {
               <div className="principle-visual">
                 <div className="principle-image-wrapper">
                   <Image 
-                    src="/assets/stockimages/ourpromise.jpg" 
+                    src="/assets/stockimages/ourpromise-1920.webp" 
                     alt="LexVuIP promise of accurate IP filings and timely legal support delivery"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
@@ -64,9 +66,10 @@ export default function AboutPage() {
               <div className="principle-visual">
                 <div className="principle-image-wrapper">
                   <Image 
-                    src="/assets/stockimages/ourpurpose.jpg" 
+                    src="/assets/stockimages/ourpurpose-1920.webp" 
                     alt="LexVuIP purpose of building trusted partnerships with law firms for IP and litigation support"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>

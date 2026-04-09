@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function ServiceCard({ image, title, desc, href }) {
+	const baseImage = image.replace('-1920.webp', '');
 	const CardContent = (
 		<div className="luxury-service-card">
 			<div className="card-visual">
@@ -15,6 +16,7 @@ function ServiceCard({ image, title, desc, href }) {
 						src={image}
 						alt={`${title} - Professional IP support service from LexVuIP`}
 						fill
+						sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
 						style={{ objectFit: 'cover' }}
 					/>
 					<div className="card-overlay"></div>
