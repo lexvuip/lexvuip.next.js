@@ -1,14 +1,29 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import './ServicesPage.css';
 import Footer from '../../layout/Footer';
-import FAQSection from '../../sections/FAQSection';
-import TestimonialSection from '../../sections/TestimonialSection';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
 import CountUp from 'react-countup';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 function ServicesPage() {
 	return (

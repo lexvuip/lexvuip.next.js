@@ -53,3 +53,12 @@ a {
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--color-gold-dark);
 }
+
+.section-loading {
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-navy);
+	font-size: 1rem;
+}
