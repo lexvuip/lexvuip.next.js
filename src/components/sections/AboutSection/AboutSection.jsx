@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import './AboutSection.css';
 import AboutStats from '../AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
@@ -7,6 +8,27 @@ import Button from '../../ui/Button';
 import Image from 'next/image';
 
 export default function AboutSection() {
+	const [videoLoaded, setVideoLoaded] = useState(false);
+	const videoContainerRef = useRef(null);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					setVideoLoaded(true);
+					observer.disconnect();
+				}
+			},
+			{ threshold: 0.25 }
+		);
+
+		if (videoContainerRef.current) {
+			observer.observe(videoContainerRef.current);
+		}
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<section id="about" className="about-section">
 			<AboutReveal>
@@ -25,18 +47,36 @@ export default function AboutSection() {
 				<div className="about-main-composition">
 					{/* Left Column: Video & Visuals */}
 					<div className="about-visual-column about-left-column">
-						<div className="about-video-wrapper">
-							<video
-								className="about-video-luxury"
-								src="/videos/about_video.mp4"
-								autoPlay
-								loop
-								muted
-								playsInline
-								title="LexVuIP Intellectual Property and Paralegal Solutions Overview Video"
-							>
-								Your browser does not support the video tag.
-							</video>
+						<div className="about-video-wrapper" ref={videoContainerRef}>
+							{videoLoaded ? (
+								<video
+									className="about-video-luxury"
+									src="/videos/about_video_compressed.mp4"
+									autoPlay
+									loop
+									muted
+									playsInline
+									poster="/videos/about_video_poster.jpg"
+									title="LexVuIP Intellectual Property and Paralegal Solutions Overview Video"
+								>
+									<track
+										kind="captions"
+										srcLang="en"
+										src="/videos/about_video_captions.vtt"
+										label="English captions"
+										default
+									/>
+									Your browser does not support the video tag.
+								</video>
+							) : (
+								<div className="video-placeholder">
+									<img
+										src="/videos/about_video_poster.jpg"
+										alt="LexVuIP Intellectual Property and Paralegal Solutions Overview Video"
+										className="video-poster-fallback"
+									/>
+								</div>
+							)}
 							<div className="video-overlay-border"></div>
 						</div>
 						
@@ -76,15 +116,15 @@ export default function AboutSection() {
 				{/* Immersive Visual Break */}
 				<div className="about-immersive-row about-image-row">
 					<div className="immersive-container">
-						<Image
-							className="about-image"
-							src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
-							alt="LexVuIP legal professionals providing patent drawings and paralegal support services in a modern law office"
-							fill
-							sizes="100vw"
-							style={{ objectFit: 'cover' }}
-							priority
-						/>
+<Image
+						className="about-image"
+						src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+						alt="LexVuIP legal professionals providing patent drawings and paralegal support services in a modern law office"
+						fill
+						sizes="(max-width: 768px) 100vw, 50vw"
+						style={{ objectFit: 'cover' }}
+						priority
+					/>
 						<div className="image-vignette"></div>
 					</div>
 				</div>

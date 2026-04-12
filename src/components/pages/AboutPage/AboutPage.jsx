@@ -30,15 +30,16 @@ export default function AboutPage() {
               <div className="principle-visual">
                 <div className="principle-image-wrapper">
                   <Image 
-                    src="/assets/stockimages/ourmission.jpg" 
+                    src="/assets/stockimages/ourmission-1920.webp" 
                     alt="LexVuIP mission to support attorneys with patent drawings and paralegal services"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>
               <div className="principle-content">
-                <h3>Our Mission</h3>
+                <h2>Our Mission</h2>
                 <p>We aim to support attorneys with reliable, detail-oriented help in both intellectual property and litigation. We ensure every filing, drawing, and deadline is managed with care.</p>
               </div>
             </div>
@@ -47,15 +48,16 @@ export default function AboutPage() {
               <div className="principle-visual">
                 <div className="principle-image-wrapper">
                   <Image 
-                    src="/assets/stockimages/ourpromise.jpg" 
+                    src="/assets/stockimages/ourpromise-1920.webp" 
                     alt="LexVuIP promise of accurate IP filings and timely legal support delivery"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>
               <div className="principle-content">
-                <h3>Our Promise</h3>
+                <h2>Our Promise</h2>
                 <p>We relieve the pressure on your desk. Whether you need design patent figures or trial prep documents, our work is accurate, compliant, and delivered on time every time.</p>
               </div>
             </div>
@@ -64,15 +66,16 @@ export default function AboutPage() {
               <div className="principle-visual">
                 <div className="principle-image-wrapper">
                   <Image 
-                    src="/assets/stockimages/ourpurpose.jpg" 
+                    src="/assets/stockimages/ourpurpose-1920.webp" 
                     alt="LexVuIP purpose of building trusted partnerships with law firms for IP and litigation support"
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>
               <div className="principle-content">
-                <h3>Our Purpose</h3>
+                <h2>Our Purpose</h2>
                 <p>To strengthen the work of attorneys by removing bottlenecks, protecting innovation, and building lasting partnerships rooted in trust, clarity, and results.</p>
               </div>
             </div>

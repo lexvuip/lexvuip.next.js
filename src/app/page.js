@@ -103,6 +103,21 @@ export default function Home() {
         }
       },
       {
+        '@type': 'VideoObject',
+        '@id': 'https://lexvuip.com/#about-video',
+        'name': 'LexVuIP Overview - IP Solutions and Paralegal Services',
+        'description': 'Learn how LexVuIP supports IP attorneys with patent drawings, trademark filings, and comprehensive paralegal services. 25+ years of expertise in USPTO, EPO, WIPO, and PCT filings.',
+        'thumbnailUrl': 'https://lexvuip.com/videos/about_video_poster.jpg',
+        'uploadDate': '2024-01-15',
+        'duration': 'PT45S',
+        'contentUrl': 'https://lexvuip.com/videos/about_video.mp4',
+        'embedUrl': 'https://lexvuip.com/#about',
+        'transcript': 'LexVuIP: Precision in Every Filing. Clarity in Every Design. 25+ years supporting IP attorneys worldwide. Expert patent drawings for USPTO, EPO, WIPO, and PCT filings. Comprehensive paralegal services: docketing, e-filing, trial preparation. Your trusted partner for intellectual property solutions.',
+        'publisher': {
+          '@id': 'https://lexvuip.com/#organization'
+        }
+      },
+      {
         '@type': 'FAQPage',
         '@id': 'https://lexvuip.com/#faqpage',
         'mainEntity': [

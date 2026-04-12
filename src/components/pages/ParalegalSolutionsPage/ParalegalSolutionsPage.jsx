@@ -33,7 +33,7 @@ function ParalegalSolutionsPage() {
 						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
-				<ServicesHeroParallax imageSrc="/assets/stockimages/lawer.jpg" alt="Professional paralegal services including docketing, e-filing, and trial preparation" />
+				<ServicesHeroParallax imageSrc="/assets/stockimages/lawer-1920.webp" alt="Professional paralegal services including docketing, e-filing, and trial preparation" />
 			</section>
 
 			{/* Impact Section */}
@@ -134,37 +134,37 @@ function ParalegalSolutionsPage() {
 					<div className="service-category-group">
 						<div className="services-grid-luxury">
 							<ServiceCard
-								image="/assets/stockimages/caseManagement.jpg"
+								image="/assets/stockimages/caseManagement-1920.webp"
 								title="Case Management"
 								desc="End-to-end management ensuring every milestone is met with precision."
 								href="/service/paralegalsolutions/case-docketing-management"
 							/>
 							<ServiceCard
-								image="/assets/stockimages/docketingManagement.jpg"
+								image="/assets/stockimages/docketingManagement-1920.webp"
 								title="Docketing Management"
 								desc="Efficient tracking and management of critical IP deadlines."
 								href="/service/paralegalsolutions/case-docketing-management"
 							/>
 							<ServiceCard
-								image="/assets/stockimages/eFillingServices.jpg"
+								image="/assets/stockimages/eFillingServices-1920.webp"
 								title="E-Filing Services"
 								desc="Seamless electronic filing for patents and trademarks."
 								href="/service/paralegalsolutions/efiling-compliance"
 							/>
 							<ServiceCard
-								image="/assets/stockimages/contactManagementServices.jpg"
+								image="/assets/stockimages/contactManagementServices-1920.webp"
 								title="Contact Management"
 								desc="Organized and secure case information management."
 								href="/service/paralegalsolutions/document-management"
 							/>
 							<ServiceCard
-								image="/assets/stockimages/trailPreparation.jpg"
+								image="/assets/stockimages/trailPreparation-1920.webp"
 								title="Trial Preparation"
 								desc="Comprehensive support for trial document and evidence prep."
 								href="/service/paralegalsolutions/trial-prep-deposition"
 							/>
 							<ServiceCard
-								image="/assets/stockimages/lawer.jpg"
+								image="/assets/stockimages/lawer-1920.webp"
 								title="Deposition Coordination"
 								desc="Expert logistics and support for global depositions."
 								href="/service/paralegalsolutions/trial-prep-deposition"

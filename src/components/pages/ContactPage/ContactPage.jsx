@@ -20,7 +20,7 @@ function ContactPage() {
 			<section className="contact-hero-section">
 				<div 
 					className="contact-hero-bg" 
-					style={{ backgroundImage: `url(/assets/stockimages/lawer.jpg)` }}
+					style={{ backgroundImage: `url(/assets/stockimages/lawer-1920.webp)` }}
 				></div>
 				<div className="contact-hero-overlay"></div>
 				<div className="contact-hero-pattern"></div>

@@ -6,16 +6,16 @@ import FloatingCallButton from "../components/ui/FloatingCallButton";
 const playfair = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "optional",
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
 const manrope = Manrope({
   variable: "--font-sans",
   subsets: ["latin"],
-  display: "swap",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  display: "optional",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {

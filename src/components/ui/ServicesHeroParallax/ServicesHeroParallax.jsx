@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 
 export default function ServicesHeroParallax({ 
-	imageSrc = "/assets/stockimages/lawer.jpg", 
+	imageSrc = "/assets/stockimages/lawer-1920.webp", 
 	alt = "Legal Services" 
 }) {
 	useEffect(() => {
@@ -61,6 +61,7 @@ export default function ServicesHeroParallax({
 					alt={alt}
 					fill
 					priority
+					sizes="100vw"
 					className="services-hero-image"
 					style={{ objectFit: 'cover' }}
 				/>
