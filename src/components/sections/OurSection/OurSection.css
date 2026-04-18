@@ -123,6 +123,8 @@
 	position: relative;
 	gap: 3vw;
 	transition: all var(--transition-base);
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .our-service-card:hover {

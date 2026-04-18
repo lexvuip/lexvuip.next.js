@@ -9,7 +9,7 @@ import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
-import CountUp from 'react-countup';
+import Counter from '../../ui/Counter';
 import { ipServices } from '../../../data/services';
 
 function IpSolutionsPage() {
@@ -63,7 +63,7 @@ function IpSolutionsPage() {
 											<span className="stat-label-tiny">PRECISION FIRST</span>
 										</div>
 										<div className="stat-value-container">
-											<CountUp end={99} duration={3} className="stat-value" suffix="%" />
+											<Counter end={99} duration={3} className="stat-value" suffix="%" />
 											<span className="stat-unit">ACCURACY</span>
 										</div>
 										<p className="stat-description-tiny">Flawless compliance for 25+ years</p>

@@ -1,10 +1,9 @@
 import AboutSection from '../components/sections/AboutSection';
 import OurSection from '../components/sections/OurSection';
 import BlogSection from '../components/sections/BlogSection';
-import TestimonialSection from '../components/sections/TestimonialSection';
-import FAQSection from '../components/sections/FAQSection';
 import Footer from '../components/layout/Footer';
 import HeroSection from '../components/sections/HeroSection';
+import HomeLazySections from '../components/pages/HomeLazySections';
 
 export const metadata = {
   title: 'Patent Drawings & Paralegal Services',
@@ -176,8 +175,7 @@ export default function Home() {
       <AboutSection />
       <OurSection />
       <BlogSection />
-      <TestimonialSection />
-      <FAQSection />
+      <HomeLazySections />
       <Footer />
     </div>
   );

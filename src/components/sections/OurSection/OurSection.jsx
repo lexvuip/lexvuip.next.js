@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import './OurSection.css';
 import Button from '../../ui/Button';
 
@@ -16,6 +17,7 @@ const services = [
 			'Our experienced remote paralegal team manages Docketing, E-Filing, and Contact Records with meticulous attention to detail—while also supporting Trial Preparation, Deposition Coordination, and Compliance so you can focus on advocacy, not administration.',
 		image: '/assets/stockimages/lawer-1920.webp',
 		alt: 'Professional paralegal support for IP law firms and litigation',
+		href: '/service/paralegalsolutions',
 	},
 	{
 		number: 2,
@@ -28,6 +30,7 @@ const services = [
 			'From intricate Utility Patent Drawings to visually precise Design Patent Illustrations and globally compliant Trademark Support, we deliver intellectual property assets that meet USPTO, EPO, and WIPO standards—ensuring your filings are clear, compliant, and strategically positioned for success.',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		alt: 'Technical utility patent drawings compliant with USPTO and WIPO standards',
+		href: '/service/ipsolutions',
 	},
 	{
 		number: 3,
@@ -40,6 +43,7 @@ const services = [
 			'Whether you need a dedicated resource for high-volume filings, specialized illustration styles, or firm-specific compliance tasks, we integrate seamlessly into your processes—delivering accurate, on-time support that aligns perfectly with your team\'s standards and client expectations.',
 		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
 		alt: 'Custom design patent illustrations and tailored legal workflow support',
+		href: '/service/customsolutions',
 	},
 ];
 
@@ -156,7 +160,7 @@ function OurSection() {
 				</h2>
 				<div className="our-services-list" ref={listRef}>
 					{services.map((service, idx) => (
-						<div className="our-service-card" key={idx}>
+						<Link href={service.href} key={idx} className="our-service-card">
 							<div className="our-service-number">{service.number}.</div>
 							<div className="our-service-content">
 								<div className="our-service-title">{service.title}</div>
@@ -174,7 +178,7 @@ function OurSection() {
 									style={{ objectFit: 'cover' }}
 								/>
 							</div>
-						</div>
+						</Link>
 					))}
 				</div>
 				<div className="our-learnmore-row">

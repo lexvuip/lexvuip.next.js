@@ -1,14 +1,29 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import './ServicesPage.css';
 import Footer from '../../layout/Footer';
-import FAQSection from '../../sections/FAQSection';
-import TestimonialSection from '../../sections/TestimonialSection';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
-import CountUp from 'react-countup';
+import Counter from '../../ui/Counter';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 function ServicesPage() {
 	return (
@@ -103,7 +118,7 @@ function ServicesPage() {
 											<span className="stat-label-tiny">ESTABLISHED EXPERTISE</span>
 										</div>
 										<div className="stat-value-container">
-											<CountUp end={25} duration={3} className="stat-value" suffix="+" />
+											<Counter end={25} duration={3} className="stat-value" suffix="+" />
 											<span className="stat-unit">YEARS</span>
 										</div>
 										<p className="stat-description-tiny">Pioneering IP support since 1999</p>
@@ -122,7 +137,7 @@ function ServicesPage() {
 								<div className="stat-card-secondary bottom-left">
 									<div className="stat-card-mini">
 										<span className="mini-value">
-											<CountUp end={121} duration={2.5} suffix="K+" />
+											<Counter end={121} duration={2.5} suffix="K+" />
 										</span>
 										<span className="mini-label">Projects</span>
 									</div>

@@ -1,0 +1,4 @@
+.counter-value {
+	font-variant-numeric: tabular-nums;
+	display: inline-block;
+}
