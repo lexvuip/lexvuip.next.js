@@ -53,7 +53,7 @@ function BlogSection() {
 									className="blog-image" 
 								/>
 								<div className="blog-image-overlay">
-									<span>Read More</span>
+									<span>Read Article <span className="sr-only">: {post.title}</span></span>
 								</div>
 							</Link>
 							<div className="blog-card-body">
