@@ -37,6 +37,7 @@ function ServiceCard({ image, title, desc, href }) {
 			{href ? (
 				<Link href={href} className="card-link-wrapper">
 					{CardContent}
+					<span className="sr-only">Learn more about {title}</span>
 				</Link>
 			) : (
 				CardContent

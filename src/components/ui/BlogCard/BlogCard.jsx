@@ -19,7 +19,7 @@ const BlogCard = ({ post }) => {
 						className="blog-card-img"
 					/>
 					<div className="blog-card-overlay">
-						<span className="blog-card-read-more">Read Article</span>
+						<span className="blog-card-read-more">Read Article<span className="sr-only">: {title}</span></span>
 					</div>
 				</div>
 			</Link>
@@ -37,7 +37,7 @@ const BlogCard = ({ post }) => {
 				<p className="blog-card-excerpt">{excerpt}</p>
 				
 				<Link href={`/blog/${slug}`} className="blog-card-link">
-					Read More <span className="arrow">→</span>
+					Read Article <span className="sr-only">: {title}</span> <span className="arrow">→</span>
 				</Link>
 			</div>
 		</article>
