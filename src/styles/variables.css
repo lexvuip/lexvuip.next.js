@@ -7,19 +7,20 @@
 	--color-gold: #c9a227;
 	--color-gold-light: #e6d190;
 	--color-gold-dark: #a68619;
+	--color-gold-text: #856a12; /* WCAG AA 4.5:1 Contrast for gold text on light backgrounds */
 	--color-champagne: #f7f3e3;
 	--color-cream: #faf8f5;
 	--color-ivory: #fefdf8;
 	--color-white: #ffffff;
 	--color-text-primary: #0a1628;
 	--color-text-secondary: #4a5568;
-	--color-text-muted: #718096;
+	--color-text-muted: #54647a; /* Darkened from #718096 for WCAG 4.5:1 text contrast */
 	--color-border: rgba(201, 162, 39, 0.2);
 	--color-border-light: rgba(201, 162, 39, 0.1);
 
 	/* Typography - Luxury Editorial */
-	--font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-	--font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-serif-fallback: Georgia, 'Times New Roman', serif;
+	--font-sans-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
 	/* Spacing Scale */
 	--space-xs: 0.25rem;

@@ -84,7 +84,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: var(--color-gold);
+	color: var(--color-gold-text);
 	padding: 0.25rem 0.75rem;
 	background: rgba(201, 162, 39, 0.1);
 	border-radius: 100px;
@@ -132,7 +132,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: var(--color-gold);
+	color: var(--color-gold-text);
 	text-decoration: none;
 	display: flex;
 	align-items: center;

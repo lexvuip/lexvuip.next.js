@@ -155,7 +155,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: var(--color-gold);
+	color: var(--color-gold-text);
 }
 
 .blog-date {
@@ -199,7 +199,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: var(--color-gold);
+	color: var(--color-gold-text);
 	text-decoration: none;
 	display: flex;
 	align-items: center;
