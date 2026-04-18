@@ -9,7 +9,7 @@ import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
-import CountUp from 'react-countup';
+import Counter from '../../ui/Counter';
 import { paralegalFaqs } from '../../../data/faqs';
 import { paralegalServices } from '../../../data/services';
 
@@ -64,7 +64,7 @@ function ParalegalSolutionsPage() {
 											<span className="stat-label-tiny">OPERATIONAL EXCELLENCE</span>
 										</div>
 										<div className="stat-value-container">
-											<CountUp end={121} duration={3} className="stat-value" suffix="K+" />
+											<Counter end={121} duration={3} className="stat-value" suffix="K+" />
 											<span className="stat-unit">PROJECTS</span>
 										</div>
 										<p className="stat-description-tiny">Seamless legal support delivered globally</p>

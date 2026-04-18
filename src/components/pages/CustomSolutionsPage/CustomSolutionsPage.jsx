@@ -9,7 +9,7 @@ import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
-import CountUp from 'react-countup';
+import Counter from '../../ui/Counter';
 import { customServices } from '../../../data/services';
 
 function CustomSolutionsPage() {
@@ -63,7 +63,7 @@ function CustomSolutionsPage() {
 											<span className="stat-label-tiny">TAILORED INTEGRATION</span>
 										</div>
 										<div className="stat-value-container">
-											<CountUp end={100} duration={3} className="stat-value" suffix="%" />
+											<Counter end={100} duration={3} className="stat-value" suffix="%" />
 											<span className="stat-unit">ADAPTIVE</span>
 										</div>
 										<p className="stat-description-tiny">Bespoke workflows for premier law firms</p>

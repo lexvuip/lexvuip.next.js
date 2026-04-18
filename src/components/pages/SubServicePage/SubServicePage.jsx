@@ -9,7 +9,7 @@ import AboutReveal from '../../ui/AboutReveal';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import Breadcrumbs from '../../ui/Breadcrumbs';
-import CountUp from 'react-countup';
+import Counter from '../../ui/Counter';
 
 const categoryConfigs = {
 	ip: {
@@ -146,7 +146,7 @@ function SubServicePage({ service, category = 'ip' }) {
 											<span className="stat-label-tiny">{config.statLabel}</span>
 										</div>
 										<div className="stat-value-container">
-											<CountUp end={config.statValue} duration={3} className="stat-value" suffix={config.statSuffix} />
+											<Counter end={config.statValue} duration={3} className="stat-value" suffix={config.statSuffix} />
 											<span className="stat-unit">{config.statUnit}</span>
 										</div>
 										<p className="stat-description-tiny">{config.statDesc}</p>

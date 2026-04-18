@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import CountUp from 'react-countup';
+import Counter from '../../ui/Counter';
 import './AboutStats.css';
 
 export default function AboutStats() {
@@ -36,7 +36,7 @@ export default function AboutStats() {
 					style={{ '--about-stat-delay': '0s' }}
 				>
 				<div className="about-stat-value">
-					{startCount ? <CountUp end={25} duration={2.5} suffix="+ Yr" /> : "25+ Yr"}
+					{startCount ? <Counter end={25} duration={2.5} suffix="+ Yr" /> : "25+ Yr"}
 				</div>
 				<div className="about-stat-label">
 					Serving Individuals & Businesses
@@ -47,7 +47,7 @@ export default function AboutStats() {
 				style={{ '--about-stat-delay': '0.12s' }}
 			>
 				<div className="about-stat-value">
-					{startCount ? <CountUp end={46} duration={2.5} suffix="+" /> : "46+"}
+					{startCount ? <Counter end={46} duration={2.5} suffix="+" /> : "46+"}
 				</div>
 				<div className="about-stat-label">
 					Technical Fields & Sectors Covered
@@ -59,7 +59,7 @@ export default function AboutStats() {
 				style={{ '--about-stat-delay': '0.24s' }}
 			>
 				<div className="about-stat-value">
-					{startCount ? <CountUp end={98} duration={2.0} suffix="%" /> : "98%"}
+					{startCount ? <Counter end={98} duration={2.0} suffix="%" /> : "98%"}
 				</div>
 				<div className="about-stat-label">Client Satisfaction Worldwide</div>
 			</div>
@@ -70,7 +70,7 @@ export default function AboutStats() {
 			>
 				<div className="about-stat-value">
 					{startCount ? (
-						<CountUp end={121177} duration={1.5} separator="," suffix="+" />
+						<Counter end={121177} duration={1.5} separator="," suffix="+" />
 					) : "121,177+"}
 				</div>
 				<div className="about-stat-label">
