@@ -182,7 +182,7 @@ function OurSection() {
 					))}
 				</div>
 				<div className="our-learnmore-row">
-					<Button href="/services" variant="secondary">Learn More</Button>
+					<Button href="/services" variant="secondary">Explore Our Services</Button>
 				</div>
 			</div>
 		</section>
