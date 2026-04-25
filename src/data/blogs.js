@@ -244,11 +244,11 @@ export const blogs = [
 		id: '6',
 		slug: 'world-ip-day-ip-and-sports',
 		category: 'Insights',
-		title: 'IP and Sports: Ready, Set, Innovate — World IP Day 2025',
-		date: '04/26/2025',
+		title: 'IP and Sports: Ready, Set, Innovate — World IP Day 2026',
+		date: '04/26/2026',
 		authorId: 'bhanu-prakash',
 		excerpt:
-			'World IP Day 2025 theme — "IP and Sports: Ready, Set, Innovate." How intellectual property quietly powers every sprint, every swoosh, every stadium. And why protecting your own invention starts the same way.',
+			'World IP Day 2026 theme — "IP and Sports: Ready, Set, Innovate." How intellectual property quietly powers every sprint, every swoosh, every stadium. And why protecting your own invention starts the same way.',
 		heroImage:
 			'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1600&auto=format&fit=crop',
 		content: [
@@ -282,7 +282,7 @@ export const blogs = [
 			},
 			{
 				heading: 'Happy World IP Day. From Our Team to Yours.',
-				body: 'WIPO\'s theme this year isn\'t just about sports. It\'s about the relationship between innovation and protection — about the fact that a great idea, fully realized and carefully documented, is worth protecting. Whether you\'re an IP attorney managing a complex filing portfolio, an inventor with a concept still on paper, or a business trying to understand what your IP is worth — today is a good day to think about it. On World IP Day 2025, we celebrate the innovators. We celebrate the attorneys who protect them. And we recommit to doing our part — with precision, with accuracy, and with the care that every invention deserves.',
+				body: 'WIPO\'s theme this year isn\'t just about sports. It\'s about the relationship between innovation and protection — about the fact that a great idea, fully realized and carefully documented, is worth protecting. Whether you\'re an IP attorney managing a complex filing portfolio, an inventor with a concept still on paper, or a business trying to understand what your IP is worth — today is a good day to think about it. On World IP Day 2026, we celebrate the innovators. We celebrate the attorneys who protect them. And we recommit to doing our part — with precision, with accuracy, and with the care that every invention deserves.',
 			},
 		],
 	},
