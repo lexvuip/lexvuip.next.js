@@ -240,4 +240,50 @@ export const blogs = [
 			},
 		],
 	},
+	{
+		id: '6',
+		slug: 'world-ip-day-ip-and-sports',
+		category: 'Insights',
+		title: 'IP and Sports: Ready, Set, Innovate — World IP Day 2026',
+		date: '04/26/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'World IP Day 2026 theme — "IP and Sports: Ready, Set, Innovate." How intellectual property quietly powers every sprint, every swoosh, every stadium. And why protecting your own invention starts the same way.',
+		heroImage:
+			'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1600&auto=format&fit=crop',
+		content: [
+			{
+				heading: 'Why "IP and Sports" Is a Smarter Theme Than It Sounds',
+				body: 'On the surface, it\'s an easy pairing — sports is global, relatable, and universally understood. But WIPO\'s choice goes deeper than accessibility. Sports is an environment where intellectual property protection is genuinely existential. Remove IP from sports and the entire ecosystem collapses. Without trademark law, you cannot stop a manufacturer from printing a team\'s crest on counterfeit jerseys and underselling the official merchandise. Without patent protection, a proprietary track surface or a revolutionary swim fabric can be copied overnight by a competitor. Without copyright, broadcast footage can be redistributed freely, eliminating the revenue that funds the leagues, the clubs, and ultimately the athletes themselves. The 2024 Paris Olympics brought renewed global attention to sports technology — from the recycled aluminum track at the Stade de France to the carbon-fiber shoe plates that have redefined distance running. All of it protected, all of it contested, all of it deeply embedded in the IP system.',
+			},
+			{
+				heading: 'The Four Pillars of IP in Sports',
+				body: 'Sports relies on all four major categories of intellectual property — often simultaneously, often within the same product. Patents drive performance advantage: the aerodynamic dimple pattern on a golf ball, the polyurethane coating on Olympic swimming suits, carbon-fiber blade geometry on running prosthetics. Trademarks power the business of identity: the Nike Swoosh, team logos, league wordmarks, athlete signatures. Copyright underpins the broadcast economy: Premier League media rights, NFL broadcast contracts — copyright-based assets worth more than most countries\' annual GDP. Trade secrets protect the hidden edge: a team\'s training methodology, a manufacturer\'s proprietary rubber compound for a tennis ball, a Formula 1 team\'s aerodynamic test data.',
+			},
+			{
+				heading: 'The Carbon Plate Running Shoe',
+				body: 'When Nike launched the Vaporfly in 2017 with its embedded carbon fiber plate and ZoomX foam, it didn\'t just break marathon records — it sparked a global debate about the boundaries of legal performance enhancement. The shoe was ultimately cleared for competition, but the patents behind it are fiercely defended. Brooks, Adidas, and New Balance have all responded with their own carbon plate patents, creating a technology arms race played out entirely in patent offices before it reaches the starting line. A marginal technical improvement — a change in foam density, a slightly altered plate geometry — can be patentable and commercially decisive. The lesson for inventors in any field: don\'t underestimate the value of incremental innovation. File early, file precisely, and use drawings that communicate the technical distinction clearly.',
+			},
+			{
+				heading: 'Speedo\'s LZR Racer and the Olympic Record Books',
+				body: 'At the 2008 Beijing Olympics, 94% of swimming gold medals were won by swimmers wearing Speedo\'s LZR Racer — a polyurethane suit so effective that FINA subsequently banned it from competition. The suit was the product of collaboration between Speedo, NASA, and Australian researchers, and its manufacturing process was aggressively patented. IP protection and regulatory compliance are separate conversations. A patented product can be banned from competitive use while remaining fully commercially viable. Understanding this distinction matters for any IP filing strategy.',
+			},
+			{
+				heading: 'The Ongoing Battle Over Track Surfaces',
+				body: 'The polyurethane track at the 2024 Paris Olympics was a proprietary design. Stadium track surfaces are patented products — the specific rubber compound, the granule size, the layering structure — all of it is IP. When municipalities build athletics facilities, they are licensing these surfaces. The manufacturers hold significant market power precisely because of their patent portfolios.',
+			},
+			{
+				heading: 'What Sports Teaches Us About IP Strategy',
+				body: 'Strip away the stadiums and the scoreboards, and sports innovation follows the same pattern as innovation in any other field. Speed of filing matters: in competitive sports, a fraction of a second is the difference between gold and bronze. In IP law, the difference between a filed patent and an unfiled idea can be the difference between a protected invention and a competitor\'s product. First-to-file is the rule in most jurisdictions. Precision determines enforceability: a patent is only as strong as the drawings and claims that define it. A vague claim is a weak claim. A technically imprecise drawing can cost you the scope of protection you thought you had. Portfolio thinking beats single-asset thinking: the strongest IP positions in sports — and in any industry — are built across multiple filings that protect the invention from multiple angles.',
+			},
+			{
+				heading: 'Where LexVuIP Fits In',
+				body: 'We don\'t work exclusively in sports. Our clients span 46+ technical fields — from medical devices to mechanical engineering, from software to consumer products, from apparel to industrial machinery. But the principles are identical across all of them. What we do, on every project, is ensure that the technical innovation an inventor has worked to create is communicated with the same precision that makes a patent enforceable. The drawing is not decoration. It is evidence. It defines the scope of what is protected. It is what a court examines when a patent is challenged. Every gold medal begins with a person in a room, solving a problem that no one had solved before. The IP system exists to ensure that person gets the credit — and the protection — they deserve.',
+			},
+			{
+				heading: 'Happy World IP Day. From Our Team to Yours.',
+				body: 'WIPO\'s theme this year isn\'t just about sports. It\'s about the relationship between innovation and protection — about the fact that a great idea, fully realized and carefully documented, is worth protecting. Whether you\'re an IP attorney managing a complex filing portfolio, an inventor with a concept still on paper, or a business trying to understand what your IP is worth — today is a good day to think about it. On World IP Day 2026, we celebrate the innovators. We celebrate the attorneys who protect them. And we recommit to doing our part — with precision, with accuracy, and with the care that every invention deserves.',
+			},
+		],
+	},
 ];
