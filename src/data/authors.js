@@ -1,28 +1,25 @@
 export const authors = {
-	'john-smith': {
-		id: 'john-smith',
-		name: 'John Smith',
-		title: 'Senior IP Attorney',
-		bio: 'John Smith is a registered patent attorney with 15+ years of experience in utility and design patent prosecution. He has successfully filed over 500 patent applications with USPTO and international offices.',
-		credentials: ['Registered Patent Attorney', 'USPTO Bar Member', 'BS Electrical Engineering'],
-		image: '/assets/authors/john-smith.jpg',
-		linkedin: 'https://linkedin.com/in/johnsmith',
-	},
-	'sarah-johnson': {
-		id: 'sarah-johnson',
-		name: 'Sarah Johnson',
-		title: 'IP Operations Director',
-		bio: 'Sarah Johnson leads LexVuIP\'s paralegal and operations team. She has managed docketing for Fortune 500 IP portfolios and specializes in international filing coordination.',
-		credentials: ['Certified Paralegal', 'PMP Certified', 'MS Legal Studies'],
-		image: '/assets/authors/sarah-johnson.jpg',
-		linkedin: 'https://linkedin.com/in/sarahjohnson',
+	'bhanu-prakash': {
+		id: 'bhanu-prakash',
+		name: 'Bhanu Prakash',
+		title: 'IP Strategy Consultant',
+		bio: 'I help inventors, startups, and attorneys turn ideas into solid, defendable assets. With over 25 years in patents and intellectual property, I blend my legal knowledge with a specialized skill set in creating accurate patent drawings and handling important filing processes.',
+		credentials: [
+			'Utility & Design Patent Drawings',
+			'USPTO, PCT, and WIPO Standards',
+			'Paralegal & Docketing Support',
+			'Trial Preparation',
+		],
+		image: '/logo.png',
+		linkedin: 'https://www.linkedin.com/company/lexvuip/?viewAsMember=true',
 	},
 };
 
 export const defaultAuthor = {
-	id: 'lexvuip-team',
-	name: 'LexVuIP Team',
-	title: 'IP Support Specialists',
-	bio: 'The LexVuIP team combines decades of experience in patent drawings, trademark filings, and paralegal support for law firms worldwide.',
+	id: 'bhanu-prakash',
+	name: 'Bhanu Prakash',
+	title: 'IP Strategy Consultant',
+	bio: 'I help inventors, startups, and attorneys turn ideas into solid, defendable assets. With over 25 years in patents and intellectual property, I blend my legal knowledge with a specialized skill set in creating accurate patent drawings and handling important filing processes.',
 	image: '/logo.png',
+	linkedin: 'https://www.linkedin.com/company/lexvuip/?viewAsMember=true',
 };
