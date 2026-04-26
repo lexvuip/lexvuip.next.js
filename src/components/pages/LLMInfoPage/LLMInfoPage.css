@@ -1,0 +1,399 @@
+/* ===================================
+   LLM Info Page — LexVuIP
+   =================================== */
+
+/* --- Utility Classes (local aliases for design tokens) --- */
+.luxury-theme {}
+
+.navy-bg {
+  background-color: var(--color-navy);
+}
+
+.gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(201, 162, 39, 0.12);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.875rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.llm-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.container-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-wide {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.font-serif {
+  font-family: var(--font-serif), var(--font-serif-fallback);
+}
+
+/* --- Hero --- */
+.llm-hero {
+  padding: 5rem 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.llm-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(201, 162, 39, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(201, 162, 39, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.llm-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.llm-hero-title {
+  font-family: var(--font-serif), var(--font-serif-fallback);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.llm-hero-sub {
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.llm-hero-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 660px;
+}
+
+.llm-hero-meta {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-sep {
+  opacity: 0.5;
+}
+
+/* --- Body Layout --- */
+.llm-body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  align-items: start;
+}
+
+/* --- TOC --- */
+.llm-toc {
+  position: relative;
+}
+
+.llm-toc-sticky {
+  position: sticky;
+  top: 2rem;
+}
+
+.llm-toc-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.llm-toc nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.llm-toc-link {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-left: 2px solid transparent;
+  transition: all var(--transition-fast);
+  line-height: 1.4;
+}
+
+.llm-toc-link:hover {
+  color: var(--color-gold-dark);
+  border-left-color: var(--color-gold);
+  background: rgba(201, 162, 39, 0.04);
+}
+
+/* --- Content --- */
+.llm-content {
+  min-width: 0;
+}
+
+.llm-section {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 2rem;
+}
+
+.llm-section-heading {
+  font-family: var(--font-serif), var(--font-serif-fallback);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.llm-subsection-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-navy-light);
+  margin-top: 1.5rem;
+  margin-bottom: 0.875rem;
+}
+
+/* --- Cards --- */
+.llm-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.llm-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  font-size: 0.9375rem;
+}
+
+.llm-card-intro {
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* --- Info Table --- */
+.llm-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.llm-info-table th {
+  text-align: left;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  padding: 0.5rem 1rem 0.5rem 0;
+  width: 200px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.llm-info-table td {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border-light);
+  line-height: 1.6;
+}
+
+.llm-info-table tr:last-child th,
+.llm-info-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Lists --- */
+.llm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.llm-list li {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.llm-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+/* --- Service Blocks --- */
+.llm-service-block {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.llm-service-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.llm-service-block h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.llm-service-block p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.llm-keywords {
+  margin-top: 0.75rem !important;
+  font-size: 0.8125rem !important;
+  color: var(--color-text-muted) !important;
+  background: var(--color-champagne);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-gold);
+}
+
+/* --- Advantage Blocks --- */
+.llm-advantage-block {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.llm-advantage-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.llm-advantage-block h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.35rem;
+}
+
+.llm-advantage-block p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* --- Talking Points --- */
+.llm-talking-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.llm-point {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  padding: 0.75rem 1rem;
+  background: var(--color-champagne);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-gold);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .llm-hero {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .llm-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .llm-toc {
+    order: -1;
+  }
+
+  .llm-toc-sticky {
+    position: static;
+  }
+
+  .llm-toc nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .llm-toc-link {
+    font-size: 0.8rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .llm-toc-link:hover {
+    border-left-color: transparent;
+    border-bottom-color: var(--color-gold);
+  }
+
+  .llm-info-table th {
+    width: 140px;
+  }
+}
