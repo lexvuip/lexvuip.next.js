@@ -51,10 +51,10 @@ body {
 }
 
 /* Content layout */
-.llm-container {
+.llm-content {
   max-width: 860px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2.5rem 4rem;
 }
 
 /* Section */
@@ -205,10 +205,11 @@ body {
 
 /* Footer note */
 .llm-footer-note {
-  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem 0;
   font-size: 0.8rem;
   color: var(--llm-muted);
-  margin-top: 3rem;
-  padding-top: 1.5rem;
   border-top: 1px solid var(--llm-border);
+  text-align: center;
 }
