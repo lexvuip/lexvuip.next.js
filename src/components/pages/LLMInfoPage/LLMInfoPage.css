@@ -1,215 +1,63 @@
-/* LLM Info Page — Minimal styles using project color tokens */
+/* Minimal styling for LLM Info Page - optimized for speed and raw semantic extraction */
 
-:root {
-  --llm-navy: #0a1628;
-  --llm-gold: #c9a227;
-  --llm-cream: #faf8f5;
-  --llm-white: #ffffff;
-  --llm-border: rgba(201, 162, 39, 0.15);
-  --llm-text: #0a1628;
-  --llm-muted: #54647a;
-}
-
-body {
-  background: var(--llm-cream);
-  color: var(--llm-text);
-  font-family: var(--font-sans), -apple-system, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Hero */
-.llm-hero {
-  background: var(--llm-navy);
-  color: var(--llm-white);
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.llm-hero h1 {
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 2rem;
-  margin: 0 0 0.5rem;
-  font-weight: 700;
-}
-
-.llm-hero p {
-  color: rgba(255,255,255,0.75);
-  max-width: 680px;
-  margin: 0.5rem auto 0;
-  font-size: 0.95rem;
-}
-
-.llm-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  color: var(--llm-gold);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-/* Content layout */
-.llm-content {
-  max-width: 860px;
+.llm-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 2.5rem 4rem;
+  padding: 120px 20px 60px; /* Added extra top padding to account for fixed navbar */
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Section */
-.llm-section {
-  margin-bottom: 3rem;
-}
-
-.llm-section h2 {
+.llm-container h1, .llm-container h2, .llm-container h3, .llm-container h4 {
   font-family: var(--font-serif), Georgia, serif;
-  font-size: 1.25rem;
-  color: var(--llm-navy);
-  border-bottom: 2px solid var(--llm-gold);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.25rem;
-  font-weight: 600;
+  color: #111;
 }
 
-.llm-section h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--llm-navy);
-  margin: 1.5rem 0 0.75rem;
+.llm-container h1 { margin-bottom: 0.5em; }
+.llm-container h2 { border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-top: 2em; }
+.llm-container h3 { margin-top: 1.5em; }
+
+.llm-system-note {
+  font-family: monospace;
+  background: #f4f4f4;
+  padding: 10px;
+  border-left: 4px solid #c9a227; /* LexVuIP Gold */
+  margin-bottom: 2em;
+  font-size: 0.9em;
 }
 
-.llm-section p {
-  font-size: 0.9375rem;
-  color: var(--llm-muted);
-  line-height: 1.75;
-}
-
-.llm-section p + p {
-  margin-top: 0.75rem;
-}
-
-/* Card */
-.llm-card {
-  background: var(--llm-white);
-  border: 1px solid var(--llm-border);
-  border-radius: 6px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.llm-card p {
-  margin: 0;
-}
-
-.llm-card p + p {
-  margin-top: 0.75rem;
-}
-
-/* Lists */
-.llm-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.llm-list li {
-  font-size: 0.9rem;
-  color: var(--llm-muted);
-  padding: 0.3rem 0 0.3rem 1rem;
-  border-left: 3px solid var(--llm-gold);
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
-}
-
-/* Tables */
-.llm-table {
+.llm-container table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
-  background: var(--llm-white);
-  border: 1px solid var(--llm-border);
-  border-radius: 6px;
-  overflow: hidden;
+  margin: 1.5em 0;
 }
 
-.llm-table th {
+.llm-container th, .llm-container td {
+  padding: 10px;
+  border: 1px solid #ddd;
   text-align: left;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--llm-muted);
-  padding: 0.65rem 1rem;
-  background: var(--llm-cream);
-  border-bottom: 1px solid var(--llm-border);
-  width: 180px;
-}
-
-.llm-table td {
-  padding: 0.65rem 1rem;
-  color: var(--llm-muted);
-  border-bottom: 1px solid var(--llm-border);
   vertical-align: top;
 }
 
-.llm-table tr:last-child td,
-.llm-table tr:last-child th {
-  border-bottom: none;
+.llm-container th {
+  background: #f9f9f9;
+  width: 30%;
 }
 
-/* Service block */
-.llm-service-block {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--llm-border);
+.llm-container ul {
+  padding-left: 20px;
 }
 
-.llm-service-block:last-child {
-  border-bottom: none;
+.llm-container li {
+  margin-bottom: 8px;
 }
 
-.llm-service-block h4 {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--llm-navy);
-  margin: 0 0 0.4rem;
-}
-
-.llm-service-block p {
-  margin: 0;
-  font-size: 0.875rem;
-}
-
-/* Keywords */
-.llm-keywords {
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--llm-muted);
-  background: #f7f3e3;
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
-  border-left: 3px solid var(--llm-gold);
-}
-
-/* Talking points */
-.llm-point {
-  font-size: 0.875rem;
-  color: var(--llm-muted);
-  padding: 0.6rem 0.875rem;
-  background: #f7f3e3;
-  border-left: 3px solid var(--llm-gold);
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-}
-
-/* Footer note */
 .llm-footer-note {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 1.5rem 2.5rem 0;
-  font-size: 0.8rem;
-  color: var(--llm-muted);
-  border-top: 1px solid var(--llm-border);
+  margin-top: 4em;
+  padding-top: 1em;
+  border-top: 1px dashed #ccc;
+  font-size: 0.85em;
+  color: #666;
   text-align: center;
 }
