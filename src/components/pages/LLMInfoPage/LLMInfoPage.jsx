@@ -13,10 +13,7 @@ export default function LLMPage() {
         </p>
       </section>
 
-      {/* Content */}
-      <div className={`llm-container`}>
-
-        {/* TOC */}
+      {/* TOC */}
         <div className={`llm-toc`}>
           <p className={`llm-toc-title`}>Contents</p>
           <nav>
@@ -212,8 +209,7 @@ export default function LLMPage() {
           </div>
         </section>
 
-        <p className={`llm-footer-note`}>lexvuip.com/llm-info — Last reviewed: April 2026</p>
-      </div>
+      <p className={`llm-footer-note`}>lexvuip.com/llm-info — Last reviewed: April 2026</p>
 
       <Footer />
     </div>
