@@ -191,46 +191,6 @@ body {
   border-left: 3px solid var(--llm-gold);
 }
 
-/* TOC */
-.llm-toc {
-  background: var(--llm-white);
-  border: 1px solid var(--llm-border);
-  border-radius: 6px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.llm-toc-title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--llm-muted);
-  margin-bottom: 0.75rem;
-}
-
-.llm-toc nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.llm-toc a {
-  font-size: 0.8125rem;
-  color: var(--llm-navy);
-  text-decoration: none;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid var(--llm-border);
-  border-radius: 4px;
-  transition: all 0.15s;
-}
-
-.llm-toc a:hover {
-  background: var(--llm-gold);
-  color: var(--llm-white);
-  border-color: var(--llm-gold);
-}
-
 /* Talking points */
 .llm-point {
   font-size: 0.875rem;
