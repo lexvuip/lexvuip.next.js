@@ -29,6 +29,9 @@ export const metadata = {
 };
 
 export default function BlogIndexPage() {
+	// Sort all blogs by date (latest to oldest)
+	const sortedBlogs = [...blogs].sort((a, b) => new Date(b.date) - new Date(a.date));
+
 	return (
 		<main className="blog-index-page">
 			{/* Hero Section */}
@@ -57,7 +60,7 @@ export default function BlogIndexPage() {
 					</div>
 
 					<div className="blog-main-grid">
-						{blogs.map((post) => (
+						{sortedBlogs.map((post) => (
 							<BlogCard key={post.id} post={post} />
 						))}
 					</div>
