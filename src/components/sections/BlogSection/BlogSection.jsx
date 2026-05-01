@@ -6,8 +6,10 @@ import { blogs } from '../../../data/blogs';
 import './BlogSection.css';
 
 function BlogSection() {
-	// Only show the latest 4 blogs on the home page
-	const latestBlogs = blogs.slice(0, 4);
+	// Sort blogs by date (latest to oldest) and show the latest 4
+	const latestBlogs = [...blogs]
+		.sort((a, b) => new Date(b.date) - new Date(a.date))
+		.slice(0, 4);
 
 	useEffect(() => {
 		const section = document.getElementById('blogs');
