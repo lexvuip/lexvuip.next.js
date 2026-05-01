@@ -6,10 +6,10 @@ import { blogs } from '../../../data/blogs';
 import './BlogSection.css';
 
 function BlogSection() {
-	// Sort blogs by date (latest to oldest) and show the latest 4
+	// Sort blogs by date (latest to oldest) and show the latest 3
 	const latestBlogs = [...blogs]
 		.sort((a, b) => new Date(b.date) - new Date(a.date))
-		.slice(0, 4);
+		.slice(0, 3);
 
 	useEffect(() => {
 		const section = document.getElementById('blogs');
