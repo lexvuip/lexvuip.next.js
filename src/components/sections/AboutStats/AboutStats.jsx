@@ -70,8 +70,8 @@ export default function AboutStats() {
 			>
 				<div className="about-stat-value">
 					{startCount ? (
-						<Counter end={121177} duration={1.5} separator="," suffix="+" />
-					) : "121,177+"}
+						<Counter end={121} duration={1.5} suffix="K+" />
+					) : "121K+"}
 				</div>
 				<div className="about-stat-label">
 					Combined Legal projects Successfully Delivered
