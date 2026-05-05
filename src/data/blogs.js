@@ -250,7 +250,7 @@ export const blogs = [
 		excerpt:
 			'Taylor Swift recently filed three trademark applications with the USPTO to protect her voice and likeness from AI deepfakes. She isn\'t the first. Earlier this year, Matthew McConaughey secured eight trademarks — including a sensory mark for his iconic "Alright, alright, alright" — for the exact same reason. This signals a massive shift in how public figures, brands, and creators will protect their identities in the era of generative AI.',
 		heroImage:
-			'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1600&auto=format&fit=crop',
+			'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1600&auto=format&fit=crop',
 		content: [
 			{
 				heading: null,
