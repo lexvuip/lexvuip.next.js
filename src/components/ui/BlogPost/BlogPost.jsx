@@ -2,7 +2,9 @@
 import React, { useMemo } from 'react';
 
 function renderBody(text) {
-	return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+	return text
+		.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
 }
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
