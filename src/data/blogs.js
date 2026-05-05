@@ -253,6 +253,10 @@ export const blogs = [
 			'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1600&auto=format&fit=crop',
 		content: [
 			{
+				heading: null,
+				body: 'Taylor Swift recently filed three trademark applications with the USPTO to protect her voice and likeness from AI deepfakes. She isn\'t the first. Earlier this year, Matthew McConaughey secured eight trademarks — including a sensory mark for his iconic "Alright, alright, alright" — for the exact same reason. This is not just celebrity news. For IP attorneys, it signals a massive shift in how public figures, brands, and creators will protect their identities in the era of generative AI. And it exposes a critical gap in traditional IP strategy that firms need to start addressing for their clients.',
+			},
+			{
 				heading: 'Why Copyright Isn\'t Enough Anymore',
 				body: 'Historically, creators relied on copyright to protect their audio and visual assets. But AI has fundamentally changed the rules of the game. Copyright protects existing recordings and fixed works. It does not stop an AI model from learning a voice and generating something entirely new that sounds exactly like you. When an AI generates a net-new song in the style of a famous artist, or a deepfake video synthesizing an actor\'s voice for an unauthorized ad, copyright infringement becomes notoriously difficult to prove. Trademark fills that gap. By registering a voice as a sensory trademark, or protecting specific likeness elements under trademark law, attorneys can give their clients a much sharper weapon to enforce against AI misuse.',
 			},
