@@ -1,5 +1,11 @@
 'use client';
 import React, { useMemo } from 'react';
+
+function renderBody(text) {
+	return text
+		.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
+}
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -75,7 +81,7 @@ function BlogPost() {
 						{post.content?.map((sec, idx) => (
 							<section key={idx} className="blogpost-section-block">
 								{sec.heading && <h2 className="blogpost-subheading">{sec.heading}</h2>}
-								<p className="blogpost-body">{sec.body}</p>
+								<p className="blogpost-body" dangerouslySetInnerHTML={{ __html: renderBody(sec.body) }} />
 							</section>
 						))}
 					</article>
