@@ -121,7 +121,7 @@ function ServicesPage() {
 											<Counter end={25} duration={3} className="stat-value" suffix="+" />
 											<span className="stat-unit">YEARS</span>
 										</div>
-										<p className="stat-description-tiny">Pioneering IP support since 1999</p>
+										<p className="stat-description-tiny">Pioneering IP support since 2002</p>
 										<div className="stat-decoration"></div>
 									</div>
 								</div>
