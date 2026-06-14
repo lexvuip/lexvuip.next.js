@@ -373,7 +373,7 @@ export const blogs = [
 		date: '06/14/2026',
 		authorId: 'bhanu-prakash',
 		excerpt: 'A published US patent application surfaces during Indian prosecution — after the local filing date, after publication, and after the examiner picks up the file. Is the prior art objection legally valid?',
-		heroImage: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1600&auto=format&fit=crop',
+		heroImage: '/assets/stockimages/prior-art-crosses-borders-us-india-1920.png',
 		content: [
 			{
 				heading: null,
