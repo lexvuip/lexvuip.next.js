@@ -67,11 +67,11 @@
 }
 
 /* Visual Column */
+/* Hidden via React comment out, styles preserved for later use */
 .about-visual-column {
 	flex: 0 0 55%;
 	position: relative;
 	opacity: 0;
-	display: none; /* Hidden as per request */
 }
 
 .about-reveal-wrapper.content-revealed .about-visual-column {
@@ -161,11 +161,11 @@
 @keyframes fadeInDelayed {
 	from {
 		opacity: 0;
-		transform: translateX(30px);
+		transform: translateY(30px); /* Changed from translateX to translateY for centered content */
 	}
 	to {
 		opacity: 1;
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 
