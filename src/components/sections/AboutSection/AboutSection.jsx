@@ -45,7 +45,7 @@ export default function AboutSection() {
 				</div>
 
 				<div className="about-main-composition">
-					{/* Left Column: Video & Visuals */}
+					{/* Left Column: Video & Visuals - Commented out for now
 					<div className="about-visual-column about-left-column">
 						<div className="about-video-wrapper" ref={videoContainerRef}>
 							{videoLoaded ? (
@@ -80,12 +80,12 @@ export default function AboutSection() {
 							<div className="video-overlay-border"></div>
 						</div>
 						
-						{/* Floating Heritage Tag */}
 						<div className="heritage-tag">
 							<span className="heritage-year">25+</span>
 							<span className="heritage-text">Years of Global <br/>Legal Support</span>
 						</div>
 					</div>
+					*/}
 
 					{/* Right Column: Narrative Content */}
 					<div className="about-narrative-column about-content">
