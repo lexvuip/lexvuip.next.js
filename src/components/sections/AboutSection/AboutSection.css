@@ -147,9 +147,7 @@
 /* Narrative Column */
 .about-narrative-column {
 	flex: 0 0 100%; /* Changed to 100% since visual column is hidden */
-	max-width: 800px;
-	margin: 0 auto;
-	text-align: center;
+	max-width: 1400px;
 	opacity: 1; /* Always visible since video column is commented out */
 	transform: translateY(0);
 	animation: none;
@@ -186,16 +184,13 @@
 	line-height: 1.8;
 	color: var(--color-text-secondary);
 	margin-bottom: 1.5rem;
-	text-align: center; /* Center aligned for better full-width readability */
 }
 
 .narrative-highlight {
-	padding: 1.5rem;
-	border: 2px solid var(--color-gold); /* Changed to full border for center alignment */
-	border-radius: var(--radius-sm);
+	padding-left: 1.5rem;
+	border-left: 2px solid var(--color-gold);
 	font-weight: 500;
 	color: var(--color-navy-deep) !important;
-	background: rgba(212, 175, 55, 0.05); /* Slight gold background */
 }
 
 /* CTA */
@@ -278,9 +273,10 @@
 		gap: 6rem;
 	}
 	
-	.about-visual-column, .about-narrative-column {
+	.about-narrative-column {
 		flex: 0 0 100%;
-		max-width: 800px;
+		max-width: 100%;
+		padding: 0 6%;
 	}
 
 	.heritage-tag {
