@@ -150,7 +150,9 @@
 	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
-	opacity: 0;
+	opacity: 1; /* Always visible since video column is commented out */
+	transform: translateY(0);
+	animation: none;
 }
 
 .about-reveal-wrapper.content-revealed .about-narrative-column {
