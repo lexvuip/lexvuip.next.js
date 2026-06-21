@@ -71,6 +71,7 @@
 	flex: 0 0 55%;
 	position: relative;
 	opacity: 0;
+	display: none; /* Hidden as per request */
 }
 
 .about-reveal-wrapper.content-revealed .about-visual-column {
@@ -145,13 +146,16 @@
 
 /* Narrative Column */
 .about-narrative-column {
-	flex: 0 0 35%;
+	flex: 0 0 100%; /* Changed to 100% since visual column is hidden */
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
 	opacity: 0;
 }
 
 .about-reveal-wrapper.content-revealed .about-narrative-column {
 	animation: fadeInDelayed 1.2s var(--transition-elegant) forwards;
-	animation-delay: 0.4s;
+	animation-delay: 0.2s; /* Reduced delay since there's no visual column first */
 }
 
 @keyframes fadeInDelayed {
@@ -180,13 +184,16 @@
 	line-height: 1.8;
 	color: var(--color-text-secondary);
 	margin-bottom: 1.5rem;
+	text-align: center; /* Center aligned for better full-width readability */
 }
 
 .narrative-highlight {
-	padding-left: 1.5rem;
-	border-left: 2px solid var(--color-gold);
+	padding: 1.5rem;
+	border: 2px solid var(--color-gold); /* Changed to full border for center alignment */
+	border-radius: var(--radius-sm);
 	font-weight: 500;
 	color: var(--color-navy-deep) !important;
+	background: rgba(212, 175, 55, 0.05); /* Slight gold background */
 }
 
 /* CTA */
