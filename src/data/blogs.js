@@ -497,7 +497,7 @@ export const blogs = [
 		date: '07/02/2026',
 		authorId: 'bhanu-prakash',
 		excerpt: 'Most drawing rejections are not about the invention. They are about margins, line weight, missing views, and reference numbering — problems that surface at the worst possible moment in a prosecution timeline.',
-		heroImage: '/assets/stockimages/utilitypatentdrawing-1920.webp',
+		heroImage: '/assets/stockimages/uspto-patent-drawings-execution-1920.png',
 		content: [
 			{
 				heading: 'The Real Problem Is Not the Drawing',
