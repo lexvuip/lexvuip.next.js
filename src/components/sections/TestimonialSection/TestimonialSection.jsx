@@ -29,6 +29,11 @@ const testimonials = [
 		name: 'Anita R.',
 		text: '"LexVuIP blends deep IP expertise with artistic precision. Their illustrations speak the language of both inventors and examiners. They not only meet global standards they set them. For firms serious about IP protection, partnering with LexVuIP is a smart, strategic move."',
 	},
+	{
+		title : '"Consistent Dedication & Quality"',
+		name: 'Robert C.',
+		text: '"Your availability during urgent requirements, commitment to meeting deadlines, attention to detail, and the quality of your work have not gone unnoticed. These qualities are the reason we continue to rely on you for important projects, and we genuinely appreciate your contribution."',
+	},
 ];
 
 function TestimonialSection() {
