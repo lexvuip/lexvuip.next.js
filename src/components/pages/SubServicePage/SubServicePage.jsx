@@ -126,7 +126,7 @@ function SubServicePage({ service, category = 'ip' }) {
 						<Button href="/contact" arrow>Consult our Experts</Button>
 					</div>
 				</div>
-				<ServicesHeroParallax imageSrc={image} alt={`${title} - LexVu professional service illustration`} />
+				<ServicesHeroParallax imageSrc={image} alt={`${title} - LexVuIP professional service illustration`} />
 			</section>
 
 			{/* Impact Section / Value Prop */}

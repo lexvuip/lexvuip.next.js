@@ -8,21 +8,21 @@ import HomeLazySections from '../components/pages/HomeLazySections';
 
 export const metadata = {
   title: 'Patent Drawings & Paralegal Services',
-  description: 'LexVu delivers USPTO-compliant patent drawings, trademark support, and end-to-end paralegal services. 25+ years supporting IP attorneys worldwide with precision filings and trial preparation.',
+  description: 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and end-to-end paralegal services. 25+ years supporting IP attorneys worldwide with precision filings and trial preparation.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Patent Drawings & Paralegal Services',
-    description: 'LexVu delivers USPTO-compliant patent drawings, trademark support, and paralegal services. 25+ years supporting IP attorneys worldwide.',
+    description: 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and paralegal services. 25+ years supporting IP attorneys worldwide.',
     url: 'https://lexvuip.com',
-    siteName: 'LexVu',
+    siteName: 'LexVuIP',
     images: [
       {
         url: '/og-home.png',
         width: 1200,
         height: 630,
-        alt: 'LexVu - Patent Drawings and Paralegal Services',
+        alt: 'LexVuIP - Patent Drawings and Paralegal Services',
       },
     ],
     locale: 'en_US',
@@ -37,7 +37,7 @@ export default function Home() {
       {
         '@type': 'Organization',
         '@id': 'https://lexvuip.com/#organization',
-        'name': 'LexVu',
+        'name': 'LexVuIP',
         'url': 'https://lexvuip.com',
         'logo': {
           '@type': 'ImageObject',
@@ -58,7 +58,7 @@ export default function Home() {
       {
         '@type': 'LocalBusiness',
         '@id': 'https://lexvuip.com/#localbusiness',
-        'name': 'LexVu',
+        'name': 'LexVuIP',
         'description': 'Intellectual property and paralegal support services for law firms and IP attorneys.',
         'url': 'https://lexvuip.com',
         'telephone': '+1-856-214-2512',
@@ -97,7 +97,7 @@ export default function Home() {
         '@type': 'WebSite',
         '@id': 'https://lexvuip.com/#website',
         'url': 'https://lexvuip.com',
-        'name': 'LexVu',
+        'name': 'LexVuIP',
         'publisher': {
           '@id': 'https://lexvuip.com/#organization'
         }
@@ -105,14 +105,14 @@ export default function Home() {
       {
         '@type': 'VideoObject',
         '@id': 'https://lexvuip.com/#about-video',
-        'name': 'LexVu Overview - IP Solutions and Paralegal Services',
-        'description': 'Learn how LexVu supports IP attorneys with patent drawings, trademark filings, and comprehensive paralegal services. 25+ years of expertise in USPTO, EPO, WIPO, and PCT filings.',
+        'name': 'LexVuIP Overview - IP Solutions and Paralegal Services',
+        'description': 'Learn how LexVuIP supports IP attorneys with patent drawings, trademark filings, and comprehensive paralegal services. 25+ years of expertise in USPTO, EPO, WIPO, and PCT filings.',
         'thumbnailUrl': 'https://lexvuip.com/videos/about_video_poster.jpg',
         'uploadDate': '2024-01-15',
         'duration': 'PT45S',
         'contentUrl': 'https://lexvuip.com/videos/about_video.mp4',
         'embedUrl': 'https://lexvuip.com/#about',
-        'transcript': 'LexVu: Precision in Every Filing. Clarity in Every Design. 25+ years supporting IP attorneys worldwide. Expert patent drawings for USPTO, EPO, WIPO, and PCT filings. Comprehensive paralegal services: docketing, e-filing, trial preparation. Your trusted partner for intellectual property solutions.',
+        'transcript': 'LexVuIP: Precision in Every Filing. Clarity in Every Design. 25+ years supporting IP attorneys worldwide. Expert patent drawings for USPTO, EPO, WIPO, and PCT filings. Comprehensive paralegal services: docketing, e-filing, trial preparation. Your trusted partner for intellectual property solutions.',
         'publisher': {
           '@id': 'https://lexvuip.com/#organization'
         }
@@ -123,18 +123,18 @@ export default function Home() {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'What services does LexVu offer?',
+            'name': 'What services does LexVuIP offer?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LexVu offers comprehensive IP solutions including USPTO-compliant patent drawings (utility and design), trademark support services, and complete paralegal solutions including docketing management, e-filing, and trial preparation.'
+              'text': 'LexVuIP offers comprehensive IP solutions including USPTO-compliant patent drawings (utility and design), trademark support services, and complete paralegal solutions including docketing management, e-filing, and trial preparation.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'How long has LexVu been in business?',
+            'name': 'How long has LexVuIP been in business?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LexVu has over 25 years of experience supporting IP attorneys and law firms worldwide with patent drawings, trademark filings, and paralegal services.'
+              'text': 'LexVuIP has over 25 years of experience supporting IP attorneys and law firms worldwide with patent drawings, trademark filings, and paralegal services.'
             }
           },
           {

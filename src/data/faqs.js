@@ -5,7 +5,7 @@ export const ipFaqs = [
 			'We provide Utility, Design, Provisional, and Trademark patent drawings, fully compliant with USPTO and WIPO guidelines. From simple flowcharts to complex mechanical illustrations — we’ve got it covered.',
 	},
 	{
-		question: 'How do I start a project with LexVu?',
+		question: 'How do I start a project with LexVuIP?',
 		answer:
 			'Simply share your idea in any format — sketch, CAD file, PDF, or even a photo. We’ll review and provide a timeline and quote. Once approved, we start illustrating.',
 	},

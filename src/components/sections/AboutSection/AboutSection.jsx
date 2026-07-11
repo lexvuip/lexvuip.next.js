@@ -57,7 +57,7 @@ export default function AboutSection() {
 									muted
 									playsInline
 									poster="/videos/about_video_poster.jpg"
-									title="LexVu Intellectual Property and Paralegal Solutions Overview Video"
+									title="LexVuIP Intellectual Property and Paralegal Solutions Overview Video"
 								>
 									<track
 										kind="captions"
@@ -72,7 +72,7 @@ export default function AboutSection() {
 								<div className="video-placeholder">
 									<img
 										src="/videos/about_video_poster.jpg"
-										alt="LexVu Intellectual Property and Paralegal Solutions Overview Video"
+										alt="LexVuIP Intellectual Property and Paralegal Solutions Overview Video"
 										className="video-poster-fallback"
 									/>
 								</div>
@@ -119,7 +119,7 @@ export default function AboutSection() {
 <Image
 						className="about-image"
 						src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
-						alt="LexVu legal professionals providing patent drawings and paralegal support services in a modern law office"
+						alt="LexVuIP legal professionals providing patent drawings and paralegal support services in a modern law office"
 						fill
 						sizes="(max-width: 768px) 100vw, 50vw"
 						style={{ objectFit: 'cover' }}

@@ -23,7 +23,7 @@ function PrivacyPolicyPage() {
 				<div className="policy-content-container">
 					<div className="policy-intro">
 						<p>
-							LexVu ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+							LexVuIP ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
 						</p>
 					</div>
 
@@ -130,7 +130,7 @@ function PrivacyPolicyPage() {
 						<h2>10. Contact Us</h2>
 						<p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
 						<div className="contact-details">
-							<p><strong>LexVu</strong></p>
+							<p><strong>LexVuIP</strong></p>
 							<p>Email: privacy@lexvuip.com</p>
 							<p>Phone: +1 (555) 123-4567</p>
 							<p><a href="/contact">Contact Form</a></p>

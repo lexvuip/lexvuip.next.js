@@ -7,7 +7,7 @@ function Footer() {
 				<div className="footer-main-row">
 					<div className="footer-col footer-brand">
 						<div className="footer-logo">
-							<img src="/logo.png" alt="LexVu Logo" className="footer-logo-img" />
+							<img src="/logo.png" alt="LexVuIP Logo" className="footer-logo-img" />
 						</div>
 						<div className="footer-tagline">
 							Precision in Every Filing<br />
@@ -78,7 +78,7 @@ function Footer() {
 
 				<div className="footer-bottom-row">
 					<div className="footer-copyright">
-						© {new Date().getFullYear()} LexVu, Inc. All rights reserved.
+						© {new Date().getFullYear()} LexVuIP, Inc. All rights reserved.
 					</div>
 					<div className="footer-policies">
 						<a href="/privacy-policy">Privacy Policy</a>
