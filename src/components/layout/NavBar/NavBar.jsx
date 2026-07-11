@@ -90,8 +90,7 @@ function NavBar() {
 		<NavProvider>
 			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'}`}>
 				<Link href="/" className="navbar-logo">
-					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
-					LexVuIP
+					<img src="/logo.png" alt="LexVu Logo" className="navbar-logo-img" />
 				</Link>
 				<DesktopNav />
 				<div className="navbar-contact">

@@ -23,7 +23,7 @@ function TermsOfServicePage() {
 				<div className="policy-content-container">
 					<div className="policy-intro">
 						<p>
-							Welcome to LexVuIP. By using our services, you agree to these terms.
+							Welcome to LexVu. By using our services, you agree to these terms.
 						</p>
 					</div>
                     {/* Add content here */}

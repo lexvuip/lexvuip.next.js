@@ -5,22 +5,22 @@ import Footer from '../../components/layout/Footer/Footer';
 import './blog.css';
 
 export const metadata = {
-	title: 'Insights & Updates | LexVuIP Blog',
+	title: 'Insights & Updates | LexVu Blog',
 	description: 'Expert insights on patent law, IP filing, trademark protection, and legal process optimization. USPTO, EPO, and WIPO compliance guides for IP attorneys.',
 	alternates: {
 		canonical: '/blog',
 	},
 	openGraph: {
-		title: 'IP Insights & Legal Updates - LexVuIP Blog',
+		title: 'IP Insights & Legal Updates - LexVu Blog',
 		description: 'Expert insights on patent law, IP filing strategies, and legal process optimization.',
 		url: 'https://lexvuip.com/blog',
-		siteName: 'LexVuIP',
+		siteName: 'LexVu',
 		images: [
 			{
 				url: '/og-blog.png',
 				width: 1200,
 				height: 630,
-				alt: 'LexVuIP Blog - IP Insights and Legal Updates',
+				alt: 'LexVu Blog - IP Insights and Legal Updates',
 			},
 		],
 		locale: 'en_US',

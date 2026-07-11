@@ -14,7 +14,7 @@ function ServiceCard({ image, title, desc, href }) {
 				<div className="card-image-wrapper">
 					<Image
 						src={image}
-						alt={`${title} - Professional IP support service from LexVuIP`}
+						alt={`${title} - Professional IP support service from LexVu`}
 						fill
 						sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
 						style={{ objectFit: 'cover' }}

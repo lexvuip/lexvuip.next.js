@@ -7,27 +7,27 @@ const testimonials = [
 	{
 		title : '"Exceptional Quality & Compliance"',
 		name: 'Laura S.',
-		text: '"LexVuIP delivered drawings that were not only visually precise but perfectly aligned with USPTO and WIPO guidelines. Their team\'s technical skill and IP knowledge gave our application a strong foundation. Working with them felt like gaining a strategic partner, not just a vendor."',
+		text: '"LexVu delivered drawings that were not only visually precise but perfectly aligned with USPTO and WIPO guidelines. Their team\'s technical skill and IP knowledge gave our application a strong foundation. Working with them felt like gaining a strategic partner, not just a vendor."',
 	},
 	{
 		title : '"Fast, Accurate, and Reliable"',
 		name: 'James K.',
-		text: '"We had a tight deadline for a utility patent filing and LexVuIP came through with speed and accuracy. Their drawings required no revisions a rare feat. Communication was smooth, and their professionalism shone through every step. A team we trust completely."',
+		text: '"We had a tight deadline for a utility patent filing and LexVu came through with speed and accuracy. Their drawings required no revisions a rare feat. Communication was smooth, and their professionalism shone through every step. A team we trust completely."',
 	},
 	{
 		title : '"Trusted IP Experts"',
 		name: 'Priya N.',
-		text: '"LexVuIP has become our go to for all IP illustration needs. Their knowledge of global standards is unmatched, and their attention to detail is outstanding. Whether for design or utility patents, they always deliver work that enhances our filings and impresses our clients."',
+		text: '"LexVu has become our go to for all IP illustration needs. Their knowledge of global standards is unmatched, and their attention to detail is outstanding. Whether for design or utility patents, they always deliver work that enhances our filings and impresses our clients."',
 	},
 	{
 		title : '"A Seamless Experience"',
 		name: 'Michael D.',
-		text: '"From the first interaction, LexVuIP\'s process was clear, efficient, and highly professional. Their team understood our technical requirements and delivered elegant, standards-compliant drawings that elevated our submission. We\'ve since partnered with them on multiple filings and every time, the results are excellent."',
+		text: '"From the first interaction, LexVu\'s process was clear, efficient, and highly professional. Their team understood our technical requirements and delivered elegant, standards-compliant drawings that elevated our submission. We\'ve since partnered with them on multiple filings and every time, the results are excellent."',
 	},
 	{
 		title : '"IP Visualization Done Right"',
 		name: 'Anita R.',
-		text: '"LexVuIP blends deep IP expertise with artistic precision. Their illustrations speak the language of both inventors and examiners. They not only meet global standards they set them. For firms serious about IP protection, partnering with LexVuIP is a smart, strategic move."',
+		text: '"LexVu blends deep IP expertise with artistic precision. Their illustrations speak the language of both inventors and examiners. They not only meet global standards they set them. For firms serious about IP protection, partnering with LexVu is a smart, strategic move."',
 	},
 ];
 

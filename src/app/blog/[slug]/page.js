@@ -77,7 +77,7 @@ export default async function BlogDetailPage({ params }) {
 		},
 		'publisher': {
 			'@type': 'Organization',
-			'name': 'LexVuIP',
+			'name': 'LexVu',
 			'logo': {
 				'@type': 'ImageObject',
 				'url': 'https://lexvuip.com/logo.png',

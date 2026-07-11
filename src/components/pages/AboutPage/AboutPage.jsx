@@ -21,7 +21,7 @@ export default function AboutPage() {
               Precise Support. <span className="italic-serif">Seamless</span> Advocacy.
             </h1>
             <p className="principles-subtitle">
-              At LexVuIP, we provide the technical foundation so attorneys can focus on what matters most: the art of advocacy.
+              At LexVu, we provide the technical foundation so attorneys can focus on what matters most: the art of advocacy.
             </p>
           </div>
           
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 <div className="principle-image-wrapper">
                   <Image 
                     src="/assets/stockimages/ourmission-1920.webp" 
-                    alt="LexVuIP mission to support attorneys with patent drawings and paralegal services"
+                    alt="LexVu mission to support attorneys with patent drawings and paralegal services"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <div className="principle-image-wrapper">
                   <Image 
                     src="/assets/stockimages/ourpromise-1920.webp" 
-                    alt="LexVuIP promise of accurate IP filings and timely legal support delivery"
+                    alt="LexVu promise of accurate IP filings and timely legal support delivery"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 <div className="principle-image-wrapper">
                   <Image 
                     src="/assets/stockimages/ourpurpose-1920.webp" 
-                    alt="LexVuIP purpose of building trusted partnerships with law firms for IP and litigation support"
+                    alt="LexVu purpose of building trusted partnerships with law firms for IP and litigation support"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     style={{ objectFit: 'cover' }}

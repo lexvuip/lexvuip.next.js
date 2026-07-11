@@ -7,16 +7,16 @@ export const metadata = {
     canonical: '/services',
   },
   openGraph: {
-    title: 'Legal & IP Services - LexVuIP',
+    title: 'Legal & IP Services - LexVu',
     description: 'Comprehensive IP solutions and paralegal support for law firms.',
     url: 'https://lexvuip.com/services',
-    siteName: 'LexVuIP',
+    siteName: 'LexVu',
     images: [
       {
         url: '/og-services.png',
         width: 1200,
         height: 630,
-        alt: 'LexVuIP Services - IP Solutions and Paralegal Support',
+        alt: 'LexVu Services - IP Solutions and Paralegal Support',
       },
     ],
     locale: 'en_US',

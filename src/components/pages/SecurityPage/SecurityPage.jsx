@@ -16,7 +16,7 @@ function SecurityPage() {
             <span className="italic-serif">Uncompromising Standards</span>
           </h1>
           <p className="security-hero-description">
-            At LexVuIP, we recognize that your data is your most valuable asset.
+            At LexVu, we recognize that your data is your most valuable asset.
             Our security framework is built on a foundation of trust,
             transparency, and multi-layered defense. We have implemented a
             comprehensive suite of technical and organizational measures to
@@ -120,7 +120,7 @@ function SecurityPage() {
               <div className="pillar-content">
                 <h3>Ethical & Contractual Obligations</h3>
                 <p>
-                  Confidentiality is a legal mandate at LexVuIP. Every member of
+                  Confidentiality is a legal mandate at LexVu. Every member of
                   our team is bound by rigorous non-disclosure agreements that
                   align with the highest industry standards for legal and patent
                   support.

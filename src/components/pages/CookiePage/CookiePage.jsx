@@ -23,7 +23,7 @@ function CookiePolicyPage() {
 				<div className="policy-content-container">
 					<div className="policy-intro">
 						<p>
-							This Cookie Policy explains how LexVuIP uses cookies and similar technologies to recognize you when you visit our website.
+							This Cookie Policy explains how LexVu uses cookies and similar technologies to recognize you when you visit our website.
 						</p>
 					</div>
                     {/* Add content here */}
