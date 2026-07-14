@@ -4,6 +4,7 @@ import BlogSection from '../components/sections/BlogSection';
 import Footer from '../components/layout/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import HomeLazySections from '../components/pages/HomeLazySections';
+import { TargetCustomers } from '../components/sections';
 
 export const metadata = {
   title: 'Patent Drawings & Paralegal Services',
@@ -175,6 +176,7 @@ export default function Home() {
       <AboutSection />
       <OurSection />
       <BlogSection />
+      <TargetCustomers />
       <HomeLazySections />
       <Footer />
     </div>

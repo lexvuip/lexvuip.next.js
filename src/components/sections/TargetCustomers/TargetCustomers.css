@@ -1,0 +1,39 @@
+.target-customers-section {
+  padding: 5rem 0;
+  background-color: var(--secondary-bg, #f8f9fa);
+  text-align: center;
+}
+
+.target-customers-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.target-customers-title {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-primary, serif);
+}
+
+.target-customers-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary, #555);
+  margin-bottom: 2rem;
+}
+
+.target-customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.target-customer-badge {
+  background-color: var(--color-primary, #000);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+}

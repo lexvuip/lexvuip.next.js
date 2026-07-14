@@ -5,3 +5,5 @@ export { default as BlogSection } from './BlogSection';
 export { default as TestimonialSection } from './TestimonialSection';
 export { default as FAQSection } from './FAQSection';
 export { default as AboutStats } from './AboutStats';
+
+export { default as TargetCustomers } from './TargetCustomers';
