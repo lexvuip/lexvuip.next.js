@@ -64,3 +64,8 @@ Report outcomes faithfully and accurately.
 - **State facts plainly:** When verification *does* pass, state it plainly. Do not hedge confirmed results with disclaimers, and do not repetitively re-verify things that have already been confirmed.
 
 **The Goal:** Provide an accurate, objective report of the current state, not a defensive or falsely optimistic one.
+
+## 6. Strict Branching and Merging Rules
+- **No Direct Changes to Main:** All code modifications must happen on the `redesign` branch. Direct commits or changes to the `main` branch are strictly forbidden.
+- **User Approval Required:** Code from the `redesign` branch can only be merged into `main` after receiving explicit approval from the user (e.g., "looks good", "we can merge").
+- **Never Delete Branches:** After merging a PR, never delete the source branch. Leave it intact for future work.

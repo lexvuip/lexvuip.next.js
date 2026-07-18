@@ -36,7 +36,7 @@
 }
 
 .navbar-logo-img {
-	height: 2.5rem;
+	height: 2.8rem;
 	width: auto;
 	object-fit: contain;
 	filter: brightness(1);
@@ -571,7 +571,7 @@
 	}
 	
 	.navbar-logo-img {
-		height: 1.75rem;
+		height: 2.25rem;
 	}
 	
 	.mobile-menu-btn {

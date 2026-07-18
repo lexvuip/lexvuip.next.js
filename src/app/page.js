@@ -3,6 +3,7 @@ import OurSection from '../components/sections/OurSection';
 import BlogSection from '../components/sections/BlogSection';
 import Footer from '../components/layout/Footer';
 import HeroSection from '../components/sections/HeroSection';
+import WorkShowcase from '../components/sections/WorkShowcase';
 import HomeLazySections from '../components/pages/HomeLazySections';
 import { TargetCustomers } from '../components/sections';
 
@@ -173,6 +174,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <HeroSection />
+      <WorkShowcase />
       <AboutSection />
       <OurSection />
       <BlogSection />
