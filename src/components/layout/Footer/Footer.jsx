@@ -1,4 +1,5 @@
 import './Footer.css';
+import { ipServices, paralegalServices } from '../../../data/services';
 
 function Footer() {
 	return (
@@ -47,21 +48,18 @@ function Footer() {
 						<div className="footer-links-group">
 							<h2 className="footer-links-title">IP Solutions</h2>
 							<ul className="footer-links-list">
-								<li><a href="/service/ipsolutions/utility-patent-drawings">Utility Patent Drawings</a></li>
-								<li><a href="/service/ipsolutions/design-patent-drawings">Design Patent Drawings</a></li>
-								<li><a href="/service/ipsolutions/trademark-support">Trademark Support</a></li>
+								{ipServices.map((service, idx) => (
+									<li key={idx}><a href={`/service/ipsolutions/${service.slug}`}>{service.title}</a></li>
+								))}
 							</ul>
 						</div>
 
 						<div className="footer-links-group">
 							<h2 className="footer-links-title">Paralegal Solutions</h2>
 							<ul className="footer-links-list">
-								<li><a href="/service/paralegalsolutions/case-docketing-management">Docketing Management</a></li>
-								<li><a href="/service/paralegalsolutions/efiling-compliance">E-Filing Services</a></li>
-								<li><a href="/service/paralegalsolutions/document-management">Contact Management</a></li>
-								<li><a href="/service/paralegalsolutions/trial-prep-deposition">Trial Preparation</a></li>
-								<li><a href="/service/paralegalsolutions/trial-prep-deposition">Deposition Coordination</a></li>
-								<li><a href="/service/paralegalsolutions/efiling-compliance">Compliance Support</a></li>
+								{paralegalServices.map((service, idx) => (
+									<li key={idx}><a href={`/service/paralegalsolutions/${service.slug}`}>{service.title}</a></li>
+								))}
 							</ul>
 						</div>
 
