@@ -5,7 +5,9 @@ import Link from 'next/link';
 import './OurSection.css';
 import Button from '../../ui/Button';
 
-const services = [
+const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+
+const globalServices = [
 	{
 		number: 1,
 		title: (
@@ -46,6 +48,24 @@ const services = [
 		href: '/service/customsolutions',
 	},
 ];
+
+const indianServices = [
+	{
+		number: 1,
+		title: (
+			<>
+				Comprehensive <em>IP Solutions</em> for Innovators in India
+			</>
+		),
+		description:
+			'From Patent Filing and Industrial Design Protection to comprehensive Trademark Registration and IP Litigation, we deliver end-to-end intellectual property services tailored for the Indian jurisdiction to secure and enforce your rights.',
+		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
+		alt: 'Comprehensive patent and trademark services in India',
+		href: '/service/ipsolutions',
+	}
+];
+
+const services = region === 'IN' ? indianServices : globalServices;
 
 function OurSection() {
 	const listRef = useRef(null);
@@ -156,7 +176,7 @@ function OurSection() {
 			<div className="our-container">
 				<div className="our-label">Our Services</div>
 				<h2 className="our-title">
-					"Paralegal Support and Practical IP across the spectrum – built around your success"
+					{region === 'IN' ? '"Comprehensive IP protection tailored to Indian standards – built around your success"' : '"Paralegal Support and Practical IP across the spectrum – built around your success"'}
 				</h2>
 				<div className="our-services-list" ref={listRef}>
 					{services.map((service, idx) => (

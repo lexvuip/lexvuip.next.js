@@ -11,6 +11,9 @@ export default function AboutSection() {
 	const [videoLoaded, setVideoLoaded] = useState(false);
 	const videoContainerRef = useRef(null);
 
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
+
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -96,10 +99,10 @@ export default function AboutSection() {
 							
 							<div className="narrative-body">
 								<p>
-									With over 25 years supporting attorneys worldwide, we deliver precise patent drawings, compliant filings, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.
+									With over 25 years supporting attorneys {isIndia ? 'in India and ' : ''}worldwide, we deliver precise patent {isIndia ? 'filings, trademark registrations' : 'drawings, compliant filings'}, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.
 								</p>
 								<p>
-									Our paralegal services handle the administrative grind - docketing, eFiling, and trial prep - while our IP services cover USPTO, EPO, PCT, and WIPO-compliant utility and design drawings.
+									Our paralegal services handle the administrative grind - docketing, eFiling, and trial prep - while our IP services cover {isIndia ? 'comprehensive IP protection tailored for the Indian jurisdiction and international filings.' : 'USPTO, EPO, PCT, and WIPO-compliant utility and design drawings.'}
 								</p>
 								<p className="narrative-highlight">
 									We believe legal work should be spent on arguments, not admin. Our mission is to ensure your focus stays on the win.

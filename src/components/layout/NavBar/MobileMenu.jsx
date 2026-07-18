@@ -76,60 +76,9 @@ function MobileMenu() {
 									<div className={`mobile-services-dropdown ${servicesOpen ? 'open' : ''}`}>
 										{servicesLink?.sections?.map((section, sectionIndex) => (
 											<div key={sectionIndex} className="mobile-services-section">
-												<div className="mobile-services-title-toggle">
-													<Link
-														href={section.href}
-														onClick={handleLinkClick}
-														className="mobile-services-section-title"
-													>
-														<span>{section.label}</span>
-													</Link>
-													{section.items && (
-														<button
-															className="mobile-sub-arrow-btn"
-															onClick={
-																section.label === 'IP Solutions'
-																	? toggleIpSolutions
-																	: section.label === 'Paralegal Solutions'
-																		? toggleParalegalSolutions
-																		: toggleCustomSolutions
-															}
-														aria-label={`Toggle ${section.label} menu`}
-														>
-															<svg 
-																className={`mobile-sub-arrow ${
-																	section.label === 'IP Solutions'
-																		? (ipSolutionsOpen ? 'open' : '')
-																		: section.label === 'Paralegal Solutions'
-																			? (paralegalSolutionsOpen ? 'open' : '')
-																			: (customSolutionsOpen ? 'open' : '')
-																}`}
-																width="10" 
-																height="10" 
-																viewBox="0 0 12 12" 
-																fill="none" 
-																xmlns="http://www.w3.org/2000/svg"
-															>
-																<path 
-																	d="M2.5 4.5L6 8L9.5 4.5" 
-																	stroke="currentColor" 
-																	strokeWidth="1.5" 
-																	strokeLinecap="round" 
-																	strokeLinejoin="round"
-																/>
-															</svg>
-														</button>
-													)}
-												</div>
-												{section.items && (
-														<div className={`mobile-services-sub-dropdown ${
-															section.label === 'IP Solutions'
-																? (ipSolutionsOpen ? 'open' : '')
-																: section.label === 'Paralegal Solutions'
-																	? (paralegalSolutionsOpen ? 'open' : '')
-																	: (customSolutionsOpen ? 'open' : '')
-														}`}>
-														<ul className="mobile-services-list">
+												{section.hideLabel ? (
+													<div className="mobile-services-sub-dropdown open" style={{ paddingLeft: 0, paddingBottom: 0, paddingTop: 0 }}>
+														<ul className="mobile-services-list" style={{ marginTop: sectionIndex === 0 ? '1rem' : 0 }}>
 															{section.items.map((item, itemIndex) => (
 																<li key={itemIndex}>
 																	<Link href={item.href} onClick={handleLinkClick}>
@@ -139,6 +88,73 @@ function MobileMenu() {
 															))}
 														</ul>
 													</div>
+												) : (
+													<>
+														<div className="mobile-services-title-toggle">
+															<Link
+																href={section.href}
+																onClick={handleLinkClick}
+																className="mobile-services-section-title"
+															>
+																<span>{section.label}</span>
+															</Link>
+															{section.items && (
+																<button
+																	className="mobile-sub-arrow-btn"
+																	onClick={
+																		section.label === 'IP Solutions'
+																			? toggleIpSolutions
+																			: section.label === 'Paralegal Solutions'
+																				? toggleParalegalSolutions
+																				: toggleCustomSolutions
+																	}
+																aria-label={`Toggle ${section.label} menu`}
+																>
+																	<svg 
+																		className={`mobile-sub-arrow ${
+																			section.label === 'IP Solutions'
+																				? (ipSolutionsOpen ? 'open' : '')
+																				: section.label === 'Paralegal Solutions'
+																					? (paralegalSolutionsOpen ? 'open' : '')
+																					: (customSolutionsOpen ? 'open' : '')
+																		}`}
+																		width="10" 
+																		height="10" 
+																		viewBox="0 0 12 12" 
+																		fill="none" 
+																		xmlns="http://www.w3.org/2000/svg"
+																	>
+																		<path 
+																			d="M2.5 4.5L6 8L9.5 4.5" 
+																			stroke="currentColor" 
+																			strokeWidth="1.5" 
+																			strokeLinecap="round" 
+																			strokeLinejoin="round"
+																		/>
+																	</svg>
+																</button>
+															)}
+														</div>
+														{section.items && (
+																<div className={`mobile-services-sub-dropdown ${
+																	section.label === 'IP Solutions'
+																		? (ipSolutionsOpen ? 'open' : '')
+																		: section.label === 'Paralegal Solutions'
+																			? (paralegalSolutionsOpen ? 'open' : '')
+																			: (customSolutionsOpen ? 'open' : '')
+																}`}>
+																<ul className="mobile-services-list">
+																	{section.items.map((item, itemIndex) => (
+																		<li key={itemIndex}>
+																			<Link href={item.href} onClick={handleLinkClick}>
+																				{item.label}
+																			</Link>
+																		</li>
+																	))}
+																</ul>
+															</div>
+														)}
+													</>
 												)}
 											</div>
 										))}

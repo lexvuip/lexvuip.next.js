@@ -1,40 +1,44 @@
+import { ipServices, paralegalServices, customServices } from './services';
+
+const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+const isIndia = region === 'IN';
+
+let servicesSections = [];
+
+if (isIndia) {
+	for (let i = 0; i < ipServices.length; i += 3) {
+		servicesSections.push({
+			hideLabel: true,
+			items: ipServices.slice(i, i + 3).map(s => ({ label: s.title, href: `/service/ipsolutions/${s.slug}` }))
+		});
+	}
+} else {
+	servicesSections = [
+		{
+			href: '/service/ipsolutions',
+			label: 'IP Solutions',
+			items: ipServices.map(s => ({ label: s.title, href: `/service/ipsolutions/${s.slug}` }))
+		},
+		...(paralegalServices.length > 0 ? [{
+			href: '/service/paralegalsolutions',
+			label: 'Paralegal Solutions',
+			items: paralegalServices.map(s => ({ label: s.title, href: `/service/paralegalsolutions/${s.slug}` }))
+		}] : []),
+		...(customServices.length > 0 ? [{
+			href: '/service/customsolutions',
+			label: 'Custom Solutions',
+			items: customServices.map(s => ({ label: s.title, href: `/service/customsolutions/${s.slug}` }))
+		}] : [])
+	];
+}
+
 export const navLinks = [
 	{ href: '/', label: 'Home' },
 	{ href: '/about', label: 'About' },
 	{
 		href: '/services',
 		label: 'Services',
-		sections: [
-			{
-				href: '/service/ipsolutions',
-				label: 'IP Solutions',
-				items: [
-					{ label: 'Utility Patent Drawings', href: '/service/ipsolutions/utility-patent-drawings' },
-					{ label: 'Design Patent Drawings', href: '/service/ipsolutions/design-patent-drawings' },
-					{ label: 'Trademark Support', href: '/service/ipsolutions/trademark-support' }
-				]
-			},
-			{
-				href: '/service/paralegalsolutions',
-				label: 'Paralegal Solutions',
-				items: [
-					{ label: 'Case & Docketing Management', href: '/service/paralegalsolutions/case-docketing-management' },
-					{ label: 'E-Filing & Compliance Support', href: '/service/paralegalsolutions/efiling-compliance' },
-					{ label: 'Contact & Document Management', href: '/service/paralegalsolutions/document-management' },
-					{ label: 'Trial Prep & Deposition', href: '/service/paralegalsolutions/trial-prep-deposition' },
-					{ label: 'Compliance Support', href: '/service/paralegalsolutions/compliance-support' }
-				]
-			},
-			{
-				href: '/service/customsolutions',
-				label: 'Custom Solutions',
-				items: [
-					{ label: 'Tailored Support', href: '/service/customsolutions/tailored-support' },
-					{ label: 'Workflow Automation', href: '/service/customsolutions/workflow-automation' },
-					{ label: 'Special Consulting', href: '/service/customsolutions/special-consulting' }
-				]
-			}
-		]
+		sections: servicesSections
 	},
 	{ href: '/#faq', label: 'FAQ' },
 	{ href: '/security', label: 'Security' },
