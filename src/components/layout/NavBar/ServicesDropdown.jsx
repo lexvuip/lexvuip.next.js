@@ -28,17 +28,19 @@ function ServicesDropdown({ onMouseEnter, onMouseLeave }) {
 		>
 			{servicesLink.sections.map((section, index) => (
 				<div key={index} className="services-dropdown-section" role="none">
-					<div className="services-dropdown-title" role="none">
-						<Link 
-							href={section.href} 
-							onClick={closeServicesDropdown}
-							role="menuitem"
-						>
-							{section.label}
-						</Link>
-					</div>
+					{!section.hideLabel && (
+						<div className="services-dropdown-title" role="none">
+							<Link 
+								href={section.href} 
+								onClick={closeServicesDropdown}
+								role="menuitem"
+							>
+								{section.label}
+							</Link>
+						</div>
+					)}
 					{section.items && (
-						<ul role="none">
+						<ul role="none" className={section.hideLabel ? "no-title-list" : ""}>
 							{section.items.map((item, itemIndex) => (
 								<li key={itemIndex} role="none">
 									<Link 

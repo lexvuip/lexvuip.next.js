@@ -6,31 +6,39 @@ import HeroSection from '../components/sections/HeroSection';
 import WorkShowcase from '../components/sections/WorkShowcase';
 import HomeLazySections from '../components/pages/HomeLazySections';
 
-export const metadata = {
-  title: 'Patent Drawings & Paralegal Services',
-  description: 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and end-to-end paralegal services. 25+ years supporting IP attorneys worldwide with precision filings and trial preparation.',
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Patent Drawings & Paralegal Services',
-    description: 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and paralegal services. 25+ years supporting IP attorneys worldwide.',
-    url: 'https://lexvuip.com',
-    siteName: 'LexVuIP',
-    images: [
-      {
-        url: '/og-home.png',
-        width: 1200,
-        height: 630,
-        alt: 'LexVuIP - Patent Drawings and Paralegal Services',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-};
+export async function generateMetadata() {
+  const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+  const isIndia = region === 'IN';
+
+  return {
+    title: isIndia ? 'Patent Filing & IP Services' : 'Patent Drawings & Paralegal Services',
+    description: isIndia ? 'LexVuIP delivers patent filing, trademark registration, and end-to-end IP services. 25+ years supporting IP attorneys with precision filings and trial preparation.' : 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and end-to-end paralegal services. 25+ years supporting IP attorneys worldwide with precision filings and trial preparation.',
+    alternates: {
+      canonical: '/',
+    },
+    openGraph: {
+      title: isIndia ? 'Patent Filing & IP Services' : 'Patent Drawings & Paralegal Services',
+      description: isIndia ? 'LexVuIP delivers patent filing, trademark registration, and IP services. 25+ years supporting IP attorneys.' : 'LexVuIP delivers USPTO-compliant patent drawings, trademark support, and paralegal services. 25+ years supporting IP attorneys worldwide.',
+      url: isIndia ? 'https://lexvuip.in' : 'https://lexvuip.com',
+      siteName: 'LexVuIP',
+      images: [
+        {
+          url: '/og-home.png',
+          width: 1200,
+          height: 630,
+          alt: 'LexVuIP - Patent Drawings and Paralegal Services',
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+  };
+}
 
 export default function Home() {
+  const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+  const isIndia = region === 'IN';
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -106,13 +114,13 @@ export default function Home() {
         '@type': 'VideoObject',
         '@id': 'https://lexvuip.com/#about-video',
         'name': 'LexVuIP Overview - IP Solutions and Paralegal Services',
-        'description': 'Learn how LexVuIP supports IP attorneys with patent drawings, trademark filings, and comprehensive paralegal services. 25+ years of expertise in USPTO, EPO, WIPO, and PCT filings.',
+        'description': isIndia ? 'Learn how LexVuIP supports IP attorneys with patent filing, trademark registration, and comprehensive paralegal services. 25+ years of expertise.' : 'Learn how LexVuIP supports IP attorneys with patent drawings, trademark filings, and comprehensive paralegal services. 25+ years of expertise in USPTO, EPO, WIPO, and PCT filings.',
         'thumbnailUrl': 'https://lexvuip.com/videos/about_video_poster.jpg',
         'uploadDate': '2024-01-15',
         'duration': 'PT45S',
         'contentUrl': 'https://lexvuip.com/videos/about_video.mp4',
         'embedUrl': 'https://lexvuip.com/#about',
-        'transcript': 'LexVuIP: Precision in Every Filing. Clarity in Every Design. 25+ years supporting IP attorneys worldwide. Expert patent drawings for USPTO, EPO, WIPO, and PCT filings. Comprehensive paralegal services: docketing, e-filing, trial preparation. Your trusted partner for intellectual property solutions.',
+        'transcript': isIndia ? 'LexVuIP: Precision in Every Filing. 25+ years supporting IP attorneys worldwide. Expert patent filing and trademark registration. Comprehensive paralegal services.' : 'LexVuIP: Precision in Every Filing. Clarity in Every Design. 25+ years supporting IP attorneys worldwide. Expert patent drawings for USPTO, EPO, WIPO, and PCT filings. Comprehensive paralegal services: docketing, e-filing, trial preparation. Your trusted partner for intellectual property solutions.',
         'publisher': {
           '@id': 'https://lexvuip.com/#organization'
         }
@@ -126,7 +134,7 @@ export default function Home() {
             'name': 'What services does LexVuIP offer?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LexVuIP offers comprehensive IP solutions including USPTO-compliant patent drawings (utility and design), trademark support services, and complete paralegal solutions including docketing management, e-filing, and trial preparation.'
+              'text': isIndia ? 'LexVuIP offers comprehensive IP solutions including patent filing, trademark registration, and complete IP protection services.' : 'LexVuIP offers comprehensive IP solutions including USPTO-compliant patent drawings (utility and design), trademark support services, and complete paralegal solutions including docketing management, e-filing, and trial preparation.'
             }
           },
           {
@@ -134,7 +142,7 @@ export default function Home() {
             'name': 'How long has LexVuIP been in business?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LexVuIP has over 25 years of experience supporting IP attorneys and law firms worldwide with patent drawings, trademark filings, and paralegal services.'
+              'text': isIndia ? 'LexVuIP has over 25 years of experience supporting IP attorneys and law firms worldwide with patent filing, trademark registration, and IP litigation support.' : 'LexVuIP has over 25 years of experience supporting IP attorneys and law firms worldwide with patent drawings, trademark filings, and paralegal services.'
             }
           },
           {
@@ -142,7 +150,7 @@ export default function Home() {
             'name': 'What patent offices do you support?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'We support filings with USPTO, EPO, WIPO/PCT, and major international patent offices. Our drawings comply with USPTO Rule 84, EPO Rule 46, and PCT Rule 11 standards.'
+              'text': isIndia ? 'We support filings with the Indian Patent Office (IPO), WIPO/PCT, and major international patent offices.' : 'We support filings with USPTO, EPO, WIPO/PCT, and major international patent offices. Our drawings comply with USPTO Rule 84, EPO Rule 46, and PCT Rule 11 standards.'
             }
           },
           {

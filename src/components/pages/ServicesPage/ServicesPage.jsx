@@ -8,6 +8,7 @@ import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
 import Counter from '../../ui/Counter';
+import { ipServices, paralegalServices, customServices } from '../../../data/services';
 
 const TestimonialSection = dynamic(
 	() => import('../../sections/TestimonialSection'),
@@ -26,15 +27,18 @@ const FAQSection = dynamic(
 );
 
 function ServicesPage() {
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
+
 	return (
 		<main className="services-page-luxury">
 			{/* Hero Section */}
 			<section className="services-hero-section">
 				<div className="services-hero-content">
 					<h1 className="services-hero-title">
-						Patent Drawings & Paralegal Services
+						{isIndia ? 'Patent Filing & IP Services' : 'Patent Drawings & Paralegal Services'}
 						<br />
-						for <span className="italic">IP Attorneys</span> Worldwide
+						for <span className="italic">IP Attorneys</span> {isIndia ? 'in India & ' : ''}Worldwide
 					</h1>
 					<p className="services-hero-description">
 						For more than 25 years, we've partnered with intellectual property
@@ -129,7 +133,7 @@ function ServicesPage() {
 								{/* Secondary Floating Accents */}
 								<div className="stat-card-secondary top-right">
 									<div className="stat-card-mini">
-										<span className="mini-value">GLOBAL</span>
+										<span className="mini-value">{isIndia ? 'IPO' : 'GLOBAL'}</span>
 										<span className="mini-label">Compliance</span>
 									</div>
 								</div>
@@ -159,8 +163,8 @@ function ServicesPage() {
 							<div className="impact-description">
 								<p>
 									We help patent attorneys and IP law firms safeguard their clients' 
-									innovations with strategic clarity. Every drawing, trademark rendering, 
-									and filing meets the highest global standards.
+									innovations with strategic clarity. Every {isIndia ? 'application' : 'drawing'}, trademark rendering, 
+									and filing meets the highest {isIndia ? 'national and international' : 'global'} standards.
 								</p>
 								<p>
 									With 25+ years of specialized expertise, we handle the technical 
@@ -188,109 +192,70 @@ function ServicesPage() {
 					</div>
 
 					{/* Paralegal Solutions Category */}
-					<div className="service-category-group">
-						<div className="category-header">
-							<h3 className="category-title">Paralegal <span className="italic-serif">Solutions</span></h3>
-							<div className="category-line"></div>
+					{paralegalServices.length > 0 && (
+						<div className="service-category-group">
+							<div className="category-header">
+								<h3 className="category-title">Paralegal <span className="italic-serif">Solutions</span></h3>
+								<div className="category-line"></div>
+							</div>
+							
+						<div className="services-grid-luxury">
+							{paralegalServices.map((service, idx) => (
+								<ServiceCard
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.description}
+									href={`/service/paralegalsolutions/${service.slug}`}
+								/>
+							))}
 						</div>
-						
-					<div className="services-grid-luxury">
-					<ServiceCard
-						image="/assets/stockimages/caseManagement-1920.webp"
-						title="Case Management"
-						desc="End-to-end management ensuring every milestone is met with precision."
-						href="/service/paralegalsolutions/case-docketing-management"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/docketingManagement-1920.webp"
-						title="Docketing Management"
-						desc="Efficient tracking and management of critical IP deadlines."
-						href="/service/paralegalsolutions/case-docketing-management"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/eFillingServices-1920.webp"
-						title="E-Filing Services"
-						desc="Seamless electronic filing for patents and trademarks."
-						href="/service/paralegalsolutions/efiling-compliance"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/contactManagementServices-1920.webp"
-						title="Contact Management"
-						desc="Organized and secure case information management."
-						href="/service/paralegalsolutions/document-management"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/trailPreparation-1920.webp"
-						title="Trial Preparation"
-						desc="Comprehensive support for trial document and evidence prep."
-						href="/service/paralegalsolutions/trial-prep-deposition"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/lawer-1920.webp"
-						title="Deposition Coordination"
-						desc="Expert logistics and support for global depositions."
-						href="/service/paralegalsolutions/trial-prep-deposition"
-					/>
-					</div>
-					</div>
+						</div>
+					)}
 
 					{/* IP Solutions Category */}
-					<div className="service-category-group">
-						<div className="category-header">
-							<h3 className="category-title">IP <span className="italic-serif">Solutions</span></h3>
-							<div className="category-line"></div>
+					{ipServices.length > 0 && (
+						<div className="service-category-group">
+							<div className="category-header">
+								<h3 className="category-title">IP <span className="italic-serif">Solutions</span></h3>
+								<div className="category-line"></div>
+							</div>
+							
+						<div className="services-grid-luxury">
+							{ipServices.map((service, idx) => (
+								<ServiceCard
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.description}
+									href={`/service/ipsolutions/${service.slug}`}
+								/>
+							))}
 						</div>
-						
-					<div className="services-grid-luxury">
-					<ServiceCard
-						image="/assets/stockimages/utilitypatentdrawing-1920.webp"
-						title="Utility Patent Drawings"
-						desc="USPTO, EPO, and WIPO-compliant utility illustrations."
-						href="/service/ipsolutions/utility-patent-drawings"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/desingpatentdrawing-1920.webp"
-						title="Design Patent Drawings"
-						desc="Accurate, visually compelling design patent illustrations."
-						href="/service/ipsolutions/design-patent-drawings"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/trademarkdesign-1920.webp"
-						title="Trademark Support"
-						desc="Comprehensive search, filing, and drawing services."
-						href="/service/ipsolutions/trademark-support"
-					/>
-					</div>
-					</div>
+						</div>
+					)}
 
 					{/* Custom Solutions Category */}
-					<div className="service-category-group">
-						<div className="category-header">
-							<h3 className="category-title">Custom <span className="italic-serif">Solutions</span></h3>
-							<div className="category-line"></div>
+					{customServices.length > 0 && (
+						<div className="service-category-group">
+							<div className="category-header">
+								<h3 className="category-title">Custom <span className="italic-serif">Solutions</span></h3>
+								<div className="category-line"></div>
+							</div>
+							
+						<div className="services-grid-luxury">
+							{customServices.map((service, idx) => (
+								<ServiceCard
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.description}
+									href={`/service/customsolutions/${service.slug}`}
+								/>
+							))}
 						</div>
-						
-					<div className="services-grid-luxury">
-					<ServiceCard
-						image="/assets/stockimages/desingpatentdrawing-1920.webp"
-						title="Tailored Support"
-						desc="Custom solutions for unique IP and paralegal needs."
-						href="/service/customsolutions/tailored-support"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/utilitypatentdrawing-1920.webp"
-						title="Workflow Automation"
-						desc="Efficiency-driven automation for legal processes."
-						href="/service/customsolutions/workflow-automation"
-					/>
-					<ServiceCard
-						image="/assets/stockimages/customworkflow-1920.webp"
-						title="Special Consulting"
-						desc="Expert consulting for complex legal projects."
-						href="/service/customsolutions/special-consulting"
-					/>
-					</div>
-					</div>
+						</div>
+					)}
 				</div>
 			</section>
 

@@ -13,6 +13,9 @@ import Counter from '../../ui/Counter';
 import { ipServices } from '../../../data/services';
 
 function IpSolutionsPage() {
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
+
 	return (
 		<main className="services-page-luxury">
 			{/* Hero Section */}
@@ -25,7 +28,7 @@ function IpSolutionsPage() {
 					</h1>
 					<p className="services-hero-description">
 						For over 25 years, we've partnered with IP attorneys to provide 
-						precise, compliant patent and trademark drawings that strengthen 
+						precise, compliant patent and trademark {isIndia ? 'services' : 'drawings'} that strengthen 
 						filings and protect intellectual property worldwide.
 					</p>
 					<div className="services-hero-actions">
@@ -71,7 +74,7 @@ function IpSolutionsPage() {
 								</div>
 								<div className="stat-card-secondary top-right">
 									<div className="stat-card-mini">
-										<span className="mini-value">USPTO</span>
+										<span className="mini-value">{isIndia ? 'IPO' : 'USPTO'}</span>
 										<span className="mini-label">Compliant</span>
 									</div>
 								</div>
@@ -83,8 +86,8 @@ function IpSolutionsPage() {
 								</div>
 								<div className="stat-card-secondary bottom-right">
 									<div className="stat-card-mini">
-										<span className="mini-value">EPO</span>
-										<span className="mini-label">European</span>
+										<span className="mini-value">{isIndia ? 'PCT' : 'EPO'}</span>
+										<span className="mini-label">{isIndia ? 'International' : 'European'}</span>
 									</div>
 								</div>
 								<div className="impact-glow"></div>
@@ -102,11 +105,11 @@ function IpSolutionsPage() {
 							<div className="impact-description">
 								<p>
 									Every line and curve matters in IP law. Our team combines deep 
-									technical knowledge with careful attention to USPTO and 
+									technical knowledge with careful attention to {isIndia ? 'Indian' : 'USPTO'} and 
 									international standards.
 								</p>
 								<p>
-									We ensure your drawings are not just compliant, but clear and 
+									We ensure your {isIndia ? 'filings' : 'drawings'} are not just compliant, but clear and 
 									effective, driving faster approvals and stronger protection 
 									for your innovations.
 								</p>
