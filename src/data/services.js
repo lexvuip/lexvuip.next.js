@@ -46,7 +46,7 @@ const globalIpServices = [
 	}
 ];
 
-export const paralegalServices = [
+const globalParalegalServices = [
 	{
 		slug: 'case-docketing-management',
 		image: '/assets/stockimages/caseManagement-1920.webp',
@@ -124,7 +124,7 @@ export const paralegalServices = [
 	}
 ];
 
-export const customServices = [
+const globalCustomServices = [
 	{
 		slug: 'tailored-support',
 		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
@@ -205,7 +205,7 @@ const indianIpServices = [
 	},
 	{
 		slug: 'trademark-registration',
-		image: '/assets/stockimages/trademark-1920.webp',
+		image: '/assets/stockimages/trademarkdesign-1920.webp',
 		title: 'Trademark Registration',
 		description: 'Securing brand identity with trademark registration across all classes in India.',
 		content: {
@@ -220,7 +220,7 @@ const indianIpServices = [
 	},
 	{
 		slug: 'copyrights-filing',
-		image: '/assets/stockimages/compliance-1920.webp',
+		image: '/assets/stockimages/complianceSupport-1920.webp',
 		title: 'Copyrights Filing',
 		description: 'Protecting original literary, dramatic, musical, and artistic works.',
 		content: {
@@ -250,7 +250,7 @@ const indianIpServices = [
 	},
 	{
 		slug: 'ip-litigation',
-		image: '/assets/stockimages/trial-1920.webp',
+		image: '/assets/stockimages/trailPreparation-1920.webp',
 		title: 'IP Litigation',
 		description: 'Enforcing IP rights and defending against infringement claims in Indian courts.',
 		content: {
@@ -265,7 +265,7 @@ const indianIpServices = [
 	},
 	{
 		slug: 'startup-business-advisory',
-		image: '/assets/stockimages/consulting-1920.webp',
+		image: '/assets/stockimages/customworkflow-1920.webp',
 		title: 'Startup & Business Advisory',
 		description: 'Strategic IP advisory tailored for startups to maximize valuation and protect core assets.',
 		content: {
@@ -280,7 +280,7 @@ const indianIpServices = [
 	},
 	{
 		slug: 'legal-consultant',
-		image: '/assets/stockimages/compliance-1920.webp',
+		image: '/assets/stockimages/lawer-1920.webp',
 		title: 'Legal Consultant',
 		description: 'Comprehensive legal consulting for IP and technology matters.',
 		content: {
@@ -295,7 +295,7 @@ const indianIpServices = [
 	},
 	{
 		slug: 'international-ip-protection',
-		image: '/assets/stockimages/trademark-1920.webp',
+		image: '/assets/stockimages/trademarkdesign-1920.webp',
 		title: 'International IP Protection',
 		description: 'Extending Indian IP protection globally via PCT, Madrid Protocol, and direct filings.',
 		content: {
@@ -314,3 +314,5 @@ const indianIpServices = [
 const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
 
 export const ipServices = region === 'IN' ? indianIpServices : globalIpServices;
+export const paralegalServices = region === 'IN' ? [] : globalParalegalServices;
+export const customServices = region === 'IN' ? [] : globalCustomServices;
