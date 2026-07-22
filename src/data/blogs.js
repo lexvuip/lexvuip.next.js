@@ -617,5 +617,55 @@ export const blogs = [
 			},
 		],
 	},
+	{
+		id: '10',
+		slug: 'ip-fundamentals-part-1-why-timing-matters',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 1: The Clock Starts Ticking — Why Patent Timing Matters Just as Much as Your Invention',
+		date: '07/20/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'Most inventors focus on whether their idea is new. But patent law cares just as much about when that idea became public. Here is why timing can be the difference between a granted patent and a rejected application — before a single claim is even drafted.',
+		heroImage: '/assets/stockimages/patent-timing-fundamentals-1920.webp',
+		content: [
+			{
+				heading: 'Every Inventor Starts With an Idea They Believe Is New',
+				body: 'The next question is usually: "How do I protect it?" But before a patent application is drafted, there is another question that is just as important: Has anything already happened that could affect whether the invention is considered new?',
+			},
+			{
+				heading: 'Many Inventors Assume They Are Automatically Entitled to a Patent',
+				body: 'Patent law does not work that way. One of the fundamental principles of patent law is that an invention must be new at the time a patent application is filed. That sounds simple. In practice, it is often where problems begin.',
+			},
+			{
+				heading: 'It Is Not Just About the Invention',
+				body: 'When a patent attorney evaluates an invention, the focus is not only on the technology. The timeline matters too. Questions like these become important: Has the invention already been described in a patent application or granted patent? Has it appeared in a journal, brochure, website, or online publication? Has it been demonstrated publicly? Has it been shown at an exhibition? Has it been discussed openly before the filing date? Each of these events can influence whether the invention is still considered new.',
+			},
+			{
+				heading: 'Timing Changes Everything',
+				body: 'Imagine two inventors working on similar ideas. One files a patent application today. The other spends another six months refining the product before filing. During those six months, information about the invention becomes publicly available. The second inventor may now face questions that had nothing to do with the quality of the invention itself. The challenge is not always the invention. Sometimes it is the timing.',
+			},
+			{
+				heading: 'Not Every Disclosure Is Treated the Same',
+				body: "This is where patent law becomes more nuanced. Some disclosures may affect patentability. Others may not. The circumstances surrounding the disclosure matter. For example, the law recognizes that certain situations deserve different treatment, including: unauthorized disclosures made without the inventor's consent, certain officially recognised exhibitions, specific public displays under prescribed conditions, and other disclosures where the law provides limited protection. These exceptions are fact-specific and should always be evaluated carefully before drawing conclusions. That is one reason experienced patent attorneys spend time understanding how, where, and when an invention has been disclosed.",
+			},
+			{
+				heading: 'A Simple Habit That Can Save Bigger Problems Later',
+				body: 'If you are developing a new product, keep a record of your invention journey. Ask yourself: When was the invention first completed? Who has seen it? Was it shared under a confidentiality agreement? Has it been presented publicly? Has any information already been published? A simple timeline can help identify potential issues before they become difficult to address.',
+			},
+			{
+				heading: 'Why This Matters to Patent Attorneys',
+				body: 'When attorneys ask clients about meetings, presentations, publications, or earlier disclosures, they are not being overly cautious. They are trying to understand the complete history of the invention. Those conversations often shape filing strategy just as much as the technical details themselves. A well-prepared timeline allows attorneys to assess potential risks early and provide more informed guidance to their clients.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'Many people think patent strategy begins with drafting claims. In my experience, it begins much earlier. It begins with understanding the journey an invention has already taken before the patent application is filed. A great invention deserves a thoughtful filing strategy. And that strategy starts with knowing not only what was invented, but also when, where, and how it entered the world.',
+			},
+			{
+				heading: 'The Question Every Inventor Should Answer',
+				body: 'If you were filing a patent application today, would you be able to confidently map every disclosure your invention has had from the day it was conceived until the day it was filed? That timeline may be more important than you think.',
+			},
+		],
+	},
 
 ];
