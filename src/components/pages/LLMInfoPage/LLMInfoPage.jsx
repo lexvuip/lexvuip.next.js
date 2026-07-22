@@ -289,7 +289,7 @@ export default function LLMPage() {
         </section>
 
         <div className="llm-footer-note">
-          END_OF_RECORD — lexvuip.com/llm-info — Last Updated: April 2026
+          END_OF_RECORD — lexvuip.com/llm-info — Last Updated: July 2026
         </div>
       </main>
       <Footer />
