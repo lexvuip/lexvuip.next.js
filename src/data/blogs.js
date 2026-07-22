@@ -627,7 +627,7 @@ export const blogs = [
 		authorId: 'bhanu-prakash',
 		excerpt:
 			'Most inventors focus on whether their idea is new. But patent law cares just as much about when that idea became public. Here is why timing can be the difference between a granted patent and a rejected application — before a single claim is even drafted.',
-		heroImage: '/assets/stockimages/patent-timing-fundamentals-1920.webp',
+		heroImage: '/assets/stockimages/patent-timing-fundamentals-1920.png',
 		content: [
 			{
 				heading: 'Every Inventor Starts With an Idea They Believe Is New',
