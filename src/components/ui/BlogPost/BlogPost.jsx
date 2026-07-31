@@ -79,7 +79,10 @@ function BlogPost() {
 				<div className="blogpost-layout">
 					<article className="blogpost-content">
 						{post.content?.map((sec, idx) => (
-							<section key={idx} className="blogpost-section-block">
+							<section
+								key={idx}
+								className={`blogpost-section-block${sec.heading === 'Legal Note' ? ' legal-note-block' : ''}`}
+							>
 								{sec.heading && <h2 className="blogpost-subheading">{sec.heading}</h2>}
 								<p className="blogpost-body" dangerouslySetInnerHTML={{ __html: renderBody(sec.body) }} />
 							</section>

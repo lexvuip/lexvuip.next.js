@@ -665,6 +665,112 @@ export const blogs = [
 				heading: 'The Question Every Inventor Should Answer',
 				body: 'If you were filing a patent application today, would you be able to confidently map every disclosure your invention has had from the day it was conceived until the day it was filed? That timeline may be more important than you think.',
 			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of patentability considerations before filing a patent application. It is not legal advice. Every invention is different, and the appropriate filing strategy depends on the specific facts, applicable laws, and professional legal advice.',
+			},
+		],
+	},
+	{
+		id: '11',
+		slug: 'ip-fundamentals-part-2-priority-dates',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 2: Why Priority Dates Matter More Than Many Inventors Realize',
+		date: '08/01/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'For many inventors, the priority date isn\'t immediately obvious. In practice, it plays an important role in how an invention is evaluated, how future filings are planned, and how patent rights are pursued.',
+		heroImage: '/assets/stockimages/priority-dates-fundamentals-1920.png',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored why timing matters before filing a patent application and how public disclosures can influence patentability. That naturally leads to another question. Which date actually matters?',
+			},
+			{
+				heading: null,
+				body: 'For many inventors, the answer isn\'t immediately obvious. For patent attorneys, however, one date often becomes the foundation for many strategic decisions throughout the patent process. The priority date.',
+			},
+			{
+				heading: null,
+				body: 'It may sound like an administrative detail. In practice, it plays an important role in how an invention is evaluated, how future filings are planned, and how patent rights are pursued. Understanding its significance early helps inventors make more informed decisions and work more effectively with their patent professionals.',
+			},
+			{
+				heading: 'Think of the Priority Date as Your Place in Line',
+				body: 'Imagine two inventors working independently on similar ideas. Neither knows the other exists. Both are developing innovative solutions. Both plan to seek patent protection. Although every situation depends on the applicable laws and the specific facts, establishing an earlier priority date can be an important advantage when determining how an invention is assessed within the patent system.',
+			},
+			{
+				heading: null,
+				body: 'That\'s why experienced patent attorneys don\'t focus only on the invention itself. They also pay close attention to when key filing events occur.',
+			},
+			{
+				heading: 'Why This Date Matters',
+				body: 'The priority date serves as an important reference point during patent examination. When assessing novelty and inventive step, patent offices often compare the claimed invention against information that became publicly available before the relevant priority date.',
+			},
+			{
+				heading: null,
+				body: 'In many situations, establishing an earlier priority date helps define the point in time against which prior art is evaluated. This is one reason why filing strategy is often discussed alongside technical strategy. It\'s not simply about preparing a strong patent application. It\'s about determining the right time to establish protection.',
+			},
+			{
+				heading: 'Priority Dates Affect More Than One Application',
+				body: 'Many first-time inventors assume that every patent application is entirely independent. In reality, innovation rarely stops after the first filing. Products improve. Features evolve. New embodiments are developed. Businesses expand into new markets.',
+			},
+			{
+				heading: null,
+				body: 'As an invention grows, additional patent applications may become part of the overall protection strategy. When the applicable legal requirements are satisfied, later applications may be able to rely on an earlier priority date for subject matter that was already disclosed. Understanding how these relationships work is an important part of long-term patent planning.',
+			},
+			{
+				heading: 'Timing and Planning Go Together',
+				body: 'One question patent attorneys hear frequently is: "We\'re still improving the invention. Should we wait before filing?"',
+			},
+			{
+				heading: null,
+				body: 'There isn\'t a universal answer. Filing too early may mean important developments haven\'t yet been captured. Waiting too long may introduce unnecessary risks if information becomes public or if competing innovations emerge.',
+			},
+			{
+				heading: null,
+				body: 'Every invention has its own commercial objectives, development cycle, and business priorities. That\'s why filing strategy is rarely just a legal decision. It\'s also a business decision. The strongest approach often balances technical readiness, commercial goals, and intellectual property protection.',
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				body: 'One of the most valuable habits an inventor can develop is maintaining a clear record of the invention\'s development. Consider documenting:',
+			},
+			{
+				heading: null,
+				body: 'When the original concept was developed. Significant technical improvements over time. Prototype and testing milestones. Meetings with collaborators, investors, or manufacturers. Public demonstrations, presentations, or publications. Patent applications related to the invention.',
+			},
+			{
+				heading: null,
+				body: 'A well-maintained timeline helps patent professionals understand the evolution of the invention and provide more informed guidance.',
+			},
+			{
+				heading: 'Why Patent Attorneys Ask So Many Questions',
+				body: 'Inventors are sometimes surprised by how much time attorneys spend discussing dates instead of technology. Questions about meetings, disclosures, earlier applications, testing, or product launches aren\'t simply administrative. They help establish the sequence of events surrounding an invention.',
+			},
+			{
+				heading: null,
+				body: 'That chronology can influence filing strategy, prior art analysis, and future prosecution decisions. A complete timeline often provides attorneys with the context they need to make better strategic recommendations.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'Many people assume the most valuable part of a patent application is the technical description. That description is certainly important. But the timeline behind the invention matters too.',
+			},
+			{
+				heading: null,
+				body: 'The priority date is more than a date recorded on an application. It becomes part of the legal framework that supports patent protection throughout the prosecution process and beyond. Understanding its importance early allows inventors to make more informed decisions and gives patent professionals a stronger foundation for developing an effective filing strategy.',
+			},
+			{
+				heading: null,
+				body: 'I\'d like to leave you with one question. If someone asked you today to explain the complete development timeline of your invention, from the first idea to the filing date, how confidently could you do it?',
+			},
+			{
+				heading: null,
+				body: 'The answer may reveal opportunities to strengthen your documentation, improve your filing strategy, and identify potential issues before an application is ever filed. Because in patent strategy, understanding when something happened can be just as important as understanding what was invented.',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of the role of priority dates in patent practice. It is not legal advice. Specific filing strategies depend on the facts of each invention, the applicable patent laws, and professional legal advice.',
+			},
 		],
 	},
 
