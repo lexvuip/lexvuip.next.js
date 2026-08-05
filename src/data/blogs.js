@@ -373,7 +373,7 @@ export const blogs = [
 		date: '06/14/2026',
 		authorId: 'bhanu-prakash',
 		excerpt: 'A published US patent application surfaces during Indian prosecution — after the local filing date, after publication, and after the examiner picks up the file. Is the prior art objection legally valid?',
-		heroImage: '/assets/stockimages/prior-art-crosses-borders-us-india-1920.png',
+		heroImage: '/assets/stockimages/prior-art-crosses-borders-us-india-1920-standard.png',
 		content: [
 			{
 				heading: null,
@@ -627,7 +627,7 @@ export const blogs = [
 		authorId: 'bhanu-prakash',
 		excerpt:
 			'Most inventors focus on whether their idea is new. But patent law cares just as much about when that idea became public. Here is why timing can be the difference between a granted patent and a rejected application — before a single claim is even drafted.',
-		heroImage: '/assets/stockimages/patent-timing-fundamentals-1920.png',
+		heroImage: '/assets/stockimages/patent-timing-fundamentals-1920-standard.png',
 		content: [
 			{
 				heading: 'Every Inventor Starts With an Idea They Believe Is New',
@@ -681,7 +681,7 @@ export const blogs = [
 		authorId: 'bhanu-prakash',
 		excerpt:
 			'For many inventors, the priority date isn\'t immediately obvious. In practice, it plays an important role in how an invention is evaluated, how future filings are planned, and how patent rights are pursued.',
-		heroImage: '/assets/stockimages/priority-dates-fundamentals-1920.png',
+		heroImage: '/assets/stockimages/priority-dates-fundamentals-1920-standard.png',
 		content: [
 			{
 				heading: null,
@@ -767,9 +767,227 @@ export const blogs = [
 				heading: null,
 				body: 'The answer may reveal opportunities to strengthen your documentation, improve your filing strategy, and identify potential issues before an application is ever filed. Because in patent strategy, understanding when something happened can be just as important as understanding what was invented.',
 			},
+		{
+			heading: 'Legal Note',
+			body: 'This article is intended for educational purposes and provides a general explanation of the role of priority dates in patent practice. It is not legal advice. Specific filing strategies depend on the facts of each invention, the applicable patent laws, and professional legal advice.',
+		},
+	],
+},
+	{
+		id: '12',
+		slug: 'ip-fundamentals-part-3-why-confidentiality-matters',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 3: Why Confidentiality Matters Before You File a Patent',
+		date: '08/08/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'Before you file a patent, the way you share your invention can be just as important as the invention itself. Here is why confidentiality matters — and how careful conversations protect your future patent options.',
+		heroImage: '/assets/stockimages/confidentiality-fundamentals-1920-standard.png',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored why the priority date plays an important role in patent strategy and how the timing of a filing can influence the patent journey.',
+			},
+			{
+				heading: null,
+				body: 'That naturally leads to another question.',
+			},
+			{
+				heading: null,
+				body: 'What happens before the filing date?',
+			},
+			{
+				heading: null,
+				body: 'More specifically,',
+			},
+			{
+				heading: null,
+				body: 'Who knows about your invention?',
+			},
+			{
+				heading: null,
+				body: 'For many inventors, discussing a new idea feels like a natural part of building a business. You may want feedback from potential customers. You may need to approach manufacturers. You may be speaking with investors, business partners, or consultants.',
+			},
+			{
+				heading: null,
+				body: 'Those conversations are often necessary.',
+			},
+			{
+				heading: null,
+				body: "But before sharing details of an invention, there's one question worth asking:",
+			},
+			{
+				heading: null,
+				body: 'Is this information still confidential?',
+			},
+			{
+				heading: null,
+				body: 'Understanding the difference between confidential discussions and public disclosures is an important part of protecting innovation.',
+			},
+			{
+				heading: 'Think of Confidentiality as a Protective Barrier',
+				body: "Imagine you've spent months developing a new product. You're excited about its potential and want to gather opinions before investing further.",
+			},
+			{
+				heading: null,
+				body: 'So you begin discussing it with people outside your organisation. Some conversations happen privately. Others happen at networking events. Some details are shared over email. Others appear in presentations or online posts.',
+			},
+			{
+				heading: null,
+				body: "Although each conversation may seem harmless, the way information is shared can have important implications for a future patent application.",
+			},
+			{
+				heading: null,
+				body: "That's why experienced patent attorneys often ask not only what has been shared, but also how, with whom, and under what circumstances.",
+			},
+			{
+				heading: 'Not Every Conversation Is the Same',
+				body: "One of the most common misconceptions among first-time inventors is that every discussion automatically becomes a public disclosure.",
+			},
+			{
+				heading: null,
+				body: "That's not necessarily the case.",
+			},
+			{
+				heading: null,
+				body: 'The circumstances surrounding the communication matter.',
+			},
+			{
+				heading: null,
+				body: 'For example, conversations held under appropriate confidentiality arrangements may be treated differently from information shared openly without restrictions.',
+			},
+			{
+				heading: null,
+				body: "Similarly, discussions within a controlled environment may not have the same implications as information made available to the general public.",
+			},
+			{
+				heading: null,
+				body: 'Determining how a particular disclosure is viewed requires careful consideration of the facts and the applicable legal framework.',
+			},
+			{
+				heading: null,
+				body: 'This is one reason patent professionals encourage inventors to discuss disclosure plans before sharing technical details.',
+			},
+			{
+				heading: 'Why Confidentiality Matters',
+				body: "Confidentiality gives inventors an opportunity to explore ideas, seek technical advice, evaluate commercial opportunities, and develop business relationships while managing the flow of sensitive information.",
+			},
+			{
+				heading: null,
+				body: 'Without appropriate safeguards, information may reach a wider audience than originally intended.',
+			},
+			{
+				heading: null,
+				body: 'Once information is broadly available, it may affect future patent strategies depending on the jurisdiction and the specific circumstances.',
+			},
+			{
+				heading: null,
+				body: "Protecting confidentiality early is often much easier than trying to address problems later.",
+			},
+			{
+				heading: "Business Conversations Often Come Before Patent Filing",
+				body: "Building an invention rarely happens in isolation.",
+			},
+			{
+				heading: null,
+				body: 'You may need to:\n\n• Discuss manufacturing options.\n\n• Seek investment.\n\n• Work with engineers or designers.\n\n• Test prototypes with potential users.\n\n• Explore licensing opportunities.\n\n• Consult technical experts.',
+			},
+			{
+				heading: null,
+				body: "These conversations are often an essential part of innovation.",
+			},
+			{
+				heading: null,
+				body: "The objective isn't to avoid discussing the invention altogether.",
+			},
+			{
+				heading: null,
+				body: "It's to ensure those discussions happen in a way that supports your intellectual property strategy.",
+			},
+			{
+				heading: null,
+				body: "Planning those conversations carefully can reduce unnecessary risks while allowing innovation to move forward.",
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				body: 'Before sharing details of your invention with anyone outside your organisation, pause and ask yourself:',
+			},
+			{
+				heading: null,
+				body: '• Why am I sharing this information?\n\n• Does the other person need to know these technical details?\n\n• Is there an appropriate confidentiality arrangement in place?\n\n• Have I documented who received the information?\n\n• Have I spoken with my patent attorney about the timing of these discussions?',
+			},
+			{
+				heading: null,
+				body: "Developing this habit can help create a clearer record of how information has been managed throughout the invention's journey.",
+			},
+			{
+				heading: 'Why Patent Attorneys Ask About Every Conversation',
+				body: "Inventors are sometimes surprised when attorneys ask detailed questions about meetings, emails, demonstrations, investor discussions, or prototype testing.",
+			},
+			{
+				heading: null,
+				body: "These questions aren't simply administrative.",
+			},
+			{
+				heading: null,
+				body: "They help establish how information moved from the inventor to others and whether confidentiality was maintained throughout that process.",
+			},
+			{
+				heading: null,
+				body: "Understanding that history allows attorneys to assess potential risks, develop an appropriate filing strategy, and provide informed guidance based on the circumstances.",
+			},
+			{
+				heading: null,
+				body: "A well-documented communication timeline can be just as valuable as a well-documented development timeline.",
+			},
+			{
+				heading: 'Final Thoughts',
+				body: "Many people believe patent strategy begins when the application is drafted.",
+			},
+			{
+				heading: null,
+				body: "In reality, it often begins much earlier.",
+			},
+			{
+				heading: null,
+				body: "It begins with how an invention is managed before the application is ever filed.",
+			},
+			{
+				heading: null,
+				body: "Confidentiality isn't about keeping ideas secret forever.",
+			},
+			{
+				heading: null,
+				body: "It's about sharing information thoughtfully while preserving future options for intellectual property protection.",
+			},
+			{
+				heading: null,
+				body: "Small decisions made during early conversations can have lasting implications later in the patent process.",
+			},
+			{
+				heading: null,
+				body: "I'd like to leave you with one question.",
+			},
+			{
+				heading: null,
+				body: "If someone asked you today exactly who has seen your invention, what they were told, and whether those conversations were confidential, could you confidently answer?",
+			},
+			{
+				heading: null,
+				body: "That answer may reveal opportunities to strengthen your documentation, improve your communication practices, and better prepare for future patent discussions.",
+			},
+			{
+				heading: null,
+				body: "Because protecting an invention isn't only about filing the right application.",
+			},
+			{
+				heading: null,
+				body: "Sometimes it begins with having the right conversation in the right way.",
+			},
 			{
 				heading: 'Legal Note',
-				body: 'This article is intended for educational purposes and provides a general explanation of the role of priority dates in patent practice. It is not legal advice. Specific filing strategies depend on the facts of each invention, the applicable patent laws, and professional legal advice.',
+				body: 'This article is intended for educational purposes and provides a general explanation of confidentiality considerations before filing a patent application. It is not legal advice. The way information is shared and the applicable legal framework vary by jurisdiction and specific circumstances, and every invention should be evaluated with professional legal advice.',
 			},
 		],
 	},
