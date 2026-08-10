@@ -1001,7 +1001,7 @@ export const blogs = [
 		authorId: 'bhanu-prakash',
 		excerpt:
 			'An invention can become public in more ways than most inventors realize — a demonstration, a presentation, a catalogue, or even an informal disclosure. Here is why understanding what counts as public availability matters before you file a patent.',
-		heroImage: '/assets/stockimages/public-disclosure-fundamentals-1920-standard.png',
+		heroImage: '/assets/stockimages/public-disclosure-fundamentals-1920.jpg',
 		content: [
 			{
 				heading: null,
