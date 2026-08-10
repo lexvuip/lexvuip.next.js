@@ -991,5 +991,311 @@ export const blogs = [
 			},
 		],
 	},
+	{
+		id: '13',
+		slug: 'ip-fundamentals-part-4-when-is-an-invention-considered-public',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 4: When Is an Invention Considered Public?',
+		date: '08/10/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'An invention can become public in more ways than most inventors realize — a demonstration, a presentation, a catalogue, or even an informal disclosure. Here is why understanding what counts as public availability matters before you file a patent.',
+		heroImage: '/assets/stockimages/public-disclosure-fundamentals-1920.jpg',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored why confidentiality matters before filing a patent application and how the way information is shared can affect an inventor\'s patent strategy.',
+			},
+			{
+				heading: null,
+				body: 'That naturally leads to another question.',
+			},
+			{
+				heading: null,
+				body: 'When does an invention actually become public?',
+			},
+			{
+				heading: null,
+				body: 'For many inventors, the answer seems obvious.',
+			},
+			{
+				heading: null,
+				body: "If something is posted online, it's public.",
+			},
+			{
+				heading: null,
+				body: "If it's discussed privately, it's confidential.",
+			},
+			{
+				heading: null,
+				body: "But the line isn't always that simple.",
+			},
+			{
+				heading: null,
+				body: 'An invention can be exposed in more ways than many inventors realize.',
+			},
+			{
+				heading: null,
+				body: 'A presentation, product demonstration, publication, conference, website, catalogue, or even an informal disclosure can raise questions about when information became available to others.',
+			},
+			{
+				heading: null,
+				body: 'Understanding that distinction before filing can help inventors avoid preventable problems and have more productive conversations with their patent professionals.',
+			},
+			{
+				heading: "Public Doesn't Always Mean Published on the Internet",
+				body: 'When people hear the word public, they often think about social media, websites, or published articles.',
+			},
+			{
+				heading: null,
+				body: 'But public availability can take many forms.',
+			},
+			{
+				heading: null,
+				body: 'For example, information about an invention may become accessible through:\n\n• A public demonstration.\n\n• A conference or exhibition.\n\n• A product shown to potential customers.\n\n• A technical presentation.\n\n• A journal, catalogue, or brochure.\n\n• A website or online publication.\n\n• A product placed on the market.\n\n• Information shared with people without appropriate confidentiality restrictions.',
+			},
+			{
+				heading: null,
+				body: "The important question isn't simply whether something was posted online.",
+			},
+			{
+				heading: null,
+				body: "It's whether information about the invention became available to others in circumstances that may affect its treatment under the applicable patent rules.",
+			},
+			{
+				heading: 'A Conversation Can Raise Different Questions',
+				body: 'Consider an inventor preparing to launch a new product.',
+			},
+			{
+				heading: null,
+				body: 'They show a working prototype to a potential investor.',
+			},
+			{
+				heading: null,
+				body: 'The investor is shown detailed drawings, explains the technology to others, and no confidentiality arrangement was established.',
+			},
+			{
+				heading: null,
+				body: 'Now compare that with the same conversation taking place under an appropriate confidentiality agreement.',
+			},
+			{
+				heading: null,
+				body: 'The technical information may be identical.',
+			},
+			{
+				heading: null,
+				body: 'The circumstances are not.',
+			},
+			{
+				heading: null,
+				body: 'This is why patent professionals need to know not only what was disclosed, but also:',
+			},
+			{
+				heading: null,
+				body: '• Who received the information?\n\n• What exactly was disclosed?\n\n• When did the disclosure happen?\n\n• Was there an obligation to keep the information confidential?',
+			},
+			{
+				heading: null,
+				body: 'Those details can matter when assessing the potential impact of a disclosure.',
+			},
+			{
+				heading: 'Not Every Disclosure Has the Same Consequence',
+				body: 'Another common misconception is:',
+			},
+			{
+				heading: null,
+				body: '"If I disclosed my invention once, I can never get a patent."',
+			},
+			{
+				heading: null,
+				body: 'Patent law is more nuanced than that.',
+			},
+			{
+				heading: null,
+				body: 'The effect of a disclosure can depend on factors such as:\n\n• Where the disclosure occurred.\n\n• What information was actually made available.\n\n• Whether the disclosure was public or confidential.\n\n• When the disclosure occurred.\n\n• Which jurisdiction is being considered.\n\n• Whether any applicable exceptions or grace-period provisions apply.',
+			},
+			{
+				heading: null,
+				body: 'Some jurisdictions recognise specific circumstances in which certain disclosures may not automatically prevent patent protection.',
+			},
+			{
+				heading: null,
+				body: 'Others may take a much stricter approach to disclosures made before filing.',
+			},
+			{
+				heading: null,
+				body: 'That is why inventors should not assume that a disclosure is harmless, or that patent protection is automatically lost, without discussing the specific circumstances with a patent professional.',
+			},
+			{
+				heading: 'Why the Details of a Disclosure Matter',
+				body: 'Suppose an inventor demonstrates a new machine at a trade exhibition.',
+			},
+			{
+				heading: null,
+				body: "The machine is visible, but its internal mechanism isn't explained.",
+			},
+			{
+				heading: null,
+				body: 'Later, the inventor files a patent application describing that internal mechanism.',
+			},
+			{
+				heading: null,
+				body: 'What exactly was made available to the public at the exhibition?',
+			},
+			{
+				heading: null,
+				body: 'That question may matter.',
+			},
+			{
+				heading: null,
+				body: 'Patent professionals often need to distinguish between what was actually disclosed and what remained unknown.',
+			},
+			{
+				heading: null,
+				body: 'The same principle applies to presentations, websites, product demonstrations, publications, and other forms of communication.',
+			},
+			{
+				heading: null,
+				body: "A disclosure isn't simply an event on a calendar.",
+			},
+			{
+				heading: null,
+				body: "It's also a question of what information became available and to whom.",
+			},
+			{
+				heading: 'The Internet Makes Timing Even More Important',
+				body: 'Online disclosures create another practical challenge.',
+			},
+			{
+				heading: null,
+				body: 'A website update can happen in seconds.',
+			},
+			{
+				heading: null,
+				body: 'A product page can be indexed by search engines.',
+			},
+			{
+				heading: null,
+				body: 'A social media post can be shared beyond its original audience.',
+			},
+			{
+				heading: null,
+				body: 'A presentation uploaded for a limited audience may eventually circulate more widely.',
+			},
+			{
+				heading: null,
+				body: 'Once information is online, reconstructing exactly when and how it became available can sometimes be difficult.',
+			},
+			{
+				heading: null,
+				body: "That's why inventors should treat online publication of technical information with the same care as other forms of public disclosure.",
+			},
+			{
+				heading: null,
+				body: 'If patent protection is being considered, it is usually better to discuss the disclosure before publishing rather than trying to assess its consequences afterward.',
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				body: 'Before showing or publishing details of an invention, ask a few simple questions:',
+			},
+			{
+				heading: null,
+				body: '• What exactly am I about to disclose?\n\n• Who will have access to it?\n\n• Is the information being shared under confidentiality?\n\n• When will the information become available?\n\n• Have I discussed the disclosure with my patent professional?',
+			},
+			{
+				heading: null,
+				body: 'Also keep a record of important disclosure events.',
+			},
+			{
+				heading: null,
+				body: 'Document:\n\n• The date.\n\n• The audience.\n\n• What was disclosed.\n\n• Where it was disclosed.\n\n• Whether confidentiality applied.\n\n• Copies of presentations, brochures, publications, or online material where possible.',
+			},
+			{
+				heading: null,
+				body: 'This record can become extremely useful if questions arise later.',
+			},
+			{
+				heading: 'Why Patent Attorneys Ask About Public Disclosure',
+				body: 'When an attorney asks:',
+			},
+			{
+				heading: null,
+				body: '"Has this invention ever been shown to anyone?"',
+			},
+			{
+				heading: null,
+				body: "they aren't looking for a simple yes or no.",
+			},
+			{
+				heading: null,
+				body: 'They may need to understand the entire history.',
+			},
+			{
+				heading: null,
+				body: '• Was it shown to an employee?\n\n• An investor?\n\n• A potential customer?\n\n• A manufacturer?\n\n• At an exhibition?\n\n• Was an NDA in place?\n\n• Was a prototype demonstrated?\n\n• Was anything published online?',
+			},
+			{
+				heading: null,
+				body: 'These questions help establish the disclosure timeline and identify issues that may need to be considered before deciding how to proceed.',
+			},
+			{
+				heading: null,
+				body: 'A detailed answer gives the patent professional much more to work with than simply saying:',
+			},
+			{
+				heading: null,
+				body: '"We haven\'t published anything."',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: "An invention doesn't necessarily become public only when it appears in a patent, journal, or social media post.",
+			},
+			{
+				heading: null,
+				body: 'Public availability can arise through many different channels, and the consequences can depend heavily on the circumstances.',
+			},
+			{
+				heading: null,
+				body: "That's why confidentiality and disclosure planning should be considered before an invention is shared outside the appropriate circle.",
+			},
+			{
+				heading: null,
+				body: 'If patent protection is part of your plans, knowing what was disclosed, to whom, when, and under what circumstances can be just as important as knowing what was invented.',
+			},
+			{
+				heading: null,
+				body: "I'd like to leave you with one question.",
+			},
+			{
+				heading: null,
+				body: 'If someone asked you today to list every occasion on which your invention was shown, discussed, demonstrated, or published, could you identify each one and explain whether it was confidential?',
+			},
+			{
+				heading: null,
+				body: "If the answer isn't clear, that may be the first part of your patent timeline worth documenting.",
+			},
+			{
+				heading: null,
+				body: 'Because sometimes, the most important question isn\'t:',
+			},
+			{
+				heading: null,
+				body: '"Did we publish the invention?"',
+			},
+			{
+				heading: null,
+				body: 'It\'s:',
+			},
+			{
+				heading: null,
+				body: '"When did information about the invention become available to someone else?"',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of public disclosure considerations before filing a patent application. It is not legal advice. The way information about an invention becomes publicly available and the applicable legal framework vary by jurisdiction and specific circumstances, and every invention should be evaluated with professional legal advice.',
+			},
+		],
+	},
 
 ];
