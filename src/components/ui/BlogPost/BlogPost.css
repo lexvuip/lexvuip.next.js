@@ -5,7 +5,7 @@
 }
 
 .blogpost-container {
-	max-width: 900px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 var(--space-md);
 }
@@ -79,15 +79,82 @@
 }
 
 .blogpost-layout {
-	max-width: 700px;
-	margin: 0 auto;
+	display: flex;
+	gap: var(--space-4xl);
+}
+
+.blogpost-layout .toc-sidebar {
+	flex: 0 0 260px;
+}
+
+.toc-sticky {
+	position: sticky;
+	top: calc(80px + var(--space-lg));
+	max-height: calc(100vh - 120px);
+	overflow-y: auto;
+}
+
+.toc-sticky::-webkit-scrollbar {
+	width: 3px;
+}
+
+.toc-sticky::-webkit-scrollbar-thumb {
+	background: var(--color-border);
+	border-radius: 3px;
 }
 
 .blogpost-content {
+	flex: 1;
+	min-width: 0;
 	font-family: var(--font-sans);
 	color: var(--color-text-primary);
 	line-height: 1.8;
 	font-size: 1.15rem;
+	max-width: 700px;
+}
+
+/* ---- Table of Contents Sidebar ---- */
+.blog-toc-title {
+	font-family: var(--font-sans);
+	font-size: 0.7rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: var(--color-text-muted);
+	margin-bottom: var(--space-lg);
+}
+
+.blog-toc-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-left: 1px solid var(--color-border);
+}
+
+.blog-toc-item {
+	font-family: var(--font-sans);
+	font-size: 0.85rem;
+	line-height: 1.5;
+}
+
+.blog-toc-link {
+	display: block;
+	padding: 0.4rem 0 0.4rem var(--space-lg);
+	color: var(--color-text-muted);
+	text-decoration: none;
+	border-left: 2px solid transparent;
+	margin-left: -1px;
+	transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.blog-toc-link:hover {
+	color: var(--color-navy);
+}
+
+.blog-toc-link.is-active {
+	color: var(--color-navy);
+	font-weight: 600;
+	border-left-color: var(--color-gold);
 }
 
 .blogpost-section-block {
@@ -99,6 +166,7 @@
 	font-size: 1.75rem;
 	color: var(--color-navy);
 	margin-bottom: var(--space-md);
+	scroll-margin-top: calc(80px + var(--space-md));
 }
 
 .blogpost-body {
@@ -199,6 +267,12 @@
 
 .related-card-title a:hover {
 	color: var(--color-gold);
+}
+
+@media (max-width: 1024px) {
+	.blogpost-layout .toc-sidebar {
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
