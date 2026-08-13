@@ -1,18 +1,26 @@
 'use client';
 import React, { useMemo } from 'react';
-
-function renderBody(text) {
-	return text
-		.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
-}
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogs } from '../../../data/blogs';
 import { authors, defaultAuthor } from '../../../data/authors';
 import Breadcrumbs from '../Breadcrumbs';
+import BlogTOC from './BlogTOC';
 import './BlogPost.css';
+
+function renderBody(text) {
+	return text
+		.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
+}
+
+function slugify(text) {
+	return text
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/(^-|-$)/g, '');
+}
 
 function BlogPost() {
 	const { slug } = useParams();
@@ -77,13 +85,26 @@ function BlogPost() {
 				</div>
 
 				<div className="blogpost-layout">
+					<aside className="toc-sidebar">
+						<div className="toc-sticky">
+							<BlogTOC sections={post.content?.filter(s => s.heading && s.heading !== 'Legal Note')} />
+						</div>
+					</aside>
+
 					<article className="blogpost-content">
 						{post.content?.map((sec, idx) => (
 							<section
 								key={idx}
 								className={`blogpost-section-block${sec.heading === 'Legal Note' ? ' legal-note-block' : ''}`}
 							>
-								{sec.heading && <h2 className="blogpost-subheading">{sec.heading}</h2>}
+								{sec.heading && (
+									<h2
+										className="blogpost-subheading"
+										id={slugify(sec.heading)}
+									>
+										{sec.heading}
+									</h2>
+								)}
 								<p className="blogpost-body" dangerouslySetInnerHTML={{ __html: renderBody(sec.body) }} />
 							</section>
 						))}
