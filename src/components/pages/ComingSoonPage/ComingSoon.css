@@ -17,23 +17,42 @@
 
 .cs-glow {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 0;
+	left: 0;
 	width: 90vmax;
 	height: 90vmax;
-	transform: translate(-50%, -50%);
+	will-change: transform;
 	background: radial-gradient(
 		circle at center,
 		rgba(201, 162, 39, 0.18) 0%,
 		rgba(201, 162, 39, 0.06) 30%,
 		transparent 60%
 	);
-	animation: cs-pulse 8s ease-in-out infinite;
 }
 
-@keyframes cs-pulse {
-	0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.85; }
-	50% { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+.cs-glow-core {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 44vmax;
+	height: 44vmax;
+	will-change: transform;
+	background: radial-gradient(
+		circle at center,
+		rgba(201, 162, 39, 0.28) 0%,
+		rgba(201, 162, 39, 0.1) 40%,
+		transparent 70%
+	);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cs-glow,
+	.cs-glow-core {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: none;
+	}
 }
 
 .cs-grain {

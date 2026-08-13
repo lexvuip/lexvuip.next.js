@@ -1,20 +1,87 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import './ComingSoon.css';
 
 export default function ComingSoon() {
 	const [mounted, setMounted] = useState(false);
+	const glowRef = useRef(null);
+	const coreRef = useRef(null);
 
 	useEffect(() => {
 		const t = setTimeout(() => setMounted(true), 50);
 		return () => clearTimeout(t);
 	}, []);
 
+	useEffect(() => {
+		const halo = glowRef.current;
+		const core = coreRef.current;
+		if (!halo || !core) return;
+
+		const reduceMotion = window.matchMedia(
+			'(prefers-reduced-motion: reduce)'
+		).matches;
+
+		let targetX = window.innerWidth / 2;
+		let targetY = window.innerHeight / 2;
+		let haloX = targetX;
+		let haloY = targetY;
+		let coreX = targetX;
+		let coreY = targetY;
+		let prevX = targetX;
+		let prevY = targetY;
+		let velocity = 0;
+		let raf;
+
+		const onPointerMove = (e) => {
+			targetX = e.clientX;
+			targetY = e.clientY;
+		};
+
+		// When the cursor leaves the page, glide the glow back to center.
+		const onPointerLeave = () => {
+			targetX = window.innerWidth / 2;
+			targetY = window.innerHeight / 2;
+		};
+
+		const tick = () => {
+			// Halo trails slowly, core follows fast — layered parallax depth.
+			haloX += (targetX - haloX) * 0.055;
+			haloY += (targetY - haloY) * 0.055;
+			coreX += (targetX - coreX) * 0.18;
+			coreY += (targetY - coreY) * 0.18;
+
+			// Velocity-reactive scale: faster movement, wider glow.
+			const dist = Math.hypot(coreX - prevX, coreY - prevY);
+			velocity += (dist - velocity) * 0.12;
+			prevX = coreX;
+			prevY = coreY;
+			const boost = 1 + Math.min(velocity / 22, 0.4);
+
+			halo.style.transform = `translate3d(${haloX}px, ${haloY}px, 0) translate(-50%, -50%) scale(${boost})`;
+			core.style.transform = `translate3d(${coreX}px, ${coreY}px, 0) translate(-50%, -50%) scale(${1 + (boost - 1) * 0.6})`;
+
+			raf = requestAnimationFrame(tick);
+		};
+
+		if (!reduceMotion) {
+			window.addEventListener('pointermove', onPointerMove, { passive: true });
+			document.addEventListener('pointerleave', onPointerLeave, { passive: true });
+			raf = requestAnimationFrame(tick);
+		}
+
+		return () => {
+			window.removeEventListener('pointermove', onPointerMove);
+			document.removeEventListener('pointerleave', onPointerLeave);
+			cancelAnimationFrame(raf);
+		};
+	}, []);
+
 	return (
 		<main className="coming-soon" role="main">
 			<div className="cs-bg" aria-hidden="true">
-				<div className="cs-glow" />
+				<div className="cs-glow" ref={glowRef} />
+				<div className="cs-glow-core" ref={coreRef} />
 				<div className="cs-grain" />
 				<div className="cs-grid-lines" />
 			</div>
