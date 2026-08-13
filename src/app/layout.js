@@ -3,7 +3,6 @@ import "./globals.css";
 import NavBar from "../components/layout/NavBar";
 import FloatingCallButton from "../components/ui/FloatingCallButton";
 import DisclaimerPopup from "../components/ui/DisclaimerPopup";
-import ComingSoonPage from "../components/pages/ComingSoonPage";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -46,7 +45,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const isIndia = region === 'IN';
 
   return (
     <html lang="en">
@@ -55,16 +53,10 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className={`${playfair.variable} ${manrope.variable}`} suppressHydrationWarning>
-        {isIndia ? (
-          <ComingSoonPage />
-        ) : (
-          <>
-            <DisclaimerPopup />
-            <NavBar />
-            {children}
-            <FloatingCallButton />
-          </>
-        )}
+        <DisclaimerPopup />
+        <NavBar />
+        {children}
+        <FloatingCallButton />
       </body>
     </html>
   );
