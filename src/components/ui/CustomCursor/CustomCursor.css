@@ -18,9 +18,9 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 88px;
-	height: 88px;
-	margin: -44px 0 0 -44px;
+	width: 64px;
+	height: 64px;
+	margin: -32px 0 0 -32px;
 	pointer-events: none;
 	z-index: 9999;
 	opacity: 0;
@@ -81,19 +81,22 @@
 	transform: rotateX(64deg) rotateZ(90deg);
 }
 
-/* ---------- Nucleus ---------- */
+/* ---------- Nucleus (high-contrast, visible on any background) ----------
+   Gold fill + navy ring = pops on light (cream/white/gold) backgrounds;
+   gold fill + outer gold glow = pops on dark navy backgrounds. */
 .atom-core {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 6px;
-	height: 6px;
-	margin: -3px 0 0 -3px;
+	width: 14px;
+	height: 14px;
+	margin: -7px 0 0 -7px;
 	border-radius: 50%;
 	background: var(--color-gold);
+	border: 2px solid var(--color-navy);
 	box-shadow:
-		0 0 6px rgba(201, 162, 39, 0.7),
-		0 0 14px rgba(201, 162, 39, 0.3);
+		0 0 0 2px rgba(201, 162, 39, 0.35),
+		0 0 8px rgba(201, 162, 39, 0.6);
 	transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
 }
 
@@ -154,14 +157,14 @@
 }
 
 /* Per-particle variation: radius, plane, speed, phase */
-.particle:nth-child(1) { --r: 52px; --ax: 68deg; --ay: 0deg; --orb: 6s; --delay: 0s; }
-.particle:nth-child(2) { --r: 40px; --ax: 70deg; --ay: 90deg; --orb: 5s; --delay: -1s; }
-.particle:nth-child(3) { --r: 56px; --ax: 64deg; --ay: 45deg; --orb: 8s; --delay: -2s; }
-.particle:nth-child(4) { --r: 44px; --ax: 72deg; --ay: 120deg; --orb: 5.5s; --delay: -3s; }
-.particle:nth-child(5) { --r: 48px; --ax: 66deg; --ay: 200deg; --orb: 7s; --delay: -1.5s; }
-.particle:nth-child(6) { --r: 38px; --ax: 74deg; --ay: 60deg; --orb: 4.5s; --delay: -2s; }
-.particle:nth-child(7) { --r: 54px; --ax: 62deg; --ay: 150deg; --orb: 9s; --delay: -4s; }
-.particle:nth-child(8) { --r: 46px; --ax: 70deg; --ay: 30deg; --orb: 6.5s; --delay: -0.5s; }
+.particle:nth-child(1) { --r: 40px; --ax: 68deg; --ay: 0deg; --orb: 6s; --delay: 0s; }
+.particle:nth-child(2) { --r: 30px; --ax: 70deg; --ay: 90deg; --orb: 5s; --delay: -1s; }
+.particle:nth-child(3) { --r: 42px; --ax: 64deg; --ay: 45deg; --orb: 8s; --delay: -2s; }
+.particle:nth-child(4) { --r: 32px; --ax: 72deg; --ay: 120deg; --orb: 5.5s; --delay: -3s; }
+.particle:nth-child(5) { --r: 36px; --ax: 66deg; --ay: 200deg; --orb: 7s; --delay: -1.5s; }
+.particle:nth-child(6) { --r: 28px; --ax: 74deg; --ay: 60deg; --orb: 4.5s; --delay: -2s; }
+.particle:nth-child(7) { --r: 44px; --ax: 62deg; --ay: 150deg; --orb: 9s; --delay: -4s; }
+.particle:nth-child(8) { --r: 34px; --ax: 70deg; --ay: 30deg; --orb: 6.5s; --delay: -0.5s; }
 
 /* ---------- States ---------- */
 
@@ -171,9 +174,9 @@
 
 /* Hovering interactive elements — atom opens, rings brighten */
 .cursor-atom.is-hovering {
-	width: 108px;
-	height: 108px;
-	margin: -54px 0 0 -54px;
+	width: 80px;
+	height: 80px;
+	margin: -40px 0 0 -40px;
 }
 
 .cursor-atom.is-hovering .orbit {
@@ -184,9 +187,10 @@
 
 .cursor-atom.is-hovering .atom-core {
 	background: var(--color-gold-light);
+	border-color: var(--color-navy);
 	box-shadow:
-		0 0 9px rgba(230, 209, 144, 0.85),
-		0 0 18px rgba(230, 209, 144, 0.4);
+		0 0 0 3px rgba(230, 209, 144, 0.4),
+		0 0 12px rgba(230, 209, 144, 0.7);
 	transform: scale(1.15);
 }
 
