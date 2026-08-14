@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { blogs } from '../../../data/blogs';
 import { authors, defaultAuthor } from '../../../data/authors';
 import Breadcrumbs from '../Breadcrumbs';
+import BlogCard from '../BlogCard/BlogCard';
 import BlogTOC from './BlogTOC';
 import './BlogPost.css';
 
@@ -132,33 +133,14 @@ function BlogPost() {
 
 				<div className="blogpost-related">
 					<div className="blog-related-header">
-						<h2 className="related-title">Related Insights</h2>
+						<h2 className="related-title">You may like</h2>
 						<Link href="/blog" className="blog-all-link">
 							View All <span className="arrow">→</span>
 						</Link>
 					</div>
 					<div className="blog-related-grid">
 						{related.map((r) => (
-							<article key={r.id} className="related-card">
-								<Link
-									href={`/blog/${r.slug}`}
-									className="related-image-wrapper hover-zoom"
-								>
-									<Image 
-										src={r.heroImage} 
-										width={400} 
-										height={250} 
-										className="related-image" 
-										alt={r.title} 
-									/>
-								</Link>
-								<div className="related-card-body">
-									<span className="related-category">{r.category}</span>
-									<h3 className="related-card-title">
-										<Link href={`/blog/${r.slug}`}>{r.title}</Link>
-									</h3>
-								</div>
-							</article>
+							<BlogCard key={r.id} post={r} />
 						))}
 					</div>
 				</div>
