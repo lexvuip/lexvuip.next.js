@@ -4,6 +4,7 @@ import NavBar from "../components/layout/NavBar";
 import FloatingCallButton from "../components/ui/FloatingCallButton";
 import DisclaimerPopup from "../components/ui/DisclaimerPopup";
 import ComingSoonPage from "../components/pages/ComingSoonPage";
+import CustomCursor from "../components/ui/CustomCursor/CustomCursor";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -53,8 +54,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="describedby" type="text/markdown" href="/llms.txt" />
       </head>
       <body className={`${playfair.variable} ${manrope.variable}`} suppressHydrationWarning>
+        <CustomCursor />
         {isIndia ? (
           <ComingSoonPage />
         ) : (

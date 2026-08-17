@@ -1,0 +1,215 @@
+/* ============================================
+   Atom Cursor — Refined
+   A glowing gold nucleus at the pointer, ringed by
+   dotted orbit paths that precess in opposite 3D
+   directions (a true atomic structure), wrapped in
+   a slow field of twinkling particles. Navy & gold.
+   ============================================ */
+
+/* Hide the native cursor only on fine-pointer devices */
+@media (pointer: fine) {
+	html.custom-cursor-active,
+	html.custom-cursor-active * {
+		cursor: none !important;
+	}
+}
+
+.cursor-atom {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 64px;
+	height: 64px;
+	margin: -32px 0 0 -32px;
+	pointer-events: none;
+	z-index: 9999;
+	opacity: 0;
+	transition:
+		opacity 0.4s ease,
+		width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+		height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+		margin 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: transform;
+}
+
+/* ---------- Rotors (opposite spins) ---------- */
+.atom-rotor {
+	position: absolute;
+	inset: 0;
+	transform-style: preserve-3d;
+}
+
+.atom-rotor.cw {
+	animation: atom-precess 9s linear infinite;
+}
+
+.atom-rotor.ccw {
+	animation: atom-precess 9s linear infinite reverse;
+}
+
+@keyframes atom-precess {
+	from {
+		transform: rotate3d(1, 0.6, 0.2, 0deg);
+	}
+	to {
+		transform: rotate3d(1, 0.6, 0.2, 360deg);
+	}
+}
+
+/* ---------- Orbit rings (dotted, tilted planes) ---------- */
+.orbit {
+	position: absolute;
+	inset: 0;
+	border: 1px dotted rgba(201, 162, 39, 0.3);
+	border-radius: 50%;
+	transition: border-color 0.35s ease, border-style 0.35s ease, border-width 0.35s ease;
+}
+
+.atom-rotor.cw .orbit:nth-child(1) {
+	transform: rotateX(64deg) rotateZ(0deg);
+}
+
+.atom-rotor.cw .orbit:nth-child(2) {
+	transform: rotateX(64deg) rotateZ(60deg);
+}
+
+.atom-rotor.ccw .orbit:nth-child(1) {
+	transform: rotateX(64deg) rotateZ(30deg);
+}
+
+.atom-rotor.ccw .orbit:nth-child(2) {
+	transform: rotateX(64deg) rotateZ(90deg);
+}
+
+/* ---------- Nucleus (high-contrast, visible on any background) ----------
+   Gold fill + navy ring = pops on light (cream/white/gold) backgrounds;
+   gold fill + outer gold glow = pops on dark navy backgrounds. */
+.atom-core {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	margin: -7px 0 0 -7px;
+	border-radius: 50%;
+	background: var(--color-gold);
+	border: 2px solid var(--color-navy);
+	box-shadow:
+		0 0 0 2px rgba(201, 162, 39, 0.35),
+		0 0 8px rgba(201, 162, 39, 0.6);
+	transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+}
+
+/* ---------- Particle field (twinkling, orbiting in 3D) ---------- */
+.atom-particles {
+	position: absolute;
+	inset: 0;
+	transform-style: preserve-3d;
+}
+
+.particle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	--r: 46px;
+	--ax: 70deg;
+	--ay: 0deg;
+	--orb: 6s;
+	--delay: 0s;
+	transform-style: preserve-3d;
+	animation: particle-orbit var(--orb) linear infinite;
+	animation-delay: var(--delay);
+}
+
+.particle::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 3px;
+	margin: -1.5px 0 0 -1.5px;
+	border-radius: 50%;
+	background: var(--color-gold);
+	box-shadow: 0 0 4px rgba(201, 162, 39, 0.6);
+	transform: translateX(var(--r));
+	animation: particle-twinkle 2.8s ease-in-out infinite;
+}
+
+@keyframes particle-orbit {
+	from {
+		transform: rotateX(var(--ax)) rotateY(var(--ay)) rotateZ(0deg);
+	}
+	to {
+		transform: rotateX(var(--ax)) rotateY(var(--ay)) rotateZ(360deg);
+	}
+}
+
+@keyframes particle-twinkle {
+	0%, 100% {
+		opacity: 0.15;
+	}
+	50% {
+		opacity: 0.85;
+	}
+}
+
+/* Per-particle variation: radius, plane, speed, phase */
+.particle:nth-child(1) { --r: 40px; --ax: 68deg; --ay: 0deg; --orb: 6s; --delay: 0s; }
+.particle:nth-child(2) { --r: 30px; --ax: 70deg; --ay: 90deg; --orb: 5s; --delay: -1s; }
+.particle:nth-child(3) { --r: 42px; --ax: 64deg; --ay: 45deg; --orb: 8s; --delay: -2s; }
+.particle:nth-child(4) { --r: 32px; --ax: 72deg; --ay: 120deg; --orb: 5.5s; --delay: -3s; }
+.particle:nth-child(5) { --r: 36px; --ax: 66deg; --ay: 200deg; --orb: 7s; --delay: -1.5s; }
+.particle:nth-child(6) { --r: 28px; --ax: 74deg; --ay: 60deg; --orb: 4.5s; --delay: -2s; }
+.particle:nth-child(7) { --r: 44px; --ax: 62deg; --ay: 150deg; --orb: 9s; --delay: -4s; }
+.particle:nth-child(8) { --r: 34px; --ax: 70deg; --ay: 30deg; --orb: 6.5s; --delay: -0.5s; }
+
+/* ---------- States ---------- */
+
+.cursor-atom.is-visible {
+	opacity: 1;
+}
+
+/* Hovering interactive elements — atom opens, rings brighten */
+.cursor-atom.is-hovering {
+	width: 80px;
+	height: 80px;
+	margin: -40px 0 0 -40px;
+}
+
+.cursor-atom.is-hovering .orbit {
+	border-color: rgba(201, 162, 39, 0.65);
+	border-style: dashed;
+	border-width: 1.2px;
+}
+
+.cursor-atom.is-hovering .atom-core {
+	background: var(--color-gold-light);
+	border-color: var(--color-navy);
+	box-shadow:
+		0 0 0 3px rgba(230, 209, 144, 0.4),
+		0 0 12px rgba(230, 209, 144, 0.7);
+	transform: scale(1.15);
+}
+
+.cursor-atom.is-hovering .particle::after {
+	box-shadow: 0 0 6px rgba(201, 162, 39, 0.8);
+}
+
+/* Click — nucleus pulses */
+.cursor-atom.is-down .atom-core {
+	transform: scale(0.7);
+	background: var(--color-gold-dark);
+	transition: transform 0.08s ease-out, background 0.08s ease-out;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.atom-rotor,
+	.particle,
+	.particle::after {
+		animation: none;
+	}
+}
