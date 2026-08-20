@@ -1297,5 +1297,351 @@ export const blogs = [
 			},
 		],
 	},
+	{
+		id: '14',
+		slug: 'ip-fundamentals-part-5-filing-first-in-india-or-abroad',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 5: Filing First in India or Abroad: Understanding Priority Claims',
+		date: '08/20/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			"Filing a patent application in India doesn't automatically protect you everywhere. Here's what priority claims, the 12-month window, and the PCT mean for inventors deciding whether to file first in India or abroad.",
+		heroImage: '/assets/stockimages/filing-first-in-india-abroad-1920.jpg',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored when an invention may be considered public and why understanding the history of disclosures is important before filing a patent application. That naturally leads to another question.',
+			},
+			{
+				heading: null,
+				body: 'What if you want patent protection in more than one country?',
+			},
+			{
+				heading: null,
+				body: 'An inventor may develop an invention in India but eventually want protection in the United States, Europe, Japan, or other markets.',
+			},
+			{
+				heading: null,
+				body: 'Does the inventor need to file everywhere at the same time?',
+			},
+			{
+				heading: null,
+				body: 'Usually, no.',
+			},
+			{
+				heading: null,
+				body: 'International patent systems provide mechanisms that allow an applicant to make an initial filing and then, subject to the applicable requirements, seek protection in other countries while claiming the benefit of the earlier filing.',
+			},
+			{
+				heading: null,
+				body: 'This is where priority claims become important.',
+			},
+			{
+				heading: 'Think of the First Filing as Establishing a Starting Point',
+				body: 'Imagine an inventor develops a new medical device in India. They file a patent application in India on January 10.',
+			},
+			{
+				heading: null,
+				body: 'Six months later, they decide that the United States and Europe are important markets. They may be able to file corresponding applications in those jurisdictions while claiming priority to the earlier Indian application, provided the applicable legal requirements are satisfied.',
+			},
+			{
+				heading: null,
+				body: "The later applications don't simply pretend that they were filed on January 10. Instead, the applicant claims the benefit of the earlier filing for the subject matter that qualifies for priority.",
+			},
+			{
+				heading: null,
+				body: 'That earlier filing establishes an important reference point for the patent strategy.',
+			},
+			{
+				heading: 'The 12-Month Window',
+				body: 'For many international patent filing strategies based on the Paris Convention, an applicant generally has 12 months from the first patent filing to file corresponding applications in other member countries and claim priority to that earlier application.',
+			},
+			{
+				heading: null,
+				body: 'This is one of the most important dates an inventor needs to understand.',
+			},
+			{
+				heading: null,
+				body: 'For example:\n\nFirst filing: January 10, 2026\n\nPriority deadline: January 10, 2027',
+			},
+			{
+				heading: null,
+				body: "That doesn't mean an applicant should automatically wait until the last day.",
+			},
+			{
+				heading: null,
+				body: 'The 12-month period is a planning window, not an invitation to postpone the decision until the deadline.',
+			},
+			{
+				heading: null,
+				body: 'During those months, the inventor may need to evaluate:',
+			},
+			{
+				heading: null,
+				body: '• Which countries are commercially important?\n\n• Where are competitors located?\n\n• Where might the invention be manufactured?\n\n• Where might the product be sold?\n\n• What budget is available for international protection?\n\n• Should a direct national filing strategy be used?\n\n• Would a PCT application be appropriate?',
+			},
+			{
+				heading: null,
+				body: 'The earlier these questions are considered, the more options the applicant may have.',
+			},
+			{
+				heading: "A Priority Claim Doesn't Automatically Protect You Everywhere",
+				body: 'This is one of the most important points for first-time inventors.',
+			},
+			{
+				heading: null,
+				body: 'Filing a patent application in one country does not create a worldwide patent.',
+			},
+			{
+				heading: null,
+				body: 'There is no single patent that automatically gives protection in every country.',
+			},
+			{
+				heading: null,
+				body: 'A priority claim is a mechanism that can allow later applications to claim the benefit of an earlier filing date for qualifying subject matter.',
+			},
+			{
+				heading: null,
+				body: 'The applicant still has to pursue patent protection in the countries or regional systems that matter to them.',
+			},
+			{
+				heading: null,
+				body: 'Those applications will then be examined under the applicable rules of the relevant jurisdiction.',
+			},
+			{
+				heading: null,
+				body: 'So the first filing is not the end of the process. It can be the beginning of an international filing strategy.',
+			},
+			{
+				heading: 'What Happens During Those 12 Months?',
+				body: 'The period between the first filing and subsequent international filings can be extremely valuable.',
+			},
+			{
+				heading: null,
+				body: 'An inventor can use this time to learn more about the commercial potential of the invention. For example:',
+			},
+			{
+				heading: null,
+				body: '• Is there genuine market demand?\n\n• Which countries are likely to generate revenue?\n\n• Has the product attracted investors?\n\n• Are competitors developing similar technology?\n\n• Is additional technical development needed?\n\n• Is international patent protection financially justified?',
+			},
+			{
+				heading: null,
+				body: 'The inventor may also conduct further patent searches and work with counsel to evaluate the strength and scope of the application.',
+			},
+			{
+				heading: null,
+				body: 'In other words, the priority period can provide time to make better decisions without immediately filing everywhere.',
+			},
+			{
+				heading: 'What About a PCT Application?',
+				body: 'Inventors often hear about the PCT, or Patent Cooperation Treaty, when discussing international patent protection.',
+			},
+			{
+				heading: null,
+				body: "It's important to understand what it does.",
+			},
+			{
+				heading: null,
+				body: 'A PCT application can provide a structured way to seek patent protection across many countries through a single international filing process.',
+			},
+			{
+				heading: null,
+				body: 'But a PCT application does not result in a single worldwide patent.',
+			},
+			{
+				heading: null,
+				body: 'Eventually, the applicant generally needs to enter the national or regional phase in the countries where patent protection is actually being pursued.',
+			},
+			{
+				heading: null,
+				body: 'For an applicant claiming priority to an earlier application, the PCT filing is commonly made within the applicable 12-month priority period.',
+			},
+			{
+				heading: null,
+				body: 'This is why the relationship between the first filing date, priority date, PCT filing, and national or regional filings needs to be planned carefully.',
+			},
+			{
+				heading: 'The Priority Claim Depends on What Was Actually Disclosed',
+				body: 'There is another important point that inventors sometimes overlook.',
+			},
+			{
+				heading: null,
+				body: "A priority claim isn't simply a way to move the entire later application back to the date of the first filing.",
+			},
+			{
+				heading: null,
+				body: 'The earlier application must provide the necessary disclosure for the subject matter for which priority is being claimed, subject to the applicable legal requirements.',
+			},
+			{
+				heading: null,
+				body: 'Imagine an inventor files an initial application describing:\n\nVersion A: A machine using a particular mechanism.',
+			},
+			{
+				heading: null,
+				body: 'Six months later, the inventor develops:\n\nVersion B: A significantly different mechanism with additional technical features.',
+			},
+			{
+				heading: null,
+				body: 'The later application may contain both versions.',
+			},
+			{
+				heading: null,
+				body: 'But the fact that Version B appears in the later application does not automatically mean that every aspect of Version B receives the earlier priority date.',
+			},
+			{
+				heading: null,
+				body: 'The specific disclosure and the applicable priority rules need to be examined.',
+			},
+			{
+				heading: null,
+				body: 'This is one reason why the quality and completeness of the first filing matter.',
+			},
+			{
+				heading: "Your First Filing Shouldn't Be Treated as a Placeholder",
+				body: "Sometimes inventors think of the first application as something they need to file quickly simply to 'get a date.'",
+			},
+			{
+				heading: null,
+				body: 'Speed can certainly matter.',
+			},
+			{
+				heading: null,
+				body: 'But the first application also establishes the foundation for future filings.',
+			},
+			{
+				heading: null,
+				body: 'If important subject matter is missing from the initial disclosure, there may be limitations on what can later claim the benefit of that earlier date.',
+			},
+			{
+				heading: null,
+				body: "That's why the goal shouldn't simply be:\n\n'File something as quickly as possible.'",
+			},
+			{
+				heading: null,
+				body: "A better question is:\n\n'What should be properly disclosed in the first filing to support the protection we may want later?'",
+			},
+			{
+				heading: null,
+				body: 'That distinction can have significant strategic value.',
+			},
+			{
+				heading: 'Filing First in India or Abroad?',
+				body: 'For an Indian inventor or company considering international protection, the decision about where to make the first filing should be discussed with the patent professional early.',
+			},
+			{
+				heading: null,
+				body: 'The choice can depend on several factors:',
+			},
+			{
+				heading: null,
+				body: '• Where the invention was developed.\n\n• Where the applicant is based.\n\n• Where commercial protection is expected to be most valuable.\n\n• Whether foreign filing restrictions apply.\n\n• The desired international filing strategy.\n\n• Budget and timing.\n\n• The nature and maturity of the invention.',
+			},
+			{
+				heading: null,
+				body: 'For example, Indian patent law contains specific requirements concerning applications made outside India by persons resident in India.',
+			},
+			{
+				heading: null,
+				body: 'In certain circumstances, permission from the Indian Patent Office may be required before filing abroad first, while the law also provides circumstances under which an applicant may proceed after filing in India and observing the applicable waiting period.',
+			},
+			{
+				heading: null,
+				body: 'These requirements should be checked before making a foreign-first filing decision.',
+			},
+			{
+				heading: null,
+				body: "This is an area where a simple assumption such as 'I'll just file in the U.S. first' can create an avoidable problem.",
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				body: 'If international patent protection is even a possibility, create a simple filing calendar from the first application.',
+			},
+			{
+				heading: null,
+				body: 'Record:',
+			},
+			{
+				heading: null,
+				body: '• The first filing date.\n\n• The priority date.\n\n• The 12-month priority deadline.\n\n• Any PCT filing deadline being considered.\n\n• National or regional filing deadlines.\n\n• Countries being evaluated.\n\n• Important commercial milestones.\n\n• Any relevant foreign filing requirements.',
+			},
+			{
+				heading: null,
+				body: "Don't rely on memory.",
+			},
+			{
+				heading: null,
+				body: "Don't rely on an email buried in your inbox.",
+			},
+			{
+				heading: null,
+				body: 'Patent deadlines are too important for that.',
+			},
+			{
+				heading: null,
+				body: 'A clear timeline also makes conversations with your patent attorney much more productive.',
+			},
+			{
+				heading: 'Why Patent Attorneys Start Planning International Filings Early',
+				body: 'International patent strategy involves more than translating an application and sending it to another country.',
+			},
+			{
+				heading: null,
+				body: 'Patent professionals need to consider priority, disclosure, jurisdiction-specific requirements, filing deadlines, prosecution strategy, and the commercial value of protection in different markets.',
+			},
+			{
+				heading: null,
+				body: "That's why the conversation about foreign filing often starts soon after the first application.",
+			},
+			{
+				heading: null,
+				body: 'The earlier an applicant identifies the countries that may matter, the more effectively the available time can be used.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'Filing a patent application in one country can be the first step toward a much broader protection strategy.',
+			},
+			{
+				heading: null,
+				body: 'But the first filing date is not simply a date to remember.',
+			},
+			{
+				heading: null,
+				body: 'It can become the foundation for priority claims in subsequent applications, subject to the applicable legal requirements.',
+			},
+			{
+				heading: null,
+				body: 'The months that follow can then be used to evaluate markets, refine the invention, consider international options, and decide where further protection makes commercial sense.',
+			},
+			{
+				heading: null,
+				body: 'The key is to start planning before the deadline is approaching.',
+			},
+			{
+				heading: null,
+				body: "I'd like to leave you with one question.",
+			},
+			{
+				heading: null,
+				body: 'If you filed a patent application tomorrow and later decided that the United States, Europe, or another market was important, would you already know what your next filing deadline would be?',
+			},
+			{
+				heading: null,
+				body: "If the answer is no, that's a conversation worth having before the first application is filed.",
+			},
+			{
+				heading: null,
+				body: "Because international patent strategy isn't simply about where you file.",
+			},
+			{
+				heading: null,
+				body: "It's also about when you file, what your first application discloses, and how that first filing supports everything that follows.",
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of priority claims and international filing considerations before filing a patent application. It is not legal advice. Filing strategies involving priority claims, PCT filings, and foreign filing requirements depend on the facts of each invention, the applicable laws of each jurisdiction, and professional legal advice.',
+			},
+		],
+	},
 
 ];
