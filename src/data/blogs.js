@@ -421,15 +421,17 @@ export const blogs = [
 			},
 			{
 				heading: 'The Analysis: Three Layers to Work Through',
-				body: '**1. Publication date vs. filing date:** The US application was filed on 01 January 2026 — before Inventor B\'s Indian filing. But it did not publish until 01 July 2027 — well after. Under Indian law, the relevant event is *publication*, not filing. At the moment Inventor B filed in India, Inventor A\'s US application was not publicly available. It was a confidential pending application sitting in the USPTO system. It cannot have anticipated a claim when it was not accessible to the public.'
-			},
-			{
-				heading: null,
-				body: '**2. The "whole contents" doctrine — does it apply here?:** Some jurisdictions (notably the UK and EPO) operate a "whole contents" approach under which unpublished earlier applications can constitute prior art for novelty purposes — but only if they are in the *same jurisdiction*. India does not have a statutory equivalent of this doctrine for cross-border situations. The Indian Patents Act does not extend prior art effect to foreign unpublished applications that had not entered the public domain as of the local filing date.'
-			},
-			{
-				heading: null,
-				body: '**3. The examiner\'s timing problem:** The objection is raised in August 2027, and by then the US application is public. But the legally relevant date is April 2026 — not August 2027. The examiner cannot retroactively apply a document that was not in the public domain when Inventor B established their priority date. The temporal reference point in the novelty analysis is fixed at the date of filing; it does not shift to whenever examination happens to begin.'
+				blocks: [
+					{
+						type: 'list',
+						ordered: true,
+						items: [
+							'**Publication date vs. filing date:** The US application was filed on 01 January 2026 — before Inventor B\'s Indian filing. But it did not publish until 01 July 2027 — well after. Under Indian law, the relevant event is *publication*, not filing. At the moment Inventor B filed in India, Inventor A\'s US application was not publicly available. It was a confidential pending application sitting in the USPTO system. It cannot have anticipated a claim when it was not accessible to the public.',
+							'**The "whole contents" doctrine — does it apply here?:** Some jurisdictions (notably the UK and EPO) operate a "whole contents" approach under which unpublished earlier applications can constitute prior art for novelty purposes — but only if they are in the *same jurisdiction*. India does not have a statutory equivalent of this doctrine for cross-border situations. The Indian Patents Act does not extend prior art effect to foreign unpublished applications that had not entered the public domain as of the local filing date.',
+							'**The examiner\'s timing problem:** The objection is raised in August 2027, and by then the US application is public. But the legally relevant date is April 2026 — not August 2027. The examiner cannot retroactively apply a document that was not in the public domain when Inventor B established their priority date. The temporal reference point in the novelty analysis is fixed at the date of filing; it does not shift to whenever examination happens to begin.',
+						],
+					},
+				],
 			},
 			{
 				heading: 'Analysis Verdict',
@@ -505,7 +507,17 @@ export const blogs = [
 			},
 			{
 				heading: 'Where the Execution Friction Shows Up',
-				body: '→ **Last-minute drawing corrections** — Discovered during pre-filing review, triggering emergency turnaround requests and deadline pressure that affects the whole docket.\n\n→ **Post-submission examiner objections** — Drawing defects that survive internal review and come back as formal objections — adding response cycles and cost the client wasn\'t expecting.\n\n→ **Revision loops with illustrators** — Back-and-forth that eats attorney time, produces inconsistent versions, and pushes the matter off the attorney\'s mental load and onto the paralegal\'s plate — often without a clean handover.',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'**Last-minute drawing corrections** — Discovered during pre-filing review, triggering emergency turnaround requests and deadline pressure that affects the whole docket.',
+							'**Post-submission examiner objections** — Drawing defects that survive internal review and come back as formal objections — adding response cycles and cost the client wasn\'t expecting.',
+							'**Revision loops with illustrators** — Back-and-forth that eats attorney time, produces inconsistent versions, and pushes the matter off the attorney\'s mental load and onto the paralegal\'s plate — often without a clean handover.',
+						],
+					},
+				],
 			},
 			{
 				heading: 'The USPTO Requirements, Without the Filler',
@@ -733,11 +745,24 @@ export const blogs = [
 			},
 			{
 				heading: 'A Practical Habit for Inventors',
-				body: 'One of the most valuable habits an inventor can develop is maintaining a clear record of the invention\'s development. Consider documenting:',
-			},
-			{
-				heading: null,
-				body: 'When the original concept was developed. Significant technical improvements over time. Prototype and testing milestones. Meetings with collaborators, investors, or manufacturers. Public demonstrations, presentations, or publications. Patent applications related to the invention.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'One of the most valuable habits an inventor can develop is maintaining a clear record of the invention\'s development. Consider documenting:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'When the original concept was developed.',
+							'Significant technical improvements over time.',
+							'Prototype and testing milestones.',
+							'Meetings with collaborators, investors, or manufacturers.',
+							'Public demonstrations, presentations, or publications.',
+							'Patent applications related to the invention.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -891,7 +916,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'You may need to:\n\n• Discuss manufacturing options.\n\n• Seek investment.\n\n• Work with engineers or designers.\n\n• Test prototypes with potential users.\n\n• Explore licensing opportunities.\n\n• Consult technical experts.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'You may need to:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Discuss manufacturing options.',
+							'Seek investment.',
+							'Work with engineers or designers.',
+							'Test prototypes with potential users.',
+							'Explore licensing opportunities.',
+							'Consult technical experts.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -915,7 +957,19 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Why am I sharing this information?\n\n• Does the other person need to know these technical details?\n\n• Is there an appropriate confidentiality arrangement in place?\n\n• Have I documented who received the information?\n\n• Have I spoken with my patent attorney about the timing of these discussions?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Why am I sharing this information?',
+							'Does the other person need to know these technical details?',
+							'Is there an appropriate confidentiality arrangement in place?',
+							'Have I documented who received the information?',
+							'Have I spoken with my patent attorney about the timing of these discussions?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1053,7 +1107,26 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'For example, information about an invention may become accessible through:\n\n• A public demonstration.\n\n• A conference or exhibition.\n\n• A product shown to potential customers.\n\n• A technical presentation.\n\n• A journal, catalogue, or brochure.\n\n• A website or online publication.\n\n• A product placed on the market.\n\n• Information shared with people without appropriate confidentiality restrictions.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'For example, information about an invention may become accessible through:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A public demonstration.',
+							'A conference or exhibition.',
+							'A product shown to potential customers.',
+							'A technical presentation.',
+							'A journal, catalogue, or brochure.',
+							'A website or online publication.',
+							'A product placed on the market.',
+							'Information shared with people without appropriate confidentiality restrictions.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1093,7 +1166,18 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Who received the information?\n\n• What exactly was disclosed?\n\n• When did the disclosure happen?\n\n• Was there an obligation to keep the information confidential?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Who received the information?',
+							'What exactly was disclosed?',
+							'When did the disclosure happen?',
+							'Was there an obligation to keep the information confidential?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1113,7 +1197,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'The effect of a disclosure can depend on factors such as:\n\n• Where the disclosure occurred.\n\n• What information was actually made available.\n\n• Whether the disclosure was public or confidential.\n\n• When the disclosure occurred.\n\n• Which jurisdiction is being considered.\n\n• Whether any applicable exceptions or grace-period provisions apply.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'The effect of a disclosure can depend on factors such as:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Where the disclosure occurred.',
+							'What information was actually made available.',
+							'Whether the disclosure was public or confidential.',
+							'When the disclosure occurred.',
+							'Which jurisdiction is being considered.',
+							'Whether any applicable exceptions or grace-period provisions apply.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1201,7 +1302,19 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• What exactly am I about to disclose?\n\n• Who will have access to it?\n\n• Is the information being shared under confidentiality?\n\n• When will the information become available?\n\n• Have I discussed the disclosure with my patent professional?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'What exactly am I about to disclose?',
+							'Who will have access to it?',
+							'Is the information being shared under confidentiality?',
+							'When will the information become available?',
+							'Have I discussed the disclosure with my patent professional?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1209,7 +1322,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'Document:\n\n• The date.\n\n• The audience.\n\n• What was disclosed.\n\n• Where it was disclosed.\n\n• Whether confidentiality applied.\n\n• Copies of presentations, brochures, publications, or online material where possible.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Document:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'The date.',
+							'The audience.',
+							'What was disclosed.',
+							'Where it was disclosed.',
+							'Whether confidentiality applied.',
+							'Copies of presentations, brochures, publications, or online material where possible.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1233,7 +1363,22 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Was it shown to an employee?\n\n• An investor?\n\n• A potential customer?\n\n• A manufacturer?\n\n• At an exhibition?\n\n• Was an NDA in place?\n\n• Was a prototype demonstrated?\n\n• Was anything published online?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Was it shown to an employee?',
+							'An investor?',
+							'A potential customer?',
+							'A manufacturer?',
+							'At an exhibition?',
+							'Was an NDA in place?',
+							'Was a prototype demonstrated?',
+							'Was anything published online?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1379,7 +1524,25 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Which countries are commercially important?\n\n• Where are competitors located?\n\n• Where might the invention be manufactured?\n\n• Where might the product be sold?\n\n• What budget is available for international protection?\n\n• Should a direct national filing strategy be used?\n\n• Would a PCT application be appropriate?',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'During those months, the inventor may need to evaluate:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Which countries are commercially important?',
+							'Where are competitors located?',
+							'Where might the invention be manufactured?',
+							'Where might the product be sold?',
+							'What budget is available for international protection?',
+							'Should a direct national filing strategy be used?',
+							'Would a PCT application be appropriate?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1419,11 +1582,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'An inventor can use this time to learn more about the commercial potential of the invention. For example:',
-			},
-			{
-				heading: null,
-				body: '• Is there genuine market demand?\n\n• Which countries are likely to generate revenue?\n\n• Has the product attracted investors?\n\n• Are competitors developing similar technology?\n\n• Is additional technical development needed?\n\n• Is international patent protection financially justified?',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'An inventor can use this time to learn more about the commercial potential of the invention. For example:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Is there genuine market demand?',
+							'Which countries are likely to generate revenue?',
+							'Has the product attracted investors?',
+							'Are competitors developing similar technology?',
+							'Is additional technical development needed?',
+							'Is international patent protection financially justified?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1531,11 +1707,25 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'The choice can depend on several factors:',
-			},
-			{
-				heading: null,
-				body: '• Where the invention was developed.\n\n• Where the applicant is based.\n\n• Where commercial protection is expected to be most valuable.\n\n• Whether foreign filing restrictions apply.\n\n• The desired international filing strategy.\n\n• Budget and timing.\n\n• The nature and maturity of the invention.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'The choice can depend on several factors:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Where the invention was developed.',
+							'Where the applicant is based.',
+							'Where commercial protection is expected to be most valuable.',
+							'Whether foreign filing restrictions apply.',
+							'The desired international filing strategy.',
+							'Budget and timing.',
+							'The nature and maturity of the invention.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1559,11 +1749,26 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'Record:',
-			},
-			{
-				heading: null,
-				body: '• The first filing date.\n\n• The priority date.\n\n• The 12-month priority deadline.\n\n• Any PCT filing deadline being considered.\n\n• National or regional filing deadlines.\n\n• Countries being evaluated.\n\n• Important commercial milestones.\n\n• Any relevant foreign filing requirements.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Record:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'The first filing date.',
+							'The priority date.',
+							'The 12-month priority deadline.',
+							'Any PCT filing deadline being considered.',
+							'National or regional filing deadlines.',
+							'Countries being evaluated.',
+							'Important commercial milestones.',
+							'Any relevant foreign filing requirements.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
