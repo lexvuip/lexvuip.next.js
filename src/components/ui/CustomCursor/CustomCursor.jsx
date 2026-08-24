@@ -5,7 +5,6 @@ import './CustomCursor.css';
 const CustomCursor = () => {
 	const [enabled, setEnabled] = useState(false);
 	const [hovering, setHovering] = useState(false);
-	const [down, setDown] = useState(false);
 	const [visible, setVisible] = useState(false);
 
 	const atomRef = useRef(null);
@@ -29,8 +28,6 @@ const CustomCursor = () => {
 
 		let mouseX = window.innerWidth / 2;
 		let mouseY = window.innerHeight / 2;
-		let atomX = mouseX;
-		let atomY = mouseY;
 		let raf = null;
 
 		const onMove = (e) => {
@@ -50,18 +47,14 @@ const CustomCursor = () => {
 			}
 		};
 
-		const onDown = () => setDown(true);
-		const onUp = () => setDown(false);
 		const onLeave = () => setVisible(false);
 		const onEnter = () => setVisible(true);
 
 		const loop = () => {
-			// Gentle lag — the atom settles back onto the pointer when you stop,
-			// giving a subtle 3D depth while keeping the nucleus near the point.
-			atomX += (mouseX - atomX) * 0.28;
-			atomY += (mouseY - atomY) * 0.28;
+			// Rings track the pointer exactly — the native cursor is the nucleus,
+			// so the atom must stay centered on it with no lag.
 			if (atomRef.current) {
-				atomRef.current.style.transform = `translate3d(${atomX}px, ${atomY}px, 0)`;
+				atomRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 			}
 			raf = requestAnimationFrame(loop);
 		};
@@ -69,8 +62,6 @@ const CustomCursor = () => {
 		window.addEventListener('mousemove', onMove, { passive: true });
 		document.addEventListener('mouseover', onOver);
 		document.addEventListener('mouseout', onOut);
-		window.addEventListener('mousedown', onDown);
-		window.addEventListener('mouseup', onUp);
 		document.documentElement.addEventListener('mouseleave', onLeave);
 		document.documentElement.addEventListener('mouseenter', onEnter);
 
@@ -81,8 +72,6 @@ const CustomCursor = () => {
 			window.removeEventListener('mousemove', onMove);
 			document.removeEventListener('mouseover', onOver);
 			document.removeEventListener('mouseout', onOut);
-			window.removeEventListener('mousedown', onDown);
-			window.removeEventListener('mouseup', onUp);
 			document.documentElement.removeEventListener('mouseleave', onLeave);
 			document.documentElement.removeEventListener('mouseenter', onEnter);
 		};
@@ -93,7 +82,7 @@ const CustomCursor = () => {
 	return (
 		<div
 			ref={atomRef}
-			className={`cursor-atom${hovering ? ' is-hovering' : ''}${down ? ' is-down' : ''}${visible ? ' is-visible' : ''}`}
+			className={`cursor-atom${hovering ? ' is-hovering' : ''}${visible ? ' is-visible' : ''}`}
 			aria-hidden="true"
 		>
 			{/* Two rotors spinning in opposite directions — proper atomic structure */}
@@ -117,8 +106,6 @@ const CustomCursor = () => {
 				<span className="particle" />
 				<span className="particle" />
 			</div>
-
-			<span className="atom-core" />
 		</div>
 	);
 };
