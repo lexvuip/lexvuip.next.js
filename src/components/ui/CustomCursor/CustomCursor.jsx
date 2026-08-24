@@ -18,9 +18,7 @@ const CustomCursor = () => {
 		const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 		if (fine || (!coarse && !hasTouch)) {
 			setEnabled(true);
-			document.documentElement.classList.add('custom-cursor-active');
 		}
-		return () => document.documentElement.classList.remove('custom-cursor-active');
 	}, []);
 
 	useEffect(() => {

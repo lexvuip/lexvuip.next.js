@@ -6,13 +6,6 @@
    a slow field of twinkling particles. Navy & gold.
    ============================================ */
 
-/* Native system cursor is kept visible and serves as the atom nucleus */
-@media (pointer: fine) {
-	html.custom-cursor-active * {
-		cursor: auto !important;
-	}
-}
-
 .cursor-atom {
 	position: fixed;
 	top: 0;
