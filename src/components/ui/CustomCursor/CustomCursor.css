@@ -6,14 +6,6 @@
    a slow field of twinkling particles. Navy & gold.
    ============================================ */
 
-/* Hide the native cursor only on fine-pointer devices */
-@media (pointer: fine) {
-	html.custom-cursor-active,
-	html.custom-cursor-active * {
-		cursor: none !important;
-	}
-}
-
 .cursor-atom {
 	position: fixed;
 	top: 0;
@@ -81,23 +73,9 @@
 	transform: rotateX(64deg) rotateZ(90deg);
 }
 
-/* ---------- Nucleus (high-contrast, visible on any background) ----------
-   Gold fill + navy ring = pops on light (cream/white/gold) backgrounds;
-   gold fill + outer gold glow = pops on dark navy backgrounds. */
+/* ---------- Nucleus (native cursor serves as the nucleus — core hidden) ---------- */
 .atom-core {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 14px;
-	height: 14px;
-	margin: -7px 0 0 -7px;
-	border-radius: 50%;
-	background: var(--color-gold);
-	border: 2px solid var(--color-navy);
-	box-shadow:
-		0 0 0 2px rgba(201, 162, 39, 0.35),
-		0 0 8px rgba(201, 162, 39, 0.6);
-	transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+	display: none;
 }
 
 /* ---------- Particle field (twinkling, orbiting in 3D) ---------- */
@@ -185,24 +163,8 @@
 	border-width: 1.2px;
 }
 
-.cursor-atom.is-hovering .atom-core {
-	background: var(--color-gold-light);
-	border-color: var(--color-navy);
-	box-shadow:
-		0 0 0 3px rgba(230, 209, 144, 0.4),
-		0 0 12px rgba(230, 209, 144, 0.7);
-	transform: scale(1.15);
-}
-
 .cursor-atom.is-hovering .particle::after {
 	box-shadow: 0 0 6px rgba(201, 162, 39, 0.8);
-}
-
-/* Click — nucleus pulses */
-.cursor-atom.is-down .atom-core {
-	transform: scale(0.7);
-	background: var(--color-gold-dark);
-	transition: transform 0.08s ease-out, background 0.08s ease-out;
 }
 
 /* Respect reduced motion */

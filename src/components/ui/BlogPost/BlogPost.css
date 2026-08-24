@@ -173,6 +173,31 @@
 	margin-bottom: var(--space-lg);
 }
 
+.blogpost-list {
+	margin: 0 0 var(--space-lg);
+	padding-left: 1.4em;
+	color: var(--color-text-primary);
+}
+
+.blogpost-list li {
+	margin-bottom: 0.6em;
+	padding-left: 0.25em;
+}
+
+.blogpost-list li::marker {
+	color: var(--color-gold);
+	font-weight: 600;
+}
+
+.blogpost-list.is-ordered li::marker {
+	color: var(--color-navy);
+	font-weight: 700;
+}
+
+.blogpost-list li:last-child {
+	margin-bottom: 0;
+}
+
 /* Related Blogs Section */
 .blogpost-related {
 	margin-top: var(--space-4xl);

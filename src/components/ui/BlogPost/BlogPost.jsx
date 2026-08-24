@@ -16,6 +16,20 @@ function renderBody(text) {
 		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
 }
 
+function ContentBlock({ block }) {
+	if (block.type === 'list') {
+		const Tag = block.ordered ? 'ol' : 'ul';
+		return (
+			<Tag className={`blogpost-list${block.ordered ? ' is-ordered' : ''}`}>
+				{block.items.map((item, i) => (
+					<li key={i} dangerouslySetInnerHTML={{ __html: renderBody(item) }} />
+				))}
+			</Tag>
+		);
+	}
+	return <p className="blogpost-body" dangerouslySetInnerHTML={{ __html: renderBody(block.text) }} />;
+}
+
 function slugify(text) {
 	return text
 		.toLowerCase()
@@ -106,7 +120,9 @@ function BlogPost() {
 										{sec.heading}
 									</h2>
 								)}
-								<p className="blogpost-body" dangerouslySetInnerHTML={{ __html: renderBody(sec.body) }} />
+								{sec.blocks
+									? sec.blocks.map((block, i) => <ContentBlock key={i} block={block} />)
+									: <ContentBlock block={{ type: 'paragraph', text: sec.body }} />}
 							</section>
 						))}
 					</article>
