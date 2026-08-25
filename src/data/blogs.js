@@ -1848,5 +1848,206 @@ export const blogs = [
 			},
 		],
 	},
+	{
+		id: '15',
+		slug: 'common-patent-filing-mistakes-startups-can-avoid',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 6: Common Patent Filing Mistakes Startups Can Avoid',
+		date: '08/25/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'Most filing problems don\'t happen because an inventor lacks a good idea. They happen because the invention is shared too early, important details are left out, deadlines aren\'t tracked, or filing decisions are made without considering what comes next.',
+		heroImage: '/assets/stockimages/patent-filing-mistakes-fundamentals-1920-standard.png',
+		content: [
+			{
+				heading: null,
+				body: 'By now in the IP Fundamentals series, we\'ve looked at why timing matters, how priority dates work, why confidentiality is important, when information may become public, and how an initial filing can support an international patent strategy.',
+			},
+			{
+				heading: null,
+				body: 'That brings us to a more practical question.',
+			},
+			{
+				heading: null,
+				body: 'What can go wrong before a patent application is filed?',
+			},
+			{
+				heading: null,
+				body: 'For startups, the answer is often more than expected.',
+			},
+			{
+				heading: null,
+				body: 'Most filing problems don\'t happen because an inventor lacks a good idea. They happen because the invention is shared too early, important details are left out, deadlines aren\'t tracked, or filing decisions are made without considering what comes next.',
+			},
+			{
+				heading: null,
+				body: 'The good news is that many of these problems are avoidable.',
+			},
+			{
+				heading: null,
+				body: 'Here are some of the most common ones.',
+			},
+			{
+				heading: 'Mistake 1: Waiting Until the Product Is Finished',
+				body: 'One of the most common assumptions is: "We\'ll file once the product is complete." That sounds logical. But product development and patent strategy don\'t always follow the same timeline. A startup may spend months refining a product while the underlying invention is already developed enough to justify discussing patent protection. During that time, the invention could be demonstrated, discussed with potential customers, shared with manufacturers, or disclosed publicly. Waiting for the perfect final product can therefore create unnecessary risks.',
+			},
+			{
+				heading: null,
+				body: 'The better question isn\'t always: "Is the product finished?" It may be: "Is the invention sufficiently developed to support a meaningful patent filing strategy?"',
+			},
+			{
+				heading: 'Mistake 2: Disclosing the Invention Before Filing',
+				body: 'Startups need to communicate. They pitch investors. They demonstrate prototypes. They attend conferences. They speak with potential customers. They publish on websites and social media. These activities are part of building a business. But sharing technical details before filing can raise patentability concerns depending on the circumstances and jurisdiction.',
+			},
+			{
+				heading: null,
+				body: 'That\'s why disclosure planning should happen before the presentation, product launch, or public demonstration. If confidentiality is appropriate, use appropriate confidentiality arrangements. If public disclosure is planned, discuss the timing with your patent professional first. A few minutes of planning can be far more valuable than trying to solve a disclosure problem later.',
+			},
+			{
+				heading: 'Mistake 3: Filing Too Quickly With an Incomplete Disclosure',
+				body: 'Speed matters in patent filing. But speed and completeness are not the same thing. Some startups rush to file because they want to establish an early filing date. The application may describe the core concept but leave out important variations, alternative embodiments, different configurations, technical relationships, possible implementation methods, or improvements already under development.',
+			},
+			{
+				heading: null,
+				body: 'Later, the startup discovers that these additional features are important to the business. The problem is that simply adding new subject matter later doesn\'t necessarily allow that material to benefit from the earlier filing date. The initial application should therefore be prepared with the future protection strategy in mind.',
+			},
+			{
+				heading: 'Mistake 4: Treating the First Filing as a Placeholder',
+				body: 'This is closely related to the previous mistake. Some inventors think: "We\'ll just file something now and improve it later." There can be strategic reasons for filing early. But an early application shouldn\'t be treated as an empty placeholder. The first filing can become the foundation for future priority claims and international filings. What it properly discloses can therefore matter long after the filing date.',
+			},
+			{
+				heading: null,
+				body: 'Before filing, ask: What aspects of this invention might we want to protect later? That question can lead to a much more thoughtful first application.',
+			},
+			{
+				heading: 'Mistake 5: Ignoring the International Filing Timeline',
+				body: 'A startup may initially file in one country and only later begin thinking about international protection. Then the 12-month priority period starts moving toward its deadline. Suddenly, decisions about the United States, Europe, Asia, or other markets become urgent. International patent protection can involve significant costs. Startups therefore need time to evaluate where protection actually makes commercial sense.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Ask early:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Where will we sell?',
+							'Where will we manufacture?',
+							'Where are our competitors?',
+							'Which markets are strategically important?',
+							'What level of international protection can we support?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'International filing decisions are easier when they\'re planned before the deadline becomes urgent.',
+			},
+			{
+				heading: 'Mistake 6: Assuming an NDA Solves Everything',
+				body: 'An NDA can be an important confidentiality tool. But signing an NDA doesn\'t automatically solve every patent-related problem. The scope of the agreement matters. So does who receives the information, what is actually disclosed, and what happens afterward. An NDA also doesn\'t replace the need to think about filing strategy before making disclosures. Confidentiality arrangements and patent strategy should work together. They aren\'t substitutes for one another.',
+			},
+			{
+				heading: 'Mistake 7: Failing to Keep a Clear Invention Timeline',
+				body: 'Startups often have information scattered across emails, notebooks, project management systems, presentations, and development files. Months later, someone asks: "When exactly did we develop this feature?" Nobody is completely sure. A simple invention timeline can make a significant difference.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Record:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Major development milestones.',
+							'Significant improvements.',
+							'Prototype dates.',
+							'Testing dates.',
+							'Disclosure events.',
+							'Investor presentations.',
+							'Customer demonstrations.',
+							'Earlier patent filings.',
+							'Important changes to the invention.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'This gives your patent professional a clearer picture of how the invention developed.',
+			},
+			{
+				heading: 'Mistake 8: Thinking the Patent Application Is the End of the Process',
+				body: 'Filing the application can feel like the finish line. It isn\'t. After filing, there may be examination, office actions, amendments, responses, additional filings, international decisions, and other prosecution events. The way an application is prepared at the beginning can influence what happens later. That\'s why patent strategy should be viewed as a process rather than a single filing event.',
+			},
+			{
+				heading: null,
+				body: 'The goal isn\'t simply to get an application on file. It\'s to build a foundation that supports the business and its intellectual property strategy over time.',
+			},
+			{
+				heading: 'A Simple Pre-Filing Check',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Before submitting a patent application, a startup can ask:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Have we disclosed the invention publicly?',
+							'Have we documented who has seen it?',
+							'Are important technical variations included?',
+							'Have we considered where international protection may be needed?',
+							'Do we understand the relevant filing and priority deadlines?',
+							'Have we discussed the commercial importance of different markets?',
+							'Is our invention timeline clear?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'These questions don\'t replace professional legal advice. They simply help ensure that important conversations happen before the application is filed.',
+			},
+			{
+				heading: 'Why Patent Attorneys Ask So Many Questions',
+				body: 'By this point in the series, one pattern should be clear. Patent attorneys aren\'t only interested in the invention itself. They want to understand its history. When was it developed? Who saw it? What was disclosed? When was the first application filed? What additional features were developed afterward? Where does the business want protection?',
+			},
+			{
+				heading: null,
+				body: 'These questions help attorneys understand the risks and opportunities surrounding the filing. For startups, providing clear answers can make the patent process more efficient and the strategic discussions more productive.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'Startups move quickly. That\'s part of what makes them exciting. But intellectual property decisions sometimes require slowing down long enough to ask the right questions.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'A public disclosure that could have been avoided. A missing technical variation. A forgotten deadline. An incomplete first filing. A market considered too late. None of these necessarily reflect the quality of the underlying invention. They reflect decisions made around the invention. And many of those decisions can be planned for.',
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Before filing a patent application, don\'t ask only: "Are we ready to file?" Also ask: "Have we done everything necessary to make this filing a strong foundation for what comes next?" That question can change the way a startup approaches patent protection.',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of common filing mistakes and pre-filing considerations before submitting a patent application. It is not legal advice. Every invention is different, and the appropriate filing strategy depends on the specific facts, applicable laws, and professional legal advice.',
+			},
+		],
+	},
 
 ];
