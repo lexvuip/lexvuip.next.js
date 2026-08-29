@@ -37,6 +37,56 @@ function slugify(text) {
 		.replace(/(^-|-$)/g, '');
 }
 
+function formatBlogDate(value) {
+	if (!value) return '';
+	const raw = String(value).trim();
+	const [m, d, y] = raw.includes('/') ? raw.split('/') : raw.split('-');
+	const monthIdx = parseInt(m, 10) - 1;
+	const day = parseInt(d, 10);
+	const year = parseInt(y, 10);
+	if (Number.isNaN(monthIdx) || Number.isNaN(day) || Number.isNaN(year)) return raw;
+	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	const mod100 = day % 100;
+	let suffix = 'th';
+	if (mod100 < 11 || mod100 > 13) {
+		if (day % 10 === 1) suffix = 'st';
+		else if (day % 10 === 2) suffix = 'nd';
+		else if (day % 10 === 3) suffix = 'rd';
+	}
+	return `${months[monthIdx]} ${day}${suffix}, ${year}`;
+}
+
+function countWordsInPost(post) {
+	if (!post) return 0;
+	let count = 0;
+	if (post.excerpt) count += String(post.excerpt).trim().split(/\s+/).filter(Boolean).length;
+	if (Array.isArray(post.content)) {
+		for (const sec of post.content) {
+			if (sec.heading) count += String(sec.heading).trim().split(/\s+/).filter(Boolean).length;
+			if (Array.isArray(sec.blocks)) {
+				for (const block of sec.blocks) {
+					if (block.type === 'list' && Array.isArray(block.items)) {
+						for (const item of block.items) {
+							count += String(item).trim().split(/\s+/).filter(Boolean).length;
+						}
+					} else if (block.text) {
+						count += String(block.text).trim().split(/\s+/).filter(Boolean).length;
+					}
+				}
+			} else if (sec.body) {
+				count += String(sec.body).trim().split(/\s+/).filter(Boolean).length;
+			}
+		}
+	}
+	return count;
+}
+
+function getReadTime(post) {
+	const words = countWordsInPost(post);
+	const minutes = Math.max(1, Math.round(words / 200));
+	return `${minutes} min read`;
+}
+
 function BlogPost() {
 	const { slug } = useParams();
 	const router = useRouter();
@@ -69,23 +119,25 @@ function BlogPost() {
 		<section className="blogpost-section">
 			<div className="blogpost-container">
 				<Breadcrumbs />
-				<button className="blogpost-back" onClick={() => router.push('/blog')}>
-					<span className="arrow">←</span> Back to Blog
-				</button>
-				
+
 				<header className="blogpost-header">
-					<div className="blogpost-meta">
-						<span className="blogpost-category">{post.category}</span>
-						<span className="blogpost-divider">|</span>
-						<span className="blogpost-date">{post.date}</span>
-						{post.authorId && (
-							<>
-								<span className="blogpost-divider">|</span>
-								<span className="blogpost-author">By {author.name}</span>
-							</>
-						)}
-					</div>
 					<h1 className="blogpost-title">{post.title}</h1>
+					<div className="blogpost-meta">
+						<div className="blogpost-meta-left">
+							<span className="blogpost-category">{post.category}</span>
+							{post.authorId && (
+								<>
+									<span className="blogpost-divider">|</span>
+									<span className="blogpost-author">By {author.name}</span>
+								</>
+							)}
+						</div>
+						<div className="blogpost-meta-right">
+							<span className="blogpost-date">{formatBlogDate(post.date)}</span>
+							<span className="blogpost-divider">|</span>
+							<span className="blogpost-readtime">{getReadTime(post)}</span>
+						</div>
+					</div>
 				</header>
 
 				<div className="blogpost-hero">
