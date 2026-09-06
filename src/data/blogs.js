@@ -2049,5 +2049,400 @@ export const blogs = [
 			},
 		],
 	},
+	{
+		id: '16',
+		slug: 'what-patent-examiners-actually-look-for-during-examination',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 7: What Patent Examiners Actually Look For During Examination',
+		date: '09/06/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			"Filing the application can feel like the finish line, but for a patent professional it's the beginning of another stage. This article explains what patent examiners actually look at — novelty, inventive step, clarity, support, disclosure, and prior art — and why an objection isn't necessarily bad news.",
+		heroImage: '/assets/stockimages/patent-examination-fundamentals-1920-standard.png',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored some of the common patent filing mistakes startups can avoid before an application is submitted.',
+			},
+			{
+				heading: null,
+				body: 'That naturally leads to another question.',
+			},
+			{
+				heading: null,
+				body: 'What happens once the application reaches the patent office?',
+			},
+			{
+				heading: null,
+				body: 'For many inventors, filing the application feels like the finish line.',
+			},
+			{
+				heading: null,
+				body: "For a patent professional, it's closer to the beginning of another stage.",
+			},
+			{
+				heading: null,
+				body: 'The application now has to go through examination.',
+			},
+			{
+				heading: null,
+				body: 'A patent examiner reviews the application against the applicable requirements and considers whether the claimed invention qualifies for protection.',
+			},
+			{
+				heading: null,
+				body: 'This can involve questions about novelty, inventive step, clarity, support, disclosure, and other formal or substantive requirements.',
+			},
+			{
+				heading: null,
+				body: 'Understanding what happens during examination can help inventors better understand why patent applications sometimes receive objections and why responding to them is more than simply correcting a few sentences.',
+			},
+			{
+				heading: "The Examiner Isn't Reviewing the Invention in Isolation",
+				body: 'An inventor naturally sees the invention from the perspective of the problem they solved.',
+			},
+			{
+				heading: null,
+				body: 'The examiner sees something different.',
+			},
+			{
+				heading: null,
+				body: 'The examiner is looking at the patent application and the claims made within it.',
+			},
+			{
+				heading: null,
+				body: 'That means the examination isn\'t simply: "Is this a good invention?"',
+			},
+			{
+				heading: null,
+				body: 'It is closer to: "Does this application satisfy the requirements for granting a patent?"',
+			},
+			{
+				heading: null,
+				body: 'This distinction is important.',
+			},
+			{
+				heading: null,
+				body: 'A commercially valuable product can still face patentability objections.',
+			},
+			{
+				heading: null,
+				body: 'Likewise, an invention that appears simple to its creator may contain patentable subject matter when properly defined.',
+			},
+			{
+				heading: null,
+				body: 'The examination focuses on what has been claimed and how the application supports those claims.',
+			},
+			{
+				heading: 'What Does a Patent Examiner Look At?',
+				body: 'The exact examination process varies by patent office and jurisdiction, but several fundamental questions commonly arise.',
+			},
+			{
+				heading: null,
+				body: '**Is the claimed invention new?** The examiner may search for earlier disclosures that describe the same invention or relevant features. If the claimed subject matter has already been disclosed, novelty can become an issue. This is why the filing and disclosure timeline discussed in the earlier articles matters.',
+			},
+			{
+				heading: null,
+				body: "**Does the invention involve an inventive step?** Being new isn't always enough. An examiner may also consider whether the claimed invention represents more than an obvious development of what was already known. This assessment can involve comparing the claimed invention with one or more earlier disclosures and considering whether the claimed differences would have been obvious to a person skilled in the relevant field. The terminology differs between jurisdictions, but the underlying question is important: Is there enough technical distinction to justify patent protection?",
+			},
+			{
+				heading: null,
+				body: "**Are the claims clear?** Claims define what the applicant is asking the patent office to protect. If a claim is unclear, ambiguous, overly broad, or otherwise fails to meet applicable requirements, the examiner may raise an objection. This is one reason claim drafting requires careful attention. A technically sophisticated invention doesn't automatically result in clear claims.",
+			},
+			{
+				heading: null,
+				body: '**Are the claims supported by the application?** The claims cannot simply describe whatever protection the applicant wishes to obtain. The application needs to provide appropriate support and disclosure for the claimed subject matter under the applicable legal requirements. This is particularly important when an applicant attempts to claim a broad range of variations around the original invention. The more broadly an invention is claimed, the more important the underlying disclosure becomes.',
+			},
+			{
+				heading: null,
+				body: "**Does the application adequately disclose the invention?** A patent application generally needs to explain the invention sufficiently for the relevant legal requirements to be satisfied. The examiner may therefore consider whether the description provides enough information about the invention and its implementation. This is another reason why a strong patent application isn't simply a collection of claims. The description, drawings, claims, and other parts of the application need to work together.",
+			},
+			{
+				heading: 'Prior Art Is a Major Part of Examination',
+				body: 'One of the most important parts of patent examination is the consideration of prior art.',
+			},
+			{
+				heading: null,
+				body: 'Prior art can include information that was available before the relevant date under the applicable rules.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'This may include:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Earlier patent publications.',
+							'Scientific or technical publications.',
+							'Publicly available products or technologies.',
+							'Conference materials.',
+							'Online disclosures.',
+							'Other publicly accessible technical information.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'The examiner may identify documents or disclosures that are relevant to the claimed invention.',
+			},
+			{
+				heading: null,
+				body: 'The applicant and patent professional then need to understand what those references actually disclose and how they relate to the claims.',
+			},
+			{
+				heading: null,
+				body: "Finding a prior-art reference doesn't necessarily mean the application is finished.",
+			},
+			{
+				heading: null,
+				body: 'The significance of the reference depends on what it discloses and how it relates to the claimed subject matter.',
+			},
+			{
+				heading: "An Objection Isn't Necessarily Bad News",
+				body: 'Many inventors become concerned when they receive an examination report containing objections.',
+			},
+			{
+				heading: null,
+				body: "That's understandable.",
+			},
+			{
+				heading: null,
+				body: 'But an objection is not automatically the same thing as a final failure.',
+			},
+			{
+				heading: null,
+				body: 'Patent examination is often an iterative process.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'An examiner may identify issues with:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Novelty.',
+							'Inventive step.',
+							'Claim clarity.',
+							'Support.',
+							'Sufficiency of disclosure.',
+							'Formal requirements.',
+							'Other jurisdiction-specific requirements.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: "The applicant may then have an opportunity to respond, amend the claims where legally permissible, provide arguments, or otherwise address the examiner's concerns.",
+			},
+			{
+				heading: null,
+				body: 'The important point is to understand *why* the objection was raised before deciding how to respond.',
+			},
+			{
+				heading: 'Why the Claims Often Become the Centre of the Discussion',
+				body: 'Imagine an application describes a sophisticated machine with ten different technical features.',
+			},
+			{
+				heading: null,
+				body: 'The examiner may identify prior art that already discloses eight of them.',
+			},
+			{
+				heading: null,
+				body: 'The remaining two features may be where the real discussion begins.',
+			},
+			{
+				heading: null,
+				body: "The applicant's patent professional may need to determine whether those distinguishing features are properly supported in the application and whether the claims can be appropriately amended or argued.",
+			},
+			{
+				heading: null,
+				body: "This is why patent prosecution isn't simply about defending the invention.",
+			},
+			{
+				heading: null,
+				body: "It's about determining what scope of protection can properly be supported by the application in light of the prior art and applicable requirements.",
+			},
+			{
+				heading: 'Where Patent Drawings Fit In',
+				body: 'Patent drawings are not simply decorative illustrations added to make an application easier to read.',
+			},
+			{
+				heading: null,
+				body: 'Where drawings are required or useful to understand the invention, they form part of the technical disclosure and need to correspond properly with the description and claims.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'During examination and prosecution, inconsistencies can create unnecessary questions. For example:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A component appears in one figure but not another.',
+							"Reference numerals don't correspond with the description.",
+							"A feature described in the claims isn't clearly represented where a drawing is relied upon.",
+							'Different figures show inconsistent configurations.',
+							'A drawing contains unnecessary or ambiguous details.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Good patent illustrations therefore support the broader application rather than existing separately from it.',
+			},
+			{
+				heading: null,
+				body: 'This is one reason accuracy and consistency matter throughout the drafting and prosecution process.',
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'When preparing for patent examination, inventors can help their patent professional by maintaining clear records of:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'The technical problem being solved.',
+							'The key features that make the invention different.',
+							'Alternative embodiments.',
+							'Important technical improvements.',
+							'Earlier versions of the invention.',
+							'Relevant testing and validation.',
+							'Prior art already identified during development.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: "These records don't replace the patent professional's analysis.",
+			},
+			{
+				heading: null,
+				body: 'They provide context.',
+			},
+			{
+				heading: null,
+				body: 'The inventor understands the technology deeply.',
+			},
+			{
+				heading: null,
+				body: 'The patent professional understands how that technology needs to be presented and protected within the patent system.',
+			},
+			{
+				heading: null,
+				body: 'Keeping both perspectives connected can make prosecution discussions much more productive.',
+			},
+			{
+				heading: "Why Patent Attorneys Study the Examiner's Objections Carefully",
+				body: 'When an examination report arrives, the easiest reaction can be to start drafting a response immediately.',
+			},
+			{
+				heading: null,
+				body: 'Experienced patent professionals first try to understand the underlying issue.',
+			},
+			{
+				heading: null,
+				body: 'What exactly has the examiner identified?',
+			},
+			{
+				heading: null,
+				body: 'Which claim is affected?',
+			},
+			{
+				heading: null,
+				body: 'What does the cited prior art actually disclose?',
+			},
+			{
+				heading: null,
+				body: 'Is the objection based on the claim language, the specification, the drawings, or another requirement?',
+			},
+			{
+				heading: null,
+				body: 'Can the issue be addressed through argument?',
+			},
+			{
+				heading: null,
+				body: 'Would an amendment be appropriate?',
+			},
+			{
+				heading: null,
+				body: 'Does the proposed amendment remain supported by the application?',
+			},
+			{
+				heading: null,
+				body: 'These questions help determine the right response rather than simply responding to every objection mechanically.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: "Patent examination isn't a simple test of whether an invention is good or bad.",
+			},
+			{
+				heading: null,
+				body: "It's a structured evaluation of whether the application and its claims satisfy the requirements for patent protection.",
+			},
+			{
+				heading: null,
+				body: "That's why a patent application doesn't stop being important once it has been filed.",
+			},
+			{
+				heading: null,
+				body: 'The quality of the original disclosure, the clarity of the claims, the consistency of the drawings, and the way the application responds to prior art can all become important during prosecution.',
+			},
+			{
+				heading: null,
+				body: 'For inventors, understanding this process makes examination less mysterious.',
+			},
+			{
+				heading: null,
+				body: 'For patent professionals, it reinforces an important principle:',
+			},
+			{
+				heading: null,
+				body: '**A patent application should be drafted not only with filing in mind, but with examination in mind.**',
+			},
+			{
+				heading: null,
+				body: "I'd like to leave you with one question.",
+			},
+			{
+				heading: null,
+				body: '**If your patent application received an examination report tomorrow, would you understand what the examiner was actually asking you to address?**',
+			},
+			{
+				heading: null,
+				body: 'Knowing what happens during examination is the first step toward having a more informed conversation about how to respond.',
+			},
+			{
+				heading: null,
+				body: 'Because getting a patent application filed is important.',
+			},
+			{
+				heading: null,
+				body: 'But understanding what happens *after filing* is where the next part of the patent journey begins.',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of patent examination and the requirements examiners commonly assess when reviewing a patent application. It is not legal advice. Every invention is different, and the appropriate filing strategy depends on the specific facts, applicable laws, and professional legal advice.',
+			},
+		],
+	},
 
 ];
