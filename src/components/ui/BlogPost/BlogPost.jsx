@@ -184,7 +184,7 @@ function BlogPost() {
 					<aside className="blogpost-author-bio">
 						<div className="author-avatar">
 							<Image 
-								src={author.image} 
+								src="/logo-dark.png" 
 								alt={author.name}
 								width={80}
 								height={80}
