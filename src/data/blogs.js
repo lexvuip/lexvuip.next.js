@@ -421,15 +421,17 @@ export const blogs = [
 			},
 			{
 				heading: 'The Analysis: Three Layers to Work Through',
-				body: '**1. Publication date vs. filing date:** The US application was filed on 01 January 2026 — before Inventor B\'s Indian filing. But it did not publish until 01 July 2027 — well after. Under Indian law, the relevant event is *publication*, not filing. At the moment Inventor B filed in India, Inventor A\'s US application was not publicly available. It was a confidential pending application sitting in the USPTO system. It cannot have anticipated a claim when it was not accessible to the public.'
-			},
-			{
-				heading: null,
-				body: '**2. The "whole contents" doctrine — does it apply here?:** Some jurisdictions (notably the UK and EPO) operate a "whole contents" approach under which unpublished earlier applications can constitute prior art for novelty purposes — but only if they are in the *same jurisdiction*. India does not have a statutory equivalent of this doctrine for cross-border situations. The Indian Patents Act does not extend prior art effect to foreign unpublished applications that had not entered the public domain as of the local filing date.'
-			},
-			{
-				heading: null,
-				body: '**3. The examiner\'s timing problem:** The objection is raised in August 2027, and by then the US application is public. But the legally relevant date is April 2026 — not August 2027. The examiner cannot retroactively apply a document that was not in the public domain when Inventor B established their priority date. The temporal reference point in the novelty analysis is fixed at the date of filing; it does not shift to whenever examination happens to begin.'
+				blocks: [
+					{
+						type: 'list',
+						ordered: true,
+						items: [
+							'**Publication date vs. filing date:** The US application was filed on 01 January 2026 — before Inventor B\'s Indian filing. But it did not publish until 01 July 2027 — well after. Under Indian law, the relevant event is *publication*, not filing. At the moment Inventor B filed in India, Inventor A\'s US application was not publicly available. It was a confidential pending application sitting in the USPTO system. It cannot have anticipated a claim when it was not accessible to the public.',
+							'**The "whole contents" doctrine — does it apply here?:** Some jurisdictions (notably the UK and EPO) operate a "whole contents" approach under which unpublished earlier applications can constitute prior art for novelty purposes — but only if they are in the *same jurisdiction*. India does not have a statutory equivalent of this doctrine for cross-border situations. The Indian Patents Act does not extend prior art effect to foreign unpublished applications that had not entered the public domain as of the local filing date.',
+							'**The examiner\'s timing problem:** The objection is raised in August 2027, and by then the US application is public. But the legally relevant date is April 2026 — not August 2027. The examiner cannot retroactively apply a document that was not in the public domain when Inventor B established their priority date. The temporal reference point in the novelty analysis is fixed at the date of filing; it does not shift to whenever examination happens to begin.',
+						],
+					},
+				],
 			},
 			{
 				heading: 'Analysis Verdict',
@@ -505,7 +507,17 @@ export const blogs = [
 			},
 			{
 				heading: 'Where the Execution Friction Shows Up',
-				body: '→ **Last-minute drawing corrections** — Discovered during pre-filing review, triggering emergency turnaround requests and deadline pressure that affects the whole docket.\n\n→ **Post-submission examiner objections** — Drawing defects that survive internal review and come back as formal objections — adding response cycles and cost the client wasn\'t expecting.\n\n→ **Revision loops with illustrators** — Back-and-forth that eats attorney time, produces inconsistent versions, and pushes the matter off the attorney\'s mental load and onto the paralegal\'s plate — often without a clean handover.',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'**Last-minute drawing corrections** — Discovered during pre-filing review, triggering emergency turnaround requests and deadline pressure that affects the whole docket.',
+							'**Post-submission examiner objections** — Drawing defects that survive internal review and come back as formal objections — adding response cycles and cost the client wasn\'t expecting.',
+							'**Revision loops with illustrators** — Back-and-forth that eats attorney time, produces inconsistent versions, and pushes the matter off the attorney\'s mental load and onto the paralegal\'s plate — often without a clean handover.',
+						],
+					},
+				],
 			},
 			{
 				heading: 'The USPTO Requirements, Without the Filler',
@@ -733,11 +745,24 @@ export const blogs = [
 			},
 			{
 				heading: 'A Practical Habit for Inventors',
-				body: 'One of the most valuable habits an inventor can develop is maintaining a clear record of the invention\'s development. Consider documenting:',
-			},
-			{
-				heading: null,
-				body: 'When the original concept was developed. Significant technical improvements over time. Prototype and testing milestones. Meetings with collaborators, investors, or manufacturers. Public demonstrations, presentations, or publications. Patent applications related to the invention.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'One of the most valuable habits an inventor can develop is maintaining a clear record of the invention\'s development. Consider documenting:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'When the original concept was developed.',
+							'Significant technical improvements over time.',
+							'Prototype and testing milestones.',
+							'Meetings with collaborators, investors, or manufacturers.',
+							'Public demonstrations, presentations, or publications.',
+							'Patent applications related to the invention.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -891,7 +916,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'You may need to:\n\n• Discuss manufacturing options.\n\n• Seek investment.\n\n• Work with engineers or designers.\n\n• Test prototypes with potential users.\n\n• Explore licensing opportunities.\n\n• Consult technical experts.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'You may need to:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Discuss manufacturing options.',
+							'Seek investment.',
+							'Work with engineers or designers.',
+							'Test prototypes with potential users.',
+							'Explore licensing opportunities.',
+							'Consult technical experts.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -915,7 +957,19 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Why am I sharing this information?\n\n• Does the other person need to know these technical details?\n\n• Is there an appropriate confidentiality arrangement in place?\n\n• Have I documented who received the information?\n\n• Have I spoken with my patent attorney about the timing of these discussions?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Why am I sharing this information?',
+							'Does the other person need to know these technical details?',
+							'Is there an appropriate confidentiality arrangement in place?',
+							'Have I documented who received the information?',
+							'Have I spoken with my patent attorney about the timing of these discussions?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1053,7 +1107,26 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'For example, information about an invention may become accessible through:\n\n• A public demonstration.\n\n• A conference or exhibition.\n\n• A product shown to potential customers.\n\n• A technical presentation.\n\n• A journal, catalogue, or brochure.\n\n• A website or online publication.\n\n• A product placed on the market.\n\n• Information shared with people without appropriate confidentiality restrictions.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'For example, information about an invention may become accessible through:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A public demonstration.',
+							'A conference or exhibition.',
+							'A product shown to potential customers.',
+							'A technical presentation.',
+							'A journal, catalogue, or brochure.',
+							'A website or online publication.',
+							'A product placed on the market.',
+							'Information shared with people without appropriate confidentiality restrictions.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1093,7 +1166,18 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Who received the information?\n\n• What exactly was disclosed?\n\n• When did the disclosure happen?\n\n• Was there an obligation to keep the information confidential?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Who received the information?',
+							'What exactly was disclosed?',
+							'When did the disclosure happen?',
+							'Was there an obligation to keep the information confidential?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1113,7 +1197,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'The effect of a disclosure can depend on factors such as:\n\n• Where the disclosure occurred.\n\n• What information was actually made available.\n\n• Whether the disclosure was public or confidential.\n\n• When the disclosure occurred.\n\n• Which jurisdiction is being considered.\n\n• Whether any applicable exceptions or grace-period provisions apply.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'The effect of a disclosure can depend on factors such as:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Where the disclosure occurred.',
+							'What information was actually made available.',
+							'Whether the disclosure was public or confidential.',
+							'When the disclosure occurred.',
+							'Which jurisdiction is being considered.',
+							'Whether any applicable exceptions or grace-period provisions apply.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1201,7 +1302,19 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• What exactly am I about to disclose?\n\n• Who will have access to it?\n\n• Is the information being shared under confidentiality?\n\n• When will the information become available?\n\n• Have I discussed the disclosure with my patent professional?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'What exactly am I about to disclose?',
+							'Who will have access to it?',
+							'Is the information being shared under confidentiality?',
+							'When will the information become available?',
+							'Have I discussed the disclosure with my patent professional?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1209,7 +1322,24 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'Document:\n\n• The date.\n\n• The audience.\n\n• What was disclosed.\n\n• Where it was disclosed.\n\n• Whether confidentiality applied.\n\n• Copies of presentations, brochures, publications, or online material where possible.',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Document:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'The date.',
+							'The audience.',
+							'What was disclosed.',
+							'Where it was disclosed.',
+							'Whether confidentiality applied.',
+							'Copies of presentations, brochures, publications, or online material where possible.',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1233,7 +1363,22 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: '• Was it shown to an employee?\n\n• An investor?\n\n• A potential customer?\n\n• A manufacturer?\n\n• At an exhibition?\n\n• Was an NDA in place?\n\n• Was a prototype demonstrated?\n\n• Was anything published online?',
+				blocks: [
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Was it shown to an employee?',
+							'An investor?',
+							'A potential customer?',
+							'A manufacturer?',
+							'At an exhibition?',
+							'Was an NDA in place?',
+							'Was a prototype demonstrated?',
+							'Was anything published online?',
+						],
+					},
+				],
 			},
 			{
 				heading: null,
@@ -1294,6 +1439,1008 @@ export const blogs = [
 			{
 				heading: 'Legal Note',
 				body: 'This article is intended for educational purposes and provides a general explanation of public disclosure considerations before filing a patent application. It is not legal advice. The way information about an invention becomes publicly available and the applicable legal framework vary by jurisdiction and specific circumstances, and every invention should be evaluated with professional legal advice.',
+			},
+		],
+	},
+	{
+		id: '14',
+		slug: 'ip-fundamentals-part-5-filing-first-in-india-or-abroad',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 5: Filing First in India or Abroad: Understanding Priority Claims',
+		date: '08/20/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			"Filing a patent application in India doesn't automatically protect you everywhere. Here's what priority claims, the 12-month window, and the PCT mean for inventors deciding whether to file first in India or abroad.",
+		heroImage: '/assets/stockimages/filing-first-in-india-abroad-1920.jpg',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored when an invention may be considered public and why understanding the history of disclosures is important before filing a patent application. That naturally leads to another question.',
+			},
+			{
+				heading: null,
+				body: 'What if you want patent protection in more than one country?',
+			},
+			{
+				heading: null,
+				body: 'An inventor may develop an invention in India but eventually want protection in the United States, Europe, Japan, or other markets.',
+			},
+			{
+				heading: null,
+				body: 'Does the inventor need to file everywhere at the same time?',
+			},
+			{
+				heading: null,
+				body: 'Usually, no.',
+			},
+			{
+				heading: null,
+				body: 'International patent systems provide mechanisms that allow an applicant to make an initial filing and then, subject to the applicable requirements, seek protection in other countries while claiming the benefit of the earlier filing.',
+			},
+			{
+				heading: null,
+				body: 'This is where priority claims become important.',
+			},
+			{
+				heading: 'Think of the First Filing as Establishing a Starting Point',
+				body: 'Imagine an inventor develops a new medical device in India. They file a patent application in India on January 10.',
+			},
+			{
+				heading: null,
+				body: 'Six months later, they decide that the United States and Europe are important markets. They may be able to file corresponding applications in those jurisdictions while claiming priority to the earlier Indian application, provided the applicable legal requirements are satisfied.',
+			},
+			{
+				heading: null,
+				body: "The later applications don't simply pretend that they were filed on January 10. Instead, the applicant claims the benefit of the earlier filing for the subject matter that qualifies for priority.",
+			},
+			{
+				heading: null,
+				body: 'That earlier filing establishes an important reference point for the patent strategy.',
+			},
+			{
+				heading: 'The 12-Month Window',
+				body: 'For many international patent filing strategies based on the Paris Convention, an applicant generally has 12 months from the first patent filing to file corresponding applications in other member countries and claim priority to that earlier application.',
+			},
+			{
+				heading: null,
+				body: 'This is one of the most important dates an inventor needs to understand.',
+			},
+			{
+				heading: null,
+				body: 'For example:\n\nFirst filing: January 10, 2026\n\nPriority deadline: January 10, 2027',
+			},
+			{
+				heading: null,
+				body: "That doesn't mean an applicant should automatically wait until the last day.",
+			},
+			{
+				heading: null,
+				body: 'The 12-month period is a planning window, not an invitation to postpone the decision until the deadline.',
+			},
+			{
+				heading: null,
+				body: 'During those months, the inventor may need to evaluate:',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'During those months, the inventor may need to evaluate:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Which countries are commercially important?',
+							'Where are competitors located?',
+							'Where might the invention be manufactured?',
+							'Where might the product be sold?',
+							'What budget is available for international protection?',
+							'Should a direct national filing strategy be used?',
+							'Would a PCT application be appropriate?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'The earlier these questions are considered, the more options the applicant may have.',
+			},
+			{
+				heading: "A Priority Claim Doesn't Automatically Protect You Everywhere",
+				body: 'This is one of the most important points for first-time inventors.',
+			},
+			{
+				heading: null,
+				body: 'Filing a patent application in one country does not create a worldwide patent.',
+			},
+			{
+				heading: null,
+				body: 'There is no single patent that automatically gives protection in every country.',
+			},
+			{
+				heading: null,
+				body: 'A priority claim is a mechanism that can allow later applications to claim the benefit of an earlier filing date for qualifying subject matter.',
+			},
+			{
+				heading: null,
+				body: 'The applicant still has to pursue patent protection in the countries or regional systems that matter to them.',
+			},
+			{
+				heading: null,
+				body: 'Those applications will then be examined under the applicable rules of the relevant jurisdiction.',
+			},
+			{
+				heading: null,
+				body: 'So the first filing is not the end of the process. It can be the beginning of an international filing strategy.',
+			},
+			{
+				heading: 'What Happens During Those 12 Months?',
+				body: 'The period between the first filing and subsequent international filings can be extremely valuable.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'An inventor can use this time to learn more about the commercial potential of the invention. For example:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Is there genuine market demand?',
+							'Which countries are likely to generate revenue?',
+							'Has the product attracted investors?',
+							'Are competitors developing similar technology?',
+							'Is additional technical development needed?',
+							'Is international patent protection financially justified?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'The inventor may also conduct further patent searches and work with counsel to evaluate the strength and scope of the application.',
+			},
+			{
+				heading: null,
+				body: 'In other words, the priority period can provide time to make better decisions without immediately filing everywhere.',
+			},
+			{
+				heading: 'What About a PCT Application?',
+				body: 'Inventors often hear about the PCT, or Patent Cooperation Treaty, when discussing international patent protection.',
+			},
+			{
+				heading: null,
+				body: "It's important to understand what it does.",
+			},
+			{
+				heading: null,
+				body: 'A PCT application can provide a structured way to seek patent protection across many countries through a single international filing process.',
+			},
+			{
+				heading: null,
+				body: 'But a PCT application does not result in a single worldwide patent.',
+			},
+			{
+				heading: null,
+				body: 'Eventually, the applicant generally needs to enter the national or regional phase in the countries where patent protection is actually being pursued.',
+			},
+			{
+				heading: null,
+				body: 'For an applicant claiming priority to an earlier application, the PCT filing is commonly made within the applicable 12-month priority period.',
+			},
+			{
+				heading: null,
+				body: 'This is why the relationship between the first filing date, priority date, PCT filing, and national or regional filings needs to be planned carefully.',
+			},
+			{
+				heading: 'The Priority Claim Depends on What Was Actually Disclosed',
+				body: 'There is another important point that inventors sometimes overlook.',
+			},
+			{
+				heading: null,
+				body: "A priority claim isn't simply a way to move the entire later application back to the date of the first filing.",
+			},
+			{
+				heading: null,
+				body: 'The earlier application must provide the necessary disclosure for the subject matter for which priority is being claimed, subject to the applicable legal requirements.',
+			},
+			{
+				heading: null,
+				body: 'Imagine an inventor files an initial application describing:\n\nVersion A: A machine using a particular mechanism.',
+			},
+			{
+				heading: null,
+				body: 'Six months later, the inventor develops:\n\nVersion B: A significantly different mechanism with additional technical features.',
+			},
+			{
+				heading: null,
+				body: 'The later application may contain both versions.',
+			},
+			{
+				heading: null,
+				body: 'But the fact that Version B appears in the later application does not automatically mean that every aspect of Version B receives the earlier priority date.',
+			},
+			{
+				heading: null,
+				body: 'The specific disclosure and the applicable priority rules need to be examined.',
+			},
+			{
+				heading: null,
+				body: 'This is one reason why the quality and completeness of the first filing matter.',
+			},
+			{
+				heading: "Your First Filing Shouldn't Be Treated as a Placeholder",
+				body: "Sometimes inventors think of the first application as something they need to file quickly simply to 'get a date.'",
+			},
+			{
+				heading: null,
+				body: 'Speed can certainly matter.',
+			},
+			{
+				heading: null,
+				body: 'But the first application also establishes the foundation for future filings.',
+			},
+			{
+				heading: null,
+				body: 'If important subject matter is missing from the initial disclosure, there may be limitations on what can later claim the benefit of that earlier date.',
+			},
+			{
+				heading: null,
+				body: "That's why the goal shouldn't simply be:\n\n'File something as quickly as possible.'",
+			},
+			{
+				heading: null,
+				body: "A better question is:\n\n'What should be properly disclosed in the first filing to support the protection we may want later?'",
+			},
+			{
+				heading: null,
+				body: 'That distinction can have significant strategic value.',
+			},
+			{
+				heading: 'Filing First in India or Abroad?',
+				body: 'For an Indian inventor or company considering international protection, the decision about where to make the first filing should be discussed with the patent professional early.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'The choice can depend on several factors:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Where the invention was developed.',
+							'Where the applicant is based.',
+							'Where commercial protection is expected to be most valuable.',
+							'Whether foreign filing restrictions apply.',
+							'The desired international filing strategy.',
+							'Budget and timing.',
+							'The nature and maturity of the invention.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'For example, Indian patent law contains specific requirements concerning applications made outside India by persons resident in India.',
+			},
+			{
+				heading: null,
+				body: 'In certain circumstances, permission from the Indian Patent Office may be required before filing abroad first, while the law also provides circumstances under which an applicant may proceed after filing in India and observing the applicable waiting period.',
+			},
+			{
+				heading: null,
+				body: 'These requirements should be checked before making a foreign-first filing decision.',
+			},
+			{
+				heading: null,
+				body: "This is an area where a simple assumption such as 'I'll just file in the U.S. first' can create an avoidable problem.",
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				body: 'If international patent protection is even a possibility, create a simple filing calendar from the first application.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Record:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'The first filing date.',
+							'The priority date.',
+							'The 12-month priority deadline.',
+							'Any PCT filing deadline being considered.',
+							'National or regional filing deadlines.',
+							'Countries being evaluated.',
+							'Important commercial milestones.',
+							'Any relevant foreign filing requirements.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: "Don't rely on memory.",
+			},
+			{
+				heading: null,
+				body: "Don't rely on an email buried in your inbox.",
+			},
+			{
+				heading: null,
+				body: 'Patent deadlines are too important for that.',
+			},
+			{
+				heading: null,
+				body: 'A clear timeline also makes conversations with your patent attorney much more productive.',
+			},
+			{
+				heading: 'Why Patent Attorneys Start Planning International Filings Early',
+				body: 'International patent strategy involves more than translating an application and sending it to another country.',
+			},
+			{
+				heading: null,
+				body: 'Patent professionals need to consider priority, disclosure, jurisdiction-specific requirements, filing deadlines, prosecution strategy, and the commercial value of protection in different markets.',
+			},
+			{
+				heading: null,
+				body: "That's why the conversation about foreign filing often starts soon after the first application.",
+			},
+			{
+				heading: null,
+				body: 'The earlier an applicant identifies the countries that may matter, the more effectively the available time can be used.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'Filing a patent application in one country can be the first step toward a much broader protection strategy.',
+			},
+			{
+				heading: null,
+				body: 'But the first filing date is not simply a date to remember.',
+			},
+			{
+				heading: null,
+				body: 'It can become the foundation for priority claims in subsequent applications, subject to the applicable legal requirements.',
+			},
+			{
+				heading: null,
+				body: 'The months that follow can then be used to evaluate markets, refine the invention, consider international options, and decide where further protection makes commercial sense.',
+			},
+			{
+				heading: null,
+				body: 'The key is to start planning before the deadline is approaching.',
+			},
+			{
+				heading: null,
+				body: "I'd like to leave you with one question.",
+			},
+			{
+				heading: null,
+				body: 'If you filed a patent application tomorrow and later decided that the United States, Europe, or another market was important, would you already know what your next filing deadline would be?',
+			},
+			{
+				heading: null,
+				body: "If the answer is no, that's a conversation worth having before the first application is filed.",
+			},
+			{
+				heading: null,
+				body: "Because international patent strategy isn't simply about where you file.",
+			},
+			{
+				heading: null,
+				body: "It's also about when you file, what your first application discloses, and how that first filing supports everything that follows.",
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of priority claims and international filing considerations before filing a patent application. It is not legal advice. Filing strategies involving priority claims, PCT filings, and foreign filing requirements depend on the facts of each invention, the applicable laws of each jurisdiction, and professional legal advice.',
+			},
+		],
+	},
+	{
+		id: '15',
+		slug: 'common-patent-filing-mistakes-startups-can-avoid',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 6: Common Patent Filing Mistakes Startups Can Avoid',
+		date: '08/25/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'Most filing problems don\'t happen because an inventor lacks a good idea. They happen because the invention is shared too early, important details are left out, deadlines aren\'t tracked, or filing decisions are made without considering what comes next.',
+		heroImage: '/assets/stockimages/patent-filing-mistakes-fundamentals-1920-standard.png',
+		content: [
+			{
+				heading: null,
+				body: 'By now in the IP Fundamentals series, we\'ve looked at why timing matters, how priority dates work, why confidentiality is important, when information may become public, and how an initial filing can support an international patent strategy.',
+			},
+			{
+				heading: null,
+				body: 'That brings us to a more practical question.',
+			},
+			{
+				heading: null,
+				body: 'What can go wrong before a patent application is filed?',
+			},
+			{
+				heading: null,
+				body: 'For startups, the answer is often more than expected.',
+			},
+			{
+				heading: null,
+				body: 'Most filing problems don\'t happen because an inventor lacks a good idea. They happen because the invention is shared too early, important details are left out, deadlines aren\'t tracked, or filing decisions are made without considering what comes next.',
+			},
+			{
+				heading: null,
+				body: 'The good news is that many of these problems are avoidable.',
+			},
+			{
+				heading: null,
+				body: 'Here are some of the most common ones.',
+			},
+			{
+				heading: 'Mistake 1: Waiting Until the Product Is Finished',
+				body: 'One of the most common assumptions is: "We\'ll file once the product is complete." That sounds logical. But product development and patent strategy don\'t always follow the same timeline. A startup may spend months refining a product while the underlying invention is already developed enough to justify discussing patent protection. During that time, the invention could be demonstrated, discussed with potential customers, shared with manufacturers, or disclosed publicly. Waiting for the perfect final product can therefore create unnecessary risks.',
+			},
+			{
+				heading: null,
+				body: 'The better question isn\'t always: "Is the product finished?" It may be: "Is the invention sufficiently developed to support a meaningful patent filing strategy?"',
+			},
+			{
+				heading: 'Mistake 2: Disclosing the Invention Before Filing',
+				body: 'Startups need to communicate. They pitch investors. They demonstrate prototypes. They attend conferences. They speak with potential customers. They publish on websites and social media. These activities are part of building a business. But sharing technical details before filing can raise patentability concerns depending on the circumstances and jurisdiction.',
+			},
+			{
+				heading: null,
+				body: 'That\'s why disclosure planning should happen before the presentation, product launch, or public demonstration. If confidentiality is appropriate, use appropriate confidentiality arrangements. If public disclosure is planned, discuss the timing with your patent professional first. A few minutes of planning can be far more valuable than trying to solve a disclosure problem later.',
+			},
+			{
+				heading: 'Mistake 3: Filing Too Quickly With an Incomplete Disclosure',
+				body: 'Speed matters in patent filing. But speed and completeness are not the same thing. Some startups rush to file because they want to establish an early filing date. The application may describe the core concept but leave out important variations, alternative embodiments, different configurations, technical relationships, possible implementation methods, or improvements already under development.',
+			},
+			{
+				heading: null,
+				body: 'Later, the startup discovers that these additional features are important to the business. The problem is that simply adding new subject matter later doesn\'t necessarily allow that material to benefit from the earlier filing date. The initial application should therefore be prepared with the future protection strategy in mind.',
+			},
+			{
+				heading: 'Mistake 4: Treating the First Filing as a Placeholder',
+				body: 'This is closely related to the previous mistake. Some inventors think: "We\'ll just file something now and improve it later." There can be strategic reasons for filing early. But an early application shouldn\'t be treated as an empty placeholder. The first filing can become the foundation for future priority claims and international filings. What it properly discloses can therefore matter long after the filing date.',
+			},
+			{
+				heading: null,
+				body: 'Before filing, ask: What aspects of this invention might we want to protect later? That question can lead to a much more thoughtful first application.',
+			},
+			{
+				heading: 'Mistake 5: Ignoring the International Filing Timeline',
+				body: 'A startup may initially file in one country and only later begin thinking about international protection. Then the 12-month priority period starts moving toward its deadline. Suddenly, decisions about the United States, Europe, Asia, or other markets become urgent. International patent protection can involve significant costs. Startups therefore need time to evaluate where protection actually makes commercial sense.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Ask early:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Where will we sell?',
+							'Where will we manufacture?',
+							'Where are our competitors?',
+							'Which markets are strategically important?',
+							'What level of international protection can we support?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'International filing decisions are easier when they\'re planned before the deadline becomes urgent.',
+			},
+			{
+				heading: 'Mistake 6: Assuming an NDA Solves Everything',
+				body: 'An NDA can be an important confidentiality tool. But signing an NDA doesn\'t automatically solve every patent-related problem. The scope of the agreement matters. So does who receives the information, what is actually disclosed, and what happens afterward. An NDA also doesn\'t replace the need to think about filing strategy before making disclosures. Confidentiality arrangements and patent strategy should work together. They aren\'t substitutes for one another.',
+			},
+			{
+				heading: 'Mistake 7: Failing to Keep a Clear Invention Timeline',
+				body: 'Startups often have information scattered across emails, notebooks, project management systems, presentations, and development files. Months later, someone asks: "When exactly did we develop this feature?" Nobody is completely sure. A simple invention timeline can make a significant difference.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Record:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Major development milestones.',
+							'Significant improvements.',
+							'Prototype dates.',
+							'Testing dates.',
+							'Disclosure events.',
+							'Investor presentations.',
+							'Customer demonstrations.',
+							'Earlier patent filings.',
+							'Important changes to the invention.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'This gives your patent professional a clearer picture of how the invention developed.',
+			},
+			{
+				heading: 'Mistake 8: Thinking the Patent Application Is the End of the Process',
+				body: 'Filing the application can feel like the finish line. It isn\'t. After filing, there may be examination, office actions, amendments, responses, additional filings, international decisions, and other prosecution events. The way an application is prepared at the beginning can influence what happens later. That\'s why patent strategy should be viewed as a process rather than a single filing event.',
+			},
+			{
+				heading: null,
+				body: 'The goal isn\'t simply to get an application on file. It\'s to build a foundation that supports the business and its intellectual property strategy over time.',
+			},
+			{
+				heading: 'A Simple Pre-Filing Check',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Before submitting a patent application, a startup can ask:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Have we disclosed the invention publicly?',
+							'Have we documented who has seen it?',
+							'Are important technical variations included?',
+							'Have we considered where international protection may be needed?',
+							'Do we understand the relevant filing and priority deadlines?',
+							'Have we discussed the commercial importance of different markets?',
+							'Is our invention timeline clear?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'These questions don\'t replace professional legal advice. They simply help ensure that important conversations happen before the application is filed.',
+			},
+			{
+				heading: 'Why Patent Attorneys Ask So Many Questions',
+				body: 'By this point in the series, one pattern should be clear. Patent attorneys aren\'t only interested in the invention itself. They want to understand its history. When was it developed? Who saw it? What was disclosed? When was the first application filed? What additional features were developed afterward? Where does the business want protection?',
+			},
+			{
+				heading: null,
+				body: 'These questions help attorneys understand the risks and opportunities surrounding the filing. For startups, providing clear answers can make the patent process more efficient and the strategic discussions more productive.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'Startups move quickly. That\'s part of what makes them exciting. But intellectual property decisions sometimes require slowing down long enough to ask the right questions.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'A public disclosure that could have been avoided. A missing technical variation. A forgotten deadline. An incomplete first filing. A market considered too late. None of these necessarily reflect the quality of the underlying invention. They reflect decisions made around the invention. And many of those decisions can be planned for.',
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Before filing a patent application, don\'t ask only: "Are we ready to file?" Also ask: "Have we done everything necessary to make this filing a strong foundation for what comes next?" That question can change the way a startup approaches patent protection.',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of common filing mistakes and pre-filing considerations before submitting a patent application. It is not legal advice. Every invention is different, and the appropriate filing strategy depends on the specific facts, applicable laws, and professional legal advice.',
+			},
+		],
+	},
+	{
+		id: '16',
+		slug: 'what-patent-examiners-actually-look-for-during-examination',
+		category: 'IP Fundamentals',
+		title:
+			'IP Fundamentals | Part 7: What Patent Examiners Actually Look For During Examination',
+		date: '09/06/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			"Filing the application can feel like the finish line, but for a patent professional it's the beginning of another stage. This article explains what patent examiners actually look at — novelty, inventive step, clarity, support, disclosure, and prior art — and why an objection isn't necessarily bad news.",
+		heroImage: '/assets/stockimages/patent-examination-fundamentals-1920-standard.png',
+		content: [
+			{
+				heading: null,
+				body: 'In the previous article, we explored some of the common patent filing mistakes startups can avoid before an application is submitted.',
+			},
+			{
+				heading: null,
+				body: 'That naturally leads to another question.',
+			},
+			{
+				heading: null,
+				body: 'What happens once the application reaches the patent office?',
+			},
+			{
+				heading: null,
+				body: 'For many inventors, filing the application feels like the finish line.',
+			},
+			{
+				heading: null,
+				body: "For a patent professional, it's closer to the beginning of another stage.",
+			},
+			{
+				heading: null,
+				body: 'The application now has to go through examination.',
+			},
+			{
+				heading: null,
+				body: 'A patent examiner reviews the application against the applicable requirements and considers whether the claimed invention qualifies for protection.',
+			},
+			{
+				heading: null,
+				body: 'This can involve questions about novelty, inventive step, clarity, support, disclosure, and other formal or substantive requirements.',
+			},
+			{
+				heading: null,
+				body: 'Understanding what happens during examination can help inventors better understand why patent applications sometimes receive objections and why responding to them is more than simply correcting a few sentences.',
+			},
+			{
+				heading: "The Examiner Isn't Reviewing the Invention in Isolation",
+				body: 'An inventor naturally sees the invention from the perspective of the problem they solved.',
+			},
+			{
+				heading: null,
+				body: 'The examiner sees something different.',
+			},
+			{
+				heading: null,
+				body: 'The examiner is looking at the patent application and the claims made within it.',
+			},
+			{
+				heading: null,
+				body: 'That means the examination isn\'t simply: "Is this a good invention?"',
+			},
+			{
+				heading: null,
+				body: 'It is closer to: "Does this application satisfy the requirements for granting a patent?"',
+			},
+			{
+				heading: null,
+				body: 'This distinction is important.',
+			},
+			{
+				heading: null,
+				body: 'A commercially valuable product can still face patentability objections.',
+			},
+			{
+				heading: null,
+				body: 'Likewise, an invention that appears simple to its creator may contain patentable subject matter when properly defined.',
+			},
+			{
+				heading: null,
+				body: 'The examination focuses on what has been claimed and how the application supports those claims.',
+			},
+			{
+				heading: 'What Does a Patent Examiner Look At?',
+				body: 'The exact examination process varies by patent office and jurisdiction, but several fundamental questions commonly arise.',
+			},
+			{
+				heading: null,
+				body: '**Is the claimed invention new?** The examiner may search for earlier disclosures that describe the same invention or relevant features. If the claimed subject matter has already been disclosed, novelty can become an issue. This is why the filing and disclosure timeline discussed in the earlier articles matters.',
+			},
+			{
+				heading: null,
+				body: "**Does the invention involve an inventive step?** Being new isn't always enough. An examiner may also consider whether the claimed invention represents more than an obvious development of what was already known. This assessment can involve comparing the claimed invention with one or more earlier disclosures and considering whether the claimed differences would have been obvious to a person skilled in the relevant field. The terminology differs between jurisdictions, but the underlying question is important: Is there enough technical distinction to justify patent protection?",
+			},
+			{
+				heading: null,
+				body: "**Are the claims clear?** Claims define what the applicant is asking the patent office to protect. If a claim is unclear, ambiguous, overly broad, or otherwise fails to meet applicable requirements, the examiner may raise an objection. This is one reason claim drafting requires careful attention. A technically sophisticated invention doesn't automatically result in clear claims.",
+			},
+			{
+				heading: null,
+				body: '**Are the claims supported by the application?** The claims cannot simply describe whatever protection the applicant wishes to obtain. The application needs to provide appropriate support and disclosure for the claimed subject matter under the applicable legal requirements. This is particularly important when an applicant attempts to claim a broad range of variations around the original invention. The more broadly an invention is claimed, the more important the underlying disclosure becomes.',
+			},
+			{
+				heading: null,
+				body: "**Does the application adequately disclose the invention?** A patent application generally needs to explain the invention sufficiently for the relevant legal requirements to be satisfied. The examiner may therefore consider whether the description provides enough information about the invention and its implementation. This is another reason why a strong patent application isn't simply a collection of claims. The description, drawings, claims, and other parts of the application need to work together.",
+			},
+			{
+				heading: 'Prior Art Is a Major Part of Examination',
+				body: 'One of the most important parts of patent examination is the consideration of prior art.',
+			},
+			{
+				heading: null,
+				body: 'Prior art can include information that was available before the relevant date under the applicable rules.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'This may include:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Earlier patent publications.',
+							'Scientific or technical publications.',
+							'Publicly available products or technologies.',
+							'Conference materials.',
+							'Online disclosures.',
+							'Other publicly accessible technical information.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'The examiner may identify documents or disclosures that are relevant to the claimed invention.',
+			},
+			{
+				heading: null,
+				body: 'The applicant and patent professional then need to understand what those references actually disclose and how they relate to the claims.',
+			},
+			{
+				heading: null,
+				body: "Finding a prior-art reference doesn't necessarily mean the application is finished.",
+			},
+			{
+				heading: null,
+				body: 'The significance of the reference depends on what it discloses and how it relates to the claimed subject matter.',
+			},
+			{
+				heading: "An Objection Isn't Necessarily Bad News",
+				body: 'Many inventors become concerned when they receive an examination report containing objections.',
+			},
+			{
+				heading: null,
+				body: "That's understandable.",
+			},
+			{
+				heading: null,
+				body: 'But an objection is not automatically the same thing as a final failure.',
+			},
+			{
+				heading: null,
+				body: 'Patent examination is often an iterative process.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'An examiner may identify issues with:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Novelty.',
+							'Inventive step.',
+							'Claim clarity.',
+							'Support.',
+							'Sufficiency of disclosure.',
+							'Formal requirements.',
+							'Other jurisdiction-specific requirements.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: "The applicant may then have an opportunity to respond, amend the claims where legally permissible, provide arguments, or otherwise address the examiner's concerns.",
+			},
+			{
+				heading: null,
+				body: 'The important point is to understand *why* the objection was raised before deciding how to respond.',
+			},
+			{
+				heading: 'Why the Claims Often Become the Centre of the Discussion',
+				body: 'Imagine an application describes a sophisticated machine with ten different technical features.',
+			},
+			{
+				heading: null,
+				body: 'The examiner may identify prior art that already discloses eight of them.',
+			},
+			{
+				heading: null,
+				body: 'The remaining two features may be where the real discussion begins.',
+			},
+			{
+				heading: null,
+				body: "The applicant's patent professional may need to determine whether those distinguishing features are properly supported in the application and whether the claims can be appropriately amended or argued.",
+			},
+			{
+				heading: null,
+				body: "This is why patent prosecution isn't simply about defending the invention.",
+			},
+			{
+				heading: null,
+				body: "It's about determining what scope of protection can properly be supported by the application in light of the prior art and applicable requirements.",
+			},
+			{
+				heading: 'Where Patent Drawings Fit In',
+				body: 'Patent drawings are not simply decorative illustrations added to make an application easier to read.',
+			},
+			{
+				heading: null,
+				body: 'Where drawings are required or useful to understand the invention, they form part of the technical disclosure and need to correspond properly with the description and claims.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'During examination and prosecution, inconsistencies can create unnecessary questions. For example:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A component appears in one figure but not another.',
+							"Reference numerals don't correspond with the description.",
+							"A feature described in the claims isn't clearly represented where a drawing is relied upon.",
+							'Different figures show inconsistent configurations.',
+							'A drawing contains unnecessary or ambiguous details.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Good patent illustrations therefore support the broader application rather than existing separately from it.',
+			},
+			{
+				heading: null,
+				body: 'This is one reason accuracy and consistency matter throughout the drafting and prosecution process.',
+			},
+			{
+				heading: 'A Practical Habit for Inventors',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'When preparing for patent examination, inventors can help their patent professional by maintaining clear records of:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'The technical problem being solved.',
+							'The key features that make the invention different.',
+							'Alternative embodiments.',
+							'Important technical improvements.',
+							'Earlier versions of the invention.',
+							'Relevant testing and validation.',
+							'Prior art already identified during development.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: "These records don't replace the patent professional's analysis.",
+			},
+			{
+				heading: null,
+				body: 'They provide context.',
+			},
+			{
+				heading: null,
+				body: 'The inventor understands the technology deeply.',
+			},
+			{
+				heading: null,
+				body: 'The patent professional understands how that technology needs to be presented and protected within the patent system.',
+			},
+			{
+				heading: null,
+				body: 'Keeping both perspectives connected can make prosecution discussions much more productive.',
+			},
+			{
+				heading: "Why Patent Attorneys Study the Examiner's Objections Carefully",
+				body: 'When an examination report arrives, the easiest reaction can be to start drafting a response immediately.',
+			},
+			{
+				heading: null,
+				body: 'Experienced patent professionals first try to understand the underlying issue.',
+			},
+			{
+				heading: null,
+				body: 'What exactly has the examiner identified?',
+			},
+			{
+				heading: null,
+				body: 'Which claim is affected?',
+			},
+			{
+				heading: null,
+				body: 'What does the cited prior art actually disclose?',
+			},
+			{
+				heading: null,
+				body: 'Is the objection based on the claim language, the specification, the drawings, or another requirement?',
+			},
+			{
+				heading: null,
+				body: 'Can the issue be addressed through argument?',
+			},
+			{
+				heading: null,
+				body: 'Would an amendment be appropriate?',
+			},
+			{
+				heading: null,
+				body: 'Does the proposed amendment remain supported by the application?',
+			},
+			{
+				heading: null,
+				body: 'These questions help determine the right response rather than simply responding to every objection mechanically.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: "Patent examination isn't a simple test of whether an invention is good or bad.",
+			},
+			{
+				heading: null,
+				body: "It's a structured evaluation of whether the application and its claims satisfy the requirements for patent protection.",
+			},
+			{
+				heading: null,
+				body: "That's why a patent application doesn't stop being important once it has been filed.",
+			},
+			{
+				heading: null,
+				body: 'The quality of the original disclosure, the clarity of the claims, the consistency of the drawings, and the way the application responds to prior art can all become important during prosecution.',
+			},
+			{
+				heading: null,
+				body: 'For inventors, understanding this process makes examination less mysterious.',
+			},
+			{
+				heading: null,
+				body: 'For patent professionals, it reinforces an important principle:',
+			},
+			{
+				heading: null,
+				body: '**A patent application should be drafted not only with filing in mind, but with examination in mind.**',
+			},
+			{
+				heading: null,
+				body: "I'd like to leave you with one question.",
+			},
+			{
+				heading: null,
+				body: '**If your patent application received an examination report tomorrow, would you understand what the examiner was actually asking you to address?**',
+			},
+			{
+				heading: null,
+				body: 'Knowing what happens during examination is the first step toward having a more informed conversation about how to respond.',
+			},
+			{
+				heading: null,
+				body: 'Because getting a patent application filed is important.',
+			},
+			{
+				heading: null,
+				body: 'But understanding what happens *after filing* is where the next part of the patent journey begins.',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of patent examination and the requirements examiners commonly assess when reviewing a patent application. It is not legal advice. Every invention is different, and the appropriate filing strategy depends on the specific facts, applicable laws, and professional legal advice.',
 			},
 		],
 	},

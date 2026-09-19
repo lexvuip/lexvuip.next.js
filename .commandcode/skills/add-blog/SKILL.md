@@ -40,6 +40,50 @@ Each entry in `src/data/blogs.js` follows this exact shape:
 }
 ```
 
+### Content sections: `body` vs `blocks`
+
+A section may use either `body` (a plain paragraph string) or `blocks` (an array of typed blocks). Use `blocks` whenever a section needs a list or mixed content.
+
+**`blocks` schema** — supported block types:
+
+```javascript
+// Paragraph block (same rendering as `body`, with **bold** and *italic* support)
+{ type: 'paragraph', text: 'Intro sentence before the list...' }
+
+// Bullet list block
+{ type: 'list', ordered: false, items: [
+    'First item — **bold** and *italic* work inside items',
+    'Second item',
+] }
+
+// Numbered list block
+{ type: 'list', ordered: true, items: [
+    'First step',
+    'Second step',
+] }
+```
+
+A section with a lead-in sentence followed by a list uses multiple blocks under one heading:
+
+```javascript
+{
+    heading: 'A Practical Habit for Inventors',
+    blocks: [
+        { type: 'paragraph', text: 'Consider documenting:' },
+        { type: 'list', ordered: false, items: [
+            'The original concept date.',
+            'Prototype milestones.',
+            'Public demonstrations.',
+        ] },
+    ],
+}
+```
+
+**Rules:**
+- Do NOT use literal `•` or `→` characters inside `body` strings — use a `list` block instead. The renderer treats them as plain text.
+- Do NOT use `\n\n` inside `body` to fake separate paragraphs — the browser collapses newlines. Use separate content sections or separate blocks.
+- `body` remains valid for plain paragraphs and is still supported.
+
 ### Categories (use existing)
 `Insights`, `Patent Strategy`, `Trademark`, `Process`, `IP Fundamentals`, `Updates`.
 
