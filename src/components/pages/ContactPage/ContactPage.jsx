@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import './ContactPage.css';
 import Footer from '../../layout/Footer';
+import BookingSection from './BookingSection';
 
 function ContactPage() {
 	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
@@ -149,6 +150,8 @@ function ContactPage() {
 					</div>
 				</div>
 			</section>
+
+			{isIndia && <BookingSection />}
 
 			<section className="contact-cta-section">
 				<div className="cta-content">
