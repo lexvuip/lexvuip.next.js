@@ -8,7 +8,7 @@ import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
 import Counter from '../../ui/Counter';
-import { ipServices, paralegalServices, customServices } from '../../../data/services';
+import { ipServices, paralegalServices, customServices, patentProtectionServices, brandCreativeProtectionServices, enforcementStrategyServices, advisoryServicesData } from '../../../data/services';
 
 const TestimonialSection = dynamic(
 	() => import('../../sections/TestimonialSection'),
@@ -36,15 +36,19 @@ function ServicesPage() {
 			<section className="services-hero-section">
 				<div className="services-hero-content">
 					<h1 className="services-hero-title">
-						{isIndia ? 'Patent Filing & IP Services' : 'Patent Drawings & Paralegal Services'}
+						{isIndia ? 'Comprehensive IP & Legal Services' : 'Patent Drawings & Paralegal Services'}
 						<br />
-						for <span className="italic">IP Attorneys</span> {isIndia ? 'in India & ' : ''}Worldwide
+						{isIndia ? "for India's Innovators" : <>for <span className="italic">IP Attorneys</span> Worldwide</>}
 					</h1>
+					{isIndia && (
+						<p className="services-hero-tagline">
+							Built for startups, inventors, individual innovators, and educational institutions.
+						</p>
+					)}
 					<p className="services-hero-description">
-						For more than 25 years, we've partnered with intellectual property
-						professionals through their most critical cases—delivering precise,
-						compliant IP support, strengthening patent and trademark filings, and
-						helping shape the future of innovation protection.
+						{isIndia
+							? 'From patent prosecution to drawings, trademark filing to litigation support, our team is trained across the full IP lifecycle. We deliver precise, compliant IP support fast, accurate, and always aligned with your strategy.'
+							: 'For more than 25 years, we\'ve partnered with intellectual property professionals through their most critical cases—delivering precise, compliant IP support, strengthening patent and trademark filings, and helping shape the future of innovation protection.'}
 					</p>
 					<div className="services-hero-actions">
 						<Button href="/contact" arrow>Get In Touch</Button>
@@ -157,18 +161,22 @@ function ServicesPage() {
 								<span className="luxury-label">STRATEGIC IMPACT</span>
 							</div>
 							<h2 className="impact-title">
-								<span className="italic-serif">Protecting</span> Innovation, 
-								Strengthening Filings, and Delivering IP Excellence.
+								{isIndia ? (
+									<>Full-Spectrum IP Protection <span className="italic-serif">Built</span> Around Your Success.</>
+								) : (
+									<><span className="italic-serif">Protecting</span> Innovation, Strengthening Filings, and Delivering IP Excellence.</>
+								)}
 							</h2>
 							<div className="impact-description">
 								<p>
-									We help patent attorneys and IP law firms safeguard their clients' 
-									innovations with strategic clarity. Every {isIndia ? 'application' : 'drawing'}, trademark rendering, 
-									and filing meets the highest {isIndia ? 'national and international' : 'global'} standards.
+									{isIndia
+										? 'From patent prosecution to drawings, trademark filing to litigation support, we deliver end-to-end IP services tailored for the Indian innovation ecosystem — startups, inventors, and institutions alike.'
+										: 'We help patent attorneys and IP law firms safeguard their clients\' innovations with strategic clarity. Every drawing, trademark rendering, and filing meets the highest global standards.'}
 								</p>
 								<p>
-									With 25+ years of specialized expertise, we handle the technical 
-									and procedural details so you can focus on winning approvals.
+									{isIndia
+										? 'With 25+ years of specialized expertise, we handle the technical and procedural details so you can focus on building and protecting your innovation.'
+										: 'With 25+ years of specialized expertise, we handle the technical and procedural details so you can focus on winning approvals.'}
 								</p>
 							</div>
 							<div className="impact-cta">
@@ -188,76 +196,198 @@ function ServicesPage() {
 							<span className="luxury-label">SERVICE CATALOG</span>
 							<span className="gold-line"></span>
 						</div>
-						<h2 className="catalog-main-title">Comprehensive Legal Support</h2>
+						<h2 className="catalog-main-title">
+							{isIndia ? 'Comprehensive IP & Legal Services' : 'Comprehensive Legal Support'}
+						</h2>
 					</div>
 
-					{/* Paralegal Solutions Category */}
-					{paralegalServices.length > 0 && (
-						<div className="service-category-group">
-							<div className="category-header">
-								<h3 className="category-title">Paralegal <span className="italic-serif">Solutions</span></h3>
-								<div className="category-line"></div>
-							</div>
-							
-						<div className="services-grid-luxury">
-							{paralegalServices.map((service, idx) => (
-								<ServiceCard
-									key={idx}
-									image={service.image}
-									title={service.title}
-									desc={service.description}
-									href={`/service/paralegalsolutions/${service.slug}`}
-								/>
-							))}
-						</div>
-						</div>
-					)}
+					{isIndia ? (
+						<>
+							{/* A. Patent Protection */}
+							{patentProtectionServices.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">Patent <span className="italic-serif">Protection</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{patentProtectionServices.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/ipsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
 
-					{/* IP Solutions Category */}
-					{ipServices.length > 0 && (
-						<div className="service-category-group">
-							<div className="category-header">
-								<h3 className="category-title">IP <span className="italic-serif">Solutions</span></h3>
-								<div className="category-line"></div>
-							</div>
-							
-						<div className="services-grid-luxury">
-							{ipServices.map((service, idx) => (
-								<ServiceCard
-									key={idx}
-									image={service.image}
-									title={service.title}
-									desc={service.description}
-									href={`/service/ipsolutions/${service.slug}`}
-								/>
-							))}
-						</div>
-						</div>
-					)}
+							{/* B. Brand & Creative Protection */}
+							{brandCreativeProtectionServices.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">Brand & Creative <span className="italic-serif">Protection</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{brandCreativeProtectionServices.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/ipsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
 
-					{/* Custom Solutions Category */}
-					{customServices.length > 0 && (
-						<div className="service-category-group">
-							<div className="category-header">
-								<h3 className="category-title">Custom <span className="italic-serif">Solutions</span></h3>
-								<div className="category-line"></div>
-							</div>
-							
-						<div className="services-grid-luxury">
-							{customServices.map((service, idx) => (
-								<ServiceCard
-									key={idx}
-									image={service.image}
-									title={service.title}
-									desc={service.description}
-									href={`/service/customsolutions/${service.slug}`}
-								/>
-							))}
-						</div>
-						</div>
+							{/* C. Enforcement & Strategy */}
+							{enforcementStrategyServices.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">Enforcement & <span className="italic-serif">Strategy</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{enforcementStrategyServices.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/ipsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
+
+							{/* D. Advisory Services */}
+							{advisoryServicesData.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">Advisory <span className="italic-serif">Services</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{advisoryServicesData.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/ipsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
+						</>
+					) : (
+						<>
+							{/* Paralegal Solutions Category */}
+							{paralegalServices.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">Paralegal <span className="italic-serif">Solutions</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{paralegalServices.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/paralegalsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
+
+							{/* IP Solutions Category */}
+							{ipServices.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">IP <span className="italic-serif">Solutions</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{ipServices.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/ipsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
+
+							{/* Custom Solutions Category */}
+							{customServices.length > 0 && (
+								<div className="service-category-group">
+									<div className="category-header">
+										<h3 className="category-title">Custom <span className="italic-serif">Solutions</span></h3>
+										<div className="category-line"></div>
+									</div>
+									<div className="services-grid-luxury">
+										{customServices.map((service, idx) => (
+											<ServiceCard
+												key={idx}
+												image={service.image}
+												title={service.title}
+												desc={service.description}
+												href={`/service/customsolutions/${service.slug}`}
+											/>
+										))}
+									</div>
+								</div>
+							)}
+						</>
 					)}
 				</div>
 			</section>
+
+			{/* Who We Serve - India only */}
+			{isIndia && (
+				<section className="who-we-serve-section">
+					<div className="who-we-serve-container">
+						<div className="luxury-label-group central">
+							<span className="gold-line"></span>
+							<span className="luxury-label">WHO WE SERVE</span>
+							<span className="gold-line"></span>
+						</div>
+						<h2 className="who-we-serve-title">
+							Built for India's <span className="italic-serif">Innovation</span> Ecosystem
+						</h2>
+						<div className="who-we-serve-grid">
+							<div className="who-we-serve-card">
+								<h3>Startups</h3>
+								<p>Portfolio strategy, fast filing turnarounds, and advisory support that scales with you.</p>
+							</div>
+							<div className="who-we-serve-card">
+								<h3>Inventors & Individual Innovators</h3>
+								<p>Guidance from first disclosure to granted patent, without the jargon.</p>
+							</div>
+							<div className="who-we-serve-card">
+								<h3>Educational Institutions</h3>
+								<p>Support for research commercialization, student and faculty inventions, and institutional IP policy.</p>
+							</div>
+						</div>
+						<div className="who-we-serve-cta">
+							<Button href="/contact">Request a Consultation</Button>
+						</div>
+					</div>
+				</section>
+			)}
 
 			<TestimonialSection />
 			<FAQSection />

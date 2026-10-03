@@ -63,4 +63,29 @@ export const paralegalFaqs = [
 	},
 ];
 
-export const defaultFaqs = ipFaqs;
+export const indiaFaqs = [
+	{
+		question: 'Do you handle patent filing and prosecution, or only patent drawings, in India?',
+		answer:
+			'Our India practice offers full-service patent filing and prosecution before the Indian Patent Office, in addition to our core patent drawing services — so your application, drawings, and prosecution strategy are handled under one roof.',
+	},
+	{
+		question: 'Can you help with international filings if I only need protection in India, or vice versa?',
+		answer:
+			'Yes. We support cross-border IP protection including PCT national phase entry into India and outbound filing strategy for Indian innovators seeking protection abroad.',
+	},
+	{
+		question: 'Do you work with startups and individual inventors, or only law firms?',
+		answer:
+			'Both. Alongside our attorney and law-firm clients, LexVuIP India works directly with startups, individual inventors, and educational institutions on patents, designs, trademarks, and copyrights.',
+	},
+	{
+		question: 'What is the difference between LexVuIP.com and LexVuIP.in?',
+		answer:
+			'LexVuIP.com serves attorneys globally with patent drawings and paralegal support. LexVuIP.in is our India branch, offering full-service patent filing, prosecution, trademark and copyright registration, IP litigation, and business advisory directly for Indian startups, inventors, and institutions, alongside our continued drawing and paralegal support.',
+	},
+];
+
+const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+
+export const defaultFaqs = region === 'IN' ? indiaFaqs : ipFaqs;

@@ -177,7 +177,7 @@ const indianIpServices = [
 		slug: 'patent-filing',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'Patent Filing',
-		description: 'Comprehensive patent drafting and filing services tailored for the Indian jurisdiction.',
+		description: 'End-to-end patent application drafting and filing before the Indian Patent Office — provisional and complete specifications, claims drafting, and Form filings, backed by our in-house patent drawing expertise for a seamless drawing-to-filing workflow.',
 		content: {
 			valueProp: 'Securing your inventions with robust patent protection in India.',
 			primaryKeywords: ['Indian patent filing', 'patent drafting India', 'Indian Patent Office'],
@@ -192,7 +192,7 @@ const indianIpServices = [
 		slug: 'industrial-design-protection',
 		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
 		title: 'Industrial Design Protection',
-		description: 'Protecting the aesthetic and visual aspects of your products in India.',
+		description: 'Registration of industrial designs before the Design Office, Kolkata, including novelty assessment, representation sheets, and classification — with the same precision drawing standards we\'ve applied for USPTO filings for 25+ years.',
 		content: {
 			valueProp: 'Ensuring your unique product designs are protected from infringement.',
 			primaryKeywords: ['Industrial design registration India', 'design protection', 'design patent India'],
@@ -204,10 +204,25 @@ const indianIpServices = [
 		}
 	},
 	{
+		slug: 'intellectual-property-prosecution',
+		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
+		title: 'IP Prosecution',
+		description: 'Responding to examination reports, hearings, and office actions across patent, design, and trademark matters — keeping applications moving toward grant with strategic, timely responses.',
+		content: {
+			valueProp: 'Expert handling of the entire IP lifecycle from filing to grant.',
+			primaryKeywords: ['IP prosecution India', 'patent prosecution', 'trademark prosecution'],
+			pillars: [
+				'Attending hearings at the IP office.',
+				'Filing responses to office actions.',
+				'Maintaining and renewing IP portfolios.'
+			]
+		}
+	},
+	{
 		slug: 'trademark-registration',
 		image: '/assets/stockimages/trademarkdesign-1920.webp',
 		title: 'Trademark Registration',
-		description: 'Securing brand identity with trademark registration across all classes in India.',
+		description: 'Search, clearance, application, and prosecution support for word marks, logos, and device marks before the Trade Marks Registry — protecting your brand identity from day one.',
 		content: {
 			valueProp: 'Protecting your brand name, logo, and identity.',
 			primaryKeywords: ['Trademark registration India', 'brand protection', 'trademark filing'],
@@ -222,7 +237,7 @@ const indianIpServices = [
 		slug: 'copyrights-filing',
 		image: '/assets/stockimages/complianceSupport-1920.webp',
 		title: 'Copyrights Filing',
-		description: 'Protecting original literary, dramatic, musical, and artistic works.',
+		description: 'Registration support for literary, artistic, software, and creative works before the Copyright Office, New Delhi — securing authorship and ownership rights.',
 		content: {
 			valueProp: 'Securing legal rights for your creative content.',
 			primaryKeywords: ['Copyright registration India', 'software copyright', 'creative work protection'],
@@ -234,25 +249,10 @@ const indianIpServices = [
 		}
 	},
 	{
-		slug: 'intellectual-property-prosecution',
-		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
-		title: 'Intellectual Property Prosecution',
-		description: 'End-to-end prosecution of IP rights before the Indian intellectual property offices.',
-		content: {
-			valueProp: 'Expert handling of the entire IP lifecycle from filing to grant.',
-			primaryKeywords: ['IP prosecution India', 'patent prosecution', 'trademark prosecution'],
-			pillars: [
-				'Attending hearings at the IP office.',
-				'Filing responses to office actions.',
-				'Maintaining and renewing IP portfolios.'
-			]
-		}
-	},
-	{
 		slug: 'ip-litigation',
 		image: '/assets/stockimages/trailPreparation-1920.webp',
 		title: 'IP Litigation',
-		description: 'Enforcing IP rights and defending against infringement claims in Indian courts.',
+		description: 'Support for opposition, cancellation, and infringement proceedings — protecting your rights when they\'re challenged, and asserting them when others infringe.',
 		content: {
 			valueProp: 'Robust legal representation in IP disputes.',
 			primaryKeywords: ['IP litigation India', 'patent infringement India', 'trademark dispute'],
@@ -264,10 +264,25 @@ const indianIpServices = [
 		}
 	},
 	{
+		slug: 'international-ip-protection',
+		image: '/assets/stockimages/trademarkdesign-1920.webp',
+		title: 'International IP Protection',
+		description: 'Cross-border filing strategy for Indian innovators seeking protection abroad, and for international clients filing in India — including PCT national phase entry and coordination with our global patent drawing practice.',
+		content: {
+			valueProp: 'Taking your IP global with strategic international filings.',
+			primaryKeywords: ['PCT filing India', 'Madrid protocol India', 'international patent'],
+			pillars: [
+				'Filing international patent applications under PCT.',
+				'Filing international trademarks under the Madrid Protocol.',
+				'Coordinating with foreign associates for national phase entries.'
+			]
+		}
+	},
+	{
 		slug: 'startup-business-advisory',
 		image: '/assets/stockimages/customworkflow-1920.webp',
 		title: 'Startup & Business Advisory',
-		description: 'Strategic IP advisory tailored for startups to maximize valuation and protect core assets.',
+		description: 'Practical IP strategy for early-stage companies — portfolio planning, freedom-to-operate considerations, and guidance on building IP into your business and fundraising strategy.',
 		content: {
 			valueProp: 'Aligning IP strategy with business goals for startups.',
 			primaryKeywords: ['Startup IP strategy', 'IP valuation', 'IP advisory India'],
@@ -282,7 +297,7 @@ const indianIpServices = [
 		slug: 'legal-consultant',
 		image: '/assets/stockimages/lawer-1920.webp',
 		title: 'Legal Consultant',
-		description: 'Comprehensive legal consulting for IP and technology matters.',
+		description: 'General legal consultation for founders, inventors, and institutions navigating IP and business decisions — a single point of contact for the questions that don\'t fit neatly into one filing type.',
 		content: {
 			valueProp: 'Expert legal guidance for complex IP challenges.',
 			primaryKeywords: ['IP legal consultant', 'technology law India', 'IP strategy'],
@@ -292,23 +307,22 @@ const indianIpServices = [
 				'Providing freedom-to-operate (FTO) opinions.'
 			]
 		}
-	},
-	{
-		slug: 'international-ip-protection',
-		image: '/assets/stockimages/trademarkdesign-1920.webp',
-		title: 'International IP Protection',
-		description: 'Extending Indian IP protection globally via PCT, Madrid Protocol, and direct filings.',
-		content: {
-			valueProp: 'Taking your IP global with strategic international filings.',
-			primaryKeywords: ['PCT filing India', 'Madrid protocol India', 'international patent'],
-			pillars: [
-				'Filing international patent applications under PCT.',
-				'Filing international trademarks under the Madrid Protocol.',
-				'Coordinating with foreign associates for national phase entries.'
-			]
-		}
 	}
 ];
+
+// India service categories (A/B/C/D)
+const indianPatentProtection = indianIpServices.filter(s =>
+	['patent-filing', 'industrial-design-protection', 'intellectual-property-prosecution'].includes(s.slug)
+);
+const indianBrandCreativeProtection = indianIpServices.filter(s =>
+	['trademark-registration', 'copyrights-filing'].includes(s.slug)
+);
+const indianEnforcementStrategy = indianIpServices.filter(s =>
+	['ip-litigation', 'international-ip-protection'].includes(s.slug)
+);
+const indianAdvisoryServices = indianIpServices.filter(s =>
+	['startup-business-advisory', 'legal-consultant'].includes(s.slug)
+);
 
 // Determine region at runtime or build time
 const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
@@ -316,3 +330,9 @@ const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
 export const ipServices = region === 'IN' ? indianIpServices : globalIpServices;
 export const paralegalServices = region === 'IN' ? [] : globalParalegalServices;
 export const customServices = region === 'IN' ? [] : globalCustomServices;
+
+// India-specific category exports
+export const patentProtectionServices = region === 'IN' ? indianPatentProtection : [];
+export const brandCreativeProtectionServices = region === 'IN' ? indianBrandCreativeProtection : [];
+export const enforcementStrategyServices = region === 'IN' ? indianEnforcementStrategy : [];
+export const advisoryServicesData = region === 'IN' ? indianAdvisoryServices : [];

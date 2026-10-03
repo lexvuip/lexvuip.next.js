@@ -40,7 +40,7 @@ export const navLinks = [
 		label: 'Services',
 		sections: servicesSections
 	},
-	{ href: '/#faq', label: 'FAQ' },
+	{ href: '/founder', label: 'Founder' },
 	{ href: '/security', label: 'Security' },
 	{ href: '/blog', label: 'Blog' },
 	{ href: '/contact', label: 'Contact Us' }

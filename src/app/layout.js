@@ -3,7 +3,6 @@ import "./globals.css";
 import NavBar from "../components/layout/NavBar";
 import FloatingCallButton from "../components/ui/FloatingCallButton";
 import DisclaimerPopup from "../components/ui/DisclaimerPopup";
-import ComingSoonPage from "../components/pages/ComingSoonPage";
 import CustomCursor from "../components/ui/CustomCursor/CustomCursor";
 
 const playfair = Playfair_Display({
@@ -47,7 +46,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const isIndia = region === 'IN';
 
   return (
     <html lang="en">
@@ -58,16 +56,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${playfair.variable} ${manrope.variable}`} suppressHydrationWarning>
         <CustomCursor />
-        {isIndia ? (
-          <ComingSoonPage />
-        ) : (
-          <>
-            <DisclaimerPopup />
-            <NavBar />
-            {children}
-            <FloatingCallButton />
-          </>
-        )}
+        <DisclaimerPopup />
+        <NavBar />
+        {children}
+        <FloatingCallButton />
       </body>
     </html>
   );

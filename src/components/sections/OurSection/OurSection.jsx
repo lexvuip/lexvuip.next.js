@@ -54,15 +54,54 @@ const indianServices = [
 		number: 1,
 		title: (
 			<>
-				Comprehensive <em>IP Solutions</em> for Innovators in India
+				<em>Patent Filing</em> & Prosecution
 			</>
 		),
 		description:
-			'From Patent Filing and Industrial Design Protection to comprehensive Trademark Registration and IP Litigation, we deliver end-to-end intellectual property services tailored for the Indian jurisdiction to secure and enforce your rights.',
+			'Complete drafting, filing, and prosecution support before the Indian Patent Office, from provisional specification through grant.',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
-		alt: 'Comprehensive patent and trademark services in India',
+		alt: 'Patent filing and prosecution services at the Indian Patent Office',
 		href: '/service/ipsolutions',
-	}
+	},
+	{
+		number: 2,
+		title: (
+			<>
+				<em>Trademark</em> & Copyright Protection
+			</>
+		),
+		description:
+			'Registration and enforcement support for brand names, logos, and creative works across India.',
+		image: '/assets/stockimages/trademarkdesign-1920.webp',
+		alt: 'Trademark and copyright registration services in India',
+		href: '/service/ipsolutions',
+	},
+	{
+		number: 3,
+		title: (
+			<>
+				<em>Design Application</em> Filing
+			</>
+		),
+		description:
+			'Preparation and filing of industrial design applications before the Design Office, Kolkata, with drawing sheets that meet classification and novelty requirements.',
+		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
+		alt: 'Industrial design application filing before the Design Office Kolkata',
+		href: '/service/ipsolutions',
+	},
+	{
+		number: 4,
+		title: (
+			<>
+				<em>IP Litigation</em> & Business Advisory
+			</>
+		),
+		description:
+			'Enforcement, opposition, and infringement support paired with practical legal and business counsel for growing ventures.',
+		image: '/assets/stockimages/trailPreparation-1920.webp',
+		alt: 'IP litigation and business advisory services in India',
+		href: '/service/ipsolutions',
+	},
 ];
 
 const services = region === 'IN' ? indianServices : globalServices;
@@ -176,7 +215,7 @@ function OurSection() {
 			<div className="our-container">
 				<div className="our-label">Our Services</div>
 				<h2 className="our-title">
-					{region === 'IN' ? '"Comprehensive IP protection tailored to Indian standards – built around your success"' : '"Paralegal Support and Practical IP across the spectrum – built around your success"'}
+					{region === 'IN' ? '"Full-Spectrum IP Protection Built Around Your Success, From Drawing to Filing to Enforcement"' : '"Paralegal Support and Practical IP across the spectrum – built around your success"'}
 				</h2>
 				<div className="our-services-list" ref={listRef}>
 					{services.map((service, idx) => (
