@@ -45,10 +45,6 @@ function ContactPage() {
 					</div>
 				</div>
 
-				<div className="hero-scroll-indicator">
-					<span className="scroll-text">Scroll</span>
-					<div className="scroll-line"></div>
-				</div>
 			</section>
 
 			<section className="contact-main-section">
@@ -71,7 +67,7 @@ function ContactPage() {
 					<div className="contact-info-section">
 						<div className="info-header">
 							<div className="info-label">Direct Reach</div>
-							<h2>Global <span className="italic-serif">Headquarters</span></h2>
+							<h2>{isIndia ? 'India ' : 'Global '}<span className="italic-serif">Headquarters</span></h2>
 						</div>
 						
 						<div className="contact-info-cards">
