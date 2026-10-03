@@ -3,6 +3,7 @@
 	background: var(--color-ivory);
 	position: relative;
 	z-index: 10;
+	scroll-margin-top: calc(80px + var(--space-md));
 }
 
 .booking-container {

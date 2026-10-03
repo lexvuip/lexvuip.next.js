@@ -9,6 +9,8 @@ import Button from '../../ui/Button';
 
 function MobileMenu() {
 	const { mobileMenuOpen, closeMobileMenu } = useNavContext();
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
 	const [ipSolutionsOpen, toggleIpSolutions, setIpSolutionsOpen] = useToggle();
 	const [paralegalSolutionsOpen, toggleParalegalSolutions, setParalegalSolutionsOpen] = useToggle();
 	const [customSolutionsOpen, toggleCustomSolutions, setCustomSolutionsOpen] = useToggle();
@@ -35,7 +37,7 @@ function MobileMenu() {
 	const servicesLink = navLinks.find(link => link.label === 'Services');
 
 	return (
-		<div className={`mobile-nav ${mobileMenuOpen ? 'active' : ''}`}>
+		<div className={`mobile-nav ${isIndia ? 'promo-offset' : ''} ${mobileMenuOpen ? 'active' : ''}`}>
 			<div className="mobile-nav-content">
 				<ul className="mobile-nav-links">
 					{navLinks.map((link, index) => {

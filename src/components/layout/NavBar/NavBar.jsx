@@ -6,6 +6,7 @@ import { NavProvider, useNavContext } from './NavContext';
 import ServicesDropdown from './ServicesDropdown';
 import MobileMenu from './MobileMenu';
 import Button from '../../ui/Button';
+import PromoBanner from '../../ui/PromoBanner';
 import useScrollPosition from '../../../hooks/useScrollPosition';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import { navLinks } from '../../../data/navigation';
@@ -85,10 +86,13 @@ function NavBar() {
 	const pathname = usePathname();
 	const isHomePage = pathname === '/';
 	const shouldShowTransparent = isHomePage && !scrolled;
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
 
 	return (
 		<NavProvider>
-			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'}`}>
+			{isIndia && <PromoBanner />}
+			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'} ${isIndia ? 'promo-offset' : ''}`}>
 				<Link href="/" className="navbar-logo">
 					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
 				</Link>

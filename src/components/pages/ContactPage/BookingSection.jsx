@@ -158,7 +158,7 @@ function BookingSection() {
 
 	if (booking) {
 		return (
-			<section className="booking-section">
+			<section className="booking-section" id="book-appointment">
 				<div className="booking-container">
 					<div className="booking-card booking-success" ref={successRef}>
 						<div className="booking-success-icon">
@@ -193,7 +193,7 @@ function BookingSection() {
 		: [];
 
 	return (
-		<section className="booking-section">
+		<section className="booking-section" id="book-appointment">
 			<div className="booking-container">
 				<div className="booking-header">
 					<span className="booking-label">Consultations</span>
