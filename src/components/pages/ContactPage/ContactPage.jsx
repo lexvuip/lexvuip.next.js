@@ -4,6 +4,9 @@ import './ContactPage.css';
 import Footer from '../../layout/Footer';
 
 function ContactPage() {
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
+
 	useEffect(() => {
 		const script = document.createElement('script');
 		script.src = 'https://js-na2.hsforms.net/forms/embed/243609401.js';
@@ -81,7 +84,21 @@ function ContactPage() {
 								</div>
 								<div className="info-content">
 									<span className="info-label-small">Location</span>
-									<p>6260 139th AVE.<br />NE 66 Redmond, WA 98052</p>
+									{isIndia ? (
+										<a
+											href="https://www.google.com/maps/place/LEXVUIP/@17.4221343,78.4998628,17z/data=!3m1!4b1!4m6!3m5!1s0x8ecb21e5e200899d:0x5e39f5aebc5ba305!8m2!3d17.4221343!4d78.4998628"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="info-link"
+										>
+											6-4-455/16/a/1, Krishna Nagar Colony,<br />
+											Balaji residency, Bholakpur, Bhoiguda,<br />
+											Hyderabad, Secunderabad,<br />
+											Telangana 500080
+										</a>
+									) : (
+										<p>6260 139th AVE.<br />NE 66 Redmond, WA 98052</p>
+									)}
 								</div>
 							</div>
 
