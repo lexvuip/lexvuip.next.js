@@ -86,13 +86,11 @@ function NavBar() {
 	const pathname = usePathname();
 	const isHomePage = pathname === '/';
 	const shouldShowTransparent = isHomePage && !scrolled;
-	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
-	const isIndia = region === 'IN';
 
 	return (
 		<NavProvider>
-			{isIndia && <PromoBanner />}
-			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'} ${isIndia ? 'promo-offset' : ''}`}>
+			<PromoBanner />
+			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'} promo-offset`}>
 				<Link href="/" className="navbar-logo">
 					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
 				</Link>
