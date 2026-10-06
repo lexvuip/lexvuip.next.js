@@ -153,7 +153,7 @@ function ContactPage() {
 				</div>
 			</section>
 
-			{isIndia && <BookingSection />}
+			<BookingSection />
 
 			<section className="contact-cta-section">
 				<div className="cta-content">
