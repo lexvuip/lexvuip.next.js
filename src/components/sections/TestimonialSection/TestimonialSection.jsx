@@ -67,8 +67,6 @@ const TESTIMONIALS = [
 	}
 ];
 
-const pad = value => (value < 10 ? `0${value}` : String(value));
-
 function TestimonialSection() {
 	const trackRef = useRef(null);
 	const tickRef = useRef(null);
@@ -220,32 +218,11 @@ function TestimonialSection() {
 				</div>
 
 				<div className="tstm-controls tstm-rv">
-					<button
-						type="button"
-						className="tstm-arrow"
-						onClick={() => goTo(current - 1)}
-						disabled={current === 0}
-						aria-label="Previous testimonial"
-					>
-						&larr;
-					</button>
 					<div className="tstm-mid">
-						<div className="tstm-count">
-							<b>{pad(current + 1)}</b> / {pad(total)}
-						</div>
 						<div className="tstm-bar" aria-hidden="true">
 							<span style={{ width: `${((current + 1) / total) * 100}%` }} />
 						</div>
 					</div>
-					<button
-						type="button"
-						className="tstm-arrow"
-						onClick={() => goTo(current + 1)}
-						disabled={current === total - 1}
-						aria-label="Next testimonial"
-					>
-						&rarr;
-					</button>
 				</div>
 
 				<div className="tstm-cta tstm-rv">
