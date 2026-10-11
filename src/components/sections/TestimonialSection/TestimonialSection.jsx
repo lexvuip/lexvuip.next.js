@@ -67,10 +67,13 @@ const TESTIMONIALS = [
 	}
 ];
 
+const AUTO_MS = 6000;
+
 function TestimonialSection() {
 	const trackRef = useRef(null);
 	const tickRef = useRef(null);
 	const [current, setCurrent] = useState(0);
+	const [paused, setPaused] = useState(false);
 	const total = TESTIMONIALS.length;
 
 	const detectCenter = useCallback(() => {
@@ -144,6 +147,15 @@ function TestimonialSection() {
 	}
 
 	useEffect(() => {
+		if (paused) return undefined;
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+		const id = setInterval(() => {
+			goTo(current + 1 === total ? 0 : current + 1);
+		}, AUTO_MS);
+		return () => clearInterval(id);
+	}, [current, paused, total]);
+
+	useEffect(() => {
 		const elements = document.querySelectorAll('.tstm-rv');
 		if (!('IntersectionObserver' in window)) {
 			elements.forEach(element => element.classList.add('in'));
@@ -188,6 +200,12 @@ function TestimonialSection() {
 					tabIndex={0}
 					aria-live="polite"
 					onKeyDown={handleKeyDown}
+					onMouseEnter={() => setPaused(true)}
+					onMouseLeave={() => setPaused(false)}
+					onTouchStart={() => setPaused(true)}
+					onTouchEnd={() => setPaused(false)}
+					onFocus={() => setPaused(true)}
+					onBlur={() => setPaused(false)}
 				>
 					{TESTIMONIALS.map((testimonial, index) => (
 						<figure
