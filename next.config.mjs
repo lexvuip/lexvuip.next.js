@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  turbopack: {
+    // Pin the workspace root so Turbopack doesn't pick up the stray
+    // package-lock.json in the home directory (breaks font module resolution)
+    root: import.meta.dirname,
+  },
   // Enable CSS minification and optimization
   experimental: {
     optimizeCss: true,
