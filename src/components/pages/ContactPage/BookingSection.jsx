@@ -4,8 +4,24 @@ import './BookingSection.css';
 
 const SLOT_RANGE_DAYS = 14;
 
+const TIMEZONE_OPTIONS = [
+	{ value: 'America/Los_Angeles', label: 'Pacific Time (PT)' },
+	{ value: 'America/Denver', label: 'Mountain Time (MT)' },
+	{ value: 'America/Chicago', label: 'Central Time (CT)' },
+	{ value: 'America/New_York', label: 'Eastern Time (ET)' },
+	{ value: 'Europe/London', label: 'United Kingdom (GMT/BST)' },
+	{ value: 'Europe/Berlin', label: 'Central European Time (CET)' },
+	{ value: 'Asia/Dubai', label: 'Gulf Standard Time (GST)' },
+	{ value: 'Asia/Kolkata', label: 'India Standard Time (IST)' },
+	{ value: 'Asia/Singapore', label: 'Singapore Time (SGT)' },
+	{ value: 'Australia/Sydney', label: 'Australian Eastern Time (AET)' }
+];
+
 function BookingSection() {
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
 	const [timeZone, setTimeZone] = useState(null);
+	const [detectedTz, setDetectedTz] = useState(null);
 	const [slotsByDay, setSlotsByDay] = useState({});
 	const [loading, setLoading] = useState(true);
 	const [loadError, setLoadError] = useState(null);
@@ -24,8 +40,19 @@ function BookingSection() {
 	}, [booking]);
 
 	useEffect(() => {
-		setTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC');
+		const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+		setDetectedTz(tz);
+		setTimeZone(tz);
 	}, []);
+
+	const timezoneChoices = useMemo(() => {
+		if (!detectedTz) return [];
+		if (TIMEZONE_OPTIONS.some(o => o.value === detectedTz)) return TIMEZONE_OPTIONS;
+		return [
+			{ value: detectedTz, label: `Your device timezone (${detectedTz})` },
+			...TIMEZONE_OPTIONS
+		];
+	}, [detectedTz]);
 
 	const fetchSlots = useCallback(async tz => {
 		setLoading(true);
@@ -70,6 +97,12 @@ function BookingSection() {
 
 	function selectSlot(slot) {
 		setSelectedSlot(slot);
+		setBookingError(null);
+	}
+
+	function handleTimeZoneChange(event) {
+		setTimeZone(event.target.value);
+		setSelectedSlot(null);
 		setBookingError(null);
 	}
 
@@ -126,7 +159,7 @@ function BookingSection() {
 	}
 
 	function formatSlot(slot) {
-		return new Date(slot).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+		return new Date(slot).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZone });
 	}
 
 	function formatSlotSummary(slot) {
@@ -135,7 +168,8 @@ function BookingSection() {
 			month: 'long',
 			day: 'numeric',
 			hour: 'numeric',
-			minute: '2-digit'
+			minute: '2-digit',
+			timeZone
 		});
 	}
 
@@ -145,12 +179,13 @@ function BookingSection() {
 			weekday: 'long',
 			year: 'numeric',
 			month: 'long',
-			day: 'numeric'
+			day: 'numeric',
+			timeZone
 		});
-		const startLine = startDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+		const startLine = startDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZone });
 		const endDate = new Date(end || '');
 		if (!Number.isNaN(endDate.getTime())) {
-			const endLine = endDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+			const endLine = endDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZone });
 			return `${dateLine}, ${startLine} — ${endLine}`;
 		}
 		return `${dateLine}, ${startLine}`;
@@ -207,6 +242,16 @@ function BookingSection() {
 				</div>
 
 				<div className="booking-card">
+					{!isIndia && (
+						<div className="booking-field booking-field-full booking-tz-field">
+							<label htmlFor="booking-timezone">Timezone</label>
+							<select id="booking-timezone" value={timeZone || ''} onChange={handleTimeZoneChange}>
+								{timezoneChoices.map(choice => (
+									<option key={choice.value} value={choice.value}>{choice.label}</option>
+								))}
+							</select>
+						</div>
+					)}
 					{loadError && (
 						<div className="booking-alert">
 							<span>{loadError}</span>
@@ -320,7 +365,7 @@ function BookingSection() {
 				</div>
 
 				{timeZone && !booking && (
-					<p className="booking-timezone">Times shown in your timezone — {timeZone}</p>
+					<p className="booking-timezone">Times shown in {timeZone}</p>
 				)}
 			</div>
 		</section>

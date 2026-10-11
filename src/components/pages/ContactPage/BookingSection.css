@@ -3,7 +3,7 @@
 	background: var(--color-ivory);
 	position: relative;
 	z-index: 10;
-	scroll-margin-top: calc(80px + var(--space-md));
+	scroll-margin-top: calc(var(--promo-banner-height) + 3.25rem + var(--space-md));
 }
 
 .booking-container {
@@ -203,6 +203,27 @@
 }
 
 .booking-field input:focus {
+	outline: none;
+	border-color: var(--color-gold);
+}
+
+.booking-tz-field {
+	margin-bottom: 2rem;
+}
+
+.booking-tz-field select {
+	padding: 0.75rem 0.9rem;
+	border: 1px solid rgba(5, 13, 24, 0.15);
+	background: var(--color-ivory);
+	font-family: var(--font-sans);
+	font-size: 0.95rem;
+	color: var(--color-navy-deep);
+	cursor: pointer;
+	width: 100%;
+	transition: border-color 0.25s ease;
+}
+
+.booking-tz-field select:focus {
 	outline: none;
 	border-color: var(--color-gold);
 }
