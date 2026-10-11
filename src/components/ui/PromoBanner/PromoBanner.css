@@ -1,5 +1,5 @@
 :root {
-	--promo-banner-height: 2.5rem;
+	--promo-banner-height: 2rem;
 }
 
 .promo-banner {
@@ -35,17 +35,17 @@
 }
 
 .promo-banner-text-full {
-	font-size: 0.72rem;
+	font-size: 0.68rem;
 }
 
 .promo-banner-text-mobile {
 	display: none;
-	font-size: 0.66rem;
+	font-size: 0.62rem;
 }
 
 @media (max-width: 768px) {
 	:root {
-		--promo-banner-height: 2.2rem;
+		--promo-banner-height: 1.75rem;
 	}
 
 	.promo-banner-text-full {
