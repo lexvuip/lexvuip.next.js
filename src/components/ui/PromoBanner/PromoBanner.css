@@ -12,6 +12,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 	background: linear-gradient(
 		90deg,
 		var(--color-gold-dark) 0%,
@@ -24,7 +25,39 @@
 	box-shadow: 0 4px 20px rgba(5, 13, 24, 0.15);
 }
 
+.promo-banner::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 45%;
+	background: linear-gradient(
+		100deg,
+		transparent 0%,
+		rgba(255, 255, 255, 0.45) 50%,
+		transparent 100%
+	);
+	transform: translateX(-120%) skewX(-20deg);
+	animation: promo-shine 4s ease-in-out infinite alternate;
+	pointer-events: none;
+}
+
+@keyframes promo-shine {
+	from {
+		transform: translateX(-120%) skewX(-20deg);
+	}
+
+	to {
+		transform: translateX(290%) skewX(-20deg);
+	}
+}
+
 .promo-banner-link {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
 	text-align: center;
 	font-family: var(--font-sans);
 	font-weight: 600;
@@ -54,5 +87,11 @@
 
 	.promo-banner-text-mobile {
 		display: block;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.promo-banner::after {
+		animation: none;
 	}
 }
