@@ -314,6 +314,10 @@
 	padding-top: calc(64px + var(--promo-banner-height));
 }
 
+.mobile-nav.promo-offset {
+	padding-top: calc(100px + var(--promo-banner-height));
+}
+
 .mobile-nav.active {
 	top: 0;
 }
