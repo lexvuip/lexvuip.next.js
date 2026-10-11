@@ -1,48 +1,76 @@
 'use client'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ContactPage.css';
 import Footer from '../../layout/Footer';
 import BookingSection from './BookingSection';
+import ContactForm from './ContactForm';
 
 function ContactPage() {
 	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
 	const isIndia = region === 'IN';
+	const whatsappNumber = isIndia ? '919110726310' : '18562142512';
+	const whatsappMessage = isIndia
+		? 'Hi LexVuIP India, I would like to learn more about your IP and paralegal services.'
+		: 'Hi LexVu, I would like to learn more about your IP and paralegal services.';
+	const [isFormOpen, setIsFormOpen] = useState(false);
 
 	useEffect(() => {
-		const script = document.createElement('script');
-		script.src = 'https://js-na2.hsforms.net/forms/embed/243609401.js';
-		script.defer = true;
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
+		if (!isFormOpen) return undefined;
+		document.body.style.overflow = 'hidden';
+		const handleKeyDown = event => {
+			if (event.key === 'Escape') setIsFormOpen(false);
 		};
-	}, []);
+		document.addEventListener('keydown', handleKeyDown);
+		return () => {
+			document.body.style.overflow = '';
+			document.removeEventListener('keydown', handleKeyDown);
+		};
+	}, [isFormOpen]);
+
+	function handleOverlayClick(event) {
+		if (event.target === event.currentTarget) setIsFormOpen(false);
+	}
 
 	return (
 		<div className="contact-page-luxury">
 			<section className="contact-hero-section">
-				<div 
-					className="contact-hero-bg" 
-					style={{ backgroundImage: `url(/assets/stockimages/lawer-1920.webp)` }}
-				></div>
-				<div className="contact-hero-overlay"></div>
-				<div className="contact-hero-pattern"></div>
-				
 				<div className="contact-hero-content">
 					<div className="hero-label">
 						<span>Get in Touch</span>
 					</div>
-					
+
 					<div className="animate-hero-text">
 						<h1 className="contact-hero-title">
-							Let's Discuss Your<br />
-							<span className="italic-serif">Legal Support Needs</span>
+							Contact Our<br />
+							<span className="italic-serif">IP &amp; Legal Support Team</span>
 						</h1>
-						
+
 						<p className="contact-hero-subtitle">
 							Experience bespoke intellectual property solutions and paralegal services designed for the modern legal landscape.
 						</p>
+
+						<div className="contact-hero-actions">
+							<button type="button" className="contact-hero-btn" onClick={() => setIsFormOpen(true)}>
+								Contact Us
+							</button>
+							<a
+								href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="contact-hero-phone"
+							>
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+								</svg>
+								{isIndia ? 'WhatsApp +91 91107 26310' : 'WhatsApp 856-214-2512'}
+							</a>
+							<a href={isIndia ? 'tel:+919110726310' : 'tel:+18562142512'} className="contact-hero-phone">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+									<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+								</svg>
+								{isIndia ? 'Call +91 91107 26310' : 'Call 856-214-2512'}
+							</a>
+						</div>
 					</div>
 				</div>
 
@@ -56,13 +84,29 @@ function ContactPage() {
 							<p className="form-intro">
 								Share your requirements with our expert team. We pride ourselves on providing precise, sophisticated legal support tailored to your unique needs.
 							</p>
+							<button type="button" className="contact-us-btn" onClick={() => setIsFormOpen(true)}>
+								Contact Us
+							</button>
 						</div>
-						<div 
-							className="hs-form-frame" 
-							data-region="na2" 
-							data-form-id="5e9773c3-00d2-4a9e-959c-0a2d1e4022aa" 
-							data-portal-id="243609401">
-						</div>
+
+						{isFormOpen && (
+							<div className="contact-modal-overlay" onClick={handleOverlayClick} role="presentation">
+								<div className="contact-modal" role="dialog" aria-modal="true" aria-label="Contact us">
+									<button
+										type="button"
+										className="contact-modal-close"
+										onClick={() => setIsFormOpen(false)}
+										aria-label="Close"
+									>
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+											<line x1="18" y1="6" x2="6" y2="18" />
+											<line x1="6" y1="6" x2="18" y2="18" />
+										</svg>
+									</button>
+									<ContactForm />
+								</div>
+							</div>
+						)}
 					</div>
 
 					<div className="contact-info-section">
