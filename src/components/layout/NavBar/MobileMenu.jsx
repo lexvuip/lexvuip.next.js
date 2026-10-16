@@ -35,7 +35,7 @@ function MobileMenu() {
 	const servicesLink = navLinks.find(link => link.label === 'Services');
 
 	return (
-		<div className={`mobile-nav ${mobileMenuOpen ? 'active' : ''}`}>
+		<div className={`mobile-nav promo-offset ${mobileMenuOpen ? 'active' : ''}`}>
 			<div className="mobile-nav-content">
 				<ul className="mobile-nav-links">
 					{navLinks.map((link, index) => {

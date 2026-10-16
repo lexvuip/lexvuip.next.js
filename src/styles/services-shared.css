@@ -879,3 +879,85 @@
 		font-size: 1.1rem;
 	}
 }
+
+/* Hero Tagline (India subtitle) */
+.services-hero-tagline {
+	font-family: var(--font-sans);
+	font-size: 1.1rem;
+	color: var(--color-gold-dark);
+	margin-bottom: 1rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+
+/* Who We Serve Section */
+.who-we-serve-section {
+	width: 100%;
+	background: var(--color-cream);
+	padding: 6rem 2rem;
+}
+
+.who-we-serve-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.who-we-serve-title {
+	font-family: var(--font-serif);
+	font-size: 2.8rem;
+	font-weight: 500;
+	color: var(--color-navy-deep);
+	margin-bottom: 3rem;
+	line-height: 1.2;
+}
+
+.who-we-serve-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.5rem;
+	margin-bottom: 3rem;
+}
+
+.who-we-serve-card {
+	text-align: left;
+	padding: 2rem;
+	background: var(--color-white);
+	border-radius: 8px;
+	box-shadow: var(--shadow-sm);
+}
+
+.who-we-serve-card h3 {
+	font-family: var(--font-serif);
+	font-size: 1.3rem;
+	color: var(--color-navy-deep);
+	margin-bottom: 0.75rem;
+	font-weight: 600;
+}
+
+.who-we-serve-card p {
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	color: var(--color-navy-deep);
+	opacity: 0.8;
+	line-height: 1.6;
+}
+
+.who-we-serve-cta {
+	margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+	.who-we-serve-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.who-we-serve-title {
+		font-size: 2rem;
+	}
+
+	.who-we-serve-section {
+		padding: 4rem 1.5rem;
+	}
+}

@@ -94,15 +94,21 @@ export default function AboutSection() {
 					<div className="about-narrative-column about-content">
 						<div className="narrative-inner">
 							<h3 className="narrative-subtitle">
-								At LexVu, we take the busywork off your plate so you can focus on winning the case and protecting what matters most.
+								{isIndia
+									? 'At LexVuIP India, we provide the technical and legal foundation so inventors, startups, and institutions can focus on what matters most: building and protecting their innovation.'
+									: 'At LexVu, we take the busywork off your plate so you can focus on winning the case and protecting what matters most.'}
 							</h3>
 							
 							<div className="narrative-body">
 								<p>
-									With over 25 years supporting attorneys {isIndia ? 'in India and ' : ''}worldwide, we deliver precise patent {isIndia ? 'filings, trademark registrations' : 'drawings, compliant filings'}, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.
+									{isIndia
+										? 'With over 25 years supporting attorneys, innovators, and institutions worldwide, we deliver precise patent drawings, compliant filings, and end-to-end IP and prosecution support fast, accurate, and always aligned with your strategy.'
+										: 'With over 25 years supporting attorneys worldwide, we deliver precise patent drawings, compliant filings, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.'}
 								</p>
 								<p>
-									Our paralegal services handle the administrative grind - docketing, eFiling, and trial prep - while our IP services cover {isIndia ? 'comprehensive IP protection tailored for the Indian jurisdiction and international filings.' : 'USPTO, EPO, PCT, and WIPO-compliant utility and design drawings.'}
+									{isIndia
+										? 'Our India practice extends this legacy into full-service patent filing, trademark, design filing and copyright registration, IP prosecution, and litigation support built for the Indian innovation ecosystem: startups, individual inventors, and educational institutions.'
+										: 'Our paralegal services handle the administrative grind - docketing, eFiling, and trial prep - while our IP services cover USPTO, EPO, PCT, and WIPO-compliant utility and design drawings.'}
 								</p>
 								<p className="narrative-highlight">
 									We believe legal work should be spent on arguments, not admin. Our mission is to ensure your focus stays on the win.

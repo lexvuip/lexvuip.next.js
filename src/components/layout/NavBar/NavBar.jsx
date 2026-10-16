@@ -6,6 +6,7 @@ import { NavProvider, useNavContext } from './NavContext';
 import ServicesDropdown from './ServicesDropdown';
 import MobileMenu from './MobileMenu';
 import Button from '../../ui/Button';
+import PromoBanner from '../../ui/PromoBanner';
 import useScrollPosition from '../../../hooks/useScrollPosition';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import { navLinks } from '../../../data/navigation';
@@ -88,7 +89,8 @@ function NavBar() {
 
 	return (
 		<NavProvider>
-			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'}`}>
+			<PromoBanner />
+			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'} promo-offset`}>
 				<Link href="/" className="navbar-logo">
 					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
 				</Link>

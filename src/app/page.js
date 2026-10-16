@@ -71,7 +71,14 @@ export default function Home() {
         'url': 'https://lexvuip.com',
         'telephone': '+1-856-214-2512',
         'email': 'inbox@lexvuip.com',
-        'address': {
+        'address': isIndia ? {
+          '@type': 'PostalAddress',
+          'streetAddress': '6-4-455/16/a/1, Krishna Nagar Colony, Balaji residency, Bholakpur, Bhoiguda',
+          'addressLocality': 'Hyderabad, Secunderabad',
+          'addressRegion': 'Telangana',
+          'postalCode': '500080',
+          'addressCountry': 'IN'
+        } : {
           '@type': 'PostalAddress',
           'streetAddress': '6260 139th AVE. NE 66',
           'addressLocality': 'Redmond',
@@ -79,11 +86,16 @@ export default function Home() {
           'postalCode': '98052',
           'addressCountry': 'US'
         },
-        'geo': {
+        'geo': isIndia ? {
+          '@type': 'GeoCoordinates',
+          'latitude': 17.4221343,
+          'longitude': 78.4998628
+        } : {
           '@type': 'GeoCoordinates',
           'latitude': 47.6625,
           'longitude': -122.1545
         },
+        'hasMap': isIndia ? 'https://www.google.com/maps/place/LEXVUIP/@17.4221343,78.4998628,17z/data=!3m1!4b1!4m6!3m5!1s0x8ecb21e5e200899d:0x5e39f5aebc5ba305!8m2!3d17.4221343!4d78.4998628' : undefined,
         'openingHoursSpecification': {
           '@type': 'OpeningHoursSpecification',
           'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
