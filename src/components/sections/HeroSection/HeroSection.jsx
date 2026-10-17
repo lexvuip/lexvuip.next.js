@@ -275,7 +275,7 @@ function HeroSection() {
 					</div>
 					<ul className="hero-trust">
 						<li>
-							<b>20+</b> years of experience
+							<b>25+</b> years of experience
 						</li>
 						<li>Drawings to USPTO &amp; WIPO guidelines</li>
 						<li>
