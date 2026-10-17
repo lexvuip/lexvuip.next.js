@@ -1,9 +1,8 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import './ParalegalSolutionsPage.css';
 import Footer from '../../layout/Footer';
-import FAQSection from '../../sections/FAQSection';
-import TestimonialSection from '../../sections/TestimonialSection';
 import AboutStats from '../../sections/AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
@@ -12,6 +11,22 @@ import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import Counter from '../../ui/Counter';
 import { paralegalFaqs } from '../../../data/faqs';
 import { paralegalServices } from '../../../data/services';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 function ParalegalSolutionsPage() {
 	return (
@@ -25,9 +40,13 @@ function ParalegalSolutionsPage() {
 						<span className="italic">Advocacy</span>
 					</h1>
 					<p className="services-hero-description">
-						For over two decades, we've provided attorneys with the technical 
-						foundation needed to win cases—clearing the overload and keeping 
+						For over two decades, we've provided attorneys with the technical
+						foundation needed to win cases—clearing the overload and keeping
 						every detail under control.
+					</p>
+					<p className="services-hero-description">
+						Based in Redmond, Washington, our paralegal team supports law firms and
+						IP attorneys nationwide across the United States.
 					</p>
 					<div className="services-hero-actions">
 						<Button href="/contact" arrow>Get In Touch</Button>
@@ -133,42 +152,15 @@ function ParalegalSolutionsPage() {
 
 					<div className="service-category-group">
 						<div className="services-grid-luxury">
-							<ServiceCard
-								image="/assets/stockimages/caseManagement-1920.webp"
-								title="Case Management"
-								desc="End-to-end management ensuring every milestone is met with precision."
-								href="/service/paralegalsolutions/case-docketing-management"
-							/>
-							<ServiceCard
-								image="/assets/stockimages/docketingManagement-1920.webp"
-								title="Docketing Management"
-								desc="Efficient tracking and management of critical IP deadlines."
-								href="/service/paralegalsolutions/case-docketing-management"
-							/>
-							<ServiceCard
-								image="/assets/stockimages/eFillingServices-1920.webp"
-								title="E-Filing Services"
-								desc="Seamless electronic filing for patents and trademarks."
-								href="/service/paralegalsolutions/efiling-compliance"
-							/>
-							<ServiceCard
-								image="/assets/stockimages/contactManagementServices-1920.webp"
-								title="Contact Management"
-								desc="Organized and secure case information management."
-								href="/service/paralegalsolutions/document-management"
-							/>
-							<ServiceCard
-								image="/assets/stockimages/trailPreparation-1920.webp"
-								title="Trial Preparation"
-								desc="Comprehensive support for trial document and evidence prep."
-								href="/service/paralegalsolutions/trial-prep-deposition"
-							/>
-							<ServiceCard
-								image="/assets/stockimages/lawer-1920.webp"
-								title="Deposition Coordination"
-								desc="Expert logistics and support for global depositions."
-								href="/service/paralegalsolutions/trial-prep-deposition"
-							/>
+							{paralegalServices.map((service, idx) => (
+								<ServiceCard
+									key={idx}
+									image={service.image}
+									title={service.title}
+									desc={service.description}
+									href={`/service/paralegalsolutions/${service.slug}`}
+								/>
+							))}
 						</div>
 					</div>
 				</div>

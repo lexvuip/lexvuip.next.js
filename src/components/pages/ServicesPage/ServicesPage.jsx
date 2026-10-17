@@ -50,12 +50,22 @@ function ServicesPage() {
 							? 'From patent prosecution to drawings, trademark filing to litigation support, our team is trained across the full IP lifecycle. We deliver precise, compliant IP support fast, accurate, and always aligned with your strategy.'
 							: 'For more than 25 years, we\'ve partnered with intellectual property professionals through their most critical cases—delivering precise, compliant IP support, strengthening patent and trademark filings, and helping shape the future of innovation protection.'}
 					</p>
+					<p className="services-hero-description">
+						{isIndia
+							? 'Based in Hyderabad, Telangana, we serve patent attorneys, startups, and inventors across India.'
+							: 'Based in Redmond, Washington, we serve IP attorneys and law firms nationwide across the United States.'}
+					</p>
 					<div className="services-hero-actions">
 						<Button href="/contact" arrow>Get In Touch</Button>
 					</div>
 				</div>
-				
-				<ServicesHeroParallax />
+
+				<ServicesHeroParallax
+					imageSrc="/assets/stockimages/homepage-1920.webp"
+					alt={isIndia
+						? 'LexVuIP India patent, trademark, and IP legal services in Hyderabad'
+						: 'LexVuIP patent drawings and paralegal services for IP attorneys nationwide'}
+				/>
 			</section>
 
 			{/* Asymmetrical Impact Section */}

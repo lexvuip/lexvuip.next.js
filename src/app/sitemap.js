@@ -1,9 +1,16 @@
 import { blogs } from '../data/blogs';
 import { ipServices, paralegalServices, customServices } from '../data/services';
 
+function toIsoDate(value) {
+  const [m, d, y] = String(value).split('/');
+  if (!m || !d || !y) return new Date().toISOString();
+  return new Date(Number(y), Number(m) - 1, Number(d)).toISOString();
+}
+
 export default function sitemap() {
-  const baseUrl = 'https://lexvuip.com';
-  
+  const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+  const baseUrl = region === 'IN' ? 'https://lexvuip.in' : 'https://lexvuip.com';
+
   const staticRoutes = [
     '',
     '/about',
@@ -11,12 +18,14 @@ export default function sitemap() {
     '/contact',
     '/blog',
     '/security',
+    '/founder',
+    '/llm-info',
     '/privacy-policy',
     '/terms-of-service',
     '/cookie-policy',
-    '/service/paralegalsolutions',
     '/service/ipsolutions',
-    '/service/customsolutions',
+    ...(paralegalServices.length > 0 ? ['/service/paralegalsolutions'] : []),
+    ...(customServices.length > 0 ? ['/service/customsolutions'] : []),
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
@@ -26,7 +35,7 @@ export default function sitemap() {
 
   const blogRoutes = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: new Date().toISOString(),
+    lastModified: toIsoDate(blog.date),
     changeFrequency: 'weekly',
     priority: 0.6,
   }));
