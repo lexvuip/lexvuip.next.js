@@ -3,6 +3,12 @@ import { blogs } from '../../../data/blogs';
 import { authors, defaultAuthor } from '../../../data/authors';
 import BlogPost from '../../../components/ui/BlogPost';
 
+function toIsoDate(value) {
+	const [m, d, y] = String(value).split('/');
+	if (!m || !d || !y) return undefined;
+	return new Date(Number(y), Number(m) - 1, Number(d)).toISOString();
+}
+
 export async function generateMetadata({ params }) {
     const { slug } = await params;
 	const post = blogs.find((b) => b.slug === slug);
@@ -14,6 +20,8 @@ export async function generateMetadata({ params }) {
 	}
 
 	const author = post.authorId ? authors[post.authorId] || defaultAuthor : defaultAuthor;
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const baseUrl = region === 'IN' ? 'https://lexvuip.in' : 'https://lexvuip.com';
 
 	return {
 		title: post.title,
@@ -24,9 +32,11 @@ export async function generateMetadata({ params }) {
 		openGraph: {
 			title: post.title,
 			description: post.excerpt,
-			url: `https://lexvuip.com/blog/${slug}`,
+			url: `${baseUrl}/blog/${slug}`,
+			siteName: 'LexVuIP',
+			locale: 'en_US',
 			type: 'article',
-			publishedTime: post.date,
+			publishedTime: toIsoDate(post.date),
 			authors: [author.name],
 			images: [
 				{
@@ -61,6 +71,8 @@ export default async function BlogDetailPage({ params }) {
 	}
 
 	const author = post.authorId ? authors[post.authorId] || defaultAuthor : defaultAuthor;
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const baseUrl = region === 'IN' ? 'https://lexvuip.in' : 'https://lexvuip.com';
 
 	const jsonLd = {
 		'@context': 'https://schema.org',
@@ -68,11 +80,13 @@ export default async function BlogDetailPage({ params }) {
 		'headline': post.title,
 		'description': post.excerpt,
 		'image': post.heroImage,
-		'datePublished': post.date,
+		'datePublished': toIsoDate(post.date),
+		'dateModified': toIsoDate(post.date),
+		'articleSection': post.category,
 		'author': {
 			'@type': 'Person',
 			'name': author.name,
-			'url': `https://lexvuip.com/about#${author.id}`,
+			'url': `${baseUrl}/about#${author.id}`,
 			'jobTitle': author.title,
 		},
 		'publisher': {
@@ -80,37 +94,13 @@ export default async function BlogDetailPage({ params }) {
 			'name': 'LexVuIP',
 			'logo': {
 				'@type': 'ImageObject',
-				'url': 'https://lexvuip.com/logo.png',
+				'url': `${baseUrl}/logo.png`,
 			},
 		},
 		'mainEntityOfPage': {
 			'@type': 'WebPage',
-			'@id': `https://lexvuip.com/blog/${slug}`,
+			'@id': `${baseUrl}/blog/${slug}`,
 		},
-	};
-
-	const breadcrumbJsonLd = {
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		'itemListElement': [
-			{
-				'@type': 'ListItem',
-				'position': 1,
-				'name': 'Home',
-				'item': 'https://lexvuip.com/',
-			},
-			{
-				'@type': 'ListItem',
-				'position': 2,
-				'name': 'Blog',
-				'item': 'https://lexvuip.com/blog',
-			},
-			{
-				'@type': 'ListItem',
-				'position': 3,
-				'name': post.title,
-			},
-		],
 	};
 
 	return (
@@ -118,10 +108,6 @@ export default async function BlogDetailPage({ params }) {
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-			/>
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
 			/>
 			<BlogPost />
 		</>

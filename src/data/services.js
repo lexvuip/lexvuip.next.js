@@ -3,6 +3,7 @@ const globalIpServices = [
 		slug: 'utility-patent-drawings',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'Utility Patent Drawings',
+		seoHeading: 'Utility Patent Drawing Services',
 		description: 'USPTO, EPO, and WIPO-compliant utility illustrations crafted with technical precision and engineering expertise',
 		content: {
 			valueProp: 'Technical accuracy and clarity for complex functional inventions. Ensuring flawless compliance with USPTO, EPO, and WIPO standards.',
@@ -33,6 +34,7 @@ const globalIpServices = [
 		slug: 'trademark-support',
 		image: '/assets/stockimages/trademarkdesign-1920.webp',
 		title: 'Trademark Support',
+		seoHeading: 'Trademark Support Services',
 		description: 'Comprehensive search, filing, and drawing services that capture the essence of your brand identity while meeting legal requirements',
 		content: {
 			valueProp: 'Brand protection and administrative efficiency. Capturing brand identity while meeting rigorous legal requirements.',
@@ -51,6 +53,7 @@ const globalParalegalServices = [
 		slug: 'case-docketing-management',
 		image: '/assets/stockimages/caseManagement-1920.webp',
 		title: 'Case & Docketing Management',
+		seoHeading: 'Case Management & Docketing Services',
 		description: 'End-to-end management ensuring every milestone from intake to resolution is met with absolute precision.',
 		content: {
 			valueProp: 'Emphasize "never missing a deadline." Focus on centralizing case data and providing real-time visibility into complex litigation schedules.',
@@ -81,6 +84,7 @@ const globalParalegalServices = [
 		slug: 'document-management',
 		image: '/assets/stockimages/contactManagementServices-1920.webp',
 		title: 'Contact & Document Management',
+		seoHeading: 'Legal Document Management Services',
 		description: 'Organized and secure management of client and witness information for rapid access during case prep.',
 		content: {
 			valueProp: 'Position Lexvuip as the "organizational backbone," managing high volumes of discovery and maintaining secure witness/expert databases.',
@@ -111,6 +115,7 @@ const globalParalegalServices = [
 		slug: 'compliance-support',
 		image: '/assets/stockimages/complianceSupport-1920.webp',
 		title: 'Compliance Support',
+		seoHeading: 'Legal Regulatory Compliance Support',
 		description: 'Continuous monitoring of court procedures and filing standards to protect your clients and keep cases moving.',
 		content: {
 			valueProp: 'Continuous monitoring of court standards and filing regulations to protect clients and ensure cases move smoothly.',
@@ -129,6 +134,7 @@ const globalCustomServices = [
 		slug: 'tailored-support',
 		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
 		title: 'Tailored Support',
+		seoHeading: 'Bespoke Legal Support Services',
 		description: 'Custom solutions for unique IP and paralegal needs, adapting to your firm\'s specific workflow and reporting style.',
 		content: {
 			valueProp: 'Highlight "The Elastic Law Firm." Scalable support that adapts to workload fluctuations without permanent overhead.',
@@ -144,6 +150,7 @@ const globalCustomServices = [
 		slug: 'workflow-automation',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'Workflow Automation',
+		seoHeading: 'Legal Workflow Automation Services',
 		description: 'Efficiency-driven automation for legal processes, helping your team stay ahead of schedules and filings.',
 		content: {
 			valueProp: 'Focus on ROI and reducing non-billable burdens. Transforming manual tasks into efficient, automated processes.',
@@ -159,6 +166,7 @@ const globalCustomServices = [
 		slug: 'special-consulting',
 		image: '/assets/stockimages/customworkflow-1920.webp',
 		title: 'Special Consulting',
+		seoHeading: 'Law Firm Management Consulting',
 		description: 'Expert consulting for complex legal projects that require specialized technical or procedural knowledge.',
 		content: {
 			valueProp: 'Strategic growth and "LegalOps" optimization. Providing high-level advisory on tech implementation.',
@@ -177,6 +185,7 @@ const indianIpServices = [
 		slug: 'patent-filing',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'Patent Filing',
+		seoHeading: 'Patent Filing in India',
 		description: 'End-to-end patent application drafting and filing before the Indian Patent Office — provisional and complete specifications, claims drafting, and Form filings, backed by our in-house patent drawing expertise for a seamless drawing-to-filing workflow.',
 		content: {
 			valueProp: 'Securing your inventions with robust patent protection in India.',
@@ -192,6 +201,7 @@ const indianIpServices = [
 		slug: 'industrial-design-protection',
 		image: '/assets/stockimages/desingpatentdrawing-1920.webp',
 		title: 'Industrial Design Protection',
+		seoHeading: 'Industrial Design Registration in India',
 		description: 'Registration of industrial designs before the Design Office, Kolkata, including novelty assessment, representation sheets, and classification — with the same precision drawing standards we\'ve applied for USPTO filings for 25+ years.',
 		content: {
 			valueProp: 'Ensuring your unique product designs are protected from infringement.',
@@ -207,6 +217,7 @@ const indianIpServices = [
 		slug: 'intellectual-property-prosecution',
 		image: '/assets/stockimages/utilitypatentdrawing-1920.webp',
 		title: 'IP Prosecution',
+		seoHeading: 'IP Prosecution Services in India',
 		description: 'Responding to examination reports, hearings, and office actions across patent, design, and trademark matters — keeping applications moving toward grant with strategic, timely responses.',
 		content: {
 			valueProp: 'Expert handling of the entire IP lifecycle from filing to grant.',
@@ -222,6 +233,7 @@ const indianIpServices = [
 		slug: 'trademark-registration',
 		image: '/assets/stockimages/trademarkdesign-1920.webp',
 		title: 'Trademark Registration',
+		seoHeading: 'Trademark Registration in India',
 		description: 'Search, clearance, application, and prosecution support for word marks, logos, and device marks before the Trade Marks Registry — protecting your brand identity from day one.',
 		content: {
 			valueProp: 'Protecting your brand name, logo, and identity.',
@@ -237,6 +249,7 @@ const indianIpServices = [
 		slug: 'copyrights-filing',
 		image: '/assets/stockimages/complianceSupport-1920.webp',
 		title: 'Copyrights Filing',
+		seoHeading: 'Copyright Registration in India',
 		description: 'Registration support for literary, artistic, software, and creative works before the Copyright Office, New Delhi — securing authorship and ownership rights.',
 		content: {
 			valueProp: 'Securing legal rights for your creative content.',
@@ -252,6 +265,7 @@ const indianIpServices = [
 		slug: 'ip-litigation',
 		image: '/assets/stockimages/trailPreparation-1920.webp',
 		title: 'IP Litigation',
+		seoHeading: 'IP Litigation Services in India',
 		description: 'Support for opposition, cancellation, and infringement proceedings — protecting your rights when they\'re challenged, and asserting them when others infringe.',
 		content: {
 			valueProp: 'Robust legal representation in IP disputes.',
@@ -282,6 +296,7 @@ const indianIpServices = [
 		slug: 'startup-business-advisory',
 		image: '/assets/stockimages/customworkflow-1920.webp',
 		title: 'Startup & Business Advisory',
+		seoHeading: 'Startup IP Strategy & Business Advisory',
 		description: 'Practical IP strategy for early-stage companies — portfolio planning, freedom-to-operate considerations, and guidance on building IP into your business and fundraising strategy.',
 		content: {
 			valueProp: 'Aligning IP strategy with business goals for startups.',
@@ -297,6 +312,7 @@ const indianIpServices = [
 		slug: 'legal-consultant',
 		image: '/assets/stockimages/lawer-1920.webp',
 		title: 'Legal Consultant',
+		seoHeading: 'IP Legal Consultant in India',
 		description: 'General legal consultation for founders, inventors, and institutions navigating IP and business decisions — a single point of contact for the questions that don\'t fit neatly into one filing type.',
 		content: {
 			valueProp: 'Expert legal guidance for complex IP challenges.',

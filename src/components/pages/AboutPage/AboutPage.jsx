@@ -1,10 +1,25 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import './AboutPage.css';
-import TestimonialSection from '../../sections/TestimonialSection';
-import FAQSection from '../../sections/FAQSection';
 import Footer from '../../layout/Footer';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 const REGION = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
 const IS_INDIA = REGION === 'IN';
@@ -178,7 +193,7 @@ export default function AboutPage() {
 		'@context': 'https://schema.org',
 		'@type': 'ProfessionalService',
 		name: 'LexVuIP',
-		url: 'https://lexvuip.com',
+		url: IS_INDIA ? 'https://lexvuip.in' : 'https://lexvuip.com',
 		description:
 			'IP and litigation support for attorneys: patent drawings, IP filings and trial-prep documents.',
 		telephone: PHONE_DISPLAY,

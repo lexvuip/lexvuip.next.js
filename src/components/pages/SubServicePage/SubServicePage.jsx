@@ -1,15 +1,30 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import './SubServicePage.css';
 import Footer from '../../layout/Footer';
-import TestimonialSection from '../../sections/TestimonialSection';
-import FAQSection from '../../sections/FAQSection';
 import AboutStats from '../../sections/AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
 import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import Breadcrumbs from '../../ui/Breadcrumbs';
 import Counter from '../../ui/Counter';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 const categoryConfigs = {
 	ip: {
@@ -103,30 +118,56 @@ function SubServicePage({ service, category = 'ip' }) {
 	if (!service) return null;
 
 	const { title, description, image, content } = service;
+	const heading = service.seoHeading || title;
 	const config = categoryConfigs[category] || categoryConfigs.ip;
+	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+	const isIndia = region === 'IN';
+	const locationLine = isIndia
+		? `Based in Hyderabad, Telangana, we deliver ${heading.toLowerCase()} to clients across India.`
+		: `Based in Redmond, Washington, we deliver ${heading.toLowerCase()} to IP attorneys and law firms nationwide across the United States.`;
+
+	const baseUrl = isIndia ? 'https://lexvuip.in' : 'https://lexvuip.com';
+	const routeSegment = category === 'paralegal' ? 'paralegalsolutions' : category === 'custom' ? 'customsolutions' : 'ipsolutions';
+	const serviceJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		'name': heading,
+		'serviceType': heading,
+		'description': description,
+		'url': `${baseUrl}/service/${routeSegment}/${service.slug}`,
+		'areaServed': isIndia ? { '@type': 'Country', 'name': 'India' } : { '@type': 'Country', 'name': 'United States' },
+		'provider': { '@id': `${baseUrl}/#localbusiness` }
+	};
 
 	return (
 		<main className="services-page-luxury sub-service-page">
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+			/>
 			{/* Hero Section */}
 			<section className="services-hero-section">
 				<div className="services-hero-content">
-					<Breadcrumbs />
+					<Breadcrumbs currentLabel={heading} />
 					<div className="luxury-label-group central">
 						<span className="gold-line"></span>
 						<span className="luxury-label">DETAILED SERVICE</span>
 						<span className="gold-line"></span>
 					</div>
 					<h1 className="services-hero-title">
-						{title}
+						{heading}
 					</h1>
 					<p className="services-hero-description">
 						{description}
+					</p>
+					<p className="services-hero-description">
+						{locationLine}
 					</p>
 					<div className="services-hero-actions">
 						<Button href="/contact" arrow>Consult our Experts</Button>
 					</div>
 				</div>
-				<ServicesHeroParallax imageSrc={image} alt={`${title} - LexVuIP professional service illustration`} />
+				<ServicesHeroParallax imageSrc={image} alt={`${heading} - LexVuIP professional service illustration`} />
 			</section>
 
 			{/* Impact Section / Value Prop */}
@@ -205,7 +246,7 @@ function SubServicePage({ service, category = 'ip' }) {
 				<div className="container">
 					<div className="keyword-tag-group">
 						{content.primaryKeywords.map((kw, idx) => (
-							<span key={idx} className="keyword-tag">#{kw.replace(/\s+/g, '')}</span>
+							<span key={idx} className="keyword-tag">{kw}</span>
 						))}
 					</div>
 				</div>

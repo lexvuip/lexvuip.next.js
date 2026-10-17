@@ -1,9 +1,24 @@
+import Image from 'next/image';
 import './Footer.css';
-import { ipServices, paralegalServices } from '../../../data/services';
+import { ipServices, paralegalServices, customServices } from '../../../data/services';
+
+const NAP = {
+	GLOBAL: {
+		address: '6260 139th Ave NE 66, Redmond, WA 98052',
+		phoneDisplay: '856-214-2512',
+		phoneHref: 'tel:+18562142512',
+	},
+	IN: {
+		address: '6-4-455/16/a/1, Krishna Nagar Colony, Balaji Residency, Bholakpur, Bhoiguda, Hyderabad, Telangana 500080',
+		phoneDisplay: '+91 91107 26310',
+		phoneHref: 'tel:+919110726310',
+	},
+};
 
 function Footer() {
 	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
 	const isIndia = region === 'IN';
+	const nap = isIndia ? NAP.IN : NAP.GLOBAL;
 
 	return (
 		<footer className="footer-section">
@@ -11,7 +26,7 @@ function Footer() {
 				<div className="footer-main-row">
 					<div className="footer-col footer-brand">
 						<div className="footer-logo">
-							<img src="/logo.png" alt="LexVuIP Logo" className="footer-logo-img" />
+							<Image src="/logo.png" alt="LexVuIP Logo" width={1890} height={304} className="footer-logo-img" />
 						</div>
 						<div className="footer-tagline">
 							Precision in Every Filing<br />
@@ -34,6 +49,11 @@ function Footer() {
 								</svg>
 							</a>
 						</div>
+						<address className="footer-nap">
+							<a href={nap.phoneHref}>{nap.phoneDisplay}</a>
+							<span>{nap.address}</span>
+							<a href="mailto:inbox@lexvuip.com">inbox@lexvuip.com</a>
+						</address>
 					</div>
 
 					<div className="footer-col footer-links">
@@ -65,6 +85,17 @@ function Footer() {
 								<ul className="footer-links-list">
 									{paralegalServices.map((service, idx) => (
 										<li key={idx}><a href={`/service/paralegalsolutions/${service.slug}`}>{service.title}</a></li>
+									))}
+								</ul>
+							</div>
+						)}
+
+						{customServices.length > 0 && (
+							<div className="footer-links-group">
+								<h2 className="footer-links-title">Custom Solutions</h2>
+								<ul className="footer-links-list">
+									{customServices.map((service, idx) => (
+										<li key={idx}><a href={`/service/customsolutions/${service.slug}`}>{service.title}</a></li>
 									))}
 								</ul>
 							</div>
