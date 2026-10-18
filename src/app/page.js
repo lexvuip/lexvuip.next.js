@@ -5,6 +5,8 @@ import Footer from '../components/layout/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import WorkShowcase from '../components/sections/WorkShowcase';
 import HomeLazySections from '../components/pages/HomeLazySections';
+import { defaultFaqs } from '../data/faqs';
+import { ipServices, paralegalServices, customServices } from '../data/services';
 
 export async function generateMetadata() {
   const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
@@ -38,18 +40,25 @@ export async function generateMetadata() {
 export default function Home() {
   const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
   const isIndia = region === 'IN';
+  const baseUrl = isIndia ? 'https://lexvuip.in' : 'https://lexvuip.com';
+  const telephone = isIndia ? '+91-91107-26310' : '+1-856-214-2512';
+  const catalogServices = [
+    ...ipServices.map((service) => ({ service, segment: 'ipsolutions' })),
+    ...paralegalServices.map((service) => ({ service, segment: 'paralegalsolutions' })),
+    ...customServices.map((service) => ({ service, segment: 'customsolutions' })),
+  ];
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://lexvuip.com/#organization',
+        '@id': `${baseUrl}/#organization`,
         'name': 'LexVuIP',
-        'url': 'https://lexvuip.com',
+        'url': baseUrl,
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://lexvuip.com/logo.png',
+          'url': `${baseUrl}/logo.png`,
         },
         'sameAs': [
           'https://www.linkedin.com/in/lexvuip-global-ip-paralegal-solutions',
@@ -58,18 +67,18 @@ export default function Home() {
         ],
         'contactPoint': {
           '@type': 'ContactPoint',
-          'telephone': '+1-856-214-2512',
+          'telephone': telephone,
           'contactType': 'customer service',
           'email': 'inbox@lexvuip.com'
         }
       },
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://lexvuip.com/#localbusiness',
-        'name': 'LexVuIP',
+        '@id': `${baseUrl}/#localbusiness`,
+        'name': isIndia ? 'LexVuIP India' : 'LexVuIP',
         'description': 'Intellectual property and paralegal support services for law firms and IP attorneys.',
-        'url': 'https://lexvuip.com',
-        'telephone': '+1-856-214-2512',
+        'url': baseUrl,
+        'telephone': telephone,
         'email': 'inbox@lexvuip.com',
         'address': isIndia ? {
           '@type': 'PostalAddress',
@@ -95,93 +104,63 @@ export default function Home() {
           'latitude': 47.6625,
           'longitude': -122.1545
         },
-        'hasMap': isIndia ? 'https://www.google.com/maps/place/LEXVUIP/@17.4221343,78.4998628,17z/data=!3m1!4b1!4m6!3m5!1s0x8ecb21e5e200899d:0x5e39f5aebc5ba305!8m2!3d17.4221343!4d78.4998628' : undefined,
+        'hasMap': isIndia
+          ? 'https://www.google.com/maps/place/LEXVUIP/@17.4221343,78.4998628,17z/data=!3m1!4b1!4m6!3m5!1s0x8ecb21e5e200899d:0x5e39f5aebc5ba305!8m2!3d17.4221343!4d78.4998628'
+          : 'https://www.google.com/maps/search/?api=1&query=6260%20139th%20Ave%20NE%2C%20Redmond%2C%20WA%2098052',
         'openingHoursSpecification': {
           '@type': 'OpeningHoursSpecification',
           'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
           'opens': '09:00',
           'closes': '18:00'
         },
-        'areaServed': [
+        'areaServed': isIndia ? [
+          { '@type': 'Country', 'name': 'India' }
+        ] : [
           { '@type': 'Country', 'name': 'United States' },
           { '@type': 'Country', 'name': 'Canada' },
           { '@type': 'Country', 'name': 'United Kingdom' }
         ],
         'priceRange': '$$',
-        'image': 'https://lexvuip.com/logo.png',
+        'image': `${baseUrl}/logo.png`,
         'parentOrganization': {
-          '@id': 'https://lexvuip.com/#organization'
+          '@id': `${baseUrl}/#organization`
+        },
+        'hasOfferCatalog': {
+          '@type': 'OfferCatalog',
+          'name': isIndia ? 'LexVuIP India Services' : 'LexVuIP Services',
+          'itemListElement': catalogServices.map(({ service, segment }) => ({
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': service.title,
+              'description': service.description,
+              'url': `${baseUrl}/service/${segment}/${service.slug}`,
+              'areaServed': isIndia ? { '@type': 'Country', 'name': 'India' } : { '@type': 'Country', 'name': 'United States' },
+              'provider': { '@id': `${baseUrl}/#localbusiness` }
+            }
+          }))
         }
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://lexvuip.com/#website',
-        'url': 'https://lexvuip.com',
+        '@id': `${baseUrl}/#website`,
+        'url': baseUrl,
         'name': 'LexVuIP',
         'publisher': {
-          '@id': 'https://lexvuip.com/#organization'
-        }
-      },
-      {
-        '@type': 'VideoObject',
-        '@id': 'https://lexvuip.com/#about-video',
-        'name': 'LexVuIP Overview - IP Solutions and Paralegal Services',
-        'description': isIndia ? 'Learn how LexVuIP supports IP attorneys with patent filing, trademark registration, and comprehensive paralegal services. 25+ years of expertise.' : 'Learn how LexVuIP supports IP attorneys with patent drawings, trademark filings, and comprehensive paralegal services. 25+ years of expertise in USPTO, EPO, WIPO, and PCT filings.',
-        'thumbnailUrl': 'https://lexvuip.com/videos/about_video_poster.jpg',
-        'uploadDate': '2024-01-15',
-        'duration': 'PT45S',
-        'contentUrl': 'https://lexvuip.com/videos/about_video.mp4',
-        'embedUrl': 'https://lexvuip.com/#about',
-        'transcript': isIndia ? 'LexVuIP: Precision in Every Filing. 25+ years supporting IP attorneys worldwide. Expert patent filing and trademark registration. Comprehensive paralegal services.' : 'LexVuIP: Precision in Every Filing. Clarity in Every Design. 25+ years supporting IP attorneys worldwide. Expert patent drawings for USPTO, EPO, WIPO, and PCT filings. Comprehensive paralegal services: docketing, e-filing, trial preparation. Your trusted partner for intellectual property solutions.',
-        'publisher': {
-          '@id': 'https://lexvuip.com/#organization'
+          '@id': `${baseUrl}/#organization`
         }
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://lexvuip.com/#faqpage',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': 'What services does LexVuIP offer?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': isIndia ? 'LexVuIP offers comprehensive IP solutions including patent filing, trademark registration, and complete IP protection services.' : 'LexVuIP offers comprehensive IP solutions including USPTO-compliant patent drawings (utility and design), trademark support services, and complete paralegal solutions including docketing management, e-filing, and trial preparation.'
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': 'How long has LexVuIP been in business?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': isIndia ? 'LexVuIP has over 25 years of experience supporting IP attorneys and law firms worldwide with patent filing, trademark registration, and IP litigation support.' : 'LexVuIP has over 25 years of experience supporting IP attorneys and law firms worldwide with patent drawings, trademark filings, and paralegal services.'
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': 'What patent offices do you support?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': isIndia ? 'We support filings with the Indian Patent Office (IPO), WIPO/PCT, and major international patent offices.' : 'We support filings with USPTO, EPO, WIPO/PCT, and major international patent offices. Our drawings comply with USPTO Rule 84, EPO Rule 46, and PCT Rule 11 standards.'
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': 'What is your turnaround time for patent drawings?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Standard turnaround is 2-4 business days. Express service is available for 24-48 hour delivery. Rush projects can be accommodated with prior arrangement.'
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Do you work with law firms outside the US?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Yes, we support IP attorneys and law firms globally, including Europe, Asia, and the Americas. We are experienced with international filing requirements and time zone coordination.'
-            }
+        '@id': `${baseUrl}/#faqpage`,
+        'mainEntity': defaultFaqs.map((faq) => ({
+          '@type': 'Question',
+          'name': faq.question,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': faq.answer
           }
-        ]
+        }))
       }
     ]
   };

@@ -118,7 +118,7 @@ function BlogPost() {
 	return (
 		<section className="blogpost-section">
 			<div className="blogpost-container">
-				<Breadcrumbs />
+				<Breadcrumbs currentLabel={post.title} />
 
 				<header className="blogpost-header">
 					<h1 className="blogpost-title">{post.title}</h1>

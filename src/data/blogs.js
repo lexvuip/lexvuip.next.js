@@ -3531,7 +3531,7 @@ export const blogs = [
 				heading: 'Legal Note',
 				body: 'This article is intended for educational purposes and provides a general explanation of trademark registration considerations before filing a trademark application in India. It is not legal advice. Trademark availability, registrability, classification, and protection strategies depend on the specific facts, the applicable laws of each jurisdiction, and professional legal advice.',
 			},
-		],
-	},
+ 		],
+ 	},
 
 ];

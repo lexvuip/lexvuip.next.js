@@ -1,4 +1,7 @@
 export default function robots() {
+  const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+  const baseUrl = region === 'IN' ? 'https://lexvuip.in' : 'https://lexvuip.com';
+
   return {
     rules: [
       {
@@ -6,6 +9,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://lexvuip.com/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }

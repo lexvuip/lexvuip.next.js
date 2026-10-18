@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { NavProvider, useNavContext } from './NavContext';
 import ServicesDropdown from './ServicesDropdown';
@@ -92,7 +93,7 @@ function NavBar() {
 			<PromoBanner />
 			<nav className={`navbar ${shouldShowTransparent ? 'transparent' : 'scrolled'} promo-offset`}>
 				<Link href="/" className="navbar-logo">
-					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
+					<Image src="/logo.png" alt="LexVuIP Logo" width={1890} height={304} priority className="navbar-logo-img" />
 				</Link>
 				<DesktopNav />
 				<div className="navbar-contact">

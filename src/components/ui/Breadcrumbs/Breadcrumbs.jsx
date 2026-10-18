@@ -11,7 +11,10 @@ const customLabels = {
 	customsolutions: 'Custom Solutions',
 };
 
-const Breadcrumbs = () => {
+const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+const baseUrl = region === 'IN' ? 'https://lexvuip.in' : 'https://lexvuip.com';
+
+const Breadcrumbs = ({ currentLabel } = {}) => {
   const pathname = usePathname();
   const pathSegments = pathname.split('/').filter((segment) => segment !== '');
 
@@ -20,15 +23,19 @@ const Breadcrumbs = () => {
     let label = segment
       .replace(/-/g, ' ')
       .replace(/\b\w/g, (l) => l.toUpperCase());
-    
+
     if (customLabels[segment]) {
       label = customLabels[segment];
     }
-    
+
     if (segment === 'service' && index === 0) {
       href = '/services';
     }
-    
+
+    if (currentLabel && index === pathSegments.length - 1) {
+      label = currentLabel;
+    }
+
     return { label, href };
   });
 
@@ -41,7 +48,7 @@ const Breadcrumbs = () => {
       '@type': 'ListItem',
       'position': index + 1,
       'name': crumb.label,
-      'item': `https://lexvuip.github.io${crumb.href}`,
+      'item': `${baseUrl}${crumb.href}`,
     })),
   };
 

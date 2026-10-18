@@ -102,8 +102,8 @@ export default function AboutSection() {
 							<div className="narrative-body">
 								<p>
 									{isIndia
-										? 'With over 25 years supporting attorneys, innovators, and institutions worldwide, we deliver precise patent drawings, compliant filings, and end-to-end IP and prosecution support fast, accurate, and always aligned with your strategy.'
-										: 'With over 25 years supporting attorneys worldwide, we deliver precise patent drawings, compliant filings, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.'}
+										? 'Based in Hyderabad, Telangana, and with over 25 years supporting attorneys, innovators, and institutions worldwide, we deliver precise patent drawings, compliant filings, and end-to-end IP and prosecution support fast, accurate, and always aligned with your strategy.'
+										: 'Based in Redmond, Washington, and with over 25 years supporting attorneys worldwide, we deliver precise patent drawings, compliant filings, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.'}
 								</p>
 								<p>
 									{isIndia

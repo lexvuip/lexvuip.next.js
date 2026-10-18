@@ -1,15 +1,25 @@
 import ContactPage from '../../components/pages/ContactPage';
 
+const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
+const isIndia = region === 'IN';
+const baseUrl = isIndia ? 'https://lexvuip.in' : 'https://lexvuip.com';
+
 export const metadata = {
-  title: "Contact Us - LexVu | Talk to Our Experts",
-  description: "Get in touch with LexVuIP for IP solutions, patent drawings, and paralegal services. Our specialists are ready to help with your legal support needs.",
+  title: isIndia
+    ? "Contact Us - LexVuIP India | IP & Legal Support in Hyderabad"
+    : "Contact Us - LexVuIP | IP & Paralegal Support in Redmond, WA",
+  description: isIndia
+    ? "Get in touch with LexVuIP India in Hyderabad for patent filing, trademark registration, and IP services across India."
+    : "Get in touch with LexVuIP in Redmond, WA for IP solutions, patent drawings, and paralegal services nationwide.",
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'Contact LexVuIP - Get Expert IP Support',
-    description: 'Get in touch with LexVuIP for IP solutions, patent drawings, and paralegal services.',
-    url: 'https://lexvuip.com/contact',
+    title: isIndia ? 'Contact LexVuIP India - Get Expert IP Support' : 'Contact LexVuIP - Get Expert IP Support',
+    description: isIndia
+      ? 'Get in touch with LexVuIP India for patent filing, trademark registration, and IP services.'
+      : 'Get in touch with LexVuIP for IP solutions, patent drawings, and paralegal services.',
+    url: `${baseUrl}/contact`,
     siteName: 'LexVuIP',
     images: [
       {

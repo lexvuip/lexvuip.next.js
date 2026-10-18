@@ -1,9 +1,8 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import './CustomSolutionsPage.css';
 import Footer from '../../layout/Footer';
-import FAQSection from '../../sections/FAQSection';
-import TestimonialSection from '../../sections/TestimonialSection';
 import AboutStats from '../../sections/AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
@@ -11,6 +10,22 @@ import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import Counter from '../../ui/Counter';
 import { customServices } from '../../../data/services';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 function CustomSolutionsPage() {
 	return (
@@ -24,9 +39,13 @@ function CustomSolutionsPage() {
 						Your <span className="italic">Firm</span>
 					</h1>
 					<p className="services-hero-description">
-						Every firm has its own way of working. We adapt to yours, providing 
-						accurate, timely support that feels like a natural extension of 
+						Every firm has its own way of working. We adapt to yours, providing
+						accurate, timely support that feels like a natural extension of
 						your team.
+					</p>
+					<p className="services-hero-description">
+						Based in Redmond, Washington, we deliver custom legal support to law
+						firms and IP attorneys nationwide across the United States.
 					</p>
 					<div className="services-hero-actions">
 						<Button href="/contact" arrow>Get In Touch</Button>

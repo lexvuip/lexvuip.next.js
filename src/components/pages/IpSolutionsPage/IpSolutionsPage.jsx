@@ -1,9 +1,8 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import './IpSolutionsPage.css';
 import Footer from '../../layout/Footer';
-import TestimonialSection from '../../sections/TestimonialSection';
-import FAQSection from '../../sections/FAQSection';
 import AboutStats from '../../sections/AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
 import ServiceCard from '../../ui/ServiceCard';
@@ -11,6 +10,22 @@ import Button from '../../ui/Button';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import Counter from '../../ui/Counter';
 import { ipServices } from '../../../data/services';
+
+const TestimonialSection = dynamic(
+	() => import('../../sections/TestimonialSection'),
+	{
+		loading: () => <div className="section-loading">Loading testimonials...</div>,
+		ssr: false,
+	}
+);
+
+const FAQSection = dynamic(
+	() => import('../../sections/FAQSection'),
+	{
+		loading: () => <div className="section-loading">Loading FAQ...</div>,
+		ssr: false,
+	}
+);
 
 function IpSolutionsPage() {
 	const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
@@ -27,9 +42,14 @@ function IpSolutionsPage() {
 						for <span className="italic">Innovation</span>
 					</h1>
 					<p className="services-hero-description">
-						For over 25 years, we've partnered with IP attorneys to provide 
-						precise, compliant patent and trademark {isIndia ? 'services' : 'drawings'} that strengthen 
+						For over 25 years, we've partnered with IP attorneys to provide
+						precise, compliant patent and trademark {isIndia ? 'services' : 'drawings'} that strengthen
 						filings and protect intellectual property worldwide.
+					</p>
+					<p className="services-hero-description">
+						{isIndia
+							? 'Based in Hyderabad, Telangana, we support patent attorneys, startups, and inventors across India.'
+							: 'Based in Redmond, Washington, we support IP attorneys and law firms nationwide across the United States.'}
 					</p>
 					<div className="services-hero-actions">
 						<Button href="/contact" arrow>Get In Touch</Button>
