@@ -69,3 +69,5 @@ Report outcomes faithfully and accurately.
 - **No Direct Changes to Main:** All code modifications must happen on the `redesign` branch. Direct commits or changes to the `main` branch are strictly forbidden.
 - **User Approval Required:** Code from the `redesign` branch can only be merged into `main` after receiving explicit approval from the user (e.g., "looks good", "we can merge").
 - **Never Delete Branches:** After merging a PR, never delete the source branch. Leave it intact for future work.
+- **Sync Before Starting Work:** Before beginning any new work on `redesign`, run `git fetch origin main && git merge origin/main` (or `git pull origin main`) and resolve any conflicts immediately. Never let `redesign` drift behind `main` across multiple merges — PR #54 accumulated conflicts because main (via PR #52) and redesign both appended different blog entries to `src/data/blogs.js` at the same location.
+- **Sync After Every Main Merge:** Whenever a PR merges `redesign` into `main`, immediately merge the updated `main` back into `redesign` right after. This keeps the next PR conflict-free.
