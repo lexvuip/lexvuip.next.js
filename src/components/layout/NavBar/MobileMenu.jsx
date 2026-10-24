@@ -10,6 +10,7 @@ import Button from '../../ui/Button';
 function MobileMenu() {
 	const { mobileMenuOpen, closeMobileMenu } = useNavContext();
 	const [ipSolutionsOpen, toggleIpSolutions, setIpSolutionsOpen] = useToggle();
+	const [patentDrawingsOpen, togglePatentDrawings, setPatentDrawingsOpen] = useToggle();
 	const [paralegalSolutionsOpen, toggleParalegalSolutions, setParalegalSolutionsOpen] = useToggle();
 	const [customSolutionsOpen, toggleCustomSolutions, setCustomSolutionsOpen] = useToggle();
 	const [servicesOpen, toggleServices, setServicesOpen] = useToggle();
@@ -17,9 +18,10 @@ function MobileMenu() {
 	const resetAllDropdowns = useCallback(() => {
 		setServicesOpen(false);
 		setIpSolutionsOpen(false);
+		setPatentDrawingsOpen(false);
 		setParalegalSolutionsOpen(false);
 		setCustomSolutionsOpen(false);
-	}, [setServicesOpen, setIpSolutionsOpen, setParalegalSolutionsOpen, setCustomSolutionsOpen]);
+	}, [setServicesOpen, setIpSolutionsOpen, setPatentDrawingsOpen, setParalegalSolutionsOpen, setCustomSolutionsOpen]);
 
 	const handleLinkClick = useCallback(() => {
 		closeMobileMenu();
@@ -102,7 +104,9 @@ function MobileMenu() {
 																<button
 																	className="mobile-sub-arrow-btn"
 																	onClick={
-																		section.label === 'IP Solutions'
+																		section.label === 'Patent Drawings'
+																			? togglePatentDrawings
+																			: section.label === 'IP Solutions'
 																			? toggleIpSolutions
 																			: section.label === 'Paralegal Solutions'
 																				? toggleParalegalSolutions
@@ -112,11 +116,13 @@ function MobileMenu() {
 																>
 																	<svg 
 																		className={`mobile-sub-arrow ${
-																			section.label === 'IP Solutions'
-																				? (ipSolutionsOpen ? 'open' : '')
-																				: section.label === 'Paralegal Solutions'
-																					? (paralegalSolutionsOpen ? 'open' : '')
-																					: (customSolutionsOpen ? 'open' : '')
+																			section.label === 'Patent Drawings'
+																				? (patentDrawingsOpen ? 'open' : '')
+																				: section.label === 'IP Solutions'
+																					? (ipSolutionsOpen ? 'open' : '')
+																					: section.label === 'Paralegal Solutions'
+																						? (paralegalSolutionsOpen ? 'open' : '')
+																						: (customSolutionsOpen ? 'open' : '')
 																		}`}
 																		width="10" 
 																		height="10" 
@@ -137,11 +143,13 @@ function MobileMenu() {
 														</div>
 														{section.items && (
 																<div className={`mobile-services-sub-dropdown ${
-																	section.label === 'IP Solutions'
-																		? (ipSolutionsOpen ? 'open' : '')
-																		: section.label === 'Paralegal Solutions'
-																			? (paralegalSolutionsOpen ? 'open' : '')
-																			: (customSolutionsOpen ? 'open' : '')
+																	section.label === 'Patent Drawings'
+																		? (patentDrawingsOpen ? 'open' : '')
+																		: section.label === 'IP Solutions'
+																			? (ipSolutionsOpen ? 'open' : '')
+																			: section.label === 'Paralegal Solutions'
+																				? (paralegalSolutionsOpen ? 'open' : '')
+																				: (customSolutionsOpen ? 'open' : '')
 																}`}>
 																<ul className="mobile-services-list">
 																	{section.items.map((item, itemIndex) => (

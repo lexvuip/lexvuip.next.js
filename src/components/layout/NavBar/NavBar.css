@@ -553,7 +553,18 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* Tighten desktop nav on narrower laptops now that 8 links are present */
+@media screen and (min-width: 1025px) and (max-width: 1360px) {
+	.navbar {
+		padding: 0.625rem 3vw;
+	}
+
+	.navbar-links {
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 1024px) {
 	.mobile-nav-links > li > a,
 	.mobile-nav-links > li > div > a {
 		padding: 0.9rem 1.25rem;
@@ -577,7 +588,7 @@
 }
 
 /* Show mobile menu button on small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	.navbar {
 		padding: 0.5rem 4vw;
 	}
