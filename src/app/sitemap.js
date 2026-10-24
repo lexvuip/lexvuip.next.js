@@ -24,6 +24,7 @@ export default function sitemap() {
     '/terms-of-service',
     '/cookie-policy',
     '/service/ipsolutions',
+    '/service/Patent-Drawings',
     ...(paralegalServices.length > 0 ? ['/service/paralegalsolutions'] : []),
     ...(customServices.length > 0 ? ['/service/customsolutions'] : []),
   ].map((route) => ({

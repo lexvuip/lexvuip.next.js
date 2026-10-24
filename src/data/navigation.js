@@ -15,6 +15,11 @@ if (isIndia) {
 } else {
 	servicesSections = [
 		{
+			href: '/service/Patent-Drawings',
+			label: 'Patent Drawings',
+			items: [{ label: 'For US Attorneys & Agents', href: '/service/Patent-Drawings' }]
+		},
+		{
 			href: '/service/ipsolutions',
 			label: 'IP Solutions',
 			items: ipServices.map(s => ({ label: s.title, href: `/service/ipsolutions/${s.slug}` }))
@@ -40,6 +45,7 @@ export const navLinks = [
 		label: 'Services',
 		sections: servicesSections
 	},
+	{ href: '/service/Patent-Drawings', label: 'Patent Drawings' },
 	{ href: '/founder', label: 'Founder' },
 	{ href: '/security', label: 'Security' },
 	{ href: '/blog', label: 'Blog' },

@@ -89,3 +89,36 @@ export const indiaFaqs = [
 const region = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
 
 export const defaultFaqs = region === 'IN' ? indiaFaqs : ipFaqs;
+
+export const patentDrawingFaqs = [
+	{
+		question: 'Do your drawings meet current USPTO formal requirements?',
+		answer:
+			'Yes. All utility and design patent drawings are prepared to meet 37 C.F.R. § 1.84 and current USPTO drawing standards, reducing the risk of drawing-related office actions.',
+	},
+	{
+		question: 'Can you work directly from a CAD file or 3D model?',
+		answer:
+			'Yes. We accept CAD files, STEP/STL models, sketches, photos, and prototypes as source material.',
+	},
+	{
+		question: 'What if the examiner objects to a drawing after filing?',
+		answer:
+			'We provide corrected and amended drawing sheets to respond to drawing objections quickly, so your prosecution timeline stays on track.',
+	},
+	{
+		question: 'Do you sign NDAs?',
+		answer:
+			'Yes. Confidentiality is standard practice. We’re happy to execute an NDA before reviewing any invention material.',
+	},
+	{
+		question: 'How do you price drawing projects?',
+		answer:
+			'Pricing depends on drawing type and complexity (utility, design, or complex multi-view drawings). We provide a transparent quote before work begins, with no hidden costs.',
+	},
+	{
+		question: 'Can you handle a full docket, not just one-off drawings?',
+		answer:
+			'Yes. We support both single-matter requests and ongoing docket relationships for firms with recurring filing volume.',
+	},
+];
