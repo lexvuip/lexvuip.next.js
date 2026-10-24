@@ -708,26 +708,30 @@
 }
 
 .pd-stp {
+	position: relative;
+	overflow: hidden;
 	text-align: center;
 	padding: 14px 20px 0;
 }
 
-.pd-stp.pulse {
-	animation: pd-shine 1.6s ease;
+.pd-stp::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+	pointer-events: none;
+}
+
+.pd-stp.pulse::after {
+	animation: pd-shine 1.2s ease;
 }
 
 @keyframes pd-shine {
-	25% {
-		text-shadow:
-			0 0 14px rgba(217, 185, 91, 0.75),
-			0 0 30px rgba(217, 185, 91, 0.35);
-		filter: brightness(1.45);
-	}
-	50% {
-		text-shadow:
-			0 0 10px rgba(217, 185, 91, 0.7),
-			0 0 24px rgba(217, 185, 91, 0.3);
-		filter: brightness(1.3);
+	to {
+		left: 100%;
 	}
 }
 
