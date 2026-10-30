@@ -619,10 +619,18 @@
 	stroke-dashoffset: 1;
 }
 
+/* draw uses an animation (not a transition) so figures swapped in mid-cycle
+   still animate: transitions never run on freshly inserted elements */
 .hero-sheet.hero-play .hero-dr {
 	stroke-dashoffset: 0;
-	transition: stroke-dashoffset var(--t, 1.3s) cubic-bezier(0.4, 0, 0.2, 1) var(--d, 0s),
-		stroke 0.45s ease, stroke-width 0.45s ease;
+	animation: heroStrokeIn var(--t, 1.3s) cubic-bezier(0.4, 0, 0.2, 1) var(--d, 0s) backwards;
+	transition: stroke 0.45s ease, stroke-width 0.45s ease;
+}
+
+@keyframes heroStrokeIn {
+	from {
+		stroke-dashoffset: 1;
+	}
 }
 
 .hero-fd {
@@ -631,7 +639,14 @@
 
 .hero-sheet.hero-play .hero-fd {
 	opacity: 1;
-	transition: opacity 0.7s ease var(--d, 0s), fill 0.45s ease;
+	animation: heroFillIn 0.7s ease var(--d, 0s) backwards;
+	transition: fill 0.45s ease;
+}
+
+@keyframes heroFillIn {
+	from {
+		opacity: 0;
+	}
 }
 
 .hero-num {
@@ -667,7 +682,7 @@
 	}
 	100% {
 		opacity: 0;
-		transform: translateY(205px);
+		transform: translateY(358px);
 	}
 }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { FIGURES } from './heroFigures';
 import './HeroSection.css';
 
 const REGION = process.env.NEXT_PUBLIC_REGION || 'GLOBAL';
@@ -37,7 +38,9 @@ function HeroSection() {
 	const artRef = useRef(null);
 	const readoutRef = useRef(null);
 	const pillRef = useRef(null);
+	const playedRef = useRef(false);
 	const [available, setAvailable] = useState(null);
+	const [fig, setFig] = useState(0);
 
 	useEffect(() => {
 		const section = sectionRef.current;
@@ -79,9 +82,16 @@ function HeroSection() {
 			bodyObserver.observe(document.body);
 		}
 
-		// Patent sheet draw/check/stamp cycle
+		// Patent sheet draw/check/stamp cycle; each new loop picks the next figure.
+		// The swap happens while hero-out has already faded the stage, so React
+		// swaps the drawing without a visible flash.
 		const timers = [];
 		const cycle = () => {
+			if (playedRef.current) {
+				setFig((i) => (i + 1) % FIGURES.length);
+			} else {
+				playedRef.current = true;
+			}
 			sheet.classList.add('hero-reset');
 			sheet.classList.remove('hero-play', 'hero-out');
 			void sheet.offsetWidth;
@@ -135,7 +145,7 @@ function HeroSection() {
 							'X ' +
 							pad(Math.round((ax / a.width) * 400)) +
 							' · Y ' +
-							pad(Math.round((ay / a.height) * 300));
+							pad(Math.round((ay / a.height) * 360));
 					}
 				}
 			});
@@ -295,11 +305,13 @@ function HeroSection() {
 					<div className="hero-stage">
 						<div className="hero-hd">
 							<span>LEXVUIP &middot; DRAWING SHEET</span>
-							<span>SHEET 1/1</span>
+							<span>
+								SHEET {fig + 1}/{FIGURES.length}
+							</span>
 						</div>
 						<div className="hero-art" ref={artRef}>
 							<svg
-								viewBox="0 0 400 300"
+								viewBox="0 0 400 360"
 								preserveAspectRatio="xMidYMid meet"
 								aria-hidden="true"
 							>
@@ -310,87 +322,19 @@ function HeroSection() {
 										<stop offset="1" stopColor="#d9b95b" stopOpacity="0" />
 									</linearGradient>
 								</defs>
-								{/* cube */}
-								<path
-									className="hero-ln hero-dr"
-									pathLength="1"
-									style={{ '--d': '.3s', '--t': '1.5s' }}
-									d="M190 100L258 139L258 217L190 256L122 217L122 139Z"
-								/>
-								<path
-									className="hero-ln hero-dr"
-									pathLength="1"
-									style={{ '--d': '1.5s', '--t': '1s' }}
-									d="M190 178L122 139M190 178L258 139M190 178L190 256"
-								/>
-								<ellipse
-									className="hero-ln hero-dr"
-									pathLength="1"
-									style={{ '--d': '2s', '--t': '.9s' }}
-									cx="190"
-									cy="139"
-									rx="26"
-									ry="13"
-								/>
-								{/* pin (exploded view) */}
-								<ellipse
-									className="hero-ln hero-dr"
-									pathLength="1"
-									style={{ '--d': '2.5s', '--t': '.8s' }}
-									cx="190"
-									cy="50"
-									rx="14"
-									ry="6"
-								/>
-								<path
-									className="hero-ln hero-dr"
-									pathLength="1"
-									style={{ '--d': '2.9s', '--t': '.8s' }}
-									d="M176 50V78A14 6 0 0 0 204 78V50"
-								/>
-								<path
-									className="hero-hid hero-fd"
-									style={{ '--d': '3.4s' }}
-									d="M190 90V126"
-								/>
-								{/* leaders + numerals */}
-								<path
-									className="hero-gl hero-dr"
-									pathLength="1"
-									style={{ '--d': '3.7s', '--t': '.8s' }}
-									d="M204 50L292 40L306 40"
-								/>
-								<path
-									className="hero-gl hero-dr"
-									pathLength="1"
-									style={{ '--d': '3.9s', '--t': '.8s' }}
-									d="M216 139L296 100L310 100"
-								/>
-								<path
-									className="hero-gl hero-dr"
-									pathLength="1"
-									style={{ '--d': '4.1s', '--t': '.8s' }}
-									d="M258 190L300 200L314 200"
-								/>
-								<text className="hero-num hero-fd" style={{ '--d': '4.4s' }} x="312" y="44">
-									14
-								</text>
-								<text className="hero-num hero-fd" style={{ '--d': '4.6s' }} x="316" y="104">
-									12
-								</text>
-								<text className="hero-num hero-fd" style={{ '--d': '4.8s' }} x="320" y="204">
-									10
-								</text>
-								<text
-									className="hero-cap hero-fd"
-									style={{ '--d': '4.9s' }}
-									x="190"
-									y="286"
-									textAnchor="middle"
-								>
-									FIG. 1
-								</text>
-								<rect className="hero-scan" x="90" y="60" width="220" height="2.5" />
+								{FIGURES.map((figure, i) =>
+									i === fig ? (
+										<g
+											key={figure.id}
+											transform={
+												figure.dy ? `translate(0 ${figure.dy})` : undefined
+											}
+										>
+											{figure.node}
+										</g>
+									) : null
+								)}
+								<rect className="hero-scan" x="10" y="0" width="380" height="3" />
 							</svg>
 							<div className="hero-stamp" style={{ '--d': '8.6s' }}>
 								READY TO FILE

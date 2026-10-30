@@ -629,6 +629,11 @@
 	overflow: visible;
 }
 
+.pd-vert {
+	display: none;
+	transform: scaleY(0);
+}
+
 .pd-trk {
 	fill: none;
 	stroke: var(--pd-line);
@@ -884,6 +889,17 @@
 	}
 	.pd-road svg {
 		display: none;
+	}
+	.pd-vert {
+		display: block;
+		position: absolute;
+		left: 5.4px;
+		width: 2.2px;
+		background: var(--pd-gold);
+		border-radius: 1.1px;
+		z-index: 1;
+		transform-origin: top center;
+		pointer-events: none;
 	}
 	.pd-stps {
 		grid-template-columns: 1fr;

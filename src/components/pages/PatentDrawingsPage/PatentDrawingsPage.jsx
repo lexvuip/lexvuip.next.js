@@ -98,10 +98,12 @@ export default function PatentDrawingsPage() {
 		const nds = Array.from(road.querySelectorAll('.pd-nd'));
 		const stps = Array.from(road.querySelectorAll('.pd-stp'));
 		const tv = road.querySelector('.pd-tv');
+		const vert = road.querySelector('.pd-vert');
 		const lens = segs.map((p) => p.getTotalLength());
 		const pulseTimers = {};
 		const lit = (i) => {
 			nds[i].classList.add('on');
+			if (stps[i]) stps[i].classList.add('on');
 			const stp = stps[i];
 			if (stp && !rm) {
 				stp.classList.remove('pulse');
@@ -117,16 +119,33 @@ export default function PatentDrawingsPage() {
 				p.style.strokeDashoffset = lens[k];
 			});
 			nds.forEach((n) => n.classList.remove('on'));
+			stps.forEach((n) => n.classList.remove('on'));
+			if (vert) vert.style.transform = 'scaleY(0)';
 			tv.style.opacity = 0;
 		};
+		const placeVert = () => {
+			if (!vert || !stps.length) return;
+			const rRoad = road.getBoundingClientRect();
+			const first = stps[0].getBoundingClientRect();
+			const last = stps[stps.length - 1].getBoundingClientRect();
+			vert.style.top = (first.top - rRoad.top + 7.5).toFixed(1) + 'px';
+			vert.style.height = (last.top - first.top).toFixed(1) + 'px';
+		};
 		clearRoad();
-		stps.forEach((x) => x.classList.add('on'));
+		placeVert();
+		const onResize = () => placeVert();
+		window.addEventListener('resize', onResize);
+		window.addEventListener('load', onResize);
 		if (rm) {
 			segs.forEach((p) => {
 				p.style.strokeDashoffset = 0;
 			});
 			nds.forEach((_, k) => lit(k));
-			return;
+			if (vert) vert.style.transform = 'none';
+			return () => {
+				window.removeEventListener('resize', onResize);
+				window.removeEventListener('load', onResize);
+			};
 		}
 		const SEG = 1700;
 		const HOLD = 2600;
@@ -138,6 +157,7 @@ export default function PatentDrawingsPage() {
 		const cycle = () => {
 			running = true;
 			clearRoad();
+			placeVert();
 			let t0 = null;
 			let reached = 0;
 			const step = (t) => {
@@ -151,10 +171,13 @@ export default function PatentDrawingsPage() {
 					segs.forEach((s, j) => {
 						s.style.strokeDashoffset = j < k ? 0 : j === k ? lens[j] * (1 - e) : lens[j];
 					});
-					const pt = segs[k].getPointAtLength(lens[k] * e);
-					tv.setAttribute('cx', pt.x);
-					tv.setAttribute('cy', pt.y);
-					tv.style.opacity = 1;
+					const pt = lens[k] ? segs[k].getPointAtLength(lens[k] * e) : null;
+					if (pt) {
+						tv.setAttribute('cx', pt.x);
+						tv.setAttribute('cy', pt.y);
+						tv.style.opacity = 1;
+					}
+					if (vert) vert.style.transform = `scaleY(${((k + e) / segs.length).toFixed(4)})`;
 					if (p > 0.985 && reached <= k) {
 						reached = k + 1;
 						lit(k + 1);
@@ -194,6 +217,8 @@ export default function PatentDrawingsPage() {
 			cancelAnimationFrame(raf);
 			timers.forEach(clearTimeout);
 			Object.values(pulseTimers).forEach(clearTimeout);
+			window.removeEventListener('resize', onResize);
+			window.removeEventListener('load', onResize);
 			ro.disconnect();
 		};
 	}, []);
@@ -594,6 +619,7 @@ export default function PatentDrawingsPage() {
 							</g>
 							<circle className="pd-tv" r="5" cx="125" cy="28" />
 						</svg>
+						<i className="pd-vert" aria-hidden="true" />
 						<div className="pd-stps">
 							<div className="pd-stp">
 								<small>STEP 01</small>
