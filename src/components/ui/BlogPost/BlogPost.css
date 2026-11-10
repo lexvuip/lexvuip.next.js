@@ -193,6 +193,17 @@
 	margin-bottom: var(--space-lg);
 }
 
+.blogpost-body a {
+	color: var(--color-gold);
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.blogpost-body a:hover {
+	color: var(--color-navy);
+}
+
 .blogpost-list {
 	margin: 0 0 var(--space-lg);
 	padding-left: 1.4em;
