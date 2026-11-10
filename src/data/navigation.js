@@ -17,21 +17,25 @@ if (isIndia) {
 		{
 			href: '/service/Patent-Drawings',
 			label: 'Patent Drawings',
+			blurb: 'Drawings prepared to USPTO requirements.',
 			items: [{ label: 'For US Attorneys & Agents', href: '/service/Patent-Drawings' }]
 		},
 		{
 			href: '/service/ipsolutions',
 			label: 'IP Solutions',
+			blurb: 'Drawings and filings across IP types.',
 			items: ipServices.map(s => ({ label: s.title, href: `/service/ipsolutions/${s.slug}` }))
 		},
 		...(paralegalServices.length > 0 ? [{
 			href: '/service/paralegalsolutions',
 			label: 'Paralegal Solutions',
+			blurb: 'Back-office support for your IP practice.',
 			items: paralegalServices.map(s => ({ label: s.title, href: `/service/paralegalsolutions/${s.slug}` }))
 		}] : []),
 		...(customServices.length > 0 ? [{
 			href: '/service/customsolutions',
 			label: 'Custom Solutions',
+			blurb: 'Support shaped around how your firm works.',
 			items: customServices.map(s => ({ label: s.title, href: `/service/customsolutions/${s.slug}` }))
 		}] : [])
 	];
