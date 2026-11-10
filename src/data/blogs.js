@@ -3528,8 +3528,585 @@ export const blogs = [
 				body: "It is a worthwhile question to answer before filing, rather than after your brand has become valuable.",
 			},
 			{
+				heading: null,
+				body: 'In the next article of this series, [Part 10](/blog/what-can-be-registered-as-a-trademark-in-india), we explore the different types of trademarks in India and what can actually be registered — from word marks and logos to shapes, colours, and sounds.',
+			},
+			{
 				heading: 'Legal Note',
 				body: 'This article is intended for educational purposes and provides a general explanation of trademark registration considerations before filing a trademark application in India. It is not legal advice. Trademark availability, registrability, classification, and protection strategies depend on the specific facts, the applicable laws of each jurisdiction, and professional legal advice.',
+			},
+ 		],
+ 	},
+
+	{
+		id: '19',
+		slug: 'what-can-be-registered-as-a-trademark-in-india',
+		category: 'Trademark',
+		title:
+			'IP Fundamentals | Part 10: What Can You Actually Register as a Trademark?',
+		date: '11/10/2026',
+		authorId: 'bhanu-prakash',
+		excerpt:
+			'Discover what can be registered as a trademark in India, from brand names and logos to slogans, packaging, colors, shapes, and sounds.',
+		heroImage:
+			'/assets/stockimages/what-can-be-registered-as-a-trademark-1920.jpg',
+		heroAlt:
+			'Different types of trademarks including word marks, logos, slogans, product packaging, colour combinations and sound marks',
+		content: [
+			{
+				heading: null,
+				body: 'When people think about trademarks, they usually think of a brand name or a logo.',
+			},
+			{
+				heading: null,
+				body: 'But trademark protection can cover more than the name printed on your packaging or displayed on your website.',
+			},
+			{
+				heading: null,
+				body: 'A distinctive slogan, a combination of colors, the shape of a product, its packaging, or even a sound associated with a brand may qualify for trademark protection in certain circumstances.',
+			},
+			{
+				heading: null,
+				body: 'The important question is not simply whether something represents your business.',
+			},
+			{
+				heading: null,
+				body: 'It is whether that element can function as a trademark and distinguish your goods or services from those of others.',
+			},
+			{
+				heading: null,
+				body: 'Understanding the different types of trademarks in India helps business owners make better decisions before investing in a brand.',
+			},
+			{
+				heading: null,
+				body: 'This is Part 10 of our IP Fundamentals series. In [Part 9](/blog/before-registering-a-trademark-in-india), we covered what every business owner should know before registering a trademark. Here, we look at what can actually be registered.',
+			},
+			{
+				heading: 'A Trademark Is More Than a Brand Name',
+				body: 'Under Indian trademark law, a trademark is a mark capable of being represented in the prescribed manner and capable of distinguishing the goods or services of one business from those of another.',
+			},
+			{
+				heading: null,
+				body: 'In simple terms, a trademark helps customers recognise the commercial source of a product or service.',
+			},
+			{
+				heading: null,
+				body: 'That mark does not always have to be a word.',
+			},
+			{
+				heading: null,
+				body: 'Depending on its distinctiveness and the applicable legal requirements, several different elements may qualify.',
+			},
+			{
+				heading: null,
+				body: "Let's look at some of them.",
+			},
+			{
+				heading: '1. Word Marks: Protecting Your Brand Name',
+				body: 'A word mark protects the words, letters, or numbers used to identify a business, product, or service.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Examples could include:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A business or product name.',
+							'A distinctive combination of letters.',
+							'A coined or invented word.',
+							'A distinctive slogan or phrase.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'For example, imagine a company selling sports equipment under the name "VELTRON".',
+			},
+			{
+				heading: null,
+				body: 'The company may seek to register VELTRON as a word mark.',
+			},
+			{
+				heading: null,
+				body: 'One important advantage of a word mark is that protection is generally sought for the wording itself, rather than being limited to one particular font, colour, or logo arrangement.',
+			},
+			{
+				heading: null,
+				body: 'However, the word must still satisfy the legal requirements for registration. A name that is generic, descriptive, or confusingly similar to an existing trademark may face difficulties.',
+			},
+			{
+				heading: '2. Logo Marks: Protecting Your Visual Identity',
+				body: 'A logo or device mark protects a distinctive visual representation associated with a business.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'This may include:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A stylised symbol.',
+							'A graphic design.',
+							'A combination of words and artwork.',
+							'A distinctive arrangement of letters or visual elements.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Consider a business that sells footwear under the name VELTRON and uses a distinctive geometric symbol alongside the name.',
+			},
+			{
+				heading: null,
+				body: 'The business may consider applying to register the logo as a separate trademark.',
+			},
+			{
+				heading: null,
+				body: 'This is worth understanding: registering a logo does not always provide the same scope of protection as registering the brand name independently.',
+			},
+			{
+				heading: null,
+				body: 'If the name is important to your business, consider whether it should also be protected as a word mark.',
+			},
+			{
+				heading: '3. Slogans and Taglines',
+				body: "A slogan can become an important part of a brand's identity.",
+			},
+			{
+				heading: null,
+				body: 'Think about a short phrase customers begin to associate with a particular business or product.',
+			},
+			{
+				heading: null,
+				body: 'A distinctive slogan may qualify for trademark registration.',
+			},
+			{
+				heading: null,
+				body: 'However, not every advertising statement can be registered.',
+			},
+			{
+				heading: null,
+				body: "A phrase that merely describes a product's quality, benefit, or intended purpose may lack the distinctiveness required for trademark protection.",
+			},
+			{
+				heading: null,
+				body: 'For example, a general phrase such as "Best Quality Products" is unlikely to function as a strong trademark on its own.',
+			},
+			{
+				heading: null,
+				body: 'The key is whether customers are likely to recognise the phrase as identifying a particular commercial source, rather than simply describing what is being sold.',
+			},
+			{
+				heading: '4. Letters, Numbers, and Combinations',
+				body: 'A trademark can also consist of letters, numbers, or a combination of both.',
+			},
+			{
+				heading: null,
+				body: 'Businesses often use these elements to identify product ranges, models, services, or brands.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'For example:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A distinctive combination of letters.',
+							'A unique alphanumeric brand name.',
+							'A particular number used as a product identifier.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'But a number or letter is not automatically registrable simply because a business uses it.',
+			},
+			{
+				heading: null,
+				body: 'The proposed mark must be capable of distinguishing the relevant goods or services. Commonly used numbers, descriptive references, or marks already associated with another business may encounter objections.',
+			},
+			{
+				heading: '5. Shape of Goods and Product Packaging',
+				body: 'This is where trademark protection becomes particularly interesting for product-based businesses.',
+			},
+			{
+				heading: null,
+				body: 'In certain circumstances, the shape of a product or its packaging can function as a trademark.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'For example:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A distinctive bottle shape.',
+							'Unusual product packaging.',
+							'A recognisable container design.',
+							'A distinctive three-dimensional product presentation.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Imagine a beverage company that consistently uses a particular bottle shape. Over time, customers may begin to recognise the product from the shape of the bottle itself, even before reading the brand name.',
+			},
+			{
+				heading: null,
+				body: 'That shape may be considered for trademark protection if it meets the legal requirements.',
+			},
+			{
+				heading: null,
+				body: 'However, there are important limitations.',
+			},
+			{
+				heading: null,
+				body: 'A shape cannot generally be registered as a trademark merely because it looks attractive or different.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Under Indian law, registration may be refused where a shape:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'Results from the nature of the goods themselves.',
+							'Is necessary to obtain a technical result.',
+							'Gives substantial value to the goods.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'This distinction matters because product shapes may also fall within the scope of design protection, which serves a different purpose.',
+			},
+			{
+				heading: null,
+				body: 'A business should consider whether it needs trademark protection, design registration, or both.',
+			},
+			{
+				heading: '6. Colour Combinations',
+				body: 'Can a colour be protected as a trademark?',
+			},
+			{
+				heading: null,
+				body: 'In certain circumstances, yes.',
+			},
+			{
+				heading: null,
+				body: 'A combination of colors may qualify for registration if it is sufficiently distinctive and capable of identifying the commercial source of goods or services.',
+			},
+			{
+				heading: null,
+				body: 'For example, a business may consistently use a particular combination of colors across its product packaging, labels, or retail presentation.',
+			},
+			{
+				heading: null,
+				body: 'Over time, customers may associate that combination with the business.',
+			},
+			{
+				heading: null,
+				body: 'However, claiming exclusive rights over a single common colour or an ordinary colour combination is not straightforward.',
+			},
+			{
+				heading: null,
+				body: 'The applicant must establish that the colour arrangement functions as a distinctive identifier and satisfies the applicable legal requirements.',
+			},
+			{
+				heading: '7. Sound Marks',
+				body: 'A trademark does not always have to be seen. It may also be heard.',
+			},
+			{
+				heading: null,
+				body: 'A distinctive sound associated with a business can qualify for trademark registration.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Think about:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							"A recognisable sound played at the beginning of a company's advertisements.",
+							'A distinctive audio signature used in digital content.',
+							'A short musical sequence associated with a product or service.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'In India, sound marks can be registered, subject to the applicable requirements for representation and distinctiveness.',
+			},
+			{
+				heading: null,
+				body: 'The sound must be represented in the manner prescribed by the Trade Marks Rules. A mere description such as "a pleasant musical sound" would not be sufficient.',
+			},
+			{
+				heading: null,
+				body: 'For businesses that rely heavily on audio branding, this is an area worth considering.',
+			},
+			{
+				heading: '8. Collective and Certification Marks',
+				body: 'Not every trademark is intended to identify one individual business.',
+			},
+			{
+				heading: null,
+				body: 'Indian trademark law also recognises collective marks and certification marks.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: '**Collective marks**',
+					},
+					{
+						type: 'paragraph',
+						text: 'These are used by members of an association to identify their goods or services as belonging to that group.',
+					},
+					{
+						type: 'paragraph',
+						text: "For example, members of a trade association may use a collective mark in accordance with the association's rules.",
+					},
+					{
+						type: 'paragraph',
+						text: '**Certification marks**',
+					},
+					{
+						type: 'paragraph',
+						text: 'These indicate that goods or services meet certain certified standards or characteristics, such as quality, origin, material, or method of manufacture.',
+					},
+					{
+						type: 'paragraph',
+						text: 'The mark is used to communicate that the relevant goods or services have been certified according to defined criteria.',
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'These marks serve a different purpose from an ordinary brand trademark and are subject to specific requirements.',
+			},
+			{
+				heading: 'Can Every Business Element Be Registered as a Trademark?',
+				body: 'No.',
+			},
+			{
+				heading: null,
+				body: 'This is one of the most important points to understand.',
+			},
+			{
+				heading: null,
+				body: 'Just because a business uses an element does not mean it can automatically claim exclusive trademark rights over it.',
+			},
+			{
+				heading: null,
+				body: 'A proposed trademark must satisfy the legal requirements for registration.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'In India, some of the key considerations include:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'**Distinctiveness:** Can the mark distinguish your goods or services from those of other businesses?',
+							'**Descriptive meaning:** Does the mark merely describe the nature, quality, purpose, or characteristics of the goods or services?',
+							'**Existing rights:** Is the mark identical or confusingly similar to an earlier trademark?',
+							'**Legal restrictions:** Does the proposed mark fall within any of the grounds for refusal under trademark law?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'For example, a business selling fresh mangoes may find it difficult to claim exclusive rights over the word "MANGO" for those goods.',
+			},
+			{
+				heading: null,
+				body: 'But a distinctive invented name used for the same products may have a stronger basis for registration, subject to availability and other legal requirements.',
+			},
+			{
+				heading: null,
+				body: 'The difference lies in how the mark functions in relation to the goods or services.',
+			},
+			{
+				heading: 'A Trademark Is Not the Same as a Design or Copyright',
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Business owners sometimes confuse trademarks with other forms of intellectual property. Although they may protect elements of the same product or brand, they serve different purposes.',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'**Trademark** — signs that distinguish the commercial source of goods or services.',
+							'**Design registration** — the visual features of shape, configuration, pattern, ornament, or composition applied to an article.',
+							'**Copyright** — original creative expression, such as artwork, illustrations, photographs, and written content.',
+							'**Patent** — a qualifying invention that meets the applicable patentability requirements.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'Consider a company launching a new consumer product.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'It may have:',
+					},
+					{
+						type: 'list',
+						ordered: false,
+						items: [
+							'A brand name that can be considered for trademark protection.',
+							'A distinctive product appearance that may qualify for design registration.',
+							'Original artwork on the packaging that may attract copyright protection.',
+							'A technical mechanism that may qualify for patent protection.',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'These rights are not interchangeable.',
+			},
+			{
+				heading: null,
+				body: 'In some cases, a business may need more than one form of IP protection to protect different aspects of the same product.',
+			},
+			{
+				heading: 'What Should You Consider Before Applying?',
+				body: 'Before deciding what to register, take a closer look at how your business uses its brand.',
+			},
+			{
+				heading: null,
+				blocks: [
+					{
+						type: 'paragraph',
+						text: 'Ask yourself:',
+					},
+					{
+						type: 'list',
+						ordered: true,
+						items: [
+							'Is the brand name important enough to protect independently?',
+							'Does the business use a distinctive logo or symbol?',
+							'Is there a slogan customers associate with the brand?',
+							'Does the product have distinctive packaging or a recognisable shape?',
+							'Are particular colors or sounds consistently associated with the business?',
+							'Which goods or services will the mark identify?',
+							'Have similar marks already been registered or used by others?',
+						],
+					},
+				],
+			},
+			{
+				heading: null,
+				body: 'You may not need to register every element.',
+			},
+			{
+				heading: null,
+				body: 'The objective is to identify the parts of your brand that carry commercial value and determine which ones are suitable for protection.',
+			},
+			{
+				heading: null,
+				body: 'A trademark search and a review of the proposed mark should form part of that decision.',
+			},
+			{
+				heading: 'Why This Matters to Trademark Professionals',
+				body: 'For trademark attorneys and professionals, identifying the correct form of a mark is an important part of filing strategy.',
+			},
+			{
+				heading: null,
+				body: 'A client may approach with a logo and ask for [trademark registration in India](/service/ipsolutions/trademark-registration).',
+			},
+			{
+				heading: null,
+				body: 'But the discussion should go further.',
+			},
+			{
+				heading: null,
+				body: 'Is the brand name distinctive? Should the word and logo be filed separately? Is the client trying to protect the shape of a product? Does the business need a collective or certification mark? Are there other forms of IP protection worth considering?',
+			},
+			{
+				heading: null,
+				body: 'These questions help determine what should be filed, how the application should be prepared, and what the client is seeking to protect.',
+			},
+			{
+				heading: null,
+				body: 'A well-considered filing strategy begins with understanding the asset, not simply submitting the application.',
+			},
+			{
+				heading: 'Final Thoughts',
+				body: 'A trademark is not limited to a name or a logo.',
+			},
+			{
+				heading: null,
+				body: 'It can take different forms, including words, symbols, slogans, shapes, packaging, colour combinations, and sounds.',
+			},
+			{
+				heading: null,
+				body: 'But the ability to register an element depends on whether it meets the legal requirements and can distinguish the goods or services of one business from another.',
+			},
+			{
+				heading: null,
+				body: 'Before investing in a brand, take time to identify what makes it recognisable.',
+			},
+			{
+				heading: null,
+				body: 'That may be the name customers remember, the symbol they associate with your products, or even a sound they recognise without seeing your logo.',
+			},
+			{
+				heading: null,
+				body: 'If someone removed your brand name from your product tomorrow, what would still help customers recognise that it came from your business?',
+			},
+			{
+				heading: null,
+				body: 'That is a useful question to ask when thinking about trademark protection.',
+			},
+			{
+				heading: 'Legal Note',
+				body: 'This article is intended for educational purposes and provides a general explanation of what can be registered as a trademark in India. It is not legal advice. Trademark availability, registrability, and protection strategies depend on the specific facts, the applicable laws of each jurisdiction, and professional legal advice.',
 			},
  		],
  	},

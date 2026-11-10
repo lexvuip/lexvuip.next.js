@@ -13,7 +13,8 @@ import './BlogPost.css';
 function renderBody(text) {
 	return text
 		.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
+		.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>')
+		.replace(/\[(.+?)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
 function ContentBlock({ block }) {
@@ -143,7 +144,7 @@ function BlogPost() {
 				<div className="blogpost-hero">
 					<Image 
 						src={post.heroImage} 
-						alt={post.title} 
+						alt={post.heroAlt || post.title} 
 						width={1600} 
 						height={900} 
 						priority
