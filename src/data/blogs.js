@@ -4125,6 +4125,11 @@ export const blogs = [
 			'/assets/stockimages/choosing-a-strong-trademark-in-india-1920.jpg',
 		heroAlt:
 			'Poster comparing a descriptive brand name and a distinctive brand name, showing different trademark name categories from descriptive to distinctive terms',
+		relatedSlugs: [
+			'what-can-be-registered-as-a-trademark-in-india',
+			'before-registering-a-trademark-in-india',
+			'trademark-strategy-for-attorneys',
+		],
 		content: [
 			{
 				heading: null,
@@ -4148,7 +4153,7 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'This is Part 11 of our IP Fundamentals series. In [Part 10](/blog/what-can-be-registered-as-a-trademark-in-india), we covered what can actually be registered as a trademark. Here, we look at what makes a brand name strong and easier to protect.',
+				body: 'This is Part 11 of our IP Fundamentals series. In [Part 10](/blog/what-can-be-registered-as-a-trademark-in-india), we covered what can actually be registered as a trademark. In [Part 9](/blog/before-registering-a-trademark-in-india), we covered what every business owner should know before registering a trademark in India. Here, we look at what makes a brand name strong and easier to protect.',
 			},
 			{
 				heading: 'What Makes a Trademark Strong?',
@@ -4540,7 +4545,7 @@ export const blogs = [
 			},
 			{
 				heading: null,
-				body: 'The important decision is to choose a name that works commercially and has the potential to function as a distinctive trademark.',
+				body: 'The important decision is to choose a name that works commercially and has the potential to function as a distinctive trademark. If you are ready to protect your brand, professional [trademark registration services in India](/service/ipsolutions/trademark-registration) can help you assess your name and file the application.',
 			},
 			{
 				heading: null,

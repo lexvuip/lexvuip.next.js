@@ -97,10 +97,18 @@ function BlogPost() {
 		if (!post || !post.authorId) return defaultAuthor;
 		return authors[post.authorId] || defaultAuthor;
 	}, [post]);
-	const related = useMemo(
-		() => blogs.filter((b) => b.slug !== slug).slice(0, 3),
-		[slug]
-	);
+	const related = useMemo(() => {
+		if (!post) return [];
+		const picked = (post.relatedSlugs || [])
+			.map((s) => blogs.find((b) => b.slug === s))
+			.filter(Boolean)
+			.slice(0, 3);
+		if (picked.length >= 3) return picked;
+		const fallback = blogs.filter(
+			(b) => b.slug !== slug && b.category === post.category && !picked.includes(b)
+		);
+		return [...picked, ...fallback].slice(0, 3);
+	}, [post, slug]);
 
 	if (!post) {
 		return (
@@ -202,7 +210,7 @@ function BlogPost() {
 
 				<div className="blogpost-related">
 					<div className="blog-related-header">
-						<h2 className="related-title">You may like</h2>
+						<h2 className="related-title">Related Articles</h2>
 						<Link href="/blog" className="blog-all-link">
 							View All <span className="arrow">→</span>
 						</Link>
