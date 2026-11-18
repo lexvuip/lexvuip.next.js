@@ -4125,6 +4125,11 @@ export const blogs = [
 			'/assets/stockimages/choosing-a-strong-trademark-in-india-1920.jpg',
 		heroAlt:
 			'Poster comparing a descriptive brand name and a distinctive brand name, showing different trademark name categories from descriptive to distinctive terms',
+		relatedSlugs: [
+			'what-can-be-registered-as-a-trademark-in-india',
+			'before-registering-a-trademark-in-india',
+			'trademark-strategy-for-attorneys',
+		],
 		content: [
 			{
 				heading: null,
