@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/third-parties": "^16.4.6",
+    "@vercel/analytics": "^2.0.1",
     "critters": "^0.0.23",
     "next": "15.5.9",
     "react": "19.1.0",
