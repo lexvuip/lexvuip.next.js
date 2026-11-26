@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import './ContactForm.css';
+import { trackEvent } from '../../../lib/analytics';
 
 const INITIAL_FORM = { firstname: '', lastname: '', email: '', phone: '', message: '' };
 
@@ -28,11 +29,14 @@ function ContactForm() {
 			});
 			const body = await res.json().catch(() => ({}));
 			if (res.ok && body.status === 'success') {
+				trackEvent('contact_form_submit', { page_path: window.location.pathname });
 				setSubmitted(true);
 			} else {
+				trackEvent('contact_form_error', { page_path: window.location.pathname, error_type: body.error || 'unknown' });
 				setSubmitError(body.error || 'Could not send your message. Please try again.');
 			}
 		} catch {
+			trackEvent('contact_form_error', { page_path: window.location.pathname, error_type: 'network' });
 			setSubmitError('Could not send your message. Please check your connection and try again.');
 		} finally {
 			setSubmitting(false);

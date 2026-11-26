@@ -266,14 +266,14 @@ function HeroSection() {
 						)}
 					</p>
 					<div className="hero-cta">
-						<a className="hero-pill" href="/contact" ref={pillRef}>
+						<a className="hero-pill" href="/contact" ref={pillRef} data-cta="hero-book-consultation">
 							BOOK A CONSULTATION{' '}
 							<span className="hero-ar" aria-hidden="true">
 								<i>&rarr;</i>
 								<i>&rarr;</i>
 							</span>
 						</a>
-						<a className="hero-lnk" href="/services">
+						<a className="hero-lnk" href="/services" data-cta="hero-explore-services">
 							Explore Services <span>&rarr;</span>
 						</a>
 						<span className="hero-wa">
