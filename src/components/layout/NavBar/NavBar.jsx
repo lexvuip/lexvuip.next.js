@@ -11,6 +11,7 @@ import PromoBanner from '../../ui/PromoBanner';
 import useScrollPosition from '../../../hooks/useScrollPosition';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import { navLinks } from '../../../data/navigation';
+import { trackEvent } from '../../../lib/analytics';
 import './NavBar.css';
 
 import { useRef, useEffect } from 'react';
@@ -97,7 +98,14 @@ function NavBar() {
 				</Link>
 				<DesktopNav />
 				<div className="navbar-contact">
-					<Button href="/contact" className="btn-inverted" arrow>Get In Touch</Button>
+					<Button
+						href="/contact"
+						className="btn-inverted"
+						arrow
+						onClick={() => trackEvent('cta_click', { cta_text: 'nav-get-in-touch', cta_location: window.location.pathname })}
+					>
+						Get In Touch
+					</Button>
 				</div>
 				<HamburgerButton />
 			</nav>

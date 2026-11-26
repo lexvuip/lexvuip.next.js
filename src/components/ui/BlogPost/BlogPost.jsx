@@ -1,10 +1,11 @@
 'use client';
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogs } from '../../../data/blogs';
 import { authors, defaultAuthor } from '../../../data/authors';
+import { trackEvent } from '../../../lib/analytics';
 import Breadcrumbs from '../Breadcrumbs';
 import BlogCard from '../BlogCard/BlogCard';
 import BlogTOC from './BlogTOC';
@@ -109,6 +110,28 @@ function BlogPost() {
 		);
 		return [...picked, ...fallback].slice(0, 3);
 	}, [post, slug]);
+
+	const depthMilestonesRef = useRef(new Set());
+
+	useEffect(() => {
+		depthMilestonesRef.current = new Set();
+		const milestones = [25, 50, 75, 100];
+		function handleScroll() {
+			const doc = document.documentElement;
+			const scrollable = doc.scrollHeight - window.innerHeight;
+			if (scrollable <= 0) return;
+			const percent = Math.round((window.scrollY / scrollable) * 100);
+			for (const m of milestones) {
+				if (percent >= m && !depthMilestonesRef.current.has(m)) {
+					depthMilestonesRef.current.add(m);
+					trackEvent('blog_read_depth', { blog_slug: slug, depth_percent: m });
+				}
+			}
+		}
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		handleScroll();
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [slug]);
 
 	if (!post) {
 		return (

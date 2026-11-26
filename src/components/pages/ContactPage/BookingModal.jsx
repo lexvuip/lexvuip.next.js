@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import './BookingModal.css';
+import { trackEvent } from '../../../lib/analytics';
 
 const SLOT_RANGE_DAYS = 14;
 
@@ -33,6 +34,10 @@ function BookingModal({ open, onClose }) {
 	const [bookingError, setBookingError] = useState(null);
 	const [booking, setBooking] = useState(null);
 	const closeRef = useRef(null);
+
+	useEffect(() => {
+		if (open) trackEvent('booking_start', { page_path: window.location.pathname });
+	}, [open]);
 
 	useEffect(() => {
 		const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
@@ -146,6 +151,7 @@ function BookingModal({ open, onClose }) {
 			});
 			const body = await res.json();
 			if (res.ok && body.status === 'success') {
+				trackEvent('booking_confirmed', { page_path: window.location.pathname });
 				setBooking(body.data);
 			} else {
 				setBookingError(body.error || 'Booking failed. Please try again.');

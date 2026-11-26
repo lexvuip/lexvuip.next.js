@@ -7,6 +7,7 @@ import NavBar from "../components/layout/NavBar";
 import FloatingCallButton from "../components/ui/FloatingCallButton";
 import DisclaimerPopup from "../components/ui/DisclaimerPopup";
 import CustomCursor from "../components/ui/CustomCursor/CustomCursor";
+import AnalyticsCtaTracker from "../components/ui/AnalyticsCtaTracker";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
         {children}
         <FloatingCallButton />
         <Analytics />
+        <AnalyticsCtaTracker />
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       {process.env.NEXT_PUBLIC_CLARITY_ID && (

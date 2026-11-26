@@ -6,6 +6,8 @@ import Footer from '../../layout/Footer';
 import AboutStats from '../../sections/AboutStats';
 import AboutReveal from '../../ui/AboutReveal';
 import Button from '../../ui/Button';
+import { useEffect } from 'react';
+import { trackEvent } from '../../../lib/analytics';
 import ServicesHeroParallax from '../../ui/ServicesHeroParallax';
 import Breadcrumbs from '../../ui/Breadcrumbs';
 import Counter from '../../ui/Counter';
@@ -115,6 +117,12 @@ const BlueprintSVG = ({ type }) => {
 };
 
 function SubServicePage({ service, category = 'ip' }) {
+	useEffect(() => {
+		if (service?.slug) {
+			trackEvent('service_view', { service_name: service.slug, service_category: category });
+		}
+	}, [service?.slug, category]);
+
 	if (!service) return null;
 
 	const { title, description, image, content } = service;

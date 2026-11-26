@@ -1,16 +1,18 @@
 'use client';
 
 import './FloatingCallButton.css';
+import { trackEvent } from '../../../lib/analytics';
 
 const FloatingCallButton = () => {
 	const phoneNumber = '+1 (856) 214-2512';
 	
 	return (
 		<div className="floating-call-container">
-			<a 
-				href={`tel:${phoneNumber.replace(/\D/g, '')}`} 
+			<a
+				href={`tel:${phoneNumber.replace(/\D/g, '')}`}
 				className="floating-call-button"
 				aria-label="Call us now"
+				onClick={() => trackEvent('phone_call_click', { page_path: window.location.pathname })}
 			>
 				<div className="call-icon">
 					<svg 

@@ -1,6 +1,7 @@
 'use client'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import './BookingSection.css';
+import { trackEvent } from '../../../lib/analytics';
 
 const SLOT_RANGE_DAYS = 14;
 
@@ -96,6 +97,9 @@ function BookingSection() {
 	}
 
 	function selectSlot(slot) {
+		if (!selectedSlot) {
+			trackEvent('booking_start', { page_path: window.location.pathname });
+		}
 		setSelectedSlot(slot);
 		setBookingError(null);
 	}
@@ -134,6 +138,7 @@ function BookingSection() {
 			});
 			const body = await res.json();
 			if (res.ok && body.status === 'success') {
+				trackEvent('booking_confirmed', { page_path: window.location.pathname });
 				setBooking(body.data);
 			} else {
 				setBookingError(body.error || 'Booking failed. Please try again.');
